@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔄 Từ Đồng Nghĩa & Trái Nghĩa — Hướng dẫn toàn tập</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080810;--s1:#0e0e1c;--s2:#131326;--s3:#18182e;--s4:#1e1e38;
+  --border:#222240;--border2:#2c2c50;--text:#e6e6f2;--muted:#666698;--faint:#363660;
+  --acc:#ffd060;--acc-d:#c89820;--acc-dim:rgba(255,208,96,.11);--acc-glow:rgba(255,208,96,.24);
+  --green:#40d88e;--green-dim:rgba(64,216,142,.10);
+  --blue:#5ba8ff;--blue-dim:rgba(91,168,255,.10);
+  --purple:#a07af4;--purple-dim:rgba(160,122,244,.10);
+  --yellow:#ffd060;--yellow-dim:rgba(255,208,96,.10);
+  --teal:#30d8c0;--teal-dim:rgba(48,216,192,.10);
+  --orange:#ff8c50;--orange-dim:rgba(255,140,80,.10);
+  --pink:#ff6584;--pink-dim:rgba(255,101,132,.11);--pink-glow:rgba(255,101,132,.22);
+  --sky:#38bdf8;--sky-dim:rgba(56,189,248,.10);
+  /* Brand */
+  --oc:#38bdf8;--oc-dim:rgba(56,189,248,.13);--oc-glow:rgba(56,189,248,.30);
+  --oc2:#5ba8ff;--oc2-dim:rgba(91,168,255,.12);
+  /* section colours */
+  --ins:#40d88e;--ins-dim:rgba(64,216,142,.12);--ins-glow:rgba(64,216,142,.28);
+  --ch:#ffd060;--ch-dim:rgba(255,208,96,.12);--ch-glow:rgba(255,208,96,.28);
+  --sk:#a07af4;--sk-dim:rgba(160,122,244,.12);--sk-glow:rgba(160,122,244,.28);
+  --au:#ff6584;--au-dim:rgba(255,101,132,.12);--au-glow:rgba(255,101,132,.28);
+  --code-bg:#05050e;
+  /* topic group colours: Syn-Mid = teal/green, Syn-Adv = purple/pink, Ant = orange/sky */
+  --synm:#30d8c0;--synm-dim:rgba(48,216,192,.13);--synm-glow:rgba(48,216,192,.28);
+  --syna:#a07af4;--syna-dim:rgba(160,122,244,.13);--syna-glow:rgba(160,122,244,.28);
+  --ant:#ff8c50;--ant-dim:rgba(255,140,80,.13);--ant-glow:rgba(255,140,80,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ── SIDEBAR ── */
+.sidebar{position:fixed;left:0;top:0;width:272px;height:100vh;background:var(--s1);border-right:1px solid var(--border);overflow-y:auto;z-index:400;display:flex;flex-direction:column}
+.sb-logo{padding:20px 18px 16px;border-bottom:1px solid var(--border)}
+.sb-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.logo-icon{width:44px;height:44px;border-radius:11px;flex-shrink:0;background:linear-gradient(135deg,var(--synm),var(--ant));display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 26px var(--synm-glow)}
+.logo-text h2{font-size:15px;font-weight:800;letter-spacing:-.4px}
+.logo-text p{font-size:10.5px;color:var(--muted);margin-top:2px}
+.prog-wrap{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--synm),var(--syna),var(--ant));width:0%;transition:width .4s;border-radius:2px}
+.nav-section{padding:6px 0 4px}
+.nav-group-hdr{display:flex;align-items:center;gap:7px;margin:6px 12px 3px;padding:6px 10px;border-radius:7px;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.ngh-oc{background:var(--oc-dim);color:var(--oc)}
+.ngh-synm{background:var(--synm-dim);color:var(--synm)}
+.ngh-syna{background:var(--syna-dim);color:var(--syna)}
+.ngh-ant{background:var(--ant-dim);color:var(--ant)}
+.ngh-au{background:var(--au-dim);color:var(--au)}
+.nav-link{display:flex;align-items:center;gap:9px;padding:5px 18px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;border-left:2px solid transparent;transition:all .14s}
+.nav-link:hover,.nav-link.active{color:var(--text);background:rgba(255,208,96,.07);border-left-color:var(--acc)}
+.nav-link .ico{font-size:12px;flex-shrink:0;width:16px;text-align:center}
+.nav-badge{margin-left:auto;font-size:9px;font-weight:700;padding:2px 7px;border-radius:100px;background:var(--acc-dim);color:var(--acc)}
+
+/* ── MAIN ── */
+.main{margin-left:272px;min-height:100vh}
+.hero{padding:72px 64px 56px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse 60% 55% at 75% 20%,rgba(48,216,192,.10) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 55% at 10% 80%,rgba(160,122,244,.08) 0%,transparent 55%),
+             radial-gradient(ellipse 45% 50% at 50% 55%,rgba(255,140,80,.05) 0%,transparent 60%),var(--bg)}
+.hero-dots{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+.hero-glow{position:absolute;right:-80px;top:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(48,216,192,.09) 0%,transparent 65%);pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--synm-dim);border:1px solid rgba(48,216,192,.35);color:var(--synm);padding:5px 16px;border-radius:100px;font-size:11.5px;font-weight:700;margin-bottom:24px;letter-spacing:.3px}
+.hero-eyebrow .pulse{width:6px;height:6px;border-radius:50%;background:var(--synm);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero h1{font-size:46px;font-weight:900;letter-spacing:-2.3px;line-height:1.08;margin-bottom:18px}
+.h-grad{background:linear-gradient(135deg,var(--synm) 0%,var(--syna) 55%,var(--ant) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.h-synm{color:var(--synm)}.h-syna{color:var(--syna)}.h-ant{color:var(--ant)}
+.h-acc{color:var(--acc)}.h-ins{color:var(--ins)}.h-sk{color:var(--sk)}
+.hero-desc{font-size:15.5px;color:var(--muted);max-width:620px;line-height:1.75;margin-bottom:28px}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:5px 14px;border-radius:7px;font-size:12px;font-weight:700}
+.chip-oc{background:var(--oc-dim);color:var(--oc)}.chip-synm{background:var(--synm-dim);color:var(--synm)}
+.chip-syna{background:var(--syna-dim);color:var(--syna)}.chip-ant{background:var(--ant-dim);color:var(--ant)}
+.chip-ins{background:var(--ins-dim);color:var(--ins)}.chip-au{background:var(--au-dim);color:var(--au)}
+.chip-t{background:var(--teal-dim);color:var(--teal)}
+
+/* ── CATEGORY BANNERS ── */
+.cat-banner{display:flex;align-items:center;gap:16px;padding:20px 24px;border-radius:14px;margin-bottom:44px;position:relative;overflow:hidden}
+.cat-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cb-synm{background:var(--synm-dim);border:1px solid rgba(48,216,192,.30)}.cb-synm::before{background:linear-gradient(90deg,var(--synm),var(--ins))}
+.cb-syna{background:var(--syna-dim);border:1px solid rgba(160,122,244,.30)}.cb-syna::before{background:linear-gradient(90deg,var(--syna),var(--pink))}
+.cb-ant{background:var(--ant-dim);border:1px solid rgba(255,140,80,.30)}.cb-ant::before{background:linear-gradient(90deg,var(--ant),var(--ch))}
+.cb-cheat{background:var(--au-dim);border:1px solid rgba(255,101,132,.30)}.cb-cheat::before{background:linear-gradient(90deg,var(--au),var(--syna))}
+.cb-icon{font-size:36px;flex-shrink:0}
+.cb-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.cb-synm .cb-badge{background:var(--synm-dim);color:var(--synm)}
+.cb-syna .cb-badge{background:var(--syna-dim);color:var(--syna)}
+.cb-ant .cb-badge{background:var(--ant-dim);color:var(--ant)}
+.cb-cheat .cb-badge{background:var(--au-dim);color:var(--au)}
+.cb-title{font-size:20px;font-weight:800;letter-spacing:-.5px}.cb-sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+/* ── CONTENT ── */
+.content{padding:52px 64px;max-width:1040px}
+.section{margin-bottom:68px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 10px;border-radius:5px;margin-top:5px;flex-shrink:0;letter-spacing:.5px}
+.st-overview{color:var(--oc);background:var(--oc-dim);border:1px solid var(--oc-glow)}
+.st-synm{color:var(--synm);background:var(--synm-dim);border:1px solid var(--synm-glow)}
+.st-syna{color:var(--syna);background:var(--syna-dim);border:1px solid var(--syna-glow)}
+.st-ant{color:var(--ant);background:var(--ant-dim);border:1px solid var(--ant-glow)}
+.st-cheat{color:var(--au);background:var(--au-dim);border:1px solid var(--au-glow)}
+.sec-title{font-size:22px;font-weight:800;letter-spacing:-.6px;margin-bottom:5px}
+.sec-sub{font-size:13px;color:var(--muted)}
+
+/* ── SUB SECTIONS ── */
+.sub{margin-bottom:36px}
+.sub-title{font-size:14.5px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:10px}
+.sub-title::before{content:'';display:inline-block;width:14px;height:3px;background:var(--acc);border-radius:2px;flex-shrink:0}
+.sub p,.sub ul,.sub ol{color:var(--muted);font-size:13.5px;margin-bottom:10px;line-height:1.78}
+.sub ul,.sub ol{padding-left:22px}.sub li{margin-bottom:5px}.sub strong{color:var(--text)}
+
+/* ── WORD GROUP CARD (core display for synonym/antonym clusters) ── */
+.word-card{background:var(--s1);border:1px solid var(--border2);border-radius:14px;overflow:hidden;margin:14px 0}
+.word-card-head{padding:16px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.word-base{font-size:19px;font-weight:800;letter-spacing:-.3px}
+.word-pron{font-size:11px;color:var(--faint);font-family:'JetBrains Mono',monospace}
+.word-vn{font-size:12.5px;color:var(--muted)}
+.word-level{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;padding:2px 9px;border-radius:5px;margin-left:auto;letter-spacing:.5px}
+.wl-mid{background:var(--synm-dim);color:var(--synm)}
+.wl-adv{background:var(--syna-dim);color:var(--syna)}
+.wl-ant{background:var(--ant-dim);color:var(--ant)}
+.word-body{padding:18px 22px}
+.syn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.syn-item{background:var(--s2);border:1px solid var(--border);border-radius:9px;padding:11px 14px;transition:all .18s}
+.syn-item:hover{border-color:var(--acc);transform:translateY(-1px)}
+.syn-item-word{font-size:13.5px;font-weight:700;color:var(--text);margin-bottom:3px}
+.syn-item-vn{font-size:11.5px;color:var(--muted)}
+.syn-item-note{font-size:10.5px;color:var(--faint);margin-top:4px;font-style:italic}
+
+/* ── EXAMPLE BOX ── */
+.ex-box{background:var(--s1);border:1px solid var(--border2);border-radius:11px;overflow:hidden;margin:13px 0}
+.ex-head{display:flex;align-items:center;gap:8px;padding:9px 16px;background:var(--s2);border-bottom:1px solid var(--border)}
+.ex-label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.ex-tag{margin-left:auto;font-size:9px;font-weight:700;padding:2px 9px;border-radius:100px;flex-shrink:0}
+.et-synm{background:var(--synm-dim);color:var(--synm)}
+.et-syna{background:var(--syna-dim);color:var(--syna)}
+.et-ant{background:var(--ant-dim);color:var(--ant)}
+.et-tip{background:var(--ch-dim);color:var(--ch)}
+.ex-body{padding:14px 20px}
+.ex-row{display:flex;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13.5px}
+.ex-row:last-child{border-bottom:none}
+.ex-en{color:var(--text);font-weight:600;min-width:230px;flex-shrink:0}
+.ex-vn{color:var(--muted)}
+.ex-note{font-size:11px;color:var(--faint);margin-left:auto;flex-shrink:0;font-style:italic}
+.ex-arrow{color:var(--faint);flex-shrink:0}
+
+/* ── INFO BOXES ── */
+.info{display:flex;gap:12px;padding:13px 16px;border-radius:9px;margin:12px 0;font-size:13px;line-height:1.65}
+.info-ico{font-size:15px;flex-shrink:0;margin-top:1px}
+.i-ok{background:var(--green-dim);border:1px solid rgba(64,216,142,.2);color:#30a870}
+.i-warn{background:var(--yellow-dim);border:1px solid rgba(255,208,96,.2);color:#b09030}
+.i-tip{background:var(--blue-dim);border:1px solid rgba(91,168,255,.2);color:#3878d0}
+.i-note{background:var(--purple-dim);border:1px solid rgba(160,122,244,.2);color:#8060d0}
+.i-err{background:var(--pink-dim);border:1px solid rgba(255,101,132,.2);color:#cc3355}
+
+/* ── RW BOX ── */
+.rw-box{background:var(--s1);border:1px solid var(--border2);border-radius:12px;padding:16px 20px;margin:13px 0;position:relative;overflow:hidden}
+.rw-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
+.rw-synm::before{background:var(--synm)}.rw-syna::before{background:var(--syna)}
+.rw-ant::before{background:var(--ant)}.rw-ins::before{background:var(--ins)}
+.rw-ch::before{background:var(--ch)}.rw-oc::before{background:var(--oc)}
+.rw-label{font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.rw-synm .rw-label{color:var(--synm)}.rw-syna .rw-label{color:var(--syna)}
+.rw-ant .rw-label{color:var(--ant)}.rw-ins .rw-label{color:var(--ins)}
+.rw-ch .rw-label{color:var(--ch)}.rw-oc .rw-label{color:var(--oc)}
+.rw-title{font-size:14px;font-weight:700;margin-bottom:5px}
+.rw-body{font-size:13px;color:var(--muted);line-height:1.68}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:13px 0;border-radius:11px;overflow:hidden}
+.tbl th{background:var(--s3);padding:9px 14px;text-align:left;font-weight:700;font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);border-bottom:1px solid var(--border2)}
+.tbl td{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted);vertical-align:top;font-size:13px}
+.tbl tr:hover td{background:rgba(255,255,255,.022)}
+.tbl td:first-child{color:var(--text);font-weight:600}
+.tbl code{font-family:'JetBrains Mono',monospace;font-size:11px;background:var(--code-bg);padding:2px 6px;border-radius:4px;color:var(--teal)}
+.tbl .badge-synm{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--synm-dim);color:var(--synm)}
+.tbl .badge-syna{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--syna-dim);color:var(--syna)}
+.tbl .badge-ant{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--ant-dim);color:var(--ant)}
+.tbl .en{color:var(--oc);font-weight:700}
+
+/* ── GRIDS ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:13px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:13px 0}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:11px;padding:15px;transition:all .2s;cursor:default}
+.card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.38)}
+.card-icon{font-size:22px;margin-bottom:8px}.card-title{font-size:13px;font-weight:700;margin-bottom:4px}.card-desc{font-size:12px;color:var(--muted);line-height:1.55}
+
+/* ── ANTONYM PAIR BOX ── */
+.ant-pair{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;background:var(--s1);border:1px solid var(--border2);border-radius:11px;padding:14px 18px;margin:10px 0}
+.ant-side{text-align:center}
+.ant-side-a{color:var(--oc)}
+.ant-side-b{color:var(--ant)}
+.ant-word{font-size:15px;font-weight:800}
+.ant-vn{font-size:11.5px;color:var(--muted);margin-top:2px}
+.ant-vs{font-size:11px;color:var(--faint);font-weight:700;font-family:'JetBrains Mono',monospace}
+
+/* ── ANTONYM PREFIX TABLE ── */
+.prefix-tag{font-family:'JetBrains Mono',monospace;font-weight:800;font-size:13px;padding:3px 10px;border-radius:6px;background:var(--ant-dim);color:var(--ant);display:inline-block}
+
+/* ── CHEAT SHEET ── */
+.cheat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:13px 0}
+.cheat-card{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:14px}
+.cheat-card h4{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:11px}
+.h4-synm{color:var(--synm)}.h4-syna{color:var(--syna)}.h4-ant{color:var(--ant)}
+.h4-ch{color:var(--ch)}.h4-ins{color:var(--ins)}.h4-au{color:var(--au)}
+.cheat-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;gap:8px}
+.cheat-row:last-child{border-bottom:none}
+.ck{color:var(--muted);flex-shrink:0;font-size:11.5px}
+.cv{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--teal);text-align:right}
+
+/* ── FORMALITY SCALE ── */
+.formality-scale{display:flex;align-items:center;gap:0;background:var(--s2);border:1px solid var(--border2);border-radius:10px;overflow:hidden;margin:13px 0}
+.fs-item{flex:1;padding:12px 10px;text-align:center;font-size:11.5px;font-weight:700;border-right:1px solid var(--border)}
+.fs-item:last-child{border-right:none}
+.fs-casual{background:rgba(56,189,248,.08);color:var(--oc)}
+.fs-neutral{background:rgba(64,216,142,.08);color:var(--ins)}
+.fs-formal{background:rgba(160,122,244,.08);color:var(--syna)}
+.fs-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:3px}
+
+p code,li code,td code{font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(255,208,96,.1);color:var(--yellow);padding:2px 6px;border-radius:4px}
+hr.dv{border:none;border-top:1px solid var(--border);margin:52px 0}
+.footer{border-top:1px solid var(--border);padding:26px 64px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}
+@media(max-width:900px){
+  .sidebar{display:none}.main{margin-left:0}
+  .hero,.content,.footer{padding-left:22px;padding-right:22px}
+  .hero h1{font-size:28px}
+  .grid-2,.grid-3,.grid-4,.cheat-grid,.syn-grid{grid-template-columns:1fr}
+  .ant-pair{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-brand">
+      <div class="logo-icon">🔄</div>
+      <div class="logo-text">
+        <h2>Đồng Nghĩa & Trái Nghĩa</h2>
+        <p>Hướng dẫn toàn tập · Mất gốc OK</p>
+      </div>
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" id="pbar"></div></div>
+  </div>
+
+  <div class="nav-section" style="border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:2px">
+    <div class="nav-group-hdr" style="background:rgba(255,208,96,.12);color:#ffd060">📚 Lộ Trình Học</div>
+    <a href="english-grammar-basics.html" class="nav-link"><span class="ico">①</span> Tiếng Anh Cơ Bản</a>
+    <a href="english-12-tenses.html" class="nav-link"><span class="ico">②</span> 12 Thì Tiếng Anh</a>
+    <a href="subject-verb-agreement-tenses.html" class="nav-link"><span class="ico">③</span> Hòa Hợp C-V &amp; Phối Thì</a>
+    <a href="synonyms-antonyms-guide.html" class="nav-link" style="color:var(--acc);background:rgba(255,208,96,.08);border-left-color:var(--acc)"><span class="ico">④</span> Đồng Nghĩa &amp; Trái Nghĩa</a>
+    <a href="adjective-order-word-classes-relative-clauses.html" class="nav-link"><span class="ico">⑤</span> Trật Tự TT · Từ Loại · MĐ QH</a>
+    <a href="english-grammar-guide.html" class="nav-link"><span class="ico">⑥</span> Ngữ Pháp Tổng Hợp</a>
+    <a href="grammar-comparison-passive-conjunctions.html" class="nav-link"><span class="ico">⑦</span> So Sánh · Bị Động · Liên Từ</a>
+    <a href="prepositions-wish-guide.html" class="nav-link"><span class="ico">⑧</span> Giới Từ &amp; Câu Ước</a>
+    <a href="grammar-modals-quantifiers-stress.html" class="nav-link"><span class="ico">⑨</span> Modal · Lượng Từ · Trọng Âm</a>
+    <a href="grammar-tag-questions-articles-conditionals.html" class="nav-link"><span class="ico">⑩</span> Hỏi Đuôi · Mạo Từ · ĐK</a>
+    <a href="grammar-tov-ving-reported-phrasal.html" class="nav-link"><span class="ico">⑪</span> To V/V-ing · Tường Thuật</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-oc">🗺️ Tổng quan</div>
+    <a href="#s0" class="nav-link"><span class="ico">📊</span> Đồng nghĩa & Trái nghĩa là gì?</a>
+    <a href="#s0b" class="nav-link"><span class="ico">⭐</span> Ưu tiên học gì trước</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-synm">🟢 Từ Đồng Nghĩa — Trung Bình</div>
+    <a href="#s1" class="nav-link"><span class="ico">1️⃣</span> Tính từ cảm xúc <span class="nav-badge">★★★</span></a>
+    <a href="#s2" class="nav-link"><span class="ico">2️⃣</span> Động từ hành động hàng ngày</a>
+    <a href="#s3" class="nav-link"><span class="ico">3️⃣</span> Tính từ mô tả sự vật</a>
+    <a href="#s4" class="nav-link"><span class="ico">4️⃣</span> Trạng từ tần suất & mức độ</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-syna">🟣 Từ Đồng Nghĩa — Nâng Cao</div>
+    <a href="#s5" class="nav-link"><span class="ico">5️⃣</span> Thang đo trang trọng (Formality)</a>
+    <a href="#s6" class="nav-link"><span class="ico">6️⃣</span> Động từ học thuật/công sở</a>
+    <a href="#s7" class="nav-link"><span class="ico">7️⃣</span> Tính từ sắc thái tinh tế</a>
+    <a href="#s8" class="nav-link"><span class="ico">8️⃣</span> Cụm từ thay thế "very + adj"</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-ant">🟠 Từ Trái Nghĩa — Trung Bình</div>
+    <a href="#s9" class="nav-link"><span class="ico">9️⃣</span> Cặp trái nghĩa cơ bản <span class="nav-badge">★★★</span></a>
+    <a href="#s10" class="nav-link"><span class="ico">🔟</span> Trái nghĩa bằng tiền tố (un-/in-/dis-)</a>
+    <a href="#s11" class="nav-link"><span class="ico">🔢</span> Trái nghĩa động từ & trạng từ</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-au">📋 Tổng hợp</div>
+    <a href="#s12" class="nav-link"><span class="ico">📋</span> Cheat Sheet toàn bộ</a>
+  </div>
+</aside>
+
+<!-- ══════════ MAIN ══════════ -->
+<div class="main">
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-dots"></div><div class="hero-glow"></div>
+  <div class="hero-eyebrow"><span class="pulse"></span> Synonyms & Antonyms · Trung bình → Nâng cao · Dành cho người mất gốc</div>
+  <h1>
+    <span class="h-grad">Từ Đồng Nghĩa</span> 🔄<br>
+    & <span class="h-ant">Trái Nghĩa</span><br>
+    <span class="h-syna">Tiếng Anh</span>
+  </h1>
+  <p class="hero-desc">Mở rộng vốn từ, nói tiếng Anh phong phú hơn — không lặp đi lặp lại "good, bad, very". Học cách chọn từ đúng ngữ cảnh, đúng sắc thái trang trọng, và cách tạo từ trái nghĩa bằng tiền tố để nhân đôi vốn từ ngay lập tức.</p>
+  <div class="hero-chips">
+    <span class="chip chip-synm">🟢 Đồng nghĩa - Trung bình</span>
+    <span class="chip chip-syna">🟣 Đồng nghĩa - Nâng cao</span>
+    <span class="chip chip-ant">🟠 Trái nghĩa - Trung bình</span>
+    <span class="chip chip-ins">✅ Nhiều ví dụ</span>
+    <span class="chip chip-oc">💡 Mẹo nhớ</span>
+    <span class="chip chip-au">📋 Cheat Sheet</span>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ════ S0 — TỔNG QUAN ════ -->
+<div class="section" id="s0">
+  <div class="sec-head">
+    <span class="sec-tag st-overview">TỔNG QUAN</span>
+    <div>
+      <h2 class="sec-title">Đồng nghĩa & Trái nghĩa là gì?</h2>
+      <p class="sec-sub">Hiểu khái niệm trước khi học từ vựng cụ thể</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="grid-2">
+      <div class="rw-box rw-synm">
+        <div class="rw-label">🟢 SYNONYMS</div>
+        <div class="rw-title">Từ đồng nghĩa</div>
+        <div class="rw-body">Là những từ có nghĩa <strong style="color:var(--text)">giống hoặc gần giống nhau</strong>, nhưng khác nhau về <strong style="color:var(--text)">sắc thái, mức độ trang trọng</strong>. Ví dụ: <code>happy, glad, delighted</code> đều nghĩa "vui" nhưng mức độ và ngữ cảnh khác nhau.</div>
+      </div>
+      <div class="rw-box rw-ant">
+        <div class="rw-label">🟠 ANTONYMS</div>
+        <div class="rw-title">Từ trái nghĩa</div>
+        <div class="rw-body">Là những từ có nghĩa <strong style="color:var(--text)">đối lập hoàn toàn</strong> với nhau. Ví dụ: <code>happy ↔ sad</code>, <code>big ↔ small</code>. Tiếng Anh có nhiều cách tạo từ trái nghĩa, không chỉ học từ mới mà còn dùng <strong style="color:var(--text)">tiền tố</strong>.</div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Vì sao cần học đồng nghĩa & trái nghĩa?</strong> Người mới học hay lặp lại "good, bad, very good, very bad" liên tục → nghe đơn điệu, thiếu tự nhiên. Mở rộng vốn từ đồng nghĩa giúp bạn nói/viết <strong>phong phú hơn, chuyên nghiệp hơn</strong>, đồng thời giúp bạn <strong>hiểu bài đọc/nghe tốt hơn</strong> vì người bản ngữ hay đổi từ để tránh lặp.</div>
+    </div>
+  </div>
+
+  <div class="sub" id="s0b">
+    <div class="sub-title">⭐ Ưu tiên học gì trước — Theo mức độ giao tiếp</div>
+    <table class="tbl">
+      <thead><tr><th>Ưu tiên</th><th>Chủ đề</th><th>Lý do</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span style="color:var(--ins)">★★★</span> Học trước</td>
+          <td>Đồng nghĩa Trung bình (cảm xúc, hành động) + Trái nghĩa cơ bản</td>
+          <td>Dùng hàng ngày, thay thế ngay "good/bad/very" lặp lại</td>
+        </tr>
+        <tr>
+          <td><span style="color:var(--ch)">★★☆</span> Học tiếp theo</td>
+          <td>Trái nghĩa bằng tiền tố (un-/in-/dis-)</td>
+          <td>Nhân đôi vốn từ cực nhanh chỉ bằng 1 quy tắc</td>
+        </tr>
+        <tr>
+          <td><span style="color:var(--orange)">★☆☆</span> Nâng cao</td>
+          <td>Đồng nghĩa Nâng cao (formality, học thuật)</td>
+          <td>Cần khi viết email công việc, bài luận, phỏng vấn</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="info i-ok">
+      <span class="info-ico">🎯</span>
+      <div><strong style="color:var(--text)">Mục tiêu thực tế:</strong> Không cần nhớ hết mọi từ đồng nghĩa. Chỉ cần với mỗi từ cơ bản (happy, big, said...) biết thêm <strong>2-3 từ thay thế</strong> là đã đủ làm câu nói/viết phong phú hơn rõ rệt.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     NHÓM ĐỒNG NGHĨA - TRUNG BÌNH
+════════════════════════════════ -->
+<div class="cat-banner cb-synm">
+  <div class="cb-icon">🟢</div>
+  <div>
+    <div class="cb-badge">SYNONYMS · INTERMEDIATE</div>
+    <div class="cb-title">Phần 1 — Từ Đồng Nghĩa Mức Trung Bình</div>
+    <div class="cb-sub">Dùng hàng ngày · Thay thế ngay từ thông dụng bị lặp lại</div>
+  </div>
+</div>
+
+<!-- ════ S1 — TÍNH TỪ CẢM XÚC ════ -->
+<div class="section" id="s1">
+  <div class="sec-head">
+    <span class="sec-tag st-synm">NHÓM 1</span>
+    <div>
+      <h2 class="sec-title">Tính từ cảm xúc — Thay thế "happy", "sad", "angry"</h2>
+      <p class="sec-sub">Đừng chỉ dùng "very happy" — có nhiều từ hay hơn</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Nhóm "Happy" (Vui)</div>
+    <div class="word-card">
+      <div class="word-card-head">
+        <span class="word-base">HAPPY</span>
+        <span class="word-pron">/ˈhæpi/</span>
+        <span class="word-vn">— vui, hạnh phúc</span>
+        <span class="word-level wl-mid">TRUNG BÌNH</span>
+      </div>
+      <div class="word-body">
+        <div class="syn-grid">
+          <div class="syn-item"><div class="syn-item-word">glad</div><div class="syn-item-vn">vui, mừng</div><div class="syn-item-note">nhẹ hơn happy, thường + that/to V</div></div>
+          <div class="syn-item"><div class="syn-item-word">pleased</div><div class="syn-item-vn">hài lòng, vui</div><div class="syn-item-note">trang trọng hơn 1 chút</div></div>
+          <div class="syn-item"><div class="syn-item-word">delighted</div><div class="syn-item-vn">rất vui, vui sướng</div><div class="syn-item-note">mạnh hơn happy</div></div>
+          <div class="syn-item"><div class="syn-item-word">cheerful</div><div class="syn-item-vn">vui vẻ, tươi tắn</div><div class="syn-item-note">tính cách luôn vui</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ dùng đúng ngữ cảnh</span><span class="ex-tag et-synm">HAPPY GROUP</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">I'm <strong>glad</strong> you came.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi vui vì bạn đã đến.</span></div>
+        <div class="ex-row"><span class="ex-en">We're <strong>delighted</strong> to announce...</span><span class="ex-arrow">→</span><span class="ex-vn">Chúng tôi rất vui mừng thông báo... (trang trọng)</span></div>
+        <div class="ex-row"><span class="ex-en">She has a <strong>cheerful</strong> personality.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy có tính cách vui vẻ.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Nhóm "Sad" (Buồn) & "Angry" (Tức giận)</div>
+    <div class="grid-2">
+      <div class="word-card">
+        <div class="word-card-head">
+          <span class="word-base">SAD</span><span class="word-pron">/sæd/</span>
+          <span class="word-level wl-mid">TB</span>
+        </div>
+        <div class="word-body">
+          <div class="syn-grid">
+            <div class="syn-item"><div class="syn-item-word">upset</div><div class="syn-item-vn">buồn, khó chịu</div></div>
+            <div class="syn-item"><div class="syn-item-word">unhappy</div><div class="syn-item-vn">không vui</div></div>
+            <div class="syn-item"><div class="syn-item-word">down</div><div class="syn-item-vn">chán nản (口语)</div></div>
+            <div class="syn-item"><div class="syn-item-word">heartbroken</div><div class="syn-item-vn">đau khổ tột cùng</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="word-card">
+        <div class="word-card-head">
+          <span class="word-base">ANGRY</span><span class="word-pron">/ˈæŋɡri/</span>
+          <span class="word-level wl-mid">TB</span>
+        </div>
+        <div class="word-body">
+          <div class="syn-grid">
+            <div class="syn-item"><div class="syn-item-word">annoyed</div><div class="syn-item-vn">khó chịu (nhẹ)</div></div>
+            <div class="syn-item"><div class="syn-item-word">upset</div><div class="syn-item-vn">bực, buồn</div></div>
+            <div class="syn-item"><div class="syn-item-word">furious</div><div class="syn-item-vn">giận dữ (mạnh)</div></div>
+            <div class="syn-item"><div class="syn-item-word">mad</div><div class="syn-item-vn">điên tiết (口语)</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ theo "cường độ":</strong> Hãy sắp xếp từ đồng nghĩa theo thang cường độ từ nhẹ → mạnh: <em>annoyed (khó chịu nhẹ) → angry (giận) → furious (giận dữ) → mad (điên tiết, 口语)</em>. Khi học từ mới, luôn hỏi: "Từ này mạnh hơn hay nhẹ hơn từ gốc?"</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S2 — ĐỘNG TỪ HÀNH ĐỘNG ════ -->
+<div class="section" id="s2">
+  <div class="sec-head">
+    <span class="sec-tag st-synm">NHÓM 2</span>
+    <div>
+      <h2 class="sec-title">Động từ hành động hàng ngày — "say", "look", "go"</h2>
+      <p class="sec-sub">3 động từ bị lặp nhiều nhất trong câu chuyện hàng ngày</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Nhóm "Say" (Nói)</div>
+    <div class="word-card">
+      <div class="word-card-head">
+        <span class="word-base">SAY / TELL</span><span class="word-pron">/seɪ/ /tel/</span>
+        <span class="word-vn">— nói, kể</span>
+        <span class="word-level wl-mid">TRUNG BÌNH</span>
+      </div>
+      <div class="word-body">
+        <div class="syn-grid">
+          <div class="syn-item"><div class="syn-item-word">mention</div><div class="syn-item-vn">đề cập đến</div></div>
+          <div class="syn-item"><div class="syn-item-word">explain</div><div class="syn-item-vn">giải thích</div></div>
+          <div class="syn-item"><div class="syn-item-word">whisper</div><div class="syn-item-vn">thì thầm</div></div>
+          <div class="syn-item"><div class="syn-item-word">shout / yell</div><div class="syn-item-vn">la hét</div></div>
+          <div class="syn-item"><div class="syn-item-word">ask</div><div class="syn-item-vn">hỏi</div></div>
+          <div class="syn-item"><div class="syn-item-word">reply / answer</div><div class="syn-item-vn">trả lời</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Nhóm "Look" (Nhìn) & "Go" (Đi)</div>
+    <div class="grid-2">
+      <div class="word-card">
+        <div class="word-card-head">
+          <span class="word-base">LOOK</span><span class="word-pron">/lʊk/</span>
+          <span class="word-level wl-mid">TB</span>
+        </div>
+        <div class="word-body">
+          <div class="syn-grid">
+            <div class="syn-item"><div class="syn-item-word">watch</div><div class="syn-item-vn">xem (TV, trận đấu)</div></div>
+            <div class="syn-item"><div class="syn-item-word">see</div><div class="syn-item-vn">nhìn thấy (vô tình)</div></div>
+            <div class="syn-item"><div class="syn-item-word">stare</div><div class="syn-item-vn">nhìn chằm chằm</div></div>
+            <div class="syn-item"><div class="syn-item-word">glance</div><div class="syn-item-vn">liếc nhìn</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="word-card">
+        <div class="word-card-head">
+          <span class="word-base">GO</span><span class="word-pron">/ɡoʊ/</span>
+          <span class="word-level wl-mid">TB</span>
+        </div>
+        <div class="word-body">
+          <div class="syn-grid">
+            <div class="syn-item"><div class="syn-item-word">walk</div><div class="syn-item-vn">đi bộ</div></div>
+            <div class="syn-item"><div class="syn-item-word">leave</div><div class="syn-item-vn">rời đi</div></div>
+            <div class="syn-item"><div class="syn-item-word">head (to)</div><div class="syn-item-vn">hướng đến</div></div>
+            <div class="syn-item"><div class="syn-item-word">travel</div><div class="syn-item-vn">đi du lịch/di chuyển</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ phân biệt look/see/watch</span><span class="ex-tag et-synm">LOOK vs SEE vs WATCH</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en"><strong>Look at</strong> the board, please.</span><span class="ex-arrow">→</span><span class="ex-vn">Nhìn lên bảng đi. (cố ý nhìn)</span></div>
+        <div class="ex-row"><span class="ex-en">I <strong>saw</strong> him at the store.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi tình cờ thấy anh ấy ở cửa hàng. (vô tình)</span></div>
+        <div class="ex-row"><span class="ex-en">We <strong>watched</strong> a movie last night.</span><span class="ex-arrow">→</span><span class="ex-vn">Tối qua chúng tôi xem phim. (xem có chủ đích, kéo dài)</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S3 — TÍNH TỪ MÔ TẢ SỰ VẬT ════ -->
+<div class="section" id="s3">
+  <div class="sec-head">
+    <span class="sec-tag st-synm">NHÓM 3</span>
+    <div>
+      <h2 class="sec-title">Tính từ mô tả sự vật — "good", "bad", "big", "small"</h2>
+      <p class="sec-sub">4 tính từ thông dụng nhất, dễ bị lặp lại nhất</p>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="word-card">
+      <div class="word-card-head">
+        <span class="word-base">GOOD</span><span class="word-pron">/ɡʊd/</span>
+        <span class="word-level wl-mid">TB</span>
+      </div>
+      <div class="word-body">
+        <div class="syn-grid">
+          <div class="syn-item"><div class="syn-item-word">great</div><div class="syn-item-vn">tuyệt</div></div>
+          <div class="syn-item"><div class="syn-item-word">excellent</div><div class="syn-item-vn">xuất sắc</div></div>
+          <div class="syn-item"><div class="syn-item-word">nice</div><div class="syn-item-vn">tốt, dễ chịu</div></div>
+          <div class="syn-item"><div class="syn-item-word">wonderful</div><div class="syn-item-vn">tuyệt vời</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="word-card">
+      <div class="word-card-head">
+        <span class="word-base">BAD</span><span class="word-pron">/bæd/</span>
+        <span class="word-level wl-mid">TB</span>
+      </div>
+      <div class="word-body">
+        <div class="syn-grid">
+          <div class="syn-item"><div class="syn-item-word">terrible</div><div class="syn-item-vn">tệ hại</div></div>
+          <div class="syn-item"><div class="syn-item-word">awful</div><div class="syn-item-vn">kinh khủng</div></div>
+          <div class="syn-item"><div class="syn-item-word">poor</div><div class="syn-item-vn">kém, tệ</div></div>
+          <div class="syn-item"><div class="syn-item-word">unpleasant</div><div class="syn-item-vn">khó chịu</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="word-card">
+      <div class="word-card-head">
+        <span class="word-base">BIG</span><span class="word-pron">/bɪɡ/</span>
+        <span class="word-level wl-mid">TB</span>
+      </div>
+      <div class="word-body">
+        <div class="syn-grid">
+          <div class="syn-item"><div class="syn-item-word">large</div><div class="syn-item-vn">to lớn (trang trọng hơn)</div></div>
+          <div class="syn-item"><div class="syn-item-word">huge</div><div class="syn-item-vn">khổng lồ</div></div>
+          <div class="syn-item"><div class="syn-item-word">enormous</div><div class="syn-item-vn">cực lớn</div></div>
+          <div class="syn-item"><div class="syn-item-word">giant</div><div class="syn-item-vn">khổng lồ (n/adj)</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="word-card">
+      <div class="word-card-head">
+        <span class="word-base">SMALL</span><span class="word-pron">/smɔːl/</span>
+        <span class="word-level wl-mid">TB</span>
+      </div>
+      <div class="word-body">
+        <div class="syn-grid">
+          <div class="syn-item"><div class="syn-item-word">little</div><div class="syn-item-vn">nhỏ, bé xíu (thân mật)</div></div>
+          <div class="syn-item"><div class="syn-item-word">tiny</div><div class="syn-item-vn">rất nhỏ</div></div>
+          <div class="syn-item"><div class="syn-item-word">mini</div><div class="syn-item-vn">mini, thu nhỏ</div></div>
+          <div class="syn-item"><div class="syn-item-word">compact</div><div class="syn-item-vn">gọn nhẹ</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info i-warn">
+    <span class="info-ico">⚠️</span>
+    <div><strong style="color:var(--text)">Lưu ý "little" vs "small":</strong> <code>small</code> chỉ thuần kích thước. <code>little</code> thường mang cảm xúc thân thương: <em>a <u>little</u> dog</em> (chú chó nhỏ xinh, có tình cảm) khác với <em>a <u>small</u> dog</em> (chỉ đơn thuần nói về kích thước).</div>
+  </div>
+</div>
+
+<!-- ════ S4 — TRẠNG TỪ TẦN SUẤT ════ -->
+<div class="section" id="s4">
+  <div class="sec-head">
+    <span class="sec-tag st-synm">NHÓM 4</span>
+    <div>
+      <h2 class="sec-title">Trạng từ tần suất & mức độ — "very", "always"</h2>
+      <p class="sec-sub">Thay thế "very" — từ bị overuse nhiều nhất trong tiếng Anh</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Thay "very + adjective" bằng 1 từ mạnh hơn</div>
+    <table class="tbl">
+      <thead><tr><th>Very + Tính từ</th><th>→ Thay bằng</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td>very tired</td><td><span class="en">exhausted</span></td><td><em>I'm exhausted after work.</em></td></tr>
+        <tr><td>very hungry</td><td><span class="en">starving</span></td><td><em>I'm starving!</em></td></tr>
+        <tr><td>very happy</td><td><span class="en">thrilled / ecstatic</span></td><td><em>She's thrilled about the news.</em></td></tr>
+        <tr><td>very scared</td><td><span class="en">terrified</span></td><td><em>He was terrified of the dog.</em></td></tr>
+        <tr><td>very big</td><td><span class="en">huge / enormous</span></td><td><em>That's a huge house.</em></td></tr>
+        <tr><td>very small</td><td><span class="en">tiny</span></td><td><em>It's a tiny apartment.</em></td></tr>
+        <tr><td>very beautiful</td><td><span class="en">gorgeous / stunning</span></td><td><em>The view is stunning.</em></td></tr>
+        <tr><td>very angry</td><td><span class="en">furious</span></td><td><em>My boss was furious.</em></td></tr>
+      </tbody>
+    </table>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo "Extreme Adjectives":</strong> Các tính từ như <code>exhausted, starving, huge, terrified</code> đã mang sẵn nghĩa "rất/cực" — nên KHÔNG dùng "very" trước chúng. Thay vào đó dùng <code>absolutely, completely, totally</code>. Đúng: <em><u>absolutely</u> exhausted</em> ✅ · Sai: <em><u>very</u> exhausted</em> ❌ (dù không sai nghiêm trọng nhưng nghe gượng)</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Thay "always" theo tần suất chính xác hơn</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Trạng từ tần suất — Sắp theo mức độ</span><span class="ex-tag et-synm">FREQUENCY</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">always (100%)</span><span class="ex-arrow">→</span><span class="ex-vn">luôn luôn</span></div>
+        <div class="ex-row"><span class="ex-en">usually / generally (~90%)</span><span class="ex-arrow">→</span><span class="ex-vn">thường thì</span></div>
+        <div class="ex-row"><span class="ex-en">often / frequently (~70%)</span><span class="ex-arrow">→</span><span class="ex-vn">thường, hay</span></div>
+        <div class="ex-row"><span class="ex-en">sometimes / occasionally (~50%)</span><span class="ex-arrow">→</span><span class="ex-vn">thỉnh thoảng</span></div>
+        <div class="ex-row"><span class="ex-en">rarely / seldom (~10%)</span><span class="ex-arrow">→</span><span class="ex-vn">hiếm khi</span></div>
+        <div class="ex-row"><span class="ex-en">never (0%)</span><span class="ex-arrow">→</span><span class="ex-vn">không bao giờ</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     NHÓM ĐỒNG NGHĨA - NÂNG CAO
+════════════════════════════════ -->
+<div class="cat-banner cb-syna">
+  <div class="cb-icon">🟣</div>
+  <div>
+    <div class="cb-badge">SYNONYMS · ADVANCED</div>
+    <div class="cb-title">Phần 2 — Từ Đồng Nghĩa Mức Nâng Cao</div>
+    <div class="cb-sub">Văn viết · Công sở · Học thuật · Phỏng vấn</div>
+  </div>
+</div>
+
+<!-- ════ S5 — THANG ĐO TRANG TRỌNG ════ -->
+<div class="section" id="s5">
+  <div class="sec-head">
+    <span class="sec-tag st-syna">NHÓM 5</span>
+    <div>
+      <h2 class="sec-title">Thang đo trang trọng (Formality Scale)</h2>
+      <p class="sec-sub">Khái niệm quan trọng nhất ở mức nâng cao — chọn từ đúng ngữ cảnh</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">3 mức độ trang trọng trong tiếng Anh</div>
+    <div class="formality-scale">
+      <div class="fs-item fs-casual">😎 CASUAL<div class="fs-sub">Bạn bè, tin nhắn, nói chuyện thân mật</div></div>
+      <div class="fs-item fs-neutral">🙂 NEUTRAL<div class="fs-sub">Giao tiếp thường ngày, trung tính</div></div>
+      <div class="fs-item fs-formal">🎩 FORMAL<div class="fs-sub">Email công việc, bài luận, phỏng vấn</div></div>
+    </div>
+    <table class="tbl">
+      <thead><tr><th>Casual 😎</th><th>Neutral 🙂</th><th>Formal 🎩</th><th>Nghĩa</th></tr></thead>
+      <tbody>
+        <tr><td><span class="en">get</span></td><td><span class="en">receive</span></td><td><span class="en">obtain</span></td><td>nhận, có được</td></tr>
+        <tr><td><span class="en">buy</span></td><td><span class="en">purchase</span></td><td><span class="en">acquire</span></td><td>mua</td></tr>
+        <tr><td><span class="en">help</span></td><td><span class="en">assist</span></td><td><span class="en">facilitate</span></td><td>giúp đỡ</td></tr>
+        <tr><td><span class="en">show</span></td><td><span class="en">demonstrate</span></td><td><span class="en">illustrate</span></td><td>thể hiện, cho thấy</td></tr>
+        <tr><td><span class="en">think</span></td><td><span class="en">consider</span></td><td><span class="en">contemplate</span></td><td>nghĩ, suy nghĩ</td></tr>
+        <tr><td><span class="en">find out</span></td><td><span class="en">discover</span></td><td><span class="en">ascertain</span></td><td>tìm ra, phát hiện</td></tr>
+        <tr><td><span class="en">a lot of</span></td><td><span class="en">many / much</span></td><td><span class="en">numerous / substantial</span></td><td>nhiều</td></tr>
+        <tr><td><span class="en">kids</span></td><td><span class="en">children</span></td><td><span class="en">minors</span></td><td>trẻ em</td></tr>
+      </tbody>
+    </table>
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Lỗi thường gặp:</strong> Đừng dùng từ quá Formal khi nói chuyện thân mật (nghe cứng nhắc, kỳ lạ), và đừng dùng từ Casual trong email công việc/bài luận (nghe thiếu chuyên nghiệp). Ví dụ: nói với bạn bè "I <u>obtained</u> a new phone" nghe rất kỳ — nên dùng "I <u>got</u> a new phone".</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S6 — ĐỘNG TỪ HỌC THUẬT/CÔNG SỞ ════ -->
+<div class="section" id="s6">
+  <div class="sec-head">
+    <span class="sec-tag st-syna">NHÓM 6</span>
+    <div>
+      <h2 class="sec-title">Động từ học thuật & công sở thường dùng</h2>
+      <p class="sec-sub">Email, báo cáo, thuyết trình, bài luận</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Động từ thay thế trong môi trường công sở</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Công sở — Email / Báo cáo</span><span class="ex-tag et-syna">BUSINESS</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">talk about → <strong>discuss</strong></span><span class="ex-arrow">→</span><span class="ex-vn">thảo luận về</span></div>
+        <div class="ex-row"><span class="ex-en">start → <strong>initiate / launch</strong></span><span class="ex-arrow">→</span><span class="ex-vn">khởi động, bắt đầu</span></div>
+        <div class="ex-row"><span class="ex-en">make better → <strong>improve / enhance</strong></span><span class="ex-arrow">→</span><span class="ex-vn">cải thiện</span></div>
+        <div class="ex-row"><span class="ex-en">check → <strong>review / verify</strong></span><span class="ex-arrow">→</span><span class="ex-vn">kiểm tra, xác minh</span></div>
+        <div class="ex-row"><span class="ex-en">give → <strong>provide</strong></span><span class="ex-arrow">→</span><span class="ex-vn">cung cấp</span></div>
+        <div class="ex-row"><span class="ex-en">tell → <strong>inform / notify</strong></span><span class="ex-arrow">→</span><span class="ex-vn">thông báo</span></div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Học thuật — Bài luận / Nghiên cứu</span><span class="ex-tag et-syna">ACADEMIC</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">show → <strong>indicate / reveal</strong></span><span class="ex-arrow">→</span><span class="ex-vn">cho thấy, tiết lộ</span></div>
+        <div class="ex-row"><span class="ex-en">say → <strong>state / claim / argue</strong></span><span class="ex-arrow">→</span><span class="ex-vn">phát biểu, lập luận</span></div>
+        <div class="ex-row"><span class="ex-en">use → <strong>utilize / employ</strong></span><span class="ex-arrow">→</span><span class="ex-vn">sử dụng</span></div>
+        <div class="ex-row"><span class="ex-en">important → <strong>significant / crucial</strong></span><span class="ex-arrow">→</span><span class="ex-vn">quan trọng</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🎯</span>
+      <div><strong style="color:var(--text)">Mẹo thực dụng:</strong> Bạn không cần nhớ hết mọi từ. Hãy chọn ra <strong>5-10 từ "công sở" quan trọng nhất</strong> phù hợp công việc của bạn, luyện dùng thành thạo trước, rồi mở rộng dần.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S7 — TÍNH TỪ SẮC THÁI TINH TẾ ════ -->
+<div class="section" id="s7">
+  <div class="sec-head">
+    <span class="sec-tag st-syna">NHÓM 7</span>
+    <div>
+      <h2 class="sec-title">Tính từ sắc thái tinh tế — Nghĩa giống nhưng cảm xúc khác</h2>
+      <p class="sec-sub">Connotation — sắc thái tích cực/tiêu cực ẩn trong từ</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Cùng nghĩa cơ bản nhưng sắc thái (connotation) khác nhau</div>
+    <p>Đây là điểm nâng cao nhất: 2 từ có thể "đồng nghĩa" về nghĩa đen, nhưng một từ mang <strong>sắc thái tích cực</strong>, từ kia mang <strong>sắc thái tiêu cực</strong>.</p>
+    <table class="tbl">
+      <thead><tr><th>Khái niệm</th><th>😊 Sắc thái tích cực</th><th>😐 Trung tính</th><th>😒 Sắc thái tiêu cực</th></tr></thead>
+      <tbody>
+        <tr><td>Gầy</td><td><span class="en">slim, slender</span></td><td><span class="en">thin</span></td><td><span class="en">skinny</span></td></tr>
+        <tr><td>Tiết kiệm</td><td><span class="en">thrifty, frugal</span></td><td><span class="en">economical</span></td><td><span class="en">stingy, cheap</span></td></tr>
+        <tr><td>Tự tin</td><td><span class="en">confident</span></td><td><span class="en">assertive</span></td><td><span class="en">arrogant, cocky</span></td></tr>
+        <tr><td>Tò mò</td><td><span class="en">curious, inquisitive</span></td><td><span class="en">interested</span></td><td><span class="en">nosy</span></td></tr>
+        <tr><td>Cứng đầu</td><td><span class="en">determined</span></td><td><span class="en">firm</span></td><td><span class="en">stubborn</span></td></tr>
+      </tbody>
+    </table>
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Bẫy nguy hiểm:</strong> Nếu khen ai đó "tiết kiệm" mà dùng nhầm <code>stingy</code> (keo kiệt) thay vì <code>thrifty</code> (tiết kiệm khéo léo), bạn sẽ vô tình XÚC PHẠM người nghe! Luôn tra connotation (sắc thái) khi học từ đồng nghĩa mới, đừng chỉ tra nghĩa đen.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S8 — CỤM THAY THẾ VERY + ADJ ════ -->
+<div class="section" id="s8">
+  <div class="sec-head">
+    <span class="sec-tag st-syna">NHÓM 8</span>
+    <div>
+      <h2 class="sec-title">Cụm từ nâng cao thay thế "very + adjective"</h2>
+      <p class="sec-sub">Cấu trúc nhấn mạnh tự nhiên như người bản ngữ</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Cấu trúc nhấn mạnh nâng cao</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Cấu trúc nhấn mạnh tự nhiên</span><span class="ex-tag et-syna">EMPHASIS</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">incredibly + adj</span><span class="ex-arrow">→</span><span class="ex-vn"><em>incredibly talented</em> — tài năng đáng kinh ngạc</span></div>
+        <div class="ex-row"><span class="ex-en">remarkably + adj</span><span class="ex-arrow">→</span><span class="ex-vn"><em>remarkably calm</em> — bình tĩnh đáng chú ý</span></div>
+        <div class="ex-row"><span class="ex-en">exceptionally + adj</span><span class="ex-arrow">→</span><span class="ex-vn"><em>exceptionally good</em> — tốt một cách ngoại lệ</span></div>
+        <div class="ex-row"><span class="ex-en">adj + to a fault</span><span class="ex-arrow">→</span><span class="ex-vn"><em>generous to a fault</em> — hào phóng quá mức</span></div>
+        <div class="ex-row"><span class="ex-en">nothing short of + noun</span><span class="ex-arrow">→</span><span class="ex-vn"><em>nothing short of amazing</em> — không gì khác ngoài tuyệt vời</span></div>
+      </div>
+    </div>
+    <div class="info i-note">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Khi nào dùng nhóm này?</strong> Dùng trong văn viết trang trọng, bài luận, thuyết trình để gây ấn tượng. Trong giao tiếp hàng ngày, "very" hoặc "really" vẫn hoàn toàn ổn — không cần cố "nâng cao hóa" mọi câu nói.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     NHÓM TRÁI NGHĨA - TRUNG BÌNH
+════════════════════════════════ -->
+<div class="cat-banner cb-ant">
+  <div class="cb-icon">🟠</div>
+  <div>
+    <div class="cb-badge">ANTONYMS · INTERMEDIATE</div>
+    <div class="cb-title">Phần 3 — Từ Trái Nghĩa Mức Trung Bình</div>
+    <div class="cb-sub">Cặp từ cơ bản · Tiền tố tạo từ trái nghĩa</div>
+  </div>
+</div>
+
+<!-- ════ S9 — CẶP TRÁI NGHĨA CƠ BẢN ════ -->
+<div class="section" id="s9">
+  <div class="sec-head">
+    <span class="sec-tag st-ant">NHÓM 9</span>
+    <div>
+      <h2 class="sec-title">Cặp từ trái nghĩa cơ bản — Tính từ thông dụng</h2>
+      <p class="sec-sub">Học theo cặp — nhớ nhanh gấp đôi</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Tính từ mô tả kích thước & số lượng</div>
+    <div class="ant-pair">
+      <div class="ant-side ant-side-a"><div class="ant-word">big / large</div><div class="ant-vn">to, lớn</div></div>
+      <div class="ant-vs">≠</div>
+      <div class="ant-side ant-side-b"><div class="ant-word">small / little</div><div class="ant-vn">nhỏ, bé</div></div>
+    </div>
+    <div class="ant-pair">
+      <div class="ant-side ant-side-a"><div class="ant-word">many / much</div><div class="ant-vn">nhiều</div></div>
+      <div class="ant-vs">≠</div>
+      <div class="ant-side ant-side-b"><div class="ant-word">few / little</div><div class="ant-vn">ít</div></div>
+    </div>
+    <div class="ant-pair">
+      <div class="ant-side ant-side-a"><div class="ant-word">long</div><div class="ant-vn">dài</div></div>
+      <div class="ant-vs">≠</div>
+      <div class="ant-side ant-side-b"><div class="ant-word">short</div><div class="ant-vn">ngắn</div></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Tính từ mô tả tính chất & cảm xúc</div>
+    <table class="tbl">
+      <thead><tr><th>Từ A</th><th>Trái nghĩa B</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td><span class="en">happy</span> (vui)</td><td><span class="en">sad</span> (buồn)</td><td><em>She looks happy/sad today.</em></td></tr>
+        <tr><td><span class="en">easy</span> (dễ)</td><td><span class="en">difficult / hard</span> (khó)</td><td><em>This test is easy/difficult.</em></td></tr>
+        <tr><td><span class="en">fast / quick</span> (nhanh)</td><td><span class="en">slow</span> (chậm)</td><td><em>He runs fast/slow.</em></td></tr>
+        <tr><td><span class="en">hot</span> (nóng)</td><td><span class="en">cold</span> (lạnh)</td><td><em>The soup is hot/cold.</em></td></tr>
+        <tr><td><span class="en">strong</span> (mạnh)</td><td><span class="en">weak</span> (yếu)</td><td><em>He is strong/weak.</em></td></tr>
+        <tr><td><span class="en">clean</span> (sạch)</td><td><span class="en">dirty</span> (bẩn)</td><td><em>The room is clean/dirty.</em></td></tr>
+        <tr><td><span class="en">expensive</span> (đắt)</td><td><span class="en">cheap</span> (rẻ)</td><td><em>This phone is expensive/cheap.</em></td></tr>
+        <tr><td><span class="en">old</span> (cũ/già)</td><td><span class="en">new / young</span> (mới/trẻ)</td><td><em>An old/new car.</em></td></tr>
+        <tr><td><span class="en">full</span> (đầy)</td><td><span class="en">empty</span> (rỗng)</td><td><em>The glass is full/empty.</em></td></tr>
+        <tr><td><span class="en">light</span> (nhẹ/sáng)</td><td><span class="en">heavy / dark</span> (nặng/tối)</td><td><em>A light/heavy bag.</em></td></tr>
+      </tbody>
+    </table>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo học theo cặp:</strong> Luôn học 2 từ trái nghĩa CÙNG LÚC, không học riêng lẻ. Khi viết flashcard, viết cả cặp: <em>hot ↔ cold</em> thay vì chỉ <em>hot</em>. Não bộ nhớ tốt hơn khi có sự đối lập để so sánh.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S10 — TRÁI NGHĨA BẰNG TIỀN TỐ ════ -->
+<div class="section" id="s10">
+  <div class="sec-head">
+    <span class="sec-tag st-ant">NHÓM 10</span>
+    <div>
+      <h2 class="sec-title">Trái nghĩa bằng tiền tố — un-/in-/dis-/im-</h2>
+      <p class="sec-sub">Mẹo nhân đôi vốn từ cực nhanh chỉ với 1 quy tắc</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Quy tắc vàng: Thêm tiền tố phủ định vào từ gốc</div>
+    <p>Rất nhiều từ trái nghĩa trong tiếng Anh được tạo bằng cách <strong>thêm tiền tố (prefix)</strong> mang nghĩa phủ định vào trước từ gốc. Học 5 tiền tố này = mở khóa hàng trăm từ trái nghĩa.</p>
+
+    <div class="rule-card" style="background:var(--s1);border:1px solid var(--border2);border-radius:14px;overflow:hidden;margin:14px 0">
+      <table class="tbl" style="margin:0">
+        <thead><tr><th>Tiền tố</th><th>Dùng với</th><th>Ví dụ</th><th>Nghĩa</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="prefix-tag">un-</span></td>
+            <td>Phổ biến nhất</td>
+            <td><span class="en">happy → unhappy</span><br><span class="en">kind → unkind</span></td>
+            <td>không vui · không tốt bụng</td>
+          </tr>
+          <tr>
+            <td><span class="prefix-tag">in-</span></td>
+            <td>Trước từ gốc Latin</td>
+            <td><span class="en">correct → incorrect</span><br><span class="en">visible → invisible</span></td>
+            <td>không đúng · vô hình</td>
+          </tr>
+          <tr>
+            <td><span class="prefix-tag">im-</span></td>
+            <td>Trước p, b, m</td>
+            <td><span class="en">possible → impossible</span><br><span class="en">patient → impatient</span></td>
+            <td>không thể · thiếu kiên nhẫn</td>
+          </tr>
+          <tr>
+            <td><span class="prefix-tag">dis-</span></td>
+            <td>Động từ & tính từ</td>
+            <td><span class="en">like → dislike</span><br><span class="en">honest → dishonest</span></td>
+            <td>không thích · không trung thực</td>
+          </tr>
+          <tr>
+            <td><span class="prefix-tag">ir-</span></td>
+            <td>Trước chữ "r"</td>
+            <td><span class="en">regular → irregular</span><br><span class="en">responsible → irresponsible</span></td>
+            <td>bất quy tắc · vô trách nhiệm</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Thêm ví dụ thực tế</span><span class="ex-tag et-ant">PREFIX EXAMPLES</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">comfortable → <strong>uncomfortable</strong></span><span class="ex-arrow">→</span><span class="ex-vn">thoải mái → khó chịu</span></div>
+        <div class="ex-row"><span class="ex-en">fair → <strong>unfair</strong></span><span class="ex-arrow">→</span><span class="ex-vn">công bằng → bất công</span></div>
+        <div class="ex-row"><span class="ex-en">formal → <strong>informal</strong></span><span class="ex-arrow">→</span><span class="ex-vn">trang trọng → không trang trọng</span></div>
+        <div class="ex-row"><span class="ex-en">complete → <strong>incomplete</strong></span><span class="ex-arrow">→</span><span class="ex-vn">hoàn chỉnh → chưa hoàn chỉnh</span></div>
+        <div class="ex-row"><span class="ex-en">appear → <strong>disappear</strong></span><span class="ex-arrow">→</span><span class="ex-vn">xuất hiện → biến mất</span></div>
+        <div class="ex-row"><span class="ex-en">agree → <strong>disagree</strong></span><span class="ex-arrow">→</span><span class="ex-vn">đồng ý → không đồng ý</span></div>
+        <div class="ex-row"><span class="ex-en">legal → <strong>illegal</strong></span><span class="ex-arrow">→</span><span class="ex-vn">hợp pháp → bất hợp pháp (tiền tố il- trước "l")</span></div>
+        <div class="ex-row"><span class="ex-en">mature → <strong>immature</strong></span><span class="ex-arrow">→</span><span class="ex-vn">chín chắn → trẻ con, bồng bột</span></div>
+      </div>
+    </div>
+
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Không có quy tắc tuyệt đối 100%!</strong> Không thể đoán chắc chắn từ nào dùng tiền tố nào — phải học thuộc dần qua thực hành. Tuy nhiên có xu hướng: <code>im-</code> trước p/b/m, <code>ir-</code> trước r, <code>il-</code> trước l, còn lại thường là <code>un-</code> hoặc <code>in-</code>. Khi không chắc, tra từ điển để xác nhận.</div>
+    </div>
+
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ "UN là vua":</strong> Nếu không chắc dùng tiền tố nào, hãy thử <code>un-</code> trước — đây là tiền tố phổ biến nhất, đặc biệt với từ gốc Anglo-Saxon (happy, kind, fair, clear...). Còn từ "sang trọng" có gốc Latin/Pháp (possible, correct, patient...) thường dùng <code>in-/im-/ir-</code>.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S11 — TRÁI NGHĨA ĐỘNG TỪ & TRẠNG TỪ ════ -->
+<div class="section" id="s11">
+  <div class="sec-head">
+    <span class="sec-tag st-ant">NHÓM 11</span>
+    <div>
+      <h2 class="sec-title">Trái nghĩa động từ & trạng từ thông dụng</h2>
+      <p class="sec-sub">Không chỉ tính từ — động từ và trạng từ cũng có cặp đối lập</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Cặp động từ trái nghĩa</div>
+    <table class="tbl">
+      <thead><tr><th>Động từ A</th><th>Trái nghĩa B</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td><span class="en">buy</span> (mua)</td><td><span class="en">sell</span> (bán)</td><td><em>I want to buy/sell this car.</em></td></tr>
+        <tr><td><span class="en">open</span> (mở)</td><td><span class="en">close</span> (đóng)</td><td><em>Please open/close the door.</em></td></tr>
+        <tr><td><span class="en">arrive</span> (đến)</td><td><span class="en">leave / depart</span> (rời đi)</td><td><em>The train arrives/leaves at 9am.</em></td></tr>
+        <tr><td><span class="en">begin / start</span> (bắt đầu)</td><td><span class="en">end / finish</span> (kết thúc)</td><td><em>The movie begins/ends at 8.</em></td></tr>
+        <tr><td><span class="en">borrow</span> (mượn)</td><td><span class="en">lend</span> (cho mượn)</td><td><em>Can I borrow your pen?</em></td></tr>
+        <tr><td><span class="en">win</span> (thắng)</td><td><span class="en">lose</span> (thua)</td><td><em>We won/lost the game.</em></td></tr>
+        <tr><td><span class="en">remember</span> (nhớ)</td><td><span class="en">forget</span> (quên)</td><td><em>I remember/forget her name.</em></td></tr>
+        <tr><td><span class="en">push</span> (đẩy)</td><td><span class="en">pull</span> (kéo)</td><td><em>Push/pull the door.</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Cặp trạng từ & giới từ trái nghĩa</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Trạng từ / Giới từ đối lập</span><span class="ex-tag et-ant">ADVERBS & PREPOSITIONS</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">here ≠ there</span><span class="ex-arrow">→</span><span class="ex-vn">ở đây ≠ ở đó</span></div>
+        <div class="ex-row"><span class="ex-en">always ≠ never</span><span class="ex-arrow">→</span><span class="ex-vn">luôn luôn ≠ không bao giờ</span></div>
+        <div class="ex-row"><span class="ex-en">above ≠ below</span><span class="ex-arrow">→</span><span class="ex-vn">ở trên ≠ ở dưới</span></div>
+        <div class="ex-row"><span class="ex-en">before ≠ after</span><span class="ex-arrow">→</span><span class="ex-vn">trước ≠ sau</span></div>
+        <div class="ex-row"><span class="ex-en">inside ≠ outside</span><span class="ex-arrow">→</span><span class="ex-vn">bên trong ≠ bên ngoài</span></div>
+        <div class="ex-row"><span class="ex-en">early ≠ late</span><span class="ex-arrow">→</span><span class="ex-vn">sớm ≠ muộn</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     CHEAT SHEET
+════════════════════════════════ -->
+<div class="cat-banner cb-cheat">
+  <div class="cb-icon">📋</div>
+  <div>
+    <div class="cb-badge">TỔNG HỢP</div>
+    <div class="cb-title">Cheat Sheet — Đồng nghĩa & Trái nghĩa</div>
+    <div class="cb-sub">In ra · Dán lên tường · Xem lại nhanh mỗi ngày</div>
+  </div>
+</div>
+
+<div class="section" id="s12">
+  <div class="sec-head">
+    <span class="sec-tag st-cheat">CHEAT SHEET</span>
+    <div>
+      <h2 class="sec-title">📋 Bảng tổng hợp toàn bộ kiến thức</h2>
+      <p class="sec-sub">Quick reference · Từ thay thế nhanh · Tiền tố trái nghĩa</p>
+    </div>
+  </div>
+
+  <div class="cheat-grid">
+
+    <div class="cheat-card">
+      <h4 class="h4-synm">🟢 Thay "Happy" — Trung bình</h4>
+      <div class="cheat-row"><span class="ck">glad</span><span class="cv">vui, mừng (nhẹ)</span></div>
+      <div class="cheat-row"><span class="ck">pleased</span><span class="cv">hài lòng</span></div>
+      <div class="cheat-row"><span class="ck">delighted</span><span class="cv">rất vui (mạnh)</span></div>
+      <div class="cheat-row"><span class="ck">cheerful</span><span class="cv">vui vẻ (tính cách)</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-synm">🟢 Thay "Good / Bad"</h4>
+      <div class="cheat-row"><span class="ck">good →</span><span class="cv">great, excellent, nice</span></div>
+      <div class="cheat-row"><span class="ck">bad →</span><span class="cv">terrible, awful, poor</span></div>
+      <div class="cheat-row"><span class="ck">big →</span><span class="cv">large, huge, enormous</span></div>
+      <div class="cheat-row"><span class="ck">small →</span><span class="cv">little, tiny, compact</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-synm">🟢 Thay "Say / Look / Go"</h4>
+      <div class="cheat-row"><span class="ck">say →</span><span class="cv">mention, explain, whisper</span></div>
+      <div class="cheat-row"><span class="ck">look →</span><span class="cv">watch, see, stare, glance</span></div>
+      <div class="cheat-row"><span class="ck">go →</span><span class="cv">walk, leave, head, travel</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-synm">🟢 Thay "Very + Adj"</h4>
+      <div class="cheat-row"><span class="ck">very tired →</span><span class="cv">exhausted</span></div>
+      <div class="cheat-row"><span class="ck">very hungry →</span><span class="cv">starving</span></div>
+      <div class="cheat-row"><span class="ck">very scared →</span><span class="cv">terrified</span></div>
+      <div class="cheat-row"><span class="ck">very beautiful →</span><span class="cv">gorgeous, stunning</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-syna">🟣 Thang trang trọng — Casual→Formal</h4>
+      <div class="cheat-row"><span class="ck">get →</span><span class="cv">receive → obtain</span></div>
+      <div class="cheat-row"><span class="ck">buy →</span><span class="cv">purchase → acquire</span></div>
+      <div class="cheat-row"><span class="ck">help →</span><span class="cv">assist → facilitate</span></div>
+      <div class="cheat-row"><span class="ck">show →</span><span class="cv">demonstrate → illustrate</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-syna">🟣 Động từ công sở</h4>
+      <div class="cheat-row"><span class="ck">talk about →</span><span class="cv">discuss</span></div>
+      <div class="cheat-row"><span class="ck">make better →</span><span class="cv">improve, enhance</span></div>
+      <div class="cheat-row"><span class="ck">check →</span><span class="cv">review, verify</span></div>
+      <div class="cheat-row"><span class="ck">tell →</span><span class="cv">inform, notify</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-syna">🟣 Sắc thái tích cực/tiêu cực</h4>
+      <div class="cheat-row"><span class="ck">Gầy (+)</span><span class="cv">slim, slender</span></div>
+      <div class="cheat-row"><span class="ck">Gầy (–)</span><span class="cv">skinny</span></div>
+      <div class="cheat-row"><span class="ck">Tiết kiệm (+)</span><span class="cv">thrifty, frugal</span></div>
+      <div class="cheat-row"><span class="ck">Tiết kiệm (–)</span><span class="cv">stingy, cheap</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-syna">🟣 Cấu trúc nhấn mạnh nâng cao</h4>
+      <div class="cheat-row"><span class="ck">incredibly + adj</span><span class="cv">đáng kinh ngạc</span></div>
+      <div class="cheat-row"><span class="ck">remarkably + adj</span><span class="cv">đáng chú ý</span></div>
+      <div class="cheat-row"><span class="ck">exceptionally + adj</span><span class="cv">ngoại lệ</span></div>
+      <div class="cheat-row"><span class="ck">nothing short of</span><span class="cv">không gì khác ngoài</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-ant">🟠 Tiền tố tạo trái nghĩa</h4>
+      <div class="cheat-row"><span class="ck">un-</span><span class="cv">happy → unhappy</span></div>
+      <div class="cheat-row"><span class="ck">in-</span><span class="cv">correct → incorrect</span></div>
+      <div class="cheat-row"><span class="ck">im-</span><span class="cv">possible → impossible</span></div>
+      <div class="cheat-row"><span class="ck">dis-</span><span class="cv">like → dislike</span></div>
+      <div class="cheat-row"><span class="ck">ir-</span><span class="cv">regular → irregular</span></div>
+      <div class="cheat-row"><span class="ck">il-</span><span class="cv">legal → illegal</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-ant">🟠 Cặp tính từ cơ bản</h4>
+      <div class="cheat-row"><span class="ck">big ≠ small</span><span class="cv">to ≠ nhỏ</span></div>
+      <div class="cheat-row"><span class="ck">easy ≠ difficult</span><span class="cv">dễ ≠ khó</span></div>
+      <div class="cheat-row"><span class="ck">fast ≠ slow</span><span class="cv">nhanh ≠ chậm</span></div>
+      <div class="cheat-row"><span class="ck">hot ≠ cold</span><span class="cv">nóng ≠ lạnh</span></div>
+      <div class="cheat-row"><span class="ck">full ≠ empty</span><span class="cv">đầy ≠ rỗng</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-ant">🟠 Cặp động từ cơ bản</h4>
+      <div class="cheat-row"><span class="ck">buy ≠ sell</span><span class="cv">mua ≠ bán</span></div>
+      <div class="cheat-row"><span class="ck">open ≠ close</span><span class="cv">mở ≠ đóng</span></div>
+      <div class="cheat-row"><span class="ck">borrow ≠ lend</span><span class="cv">mượn ≠ cho mượn</span></div>
+      <div class="cheat-row"><span class="ck">remember ≠ forget</span><span class="cv">nhớ ≠ quên</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-ins">✅ Lộ trình học gợi ý</h4>
+      <div class="cheat-row"><span class="ck">Tuần 1-2</span><span class="cv">Nhóm 1-4 (Đồng nghĩa TB)</span></div>
+      <div class="cheat-row"><span class="ck">Tuần 3</span><span class="cv">Nhóm 9-10 (Trái nghĩa + tiền tố)</span></div>
+      <div class="cheat-row"><span class="ck">Tuần 4</span><span class="cv">Nhóm 11 (Động từ trái nghĩa)</span></div>
+      <div class="cheat-row"><span class="ck">Tháng 2+</span><span class="cv">Nhóm 5-8 (Nâng cao)</span></div>
+    </div>
+
+  </div>
+
+  <!-- BẢNG TỔNG HỢP TIỀN TỐ ĐẦY ĐỦ -->
+  <div class="sub">
+    <div class="sub-title">Bảng tra nhanh — 30 cặp trái nghĩa bằng tiền tố thông dụng nhất</div>
+    <table class="tbl">
+      <thead><tr><th>Từ gốc</th><th>Trái nghĩa</th><th>Từ gốc</th><th>Trái nghĩa</th></tr></thead>
+      <tbody>
+        <tr><td>happy</td><td class="ok">unhappy</td><td>possible</td><td class="ok">impossible</td></tr>
+        <tr><td>fair</td><td class="ok">unfair</td><td>patient</td><td class="ok">impatient</td></tr>
+        <tr><td>kind</td><td class="ok">unkind</td><td>polite</td><td class="ok">impolite</td></tr>
+        <tr><td>comfortable</td><td class="ok">uncomfortable</td><td>mature</td><td class="ok">immature</td></tr>
+        <tr><td>correct</td><td class="ok">incorrect</td><td>like</td><td class="ok">dislike</td></tr>
+        <tr><td>visible</td><td class="ok">invisible</td><td>honest</td><td class="ok">dishonest</td></tr>
+        <tr><td>complete</td><td class="ok">incomplete</td><td>agree</td><td class="ok">disagree</td></tr>
+        <tr><td>formal</td><td class="ok">informal</td><td>appear</td><td class="ok">disappear</td></tr>
+        <tr><td>regular</td><td class="ok">irregular</td><td>obey</td><td class="ok">disobey</td></tr>
+        <tr><td>responsible</td><td class="ok">irresponsible</td><td>legal</td><td class="ok">illegal</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info i-ok" style="margin-top:22px">
+    <span class="info-ico">🎯</span>
+    <div style="font-size:13.5px">
+      <strong style="color:var(--text)">Tài nguyên luyện tập miễn phí:</strong><br>
+      <span style="color:var(--muted)">
+        <a href="https://www.thesaurus.com" style="color:var(--acc)">Thesaurus.com</a> — Tra từ đồng nghĩa nhanh nhất &nbsp;·&nbsp;
+        <a href="https://www.merriam-webster.com/thesaurus" style="color:var(--acc)">Merriam-Webster Thesaurus</a> — Có giải thích sắc thái &nbsp;·&nbsp;
+        <a href="https://www.vocabulary.com" style="color:var(--acc)">Vocabulary.com</a> — Học từ + quiz tương tác &nbsp;·&nbsp;
+        <a href="https://ludwig.guru" style="color:var(--acc)">Ludwig.guru</a> — Kiểm tra từ dùng trong ngữ cảnh thực tế
+      </span>
+    </div>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<div class="footer">
+  <span>🔄 Từ Đồng Nghĩa & Trái Nghĩa · Hướng dẫn toàn tập · Dành cho người mất gốc · 2026</span>
+  <span style="margin-left:auto;color:var(--faint)">4 nhóm Đồng nghĩa TB · 4 nhóm Đồng nghĩa NC · 3 nhóm Trái nghĩa · Cheat Sheet</span>
+</div>
+</div><!-- /main -->
+
+<script>
+window.addEventListener('scroll',()=>{
+  const el=document.documentElement;
+  document.getElementById('pbar').style.width=(el.scrollTop/(el.scrollHeight-el.clientHeight)*100)+'%';
+});
+const sections=document.querySelectorAll('.section[id]');
+const links=document.querySelectorAll('.nav-link');
+sections.forEach(s=>new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      const a=document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+      if(a)a.classList.add('active');
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'}).observe(s));
+</script>
+</body>
+</html>

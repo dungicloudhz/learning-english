@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⏰ 12 Thì Tiếng Anh — Hướng dẫn toàn tập cho người mất gốc</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080810;--s1:#0e0e1c;--s2:#131326;--s3:#18182e;--s4:#1e1e38;
+  --border:#222240;--border2:#2c2c50;--text:#e6e6f2;--muted:#666698;--faint:#363660;
+  --acc:#ffd060;--acc-d:#c89820;--acc-dim:rgba(255,208,96,.11);--acc-glow:rgba(255,208,96,.24);
+  --green:#40d88e;--green-dim:rgba(64,216,142,.10);
+  --blue:#5ba8ff;--blue-dim:rgba(91,168,255,.10);
+  --purple:#a07af4;--purple-dim:rgba(160,122,244,.10);
+  --yellow:#ffd060;--yellow-dim:rgba(255,208,96,.10);
+  --teal:#30d8c0;--teal-dim:rgba(48,216,192,.10);
+  --orange:#ff8c50;--orange-dim:rgba(255,140,80,.10);
+  --pink:#ff6584;--pink-dim:rgba(255,101,132,.11);--pink-glow:rgba(255,101,132,.22);
+  --sky:#38bdf8;--sky-dim:rgba(56,189,248,.10);
+  /* Brand */
+  --oc:#38bdf8;--oc-dim:rgba(56,189,248,.13);--oc-glow:rgba(56,189,248,.30);
+  --oc2:#5ba8ff;--oc2-dim:rgba(91,168,255,.12);
+  /* section colours */
+  --ins:#40d88e;--ins-dim:rgba(64,216,142,.12);--ins-glow:rgba(64,216,142,.28);
+  --ch:#ffd060;--ch-dim:rgba(255,208,96,.12);--ch-glow:rgba(255,208,96,.28);
+  --sk:#a07af4;--sk-dim:rgba(160,122,244,.12);--sk-glow:rgba(160,122,244,.28);
+  --au:#ff6584;--au-dim:rgba(255,101,132,.12);--au-glow:rgba(255,101,132,.28);
+  --code-bg:#05050e;
+  /* tense group colours */
+  --present:#38bdf8;   --present-dim:rgba(56,189,248,.13);   --present-glow:rgba(56,189,248,.28);
+  --past:#a07af4;      --past-dim:rgba(160,122,244,.13);      --past-glow:rgba(160,122,244,.28);
+  --future:#ffd060;    --future-dim:rgba(255,208,96,.13);     --future-glow:rgba(255,208,96,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ── SIDEBAR ── */
+.sidebar{position:fixed;left:0;top:0;width:272px;height:100vh;background:var(--s1);border-right:1px solid var(--border);overflow-y:auto;z-index:400;display:flex;flex-direction:column}
+.sb-logo{padding:20px 18px 16px;border-bottom:1px solid var(--border)}
+.sb-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.logo-icon{width:44px;height:44px;border-radius:11px;flex-shrink:0;background:linear-gradient(135deg,var(--oc),var(--sk));display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 26px var(--oc-glow)}
+.logo-text h2{font-size:15px;font-weight:800;letter-spacing:-.4px}
+.logo-text p{font-size:10.5px;color:var(--muted);margin-top:2px}
+.prog-wrap{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--present),var(--past),var(--future));width:0%;transition:width .4s;border-radius:2px}
+.nav-section{padding:6px 0 4px}
+.nav-group-hdr{display:flex;align-items:center;gap:7px;margin:6px 12px 3px;padding:6px 10px;border-radius:7px;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.ngh-oc{background:var(--oc-dim);color:var(--oc)}
+.ngh-present{background:var(--present-dim);color:var(--present)}
+.ngh-past{background:var(--past-dim);color:var(--past)}
+.ngh-future{background:var(--future-dim);color:var(--future)}
+.ngh-ch{background:var(--ch-dim);color:var(--ch)}
+.ngh-au{background:var(--au-dim);color:var(--au)}
+.nav-link{display:flex;align-items:center;gap:9px;padding:5px 18px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;border-left:2px solid transparent;transition:all .14s}
+.nav-link:hover,.nav-link.active{color:var(--text);background:rgba(255,208,96,.07);border-left-color:var(--acc)}
+.nav-link .ico{font-size:12px;flex-shrink:0;width:16px;text-align:center}
+.nav-badge{margin-left:auto;font-size:9px;font-weight:700;padding:2px 7px;border-radius:100px;background:var(--acc-dim);color:var(--acc)}
+
+/* ── MAIN ── */
+.main{margin-left:272px;min-height:100vh}
+.hero{padding:72px 64px 56px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse 60% 55% at 75% 20%,rgba(56,189,248,.10) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 55% at 10% 80%,rgba(160,122,244,.08) 0%,transparent 55%),
+             radial-gradient(ellipse 45% 50% at 50% 55%,rgba(255,208,96,.04) 0%,transparent 60%),var(--bg)}
+.hero-dots{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+.hero-glow{position:absolute;right:-80px;top:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(56,189,248,.09) 0%,transparent 65%);pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--oc-dim);border:1px solid rgba(56,189,248,.35);color:var(--oc);padding:5px 16px;border-radius:100px;font-size:11.5px;font-weight:700;margin-bottom:24px;letter-spacing:.3px}
+.hero-eyebrow .pulse{width:6px;height:6px;border-radius:50%;background:var(--oc);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero h1{font-size:50px;font-weight:900;letter-spacing:-2.5px;line-height:1.05;margin-bottom:18px}
+.h-grad{background:linear-gradient(135deg,var(--oc) 0%,var(--sk) 55%,var(--ch) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.h-present{color:var(--present)}.h-past{color:var(--past)}.h-future{color:var(--future)}
+.h-acc{color:var(--acc)}.h-ins{color:var(--ins)}.h-sk{color:var(--sk)}
+.hero-desc{font-size:15.5px;color:var(--muted);max-width:600px;line-height:1.75;margin-bottom:28px}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:5px 14px;border-radius:7px;font-size:12px;font-weight:700}
+.chip-oc{background:var(--oc-dim);color:var(--oc)}.chip-present{background:var(--present-dim);color:var(--present)}
+.chip-past{background:var(--past-dim);color:var(--past)}.chip-future{background:var(--future-dim);color:var(--future)}
+.chip-ins{background:var(--ins-dim);color:var(--ins)}.chip-ch{background:var(--ch-dim);color:var(--ch)}
+.chip-sk{background:var(--sk-dim);color:var(--sk)}.chip-au{background:var(--au-dim);color:var(--au)}
+.chip-t{background:var(--teal-dim);color:var(--teal)}
+
+/* ── CATEGORY BANNERS ── */
+.cat-banner{display:flex;align-items:center;gap:16px;padding:20px 24px;border-radius:14px;margin-bottom:44px;position:relative;overflow:hidden}
+.cat-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cb-present{background:var(--present-dim);border:1px solid rgba(56,189,248,.30)}.cb-present::before{background:linear-gradient(90deg,var(--present),var(--ins))}
+.cb-past{background:var(--past-dim);border:1px solid rgba(160,122,244,.30)}.cb-past::before{background:linear-gradient(90deg,var(--past),var(--pink))}
+.cb-future{background:var(--future-dim);border:1px solid rgba(255,208,96,.30)}.cb-future::before{background:linear-gradient(90deg,var(--future),var(--orange))}
+.cb-cheat{background:var(--au-dim);border:1px solid rgba(255,101,132,.30)}.cb-cheat::before{background:linear-gradient(90deg,var(--au),var(--sk))}
+.cb-icon{font-size:36px;flex-shrink:0}
+.cb-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.cb-present .cb-badge{background:var(--present-dim);color:var(--present)}
+.cb-past .cb-badge{background:var(--past-dim);color:var(--past)}
+.cb-future .cb-badge{background:var(--future-dim);color:var(--future)}
+.cb-cheat .cb-badge{background:var(--au-dim);color:var(--au)}
+.cb-title{font-size:20px;font-weight:800;letter-spacing:-.5px}.cb-sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+/* ── CONTENT ── */
+.content{padding:52px 64px;max-width:1040px}
+.section{margin-bottom:68px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 10px;border-radius:5px;margin-top:5px;flex-shrink:0;letter-spacing:.5px}
+.st-overview{color:var(--oc);background:var(--oc-dim);border:1px solid var(--oc-glow)}
+.st-present{color:var(--present);background:var(--present-dim);border:1px solid var(--present-glow)}
+.st-past{color:var(--past);background:var(--past-dim);border:1px solid var(--past-glow)}
+.st-future{color:var(--future);background:var(--future-dim);border:1px solid var(--future-glow)}
+.st-cheat{color:var(--au);background:var(--au-dim);border:1px solid var(--au-glow)}
+.st-ins{color:var(--ins);background:var(--ins-dim);border:1px solid var(--ins-glow)}
+.sec-title{font-size:22px;font-weight:800;letter-spacing:-.6px;margin-bottom:5px}
+.sec-sub{font-size:13px;color:var(--muted)}
+
+/* ── SUB SECTIONS ── */
+.sub{margin-bottom:36px}
+.sub-title{font-size:14.5px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:10px}
+.sub-title::before{content:'';display:inline-block;width:14px;height:3px;background:var(--acc);border-radius:2px;flex-shrink:0}
+.sub p,.sub ul,.sub ol{color:var(--muted);font-size:13.5px;margin-bottom:10px;line-height:1.78}
+.sub ul,.sub ol{padding-left:22px}.sub li{margin-bottom:5px}.sub strong{color:var(--text)}
+
+/* ── TENSE CARD (main display for each tense) ── */
+.tense-card{background:var(--s1);border:1px solid var(--border2);border-radius:14px;overflow:hidden;margin:14px 0}
+.tense-card-head{padding:18px 22px;border-bottom:1px solid var(--border)}
+.tense-number{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;padding:2px 9px;border-radius:4px;display:inline-block;margin-bottom:8px;letter-spacing:.6px}
+.tn-present{background:var(--present-dim);color:var(--present)}
+.tn-past{background:var(--past-dim);color:var(--past)}
+.tn-future{background:var(--future-dim);color:var(--future)}
+.tense-name{font-size:19px;font-weight:800;letter-spacing:-.4px;margin-bottom:3px}
+.tense-vn{font-size:12.5px;color:var(--muted)}
+.tense-body{padding:20px 22px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tense-formula{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:15px}
+.tense-formula h4{font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.formula-row{display:flex;align-items:baseline;gap:10px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12.5px}
+.formula-row:last-child{border-bottom:none}
+.fr-label{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0;letter-spacing:.3px}
+.fr-pos{background:var(--ins-dim);color:var(--ins)}
+.fr-neg{background:var(--au-dim);color:var(--au)}
+.fr-q{background:var(--ch-dim);color:var(--ch)}
+.fr-formula{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--teal)}
+.tense-when{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:15px}
+.tense-when h4{font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.when-item{display:flex;align-items:flex-start;gap:8px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12.5px;color:var(--muted)}
+.when-item:last-child{border-bottom:none}
+.when-dot{width:6px;height:6px;border-radius:50%;margin-top:6px;flex-shrink:0}
+.wd-present{background:var(--present)}.wd-past{background:var(--past)}.wd-future{background:var(--future)}
+
+/* ── EXAMPLE BOX ── */
+.ex-box{background:var(--s1);border:1px solid var(--border2);border-radius:11px;overflow:hidden;margin:13px 0}
+.ex-head{display:flex;align-items:center;gap:8px;padding:9px 16px;background:var(--s2);border-bottom:1px solid var(--border)}
+.ex-label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.ex-tag{margin-left:auto;font-size:9px;font-weight:700;padding:2px 9px;border-radius:100px;flex-shrink:0}
+.et-present{background:var(--present-dim);color:var(--present)}
+.et-past{background:var(--past-dim);color:var(--past)}
+.et-future{background:var(--future-dim);color:var(--future)}
+.et-tip{background:var(--ch-dim);color:var(--ch)}
+.et-compare{background:var(--sk-dim);color:var(--sk)}
+.ex-body{padding:14px 20px}
+.ex-row{display:flex;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13.5px}
+.ex-row:last-child{border-bottom:none}
+.ex-type{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0}
+.ext-pos{background:var(--ins-dim);color:var(--ins)}
+.ext-neg{background:var(--au-dim);color:var(--au)}
+.ext-q{background:var(--ch-dim);color:var(--ch)}
+.ex-en{color:var(--text);font-weight:600;min-width:240px;flex-shrink:0}
+.ex-vn{color:var(--muted)}
+.ex-note{font-size:11px;color:var(--faint);margin-left:auto;flex-shrink:0;font-style:italic}
+.ex-arrow{color:var(--faint);flex-shrink:0}
+
+/* ── INFO BOXES ── */
+.info{display:flex;gap:12px;padding:13px 16px;border-radius:9px;margin:12px 0;font-size:13px;line-height:1.65}
+.info-ico{font-size:15px;flex-shrink:0;margin-top:1px}
+.i-ok{background:var(--green-dim);border:1px solid rgba(64,216,142,.2);color:#30a870}
+.i-warn{background:var(--yellow-dim);border:1px solid rgba(255,208,96,.2);color:#b09030}
+.i-tip{background:var(--blue-dim);border:1px solid rgba(91,168,255,.2);color:#3878d0}
+.i-note{background:var(--purple-dim);border:1px solid rgba(160,122,244,.2);color:#8060d0}
+.i-err{background:var(--pink-dim);border:1px solid rgba(255,101,132,.2);color:#cc3355}
+
+/* ── RW BOX ── */
+.rw-box{background:var(--s1);border:1px solid var(--border2);border-radius:12px;padding:16px 20px;margin:13px 0;position:relative;overflow:hidden}
+.rw-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
+.rw-present::before{background:var(--present)}.rw-past::before{background:var(--past)}
+.rw-future::before{background:var(--future)}.rw-ins::before{background:var(--ins)}
+.rw-ch::before{background:var(--ch)}.rw-sk::before{background:var(--sk)}
+.rw-label{font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.rw-present .rw-label{color:var(--present)}.rw-past .rw-label{color:var(--past)}
+.rw-future .rw-label{color:var(--future)}.rw-ins .rw-label{color:var(--ins)}
+.rw-ch .rw-label{color:var(--ch)}.rw-sk .rw-label{color:var(--sk)}
+.rw-title{font-size:14px;font-weight:700;margin-bottom:5px}
+.rw-body{font-size:13px;color:var(--muted);line-height:1.68}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:13px 0;border-radius:11px;overflow:hidden}
+.tbl th{background:var(--s3);padding:9px 14px;text-align:left;font-weight:700;font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);border-bottom:1px solid var(--border2)}
+.tbl td{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted);vertical-align:top;font-size:13px}
+.tbl tr:hover td{background:rgba(255,255,255,.022)}
+.tbl td:first-child{color:var(--text);font-weight:600;white-space:nowrap}
+.tbl code{font-family:'JetBrains Mono',monospace;font-size:11px;background:var(--code-bg);padding:2px 6px;border-radius:4px;color:var(--teal)}
+.tbl .badge-present{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--present-dim);color:var(--present)}
+.tbl .badge-past{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--past-dim);color:var(--past)}
+.tbl .badge-future{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--future-dim);color:var(--future)}
+.tbl .star{color:var(--ch);font-size:12px}
+
+/* ── GRIDS ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:13px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:13px 0}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:11px;padding:15px;transition:all .2s;cursor:default}
+.card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.38)}
+.card-icon{font-size:22px;margin-bottom:8px}.card-title{font-size:13px;font-weight:700;margin-bottom:4px}.card-desc{font-size:12px;color:var(--muted);line-height:1.55}
+
+/* ── COMPARE BOX ── */
+.cmp-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:11px;overflow:hidden;margin:13px 0}
+.cmp-a{border-right:1px solid var(--border);padding:14px 16px}
+.cmp-b{padding:14px 16px}
+.cmp-label{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.cmp-text{font-size:13px;color:var(--text);line-height:1.68}
+.cmp-note{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+
+/* ── SIGNALS PILL LIST ── */
+.signals{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}
+.sig{padding:4px 12px;border-radius:6px;font-size:11.5px;font-weight:700;font-family:'JetBrains Mono',monospace}
+.sig-present{background:var(--present-dim);color:var(--present)}
+.sig-past{background:var(--past-dim);color:var(--past)}
+.sig-future{background:var(--future-dim);color:var(--future)}
+.sig-common{background:var(--ins-dim);color:var(--ins)}
+
+/* ── TIMELINE VISUAL ── */
+.timeline{background:var(--s2);border:1px solid var(--border2);border-radius:12px;padding:20px 24px;margin:13px 0;overflow-x:auto}
+.tl-line{display:flex;align-items:center;gap:0;position:relative;min-width:500px}
+.tl-past-zone{flex:2;display:flex;flex-direction:column;align-items:center;gap:8px}
+.tl-now-zone{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 8px}
+.tl-future-zone{flex:2;display:flex;flex-direction:column;align-items:center;gap:8px}
+.tl-bar{height:4px;width:100%;background:var(--border2);border-radius:2px;position:relative}
+.tl-dot{width:14px;height:14px;border-radius:50%;border:2px solid;flex-shrink:0}
+.tl-dot-past{background:var(--past-dim);border-color:var(--past)}
+.tl-dot-now{background:var(--acc-dim);border-color:var(--acc);box-shadow:0 0 8px var(--acc-glow)}
+.tl-dot-future{background:var(--future-dim);border-color:var(--future)}
+.tl-label{font-size:10px;font-weight:700;text-align:center}
+.tl-label-past{color:var(--past)}.tl-label-now{color:var(--acc)}.tl-label-future{color:var(--future)}
+.tl-divider{width:2px;height:40px;background:var(--border2);flex-shrink:0}
+.tl-desc{font-size:11px;color:var(--muted);text-align:center;max-width:100px}
+
+/* ── CHEAT SHEET ── */
+.cheat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:13px 0}
+.cheat-card{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:14px}
+.cheat-card h4{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:11px}
+.h4-present{color:var(--present)}.h4-past{color:var(--past)}.h4-future{color:var(--future)}
+.h4-ch{color:var(--ch)}.h4-ins{color:var(--ins)}.h4-sk{color:var(--sk)}.h4-au{color:var(--au)}
+.cheat-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;gap:8px}
+.cheat-row:last-child{border-bottom:none}
+.ck{color:var(--muted);flex-shrink:0;font-size:11.5px}
+.cv{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--teal);text-align:right}
+
+/* ── USAGE FREQUENCY TAG ── */
+.freq{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px}
+.freq-high{background:var(--ins-dim);color:var(--ins)}
+.freq-mid{background:var(--ch-dim);color:var(--ch)}
+.freq-low{background:var(--faint);color:var(--muted)}
+.freq-dot{width:5px;height:5px;border-radius:50%}
+.fd-high{background:var(--ins)}.fd-mid{background:var(--ch)}.fd-low{background:var(--muted)}
+
+p code,li code,td code{font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(255,208,96,.1);color:var(--yellow);padding:2px 6px;border-radius:4px}
+hr.dv{border:none;border-top:1px solid var(--border);margin:52px 0}
+.footer{border-top:1px solid var(--border);padding:26px 64px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}
+@media(max-width:900px){
+  .sidebar{display:none}.main{margin-left:0}
+  .hero,.content,.footer{padding-left:22px;padding-right:22px}
+  .hero h1{font-size:30px}
+  .tense-body,.grid-2,.grid-3,.grid-4,.cheat-grid,.cmp-box{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-brand">
+      <div class="logo-icon">⏰</div>
+      <div class="logo-text">
+        <h2>12 Thì Tiếng Anh</h2>
+        <p>Hướng dẫn toàn tập · Mất gốc OK</p>
+      </div>
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" id="pbar"></div></div>
+  </div>
+
+  <div class="nav-section" style="border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:2px">
+    <div class="nav-group-hdr" style="background:rgba(255,208,96,.12);color:#ffd060">📚 Lộ Trình Học</div>
+    <a href="english-grammar-basics.html" class="nav-link"><span class="ico">①</span> Tiếng Anh Cơ Bản</a>
+    <a href="english-12-tenses.html" class="nav-link" style="color:var(--acc);background:rgba(255,208,96,.08);border-left-color:var(--acc)"><span class="ico">②</span> 12 Thì Tiếng Anh</a>
+    <a href="subject-verb-agreement-tenses.html" class="nav-link"><span class="ico">③</span> Hòa Hợp C-V &amp; Phối Thì</a>
+    <a href="synonyms-antonyms-guide.html" class="nav-link"><span class="ico">④</span> Đồng Nghĩa &amp; Trái Nghĩa</a>
+    <a href="adjective-order-word-classes-relative-clauses.html" class="nav-link"><span class="ico">⑤</span> Trật Tự TT · Từ Loại · MĐ QH</a>
+    <a href="english-grammar-guide.html" class="nav-link"><span class="ico">⑥</span> Ngữ Pháp Tổng Hợp</a>
+    <a href="grammar-comparison-passive-conjunctions.html" class="nav-link"><span class="ico">⑦</span> So Sánh · Bị Động · Liên Từ</a>
+    <a href="prepositions-wish-guide.html" class="nav-link"><span class="ico">⑧</span> Giới Từ &amp; Câu Ước</a>
+    <a href="grammar-modals-quantifiers-stress.html" class="nav-link"><span class="ico">⑨</span> Modal · Lượng Từ · Trọng Âm</a>
+    <a href="grammar-tag-questions-articles-conditionals.html" class="nav-link"><span class="ico">⑩</span> Hỏi Đuôi · Mạo Từ · ĐK</a>
+    <a href="grammar-tov-ving-reported-phrasal.html" class="nav-link"><span class="ico">⑪</span> To V/V-ing · Tường Thuật</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-oc">🗺️ Bản đồ 12 thì</div>
+    <a href="#s0" class="nav-link"><span class="ico">📊</span> Tổng quan & lộ trình</a>
+    <a href="#s0b" class="nav-link"><span class="ico">⭐</span> Ưu tiên học thì nào</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-present">🔵 Hiện Tại (Present)</div>
+    <a href="#s1" class="nav-link"><span class="ico">1️⃣</span> Simple Present <span class="nav-badge">★★★</span></a>
+    <a href="#s2" class="nav-link"><span class="ico">2️⃣</span> Present Continuous <span class="nav-badge">★★★</span></a>
+    <a href="#s3" class="nav-link"><span class="ico">3️⃣</span> Present Perfect <span class="nav-badge">★★☆</span></a>
+    <a href="#s4" class="nav-link"><span class="ico">4️⃣</span> Present Perfect Cont.</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-past">🟣 Quá Khứ (Past)</div>
+    <a href="#s5" class="nav-link"><span class="ico">5️⃣</span> Simple Past <span class="nav-badge">★★★</span></a>
+    <a href="#s6" class="nav-link"><span class="ico">6️⃣</span> Past Continuous <span class="nav-badge">★★☆</span></a>
+    <a href="#s7" class="nav-link"><span class="ico">7️⃣</span> Past Perfect</a>
+    <a href="#s8" class="nav-link"><span class="ico">8️⃣</span> Past Perfect Cont.</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-future">🟡 Tương Lai (Future)</div>
+    <a href="#s9"  class="nav-link"><span class="ico">9️⃣</span> Simple Future (will) <span class="nav-badge">★★★</span></a>
+    <a href="#s10" class="nav-link"><span class="ico">🔟</span> Future Continuous</a>
+    <a href="#s11" class="nav-link"><span class="ico">🔢</span> Future Perfect</a>
+    <a href="#s12" class="nav-link"><span class="ico">🔢</span> Future Perfect Cont.</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-au">📋 Tổng hợp</div>
+    <a href="#s13" class="nav-link"><span class="ico">📋</span> Cheat Sheet toàn bộ</a>
+  </div>
+</aside>
+
+<!-- ══════════ MAIN ══════════ -->
+<div class="main">
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-dots"></div><div class="hero-glow"></div>
+  <div class="hero-eyebrow"><span class="pulse"></span> 12 Thì · Tiếng Anh cơ bản → nâng cao · Dành cho người mất gốc</div>
+  <h1>
+    <span class="h-grad">12 Thì</span> ⏰<br>
+    <span class="h-present">Hiện Tại</span> · <span class="h-past">Quá Khứ</span><br>
+    · <span class="h-future">Tương Lai</span>
+  </h1>
+  <p class="hero-desc">Giải thích 12 thì tiếng Anh từ dễ đến khó — lý thuyết rõ ràng, ví dụ thực tế, mẹo nhớ lâu và hướng dẫn khi nào nên dùng thì nào trong giao tiếp hàng ngày. Không học vẹt, hiểu thật sự.</p>
+  <div class="hero-chips">
+    <span class="chip chip-present">🔵 4 thì Hiện tại</span>
+    <span class="chip chip-past">🟣 4 thì Quá khứ</span>
+    <span class="chip chip-future">🟡 4 thì Tương lai</span>
+    <span class="chip chip-ins">✅ Nhiều ví dụ</span>
+    <span class="chip chip-ch">💡 Mẹo nhớ</span>
+    <span class="chip chip-sk">⭐ Ưu tiên giao tiếp</span>
+    <span class="chip chip-au">📋 Cheat Sheet</span>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ════ S0 — TỔNG QUAN ════ -->
+<div class="section" id="s0">
+  <div class="sec-head">
+    <span class="sec-tag st-overview">TỔNG QUAN</span>
+    <div>
+      <h2 class="sec-title">Bản đồ 12 thì tiếng Anh</h2>
+      <p class="sec-sub">Nhìn toàn cảnh trước · Hiểu cấu trúc 3×4 · Không bị ngợp</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Tại sao tiếng Anh có 12 thì?</div>
+    <p>Tiếng Anh dùng thì (tense) để diễn tả <strong>thời gian</strong> (hiện tại/quá khứ/tương lai) kết hợp với <strong>trạng thái hành động</strong> (đơn giản, đang xảy ra, đã hoàn thành, đang + đã hoàn thành). 3 × 4 = 12 thì.</p>
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Trạng thái \ Thời gian</th>
+          <th><span class="badge-present">Hiện tại</span></th>
+          <th><span class="badge-past">Quá khứ</span></th>
+          <th><span class="badge-future">Tương lai</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>⬜ Đơn (Simple)</td>
+          <td>Present Simple<br><span style="color:var(--muted);font-size:11px">I eat</span></td>
+          <td>Past Simple<br><span style="color:var(--muted);font-size:11px">I ate</span></td>
+          <td>Future Simple<br><span style="color:var(--muted);font-size:11px">I will eat</span></td>
+        </tr>
+        <tr>
+          <td>🔄 Tiếp diễn (Continuous)</td>
+          <td>Present Continuous<br><span style="color:var(--muted);font-size:11px">I am eating</span></td>
+          <td>Past Continuous<br><span style="color:var(--muted);font-size:11px">I was eating</span></td>
+          <td>Future Continuous<br><span style="color:var(--muted);font-size:11px">I will be eating</span></td>
+        </tr>
+        <tr>
+          <td>✅ Hoàn thành (Perfect)</td>
+          <td>Present Perfect<br><span style="color:var(--muted);font-size:11px">I have eaten</span></td>
+          <td>Past Perfect<br><span style="color:var(--muted);font-size:11px">I had eaten</span></td>
+          <td>Future Perfect<br><span style="color:var(--muted);font-size:11px">I will have eaten</span></td>
+        </tr>
+        <tr>
+          <td>🔄✅ Hoàn thành tiếp diễn</td>
+          <td>Present Perfect Cont.<br><span style="color:var(--muted);font-size:11px">I have been eating</span></td>
+          <td>Past Perfect Cont.<br><span style="color:var(--muted);font-size:11px">I had been eating</span></td>
+          <td>Future Perfect Cont.<br><span style="color:var(--muted);font-size:11px">I will have been eating</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Mẹo học 12 thì không bị ngợp:</strong> Đừng cố học hết 12 thì cùng một lúc. Hãy học 5 thì quan trọng nhất trước (đánh dấu ★★★ trong sidebar), dùng thành thạo rồi mới sang thì khó hơn.</div>
+    </div>
+  </div>
+
+  <div class="sub" id="s0b">
+    <div class="sub-title">⭐ Ưu tiên học thì nào — Giao tiếp thực tế</div>
+    <table class="tbl">
+      <thead><tr><th>Ưu tiên</th><th>Thì</th><th>Dùng bao nhiêu %</th><th>Học khi nào</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="star">★★★</span> Bắt buộc</td>
+          <td>Present Simple · Past Simple · Future (will) · Present Continuous</td>
+          <td style="color:var(--ins)">~75%</td>
+          <td>Tuần 1–4</td>
+        </tr>
+        <tr>
+          <td><span class="star">★★☆</span> Nên học</td>
+          <td>Present Perfect · Past Continuous · Going to (future)</td>
+          <td style="color:var(--ch)">~18%</td>
+          <td>Tháng 2–3</td>
+        </tr>
+        <tr>
+          <td><span class="star">★☆☆</span> Nâng cao</td>
+          <td>Past Perfect · Present Perfect Cont. · Future Continuous</td>
+          <td style="color:var(--orange)">~5%</td>
+          <td>Tháng 4–6</td>
+        </tr>
+        <tr>
+          <td>☆☆☆ Chuyên sâu</td>
+          <td>Past Perfect Cont. · Future Perfect · Future Perfect Cont.</td>
+          <td style="color:var(--muted)">~2%</td>
+          <td>Khi đã vững</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="info i-ok">
+      <span class="info-ico">🎯</span>
+      <div><strong style="color:var(--text)">Tin vui cho người mất gốc:</strong> Chỉ cần nắm vững <strong>5 thì đầu tiên (Present Simple, Present Continuous, Past Simple, Present Perfect, Future Simple)</strong> là bạn đã đủ giao tiếp trong 90% tình huống đời thực. 7 thì còn lại là bonus.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     NHÓM HIỆN TẠI
+════════════════════════════════ -->
+<div class="cat-banner cb-present">
+  <div class="cb-icon">🔵</div>
+  <div>
+    <div class="cb-badge">HIỆN TẠI · PRESENT</div>
+    <div class="cb-title">Nhóm 1 — 4 Thì Hiện Tại</div>
+    <div class="cb-sub">Simple · Continuous · Perfect · Perfect Continuous</div>
+  </div>
+</div>
+
+<!-- ════ THÌ 1 — PRESENT SIMPLE ════ -->
+<div class="section" id="s1">
+  <div class="sec-head">
+    <span class="sec-tag st-present">THÌ 1</span>
+    <div>
+      <h2 class="sec-title">Present Simple — Thì Hiện Tại Đơn</h2>
+      <p class="sec-sub"><span class="freq freq-high"><span class="freq-dot fd-high"></span>Dùng rất nhiều</span> · Thì quan trọng số 1 · Học đầu tiên</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Khi nào dùng?</div>
+    <div class="grid-3">
+      <div class="card"><div class="card-icon">🔄</div><div class="card-title" style="color:var(--present)">Thói quen / Lịch trình</div><div class="card-desc">Việc lặp lại thường xuyên. "I go to work at 8am."</div></div>
+      <div class="card"><div class="card-icon">🌍</div><div class="card-title" style="color:var(--ins)">Sự thật / Khoa học</div><div class="card-desc">Điều luôn đúng. "Water boils at 100°C."</div></div>
+      <div class="card"><div class="card-icon">❤️</div><div class="card-title" style="color:var(--ch)">Cảm xúc / Sở thích</div><div class="card-desc">Trạng thái bền vững. "I love Vietnamese food."</div></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-present">PRESENT SIMPLE</span>
+        <div class="tense-name" style="color:var(--present)">Thì Hiện Tại Đơn</div>
+        <div class="tense-vn">Thói quen · Sự thật · Cảm xúc bền vững</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + V / V-s/es</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + do/does + not + V</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Do/Does + S + V?</span></div>
+          <div style="margin-top:10px;font-size:11.5px;color:var(--muted)">
+            He/She/It → thêm <code>-s/-es</code><br>
+            He/She/It → dùng <code>does</code> (không + s)<br>
+            I/You/We/They → dùng <code>do</code>
+          </div>
+        </div>
+        <div class="tense-when">
+          <h4>Từ báo hiệu</h4>
+          <div class="when-item"><span class="when-dot wd-present"></span><div><code>always, usually, often</code><br>luôn, thường, hay</div></div>
+          <div class="when-item"><span class="when-dot wd-present"></span><div><code>sometimes, rarely, never</code><br>đôi khi, hiếm, không bao giờ</div></div>
+          <div class="when-item"><span class="when-dot wd-present"></span><div><code>every day/week/month</code><br>mỗi ngày/tuần/tháng</div></div>
+          <div class="when-item"><span class="when-dot wd-present"></span><div><code>on Mondays, at noon</code><br>vào thứ Hai, lúc trưa</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Ví dụ minh hoạ</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ · Present Simple</span><span class="ex-tag et-present">THÌ 1</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">I wake up at 6 every morning.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi thức dậy lúc 6 giờ mỗi sáng.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">She works at a hospital.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy làm việc tại bệnh viện.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">The sun rises in the east.</span><span class="ex-arrow">→</span><span class="ex-vn">Mặt trời mọc ở hướng đông.</span></div>
+        <div class="ex-row"><span class="ex-type ext-neg">–</span><span class="ex-en">I don't eat meat.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi không ăn thịt.</span></div>
+        <div class="ex-row"><span class="ex-type ext-neg">–</span><span class="ex-en">He doesn't like spicy food.</span><span class="ex-arrow">→</span><span class="ex-vn">Anh ấy không thích đồ ăn cay.</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">Do you speak English?</span><span class="ex-arrow">→</span><span class="ex-vn">Bạn có nói tiếng Anh không?</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">Does she live in Hanoi?</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy có sống ở Hà Nội không?</span></div>
+      </div>
+    </div>
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Bẫy phổ biến:</strong> Với He/She/It → động từ thêm <code>-s/-es</code> nhưng khi dùng phủ định/câu hỏi → dùng <code>does/doesn't</code> và động từ <strong>không</strong> thêm -s nữa. Đúng: <em>She <u>doesn't like</u></em> ✅ · Sai: <em>She <u>doesn't likes</u></em> ❌</div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ -s/-es:</strong> Chỉ thêm vào khi chủ ngữ là <strong>He / She / It</strong> (số ít, ngôi 3). Tưởng tượng: "Anh ấy, cô ấy, nó → bắt phải thêm S". Còn tôi, bạn, chúng tôi, họ → giữ nguyên động từ.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ THÌ 2 — PRESENT CONTINUOUS ════ -->
+<div class="section" id="s2">
+  <div class="sec-head">
+    <span class="sec-tag st-present">THÌ 2</span>
+    <div>
+      <h2 class="sec-title">Present Continuous — Thì Hiện Tại Tiếp Diễn</h2>
+      <p class="sec-sub"><span class="freq freq-high"><span class="freq-dot fd-high"></span>Dùng rất nhiều</span> · Hành động đang xảy ra ngay lúc này</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức & Khi nào dùng?</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-present">PRESENT CONTINUOUS</span>
+        <div class="tense-name" style="color:var(--present)">Thì Hiện Tại Tiếp Diễn</div>
+        <div class="tense-vn">Đang xảy ra · Tạm thời · Kế hoạch gần</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + am/is/are + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + am/is/are + not + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Am/Is/Are + S + V-ing?</span></div>
+          <div style="margin-top:10px;font-size:11.5px;color:var(--muted)">
+            I → <code>am</code> · He/She/It → <code>is</code><br>
+            You/We/They → <code>are</code>
+          </div>
+        </div>
+        <div class="tense-when">
+          <h4>Dùng khi nào?</h4>
+          <div class="when-item"><span class="when-dot wd-present"></span><div>Hành động đang xảy ra <strong style="color:var(--text)">ngay lúc nói</strong></div></div>
+          <div class="when-item"><span class="when-dot wd-present"></span><div>Tình huống <strong style="color:var(--text)">tạm thời</strong> (không phải mãi mãi)</div></div>
+          <div class="when-item"><span class="when-dot wd-present"></span><div>Kế hoạch <strong style="color:var(--text)">đã sắp xếp sẵn</strong> trong tương lai gần</div></div>
+          <div class="when-item"><span class="when-dot wd-present"></span><div>Từ báo hiệu: <code>now, right now, at the moment, look!</code></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Ví dụ minh hoạ</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ · Present Continuous</span><span class="ex-tag et-present">THÌ 2</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">I am studying English now.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi đang học tiếng Anh bây giờ.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">She is cooking dinner.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy đang nấu bữa tối.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">They are meeting at 7pm tonight.</span><span class="ex-arrow">→</span><span class="ex-vn">Tối nay họ gặp nhau lúc 7 giờ. (kế hoạch)</span></div>
+        <div class="ex-row"><span class="ex-type ext-neg">–</span><span class="ex-en">I'm not watching TV right now.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi không đang xem TV lúc này.</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">What are you doing?</span><span class="ex-arrow">→</span><span class="ex-vn">Bạn đang làm gì vậy?</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">Is he sleeping?</span><span class="ex-arrow">→</span><span class="ex-vn">Anh ấy đang ngủ không?</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">So sánh Present Simple vs Present Continuous</div>
+    <div class="cmp-box">
+      <div class="cmp-a" style="background:rgba(56,189,248,.05)">
+        <div class="cmp-label" style="color:var(--present)">🔵 PRESENT SIMPLE — Thói quen</div>
+        <div class="cmp-text">I <strong>work</strong> in Saigon.<br>→ Tôi làm việc ở Sài Gòn. (thường xuyên)</div>
+        <div class="cmp-note">He <strong>reads</strong> books every night.<br>→ Anh ấy đọc sách mỗi tối. (thói quen)</div>
+      </div>
+      <div class="cmp-b" style="background:rgba(56,189,248,.08)">
+        <div class="cmp-label" style="color:var(--teal)">🔄 PRESENT CONTINUOUS — Đang làm</div>
+        <div class="cmp-text">I <strong>am working</strong> from home today.<br>→ Hôm nay tôi đang làm ở nhà. (tạm thời)</div>
+        <div class="cmp-note">He <strong>is reading</strong> a book now.<br>→ Anh ấy đang đọc sách lúc này. (ngay lúc này)</div>
+      </div>
+    </div>
+    <div class="info i-note">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Stative Verbs — Động từ KHÔNG dùng với -ing:</strong> Một số động từ chỉ trạng thái (cảm xúc, nhận thức, sở hữu) <strong>không bao giờ</strong> dùng với continuous: <code>know, love, like, hate, want, need, see, hear, believe, own, have</code>. Đúng: <em>I <u>love</u> you</em> ✅ · Sai: <em>I <u>am loving</u> you</em> ❌</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ THÌ 3 — PRESENT PERFECT ════ -->
+<div class="section" id="s3">
+  <div class="sec-head">
+    <span class="sec-tag st-present">THÌ 3</span>
+    <div>
+      <h2 class="sec-title">Present Perfect — Thì Hiện Tại Hoàn Thành</h2>
+      <p class="sec-sub"><span class="freq freq-mid"><span class="freq-dot fd-mid"></span>Dùng khá nhiều</span> · Khó nhất trong nhóm hiện tại · Rất phổ biến tiếng Anh Anh</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức & Khi nào dùng?</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-present">PRESENT PERFECT</span>
+        <div class="tense-name" style="color:var(--present)">Thì Hiện Tại Hoàn Thành</div>
+        <div class="tense-vn">Đã làm gì đó → có liên quan đến hiện tại</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + have/has + V3 (past participle)</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + have/has + not + V3</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Have/Has + S + V3?</span></div>
+          <div style="margin-top:10px;font-size:11.5px;color:var(--muted)">
+            I/You/We/They → <code>have</code><br>
+            He/She/It → <code>has</code><br>
+            V3 = dạng 3 của động từ (eaten, gone, seen...)
+          </div>
+        </div>
+        <div class="tense-when">
+          <h4>Dùng khi nào?</h4>
+          <div class="when-item"><span class="when-dot wd-present"></span><div>Kinh nghiệm <strong style="color:var(--text)">trong cuộc đời</strong> (chưa nói khi nào)</div></div>
+          <div class="when-item"><span class="when-dot wd-present"></span><div>Hành động vừa xong, <strong style="color:var(--text)">ảnh hưởng hiện tại</strong></div></div>
+          <div class="when-item"><span class="when-dot wd-present"></span><div>Trạng thái từ quá khứ <strong style="color:var(--text)">kéo dài đến nay</strong></div></div>
+          <div class="when-item"><span class="when-dot wd-present"></span><div>Từ: <code>ever, never, just, already, yet, for, since</code></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Ví dụ minh hoạ</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ · Present Perfect</span><span class="ex-tag et-present">THÌ 3</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">I have been to Japan.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi đã từng đến Nhật. (kinh nghiệm)</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">She has just arrived.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy vừa mới đến. (vừa xong)</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">I have lived here for 5 years.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi đã sống ở đây được 5 năm. (kéo dài đến nay)</span></div>
+        <div class="ex-row"><span class="ex-type ext-neg">–</span><span class="ex-en">I haven't eaten pho yet.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi chưa ăn phở. (yet = chưa)</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">Have you ever tried durian?</span><span class="ex-arrow">→</span><span class="ex-vn">Bạn đã từng ăn sầu riêng chưa?</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">Has he finished his homework?</span><span class="ex-arrow">→</span><span class="ex-vn">Anh ấy làm xong bài tập chưa?</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🔑</span>
+      <div><strong style="color:var(--text)">for vs since:</strong> <code>for</code> + khoảng thời gian (<em>for 3 years, for a week</em>) · <code>since</code> + mốc thời gian (<em>since 2020, since Monday, since I was a child</em>). Ví dụ: <em>I have studied English <u>for</u> 2 years / <u>since</u> 2022.</em></div>
+    </div>
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Present Perfect vs Past Simple:</strong> Dùng <strong>Past Simple</strong> khi biết rõ thời điểm (<em>I went to Japan <u>in 2022</u></em>). Dùng <strong>Present Perfect</strong> khi không nêu thời điểm hoặc kinh nghiệm tổng quát (<em>I <u>have been</u> to Japan</em>).</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ THÌ 4 — PRESENT PERFECT CONTINUOUS ════ -->
+<div class="section" id="s4">
+  <div class="sec-head">
+    <span class="sec-tag st-present">THÌ 4</span>
+    <div>
+      <h2 class="sec-title">Present Perfect Continuous</h2>
+      <p class="sec-sub"><span class="freq freq-low"><span class="freq-dot fd-low"></span>Ít dùng hơn</span> · Nhấn mạnh quá trình · Thì Hiện Tại Hoàn Thành Tiếp Diễn</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức & Ví dụ</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-present">PRESENT PERFECT CONTINUOUS</span>
+        <div class="tense-name" style="color:var(--present)">Hiện Tại Hoàn Thành Tiếp Diễn</div>
+        <div class="tense-vn">Đã làm gì đó liên tục từ quá khứ đến nay</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + have/has + been + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + have/has + not + been + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Have/Has + S + been + V-ing?</span></div>
+          <div style="margin-top:10px;font-size:11.5px;color:var(--muted)">Từ báo hiệu: <code>for, since, all day, lately, recently</code></div>
+        </div>
+        <div class="tense-when">
+          <h4>Dùng khi nào?</h4>
+          <div class="when-item"><span class="when-dot wd-present"></span><div>Nhấn mạnh <strong style="color:var(--text)">quá trình liên tục</strong> từ quá khứ đến nay</div></div>
+          <div class="when-item"><span class="when-dot wd-present"></span><div>Giải thích <strong style="color:var(--text)">kết quả hiện tại</strong> (tại sao mệt, tại sao ướt...)</div></div>
+          <div class="when-item"><span class="when-dot wd-present"></span><div>Hành động vừa mới dừng, còn dấu hiệu</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ</span><span class="ex-tag et-present">THÌ 4</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">I have been studying for 3 hours.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi đã học liên tục 3 tiếng đồng hồ.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">She's been crying — her eyes are red.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy đã khóc — mắt cô ấy đỏ. (giải thích)</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">How long have you been waiting?</span><span class="ex-arrow">→</span><span class="ex-vn">Bạn đã chờ bao lâu rồi?</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Perfect vs Perfect Continuous:</strong> <em>I <u>have read</u> the book.</em> → Đã đọc xong (kết quả). <em>I <u>have been reading</u> all day.</em> → Nhấn mạnh đang đọc suốt ngày (quá trình). Khi không chắc, dùng Present Perfect thường là ổn.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     NHÓM QUÁ KHỨ
+════════════════════════════════ -->
+<div class="cat-banner cb-past">
+  <div class="cb-icon">🟣</div>
+  <div>
+    <div class="cb-badge">QUÁ KHỨ · PAST</div>
+    <div class="cb-title">Nhóm 2 — 4 Thì Quá Khứ</div>
+    <div class="cb-sub">Simple · Continuous · Perfect · Perfect Continuous</div>
+  </div>
+</div>
+
+<!-- ════ THÌ 5 — PAST SIMPLE ════ -->
+<div class="section" id="s5">
+  <div class="sec-head">
+    <span class="sec-tag st-past">THÌ 5</span>
+    <div>
+      <h2 class="sec-title">Past Simple — Thì Quá Khứ Đơn</h2>
+      <p class="sec-sub"><span class="freq freq-high"><span class="freq-dot fd-high"></span>Dùng rất nhiều</span> · Kể chuyện · Hành động đã xảy ra trong quá khứ</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức & Khi nào dùng?</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-past">PAST SIMPLE</span>
+        <div class="tense-name" style="color:var(--past)">Thì Quá Khứ Đơn</div>
+        <div class="tense-vn">Đã xảy ra & kết thúc · Biết rõ thời điểm</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + V2 (V-ed / irregular)</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + did + not + V (nguyên thể)</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Did + S + V?</span></div>
+          <div style="margin-top:10px;font-size:11.5px;color:var(--muted)">
+            V2 regular: <code>work→worked, play→played</code><br>
+            V2 irregular: <code>go→went, eat→ate, see→saw</code><br>
+            TO BE: <code>was (I/He/She/It)</code> / <code>were (You/We/They)</code>
+          </div>
+        </div>
+        <div class="tense-when">
+          <h4>Từ báo hiệu</h4>
+          <div class="when-item"><span class="when-dot wd-past"></span><div><code>yesterday</code> — hôm qua</div></div>
+          <div class="when-item"><span class="when-dot wd-past"></span><div><code>last night/week/year</code> — tối qua...</div></div>
+          <div class="when-item"><span class="when-dot wd-past"></span><div><code>...ago</code> — 3 ngày trước, 1 tuần trước</div></div>
+          <div class="when-item"><span class="when-dot wd-past"></span><div><code>in 2020, when I was young</code></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Ví dụ minh hoạ</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ · Past Simple</span><span class="ex-tag et-past">THÌ 5</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">I ate pho for breakfast yesterday.</span><span class="ex-arrow">→</span><span class="ex-vn">Hôm qua tôi ăn phở điểm tâm.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">She went to Da Nang last summer.</span><span class="ex-arrow">→</span><span class="ex-vn">Mùa hè năm ngoái cô ấy đi Đà Nẵng.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">He was very tired after work.</span><span class="ex-arrow">→</span><span class="ex-vn">Anh ấy rất mệt sau giờ làm.</span></div>
+        <div class="ex-row"><span class="ex-type ext-neg">–</span><span class="ex-en">I didn't go to school yesterday.</span><span class="ex-arrow">→</span><span class="ex-vn">Hôm qua tôi không đi học.</span></div>
+        <div class="ex-row"><span class="ex-type ext-neg">–</span><span class="ex-en">They weren't happy about it.</span><span class="ex-arrow">→</span><span class="ex-vn">Họ không vui về điều đó.</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">Did you enjoy the movie?</span><span class="ex-arrow">→</span><span class="ex-vn">Bạn có thích bộ phim không?</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">Where did you go last weekend?</span><span class="ex-arrow">→</span><span class="ex-vn">Cuối tuần rồi bạn đi đâu?</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ động từ bất quy tắc:</strong> Học theo nhóm âm: <em>ring-rang-rung, sing-sang-sung, swim-swam-swum</em> · Hoặc theo nhóm giống nhau: <em>cut-cut-cut, put-put-put, hit-hit-hit</em> (không đổi). Chỉ cần nhớ ~50 động từ bất quy tắc thông dụng nhất là đủ.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ THÌ 6 — PAST CONTINUOUS ════ -->
+<div class="section" id="s6">
+  <div class="sec-head">
+    <span class="sec-tag st-past">THÌ 6</span>
+    <div>
+      <h2 class="sec-title">Past Continuous — Thì Quá Khứ Tiếp Diễn</h2>
+      <p class="sec-sub"><span class="freq freq-mid"><span class="freq-dot fd-mid"></span>Dùng vừa phải</span> · Đang làm gì đó trong quá khứ · Hay kết hợp với Past Simple</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức & Khi nào dùng?</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-past">PAST CONTINUOUS</span>
+        <div class="tense-name" style="color:var(--past)">Thì Quá Khứ Tiếp Diễn</div>
+        <div class="tense-vn">Đang làm gì đó tại một thời điểm trong quá khứ</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + was/were + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + was/were + not + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Was/Were + S + V-ing?</span></div>
+          <div style="margin-top:10px;font-size:11.5px;color:var(--muted)">
+            I/He/She/It → <code>was</code><br>
+            You/We/They → <code>were</code>
+          </div>
+        </div>
+        <div class="tense-when">
+          <h4>Dùng khi nào?</h4>
+          <div class="when-item"><span class="when-dot wd-past"></span><div>Đang làm gì đó tại <strong style="color:var(--text)">một thời điểm cụ thể</strong> trong quá khứ</div></div>
+          <div class="when-item"><span class="when-dot wd-past"></span><div>Hành động bị <strong style="color:var(--text)">gián đoạn</strong> bởi hành động khác</div></div>
+          <div class="when-item"><span class="when-dot wd-past"></span><div>Hai hành động <strong style="color:var(--text)">song song</strong> trong quá khứ</div></div>
+          <div class="when-item"><span class="when-dot wd-past"></span><div>Từ: <code>when, while, at that time, at 8pm yesterday</code></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ · Past Continuous</span><span class="ex-tag et-past">THÌ 6</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">I was sleeping when you called.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi đang ngủ khi bạn gọi. (bị gián đoạn)</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">While she was cooking, he was watching TV.</span><span class="ex-arrow">→</span><span class="ex-vn">Trong khi cô ấy nấu ăn, anh ấy xem TV. (song song)</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">It was raining at 8pm yesterday.</span><span class="ex-arrow">→</span><span class="ex-vn">Lúc 8 giờ tối qua trời đang mưa.</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">What were you doing last night?</span><span class="ex-arrow">→</span><span class="ex-vn">Tối qua bạn đang làm gì?</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🎯</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ công thức when/while:</strong> <em><u>While</u> + Past Continuous, Past Simple</em> hoặc <em>Past Continuous <u>when</u> + Past Simple</em>. Hành động dài (đang làm) → Continuous · Hành động ngắn cắt ngang → Simple.<br>Ví dụ: <em>I <u>was eating</u> (dài) <strong>when</strong> the phone <u>rang</u> (ngắn, cắt ngang).</em></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ THÌ 7 — PAST PERFECT ════ -->
+<div class="section" id="s7">
+  <div class="sec-head">
+    <span class="sec-tag st-past">THÌ 7</span>
+    <div>
+      <h2 class="sec-title">Past Perfect — Thì Quá Khứ Hoàn Thành</h2>
+      <p class="sec-sub"><span class="freq freq-low"><span class="freq-dot fd-low"></span>Ít dùng hơn</span> · "Quá khứ của quá khứ" · Hành động xảy ra trước hành động khác</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức & Ví dụ</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-past">PAST PERFECT</span>
+        <div class="tense-name" style="color:var(--past)">Thì Quá Khứ Hoàn Thành</div>
+        <div class="tense-vn">"Quá khứ của quá khứ" — xảy ra TRƯỚC một thời điểm trong QK</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + had + V3</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + had + not + V3</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Had + S + V3?</span></div>
+          <div style="margin-top:10px;font-size:11.5px;color:var(--muted)">Mọi chủ ngữ đều dùng <code>had</code><br>Từ: <code>before, after, when, already, by the time</code></div>
+        </div>
+        <div class="tense-when">
+          <h4>Dùng khi nào?</h4>
+          <div class="when-item"><span class="when-dot wd-past"></span><div>Hành động xảy ra <strong style="color:var(--text)">trước</strong> một hành động quá khứ khác</div></div>
+          <div class="when-item"><span class="when-dot wd-past"></span><div>Thường đi với Past Simple để so sánh thứ tự</div></div>
+          <div class="when-item"><span class="when-dot wd-past"></span><div>Câu gián tiếp (reported speech)</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ · Past Perfect</span><span class="ex-tag et-past">THÌ 7</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">When I arrived, she had already left.</span><span class="ex-arrow">→</span><span class="ex-vn">Khi tôi đến, cô ấy đã đi rồi. (đi trước khi tôi đến)</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">He had eaten before we called him.</span><span class="ex-arrow">→</span><span class="ex-vn">Anh ấy đã ăn trước khi chúng tôi gọi.</span></div>
+        <div class="ex-row"><span class="ex-type ext-neg">–</span><span class="ex-en">I hadn't seen that movie before.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi chưa từng xem bộ phim đó trước đây.</span></div>
+      </div>
+    </div>
+    <div class="info i-note">
+      <span class="info-ico">🗺️</span>
+      <div><strong style="color:var(--text)">Cách nhớ đơn giản nhất:</strong> Past Perfect = "Quá khứ của quá khứ". Khi kể 2 chuyện trong quá khứ, chuyện nào xảy ra TRƯỚC thì dùng <em>had + V3</em>, chuyện sau dùng Past Simple. Như 2 tầng bậc thang: tầng dưới = had + V3.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ THÌ 8 — PAST PERFECT CONTINUOUS ════ -->
+<div class="section" id="s8">
+  <div class="sec-head">
+    <span class="sec-tag st-past">THÌ 8</span>
+    <div>
+      <h2 class="sec-title">Past Perfect Continuous</h2>
+      <p class="sec-sub"><span class="freq freq-low"><span class="freq-dot fd-low"></span>Hiếm dùng</span> · Thì Quá Khứ Hoàn Thành Tiếp Diễn</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức & Ví dụ</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-past">PAST PERFECT CONTINUOUS</span>
+        <div class="tense-name" style="color:var(--past)">Quá Khứ Hoàn Thành Tiếp Diễn</div>
+        <div class="tense-vn">Đã làm gì đó liên tục → trước một thời điểm quá khứ</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + had + been + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + had + not + been + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Had + S + been + V-ing?</span></div>
+        </div>
+        <div class="tense-when">
+          <h4>Dùng khi nào?</h4>
+          <div class="when-item"><span class="when-dot wd-past"></span><div>Nhấn mạnh <strong style="color:var(--text)">quá trình</strong> kéo dài trước một thời điểm QK</div></div>
+          <div class="when-item"><span class="when-dot wd-past"></span><div>Giải thích <strong style="color:var(--text)">nguyên nhân</strong> của kết quả trong quá khứ</div></div>
+          <div class="when-item"><span class="when-dot wd-past"></span><div>Từ: <code>for, since, before, when, how long</code></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ</span><span class="ex-tag et-past">THÌ 8</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">She had been crying when I got home.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy đã khóc khi tôi về tới nhà.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">He had been working for 10 hours before he rested.</span><span class="ex-arrow">→</span><span class="ex-vn">Anh ấy đã làm việc 10 tiếng trước khi nghỉ ngơi.</span></div>
+      </div>
+    </div>
+    <div class="info i-warn">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Thực tế:</strong> Thì này rất hiếm trong giao tiếp thường ngày. Người bản ngữ đôi khi dùng Past Perfect thay thế. Đừng lo nếu chưa nắm vững — hãy tập trung vào các thì quan trọng hơn trước.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     NHÓM TƯƠNG LAI
+════════════════════════════════ -->
+<div class="cat-banner cb-future">
+  <div class="cb-icon">🟡</div>
+  <div>
+    <div class="cb-badge">TƯƠNG LAI · FUTURE</div>
+    <div class="cb-title">Nhóm 3 — 4 Thì Tương Lai</div>
+    <div class="cb-sub">Simple (will) · Continuous · Perfect · Perfect Continuous</div>
+  </div>
+</div>
+
+<!-- ════ THÌ 9 — FUTURE SIMPLE ════ -->
+<div class="section" id="s9">
+  <div class="sec-head">
+    <span class="sec-tag st-future">THÌ 9</span>
+    <div>
+      <h2 class="sec-title">Future Simple — Thì Tương Lai Đơn (will)</h2>
+      <p class="sec-sub"><span class="freq freq-high"><span class="freq-dot fd-high"></span>Dùng rất nhiều</span> · "will" và "going to" · Phân biệt cách dùng</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Will vs Going to — Hai cách nói tương lai</div>
+    <div class="cmp-box">
+      <div class="cmp-a" style="background:rgba(255,208,96,.05)">
+        <div class="cmp-label" style="color:var(--future)">⚡ WILL — Quyết định tức thời / Dự đoán / Lời hứa</div>
+        <div class="cmp-text"><strong>S + will + V (nguyên thể)</strong></div>
+        <div class="cmp-note">
+          • Quyết định ngay lúc nói: <em>I <u>will</u> help you right now.</em><br>
+          • Dự đoán không chắc chắn: <em>It <u>will</u> rain tomorrow.</em><br>
+          • Lời hứa, đề nghị: <em>I <u>will</u> never lie to you.</em>
+        </div>
+      </div>
+      <div class="cmp-b" style="background:rgba(64,216,142,.05)">
+        <div class="cmp-label" style="color:var(--ins)">📅 GOING TO — Kế hoạch đã có / Bằng chứng rõ ràng</div>
+        <div class="cmp-text"><strong>S + am/is/are + going to + V</strong></div>
+        <div class="cmp-note">
+          • Kế hoạch từ trước: <em>I <u>am going to</u> study tonight.</em><br>
+          • Có bằng chứng: <em>Look! It <u>is going to</u> rain.</em><br>
+          • Dự định rõ ràng: <em>We <u>are going to</u> move next month.</em>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức will đầy đủ</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-future">FUTURE SIMPLE — WILL</span>
+        <div class="tense-name" style="color:var(--future)">Thì Tương Lai Đơn</div>
+        <div class="tense-vn">Quyết định tức thời · Dự đoán · Lời hứa · Đề nghị</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + will + V</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + will + not (won't) + V</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Will + S + V?</span></div>
+          <div style="margin-top:10px;font-size:11.5px;color:var(--muted)">
+            Tất cả chủ ngữ đều dùng <code>will</code><br>
+            Rút gọn: <code>I'll, she'll, they'll, won't</code>
+          </div>
+        </div>
+        <div class="tense-when">
+          <h4>Từ báo hiệu</h4>
+          <div class="when-item"><span class="when-dot wd-future"></span><div><code>tomorrow</code> — ngày mai</div></div>
+          <div class="when-item"><span class="when-dot wd-future"></span><div><code>next week/month/year</code></div></div>
+          <div class="when-item"><span class="when-dot wd-future"></span><div><code>soon, in the future, someday</code></div></div>
+          <div class="when-item"><span class="when-dot wd-future"></span><div><code>I think, I believe, probably</code></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ · Future Simple</span><span class="ex-tag et-future">THÌ 9</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">I will call you when I arrive.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi sẽ gọi cho bạn khi tôi đến.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">I think it will be a great trip.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi nghĩ đó sẽ là một chuyến đi tuyệt vời.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">I'll help you with that!</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi sẽ giúp bạn điều đó! (đề nghị ngay lúc này)</span></div>
+        <div class="ex-row"><span class="ex-type ext-neg">–</span><span class="ex-en">I won't be late, I promise.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi sẽ không muộn, tôi hứa.</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">Will you come to the party?</span><span class="ex-arrow">→</span><span class="ex-vn">Bạn có đến bữa tiệc không?</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ THÌ 10 — FUTURE CONTINUOUS ════ -->
+<div class="section" id="s10">
+  <div class="sec-head">
+    <span class="sec-tag st-future">THÌ 10</span>
+    <div>
+      <h2 class="sec-title">Future Continuous — Thì Tương Lai Tiếp Diễn</h2>
+      <p class="sec-sub"><span class="freq freq-low"><span class="freq-dot fd-low"></span>Ít dùng trong giao tiếp thường</span> · Đang làm gì đó tại một thời điểm tương lai</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức & Ví dụ</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-future">FUTURE CONTINUOUS</span>
+        <div class="tense-name" style="color:var(--future)">Thì Tương Lai Tiếp Diễn</div>
+        <div class="tense-vn">Sẽ đang làm gì đó tại một thời điểm trong tương lai</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + will + be + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + will + not + be + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Will + S + be + V-ing?</span></div>
+          <div style="margin-top:10px;font-size:11.5px;color:var(--muted)">Từ: <code>at this time tomorrow, at 8pm next Friday, this time next year</code></div>
+        </div>
+        <div class="tense-when">
+          <h4>Dùng khi nào?</h4>
+          <div class="when-item"><span class="when-dot wd-future"></span><div>Đang làm gì tại <strong style="color:var(--text)">thời điểm xác định</strong> trong tương lai</div></div>
+          <div class="when-item"><span class="when-dot wd-future"></span><div>Kế hoạch đã sắp xếp, <strong style="color:var(--text)">chắc chắn xảy ra</strong></div></div>
+          <div class="when-item"><span class="when-dot wd-future"></span><div>Hỏi về kế hoạch lịch sự (tránh ép buộc)</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ</span><span class="ex-tag et-future">THÌ 10</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">At 8pm tonight, I will be watching a movie.</span><span class="ex-arrow">→</span><span class="ex-vn">Tối nay lúc 8 giờ, tôi sẽ đang xem phim.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">This time tomorrow, she'll be flying to London.</span><span class="ex-arrow">→</span><span class="ex-vn">Giờ này ngày mai, cô ấy sẽ đang bay đến London.</span></div>
+        <div class="ex-row"><span class="ex-type ext-q">?</span><span class="ex-en">Will you be using the car tomorrow?</span><span class="ex-arrow">→</span><span class="ex-vn">Ngày mai bạn có dùng xe không? (hỏi lịch sự)</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ THÌ 11 — FUTURE PERFECT ════ -->
+<div class="section" id="s11">
+  <div class="sec-head">
+    <span class="sec-tag st-future">THÌ 11</span>
+    <div>
+      <h2 class="sec-title">Future Perfect — Thì Tương Lai Hoàn Thành</h2>
+      <p class="sec-sub"><span class="freq freq-low"><span class="freq-dot fd-low"></span>Hiếm dùng</span> · Sẽ hoàn thành trước một thời điểm tương lai</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức & Ví dụ</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-future">FUTURE PERFECT</span>
+        <div class="tense-name" style="color:var(--future)">Thì Tương Lai Hoàn Thành</div>
+        <div class="tense-vn">Sẽ hoàn thành xong trước một thời điểm trong tương lai</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + will + have + V3</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + will + not + have + V3</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Will + S + have + V3?</span></div>
+          <div style="margin-top:10px;font-size:11.5px;color:var(--muted)">Từ: <code>by + thời điểm TL (by tomorrow, by 2030, by the time...)</code></div>
+        </div>
+        <div class="tense-when">
+          <h4>Dùng khi nào?</h4>
+          <div class="when-item"><span class="when-dot wd-future"></span><div>Sẽ xong trước một <strong style="color:var(--text)">deadline/mốc</strong> trong TL</div></div>
+          <div class="when-item"><span class="when-dot wd-future"></span><div>Từ khóa: <code>by, by the time, before</code></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ</span><span class="ex-tag et-future">THÌ 11</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">By 2030, I will have graduated from university.</span><span class="ex-arrow">→</span><span class="ex-vn">Trước năm 2030, tôi sẽ đã tốt nghiệp đại học.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">By the time you arrive, I will have cooked dinner.</span><span class="ex-arrow">→</span><span class="ex-vn">Khi bạn đến, tôi sẽ đã nấu xong bữa tối rồi.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ THÌ 12 — FUTURE PERFECT CONTINUOUS ════ -->
+<div class="section" id="s12">
+  <div class="sec-head">
+    <span class="sec-tag st-future">THÌ 12</span>
+    <div>
+      <h2 class="sec-title">Future Perfect Continuous</h2>
+      <p class="sec-sub"><span class="freq freq-low"><span class="freq-dot fd-low"></span>Rất hiếm</span> · Thì Tương Lai Hoàn Thành Tiếp Diễn · Thì phức tạp nhất</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức & Ví dụ</div>
+    <div class="tense-card">
+      <div class="tense-card-head">
+        <span class="tense-number tn-future">FUTURE PERFECT CONTINUOUS</span>
+        <div class="tense-name" style="color:var(--future)">Tương Lai Hoàn Thành Tiếp Diễn</div>
+        <div class="tense-vn">Sẽ đã làm liên tục được bao lâu đó tính đến một thời điểm TL</div>
+      </div>
+      <div class="tense-body">
+        <div class="tense-formula">
+          <h4>Công thức</h4>
+          <div class="formula-row"><span class="fr-label fr-pos">+</span><span class="fr-formula">S + will + have + been + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-neg">–</span><span class="fr-formula">S + will + not + have + been + V-ing</span></div>
+          <div class="formula-row"><span class="fr-label fr-q">?</span><span class="fr-formula">Will + S + have + been + V-ing?</span></div>
+          <div style="margin-top:10px;font-size:11.5px;color:var(--muted)">Từ: <code>by, for, since</code></div>
+        </div>
+        <div class="tense-when">
+          <h4>Dùng khi nào?</h4>
+          <div class="when-item"><span class="when-dot wd-future"></span><div>Nhấn mạnh <strong style="color:var(--text)">thời gian</strong> làm liên tục đến mốc TL</div></div>
+          <div class="when-item"><span class="when-dot wd-future"></span><div>Rất hiếm trong giao tiếp, hay gặp trong văn viết</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ</span><span class="ex-tag et-future">THÌ 12</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">By 2025, I will have been learning English for 3 years.</span><span class="ex-arrow">→</span><span class="ex-vn">Đến năm 2025, tôi sẽ đã học tiếng Anh được 3 năm.</span></div>
+        <div class="ex-row"><span class="ex-type ext-pos">+</span><span class="ex-en">By the time he retires, he will have been working here for 30 years.</span><span class="ex-arrow">→</span><span class="ex-vn">Khi anh ấy nghỉ hưu, anh ấy sẽ đã làm đây 30 năm.</span></div>
+      </div>
+    </div>
+    <div class="info i-warn">
+      <span class="info-ico">😅</span>
+      <div><strong style="color:var(--text)">Thực tế:</strong> Thì này gần như không xuất hiện trong hội thoại đời thường. Ngay cả người bản ngữ cũng ít dùng. Hãy biết nó tồn tại là đủ — đừng lo lắng nếu chưa dùng được.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     CHEAT SHEET
+════════════════════════════════ -->
+<div class="cat-banner cb-cheat">
+  <div class="cb-icon">📋</div>
+  <div>
+    <div class="cb-badge">TỔNG HỢP</div>
+    <div class="cb-title">Cheat Sheet — Tổng hợp 12 thì</div>
+    <div class="cb-sub">In ra · Dán lên tường · Xem lại nhanh mỗi ngày</div>
+  </div>
+</div>
+
+<div class="section" id="s13">
+  <div class="sec-head">
+    <span class="sec-tag st-cheat">CHEAT SHEET</span>
+    <div>
+      <h2 class="sec-title">📋 Bảng tổng hợp 12 thì toàn tập</h2>
+      <p class="sec-sub">Công thức · Từ báo hiệu · Cách dùng · Ví dụ nhanh</p>
+    </div>
+  </div>
+
+  <!-- BẢNG TỔNG HỢP ĐẦY ĐỦ -->
+  <div class="sub">
+    <div class="sub-title">Bảng tổng hợp toàn bộ 12 thì</div>
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Tên thì</th>
+          <th>Công thức (+)</th>
+          <th>Từ báo hiệu</th>
+          <th>Ví dụ nhanh</th>
+          <th>Mức độ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge-present">1</span></td>
+          <td>Present Simple<br><small>Hiện tại đơn</small></td>
+          <td><code>S + V / V-s</code></td>
+          <td>always, every day, usually</td>
+          <td><em>I eat rice daily.</em></td>
+          <td><span style="color:var(--ins)">★★★</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-present">2</span></td>
+          <td>Present Continuous<br><small>Hiện tại tiếp diễn</small></td>
+          <td><code>S + am/is/are + V-ing</code></td>
+          <td>now, right now, at the moment</td>
+          <td><em>I am eating now.</em></td>
+          <td><span style="color:var(--ins)">★★★</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-present">3</span></td>
+          <td>Present Perfect<br><small>Hiện tại hoàn thành</small></td>
+          <td><code>S + have/has + V3</code></td>
+          <td>ever, never, just, already, yet, for, since</td>
+          <td><em>I have eaten pho.</em></td>
+          <td><span style="color:var(--ch)">★★☆</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-present">4</span></td>
+          <td>Present Perfect Cont.<br><small>HT hoàn thành tiếp diễn</small></td>
+          <td><code>S + have/has + been + V-ing</code></td>
+          <td>for, since, all day, lately</td>
+          <td><em>I have been studying for 2h.</em></td>
+          <td><span style="color:var(--orange)">★☆☆</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-past">5</span></td>
+          <td>Past Simple<br><small>Quá khứ đơn</small></td>
+          <td><code>S + V2 (V-ed / irreg.)</code></td>
+          <td>yesterday, last week, ago, in 2020</td>
+          <td><em>I ate pho yesterday.</em></td>
+          <td><span style="color:var(--ins)">★★★</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-past">6</span></td>
+          <td>Past Continuous<br><small>Quá khứ tiếp diễn</small></td>
+          <td><code>S + was/were + V-ing</code></td>
+          <td>when, while, at that time</td>
+          <td><em>I was sleeping when you called.</em></td>
+          <td><span style="color:var(--ch)">★★☆</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-past">7</span></td>
+          <td>Past Perfect<br><small>Quá khứ hoàn thành</small></td>
+          <td><code>S + had + V3</code></td>
+          <td>before, after, when, already, by the time</td>
+          <td><em>She had left when I arrived.</em></td>
+          <td><span style="color:var(--orange)">★☆☆</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-past">8</span></td>
+          <td>Past Perfect Cont.<br><small>QK hoàn thành tiếp diễn</small></td>
+          <td><code>S + had + been + V-ing</code></td>
+          <td>for, since, before, when</td>
+          <td><em>She had been crying when I arrived.</em></td>
+          <td><span style="color:var(--muted)">☆☆☆</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-future">9</span></td>
+          <td>Future Simple (will)<br><small>Tương lai đơn</small></td>
+          <td><code>S + will + V</code></td>
+          <td>tomorrow, next week, soon, I think</td>
+          <td><em>I will call you tomorrow.</em></td>
+          <td><span style="color:var(--ins)">★★★</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-future">9b</span></td>
+          <td>Future — going to<br><small>Kế hoạch / Dự tính</small></td>
+          <td><code>S + am/is/are + going to + V</code></td>
+          <td>tonight, next week (kế hoạch có sẵn)</td>
+          <td><em>I am going to study tonight.</em></td>
+          <td><span style="color:var(--ins)">★★★</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-future">10</span></td>
+          <td>Future Continuous<br><small>Tương lai tiếp diễn</small></td>
+          <td><code>S + will + be + V-ing</code></td>
+          <td>at this time tomorrow, at 8pm next Friday</td>
+          <td><em>I will be working at 8pm.</em></td>
+          <td><span style="color:var(--orange)">★☆☆</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-future">11</span></td>
+          <td>Future Perfect<br><small>Tương lai hoàn thành</small></td>
+          <td><code>S + will + have + V3</code></td>
+          <td>by tomorrow, by 2030, by the time</td>
+          <td><em>By 2030, I will have graduated.</em></td>
+          <td><span style="color:var(--muted)">☆☆☆</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge-future">12</span></td>
+          <td>Future Perfect Cont.<br><small>TL hoàn thành tiếp diễn</small></td>
+          <td><code>S + will + have + been + V-ing</code></td>
+          <td>by, for, since (kết hợp)</td>
+          <td><em>By 2025, I will have been studying for 3 years.</em></td>
+          <td><span style="color:var(--muted)">☆☆☆</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CHEAT CARDS -->
+  <div class="sub">
+    <div class="sub-title">Quick Reference Cards — 12 thì</div>
+    <div class="cheat-grid">
+
+      <div class="cheat-card">
+        <h4 class="h4-present">🔵 Thì 1 — Present Simple</h4>
+        <div class="cheat-row"><span class="ck">Công thức +</span><span class="cv">S + V / V-s/es</span></div>
+        <div class="cheat-row"><span class="ck">Phủ định</span><span class="cv">S + don't/doesn't + V</span></div>
+        <div class="cheat-row"><span class="ck">Câu hỏi</span><span class="cv">Do/Does + S + V?</span></div>
+        <div class="cheat-row"><span class="ck">Từ báo hiệu</span><span class="cv">always, every day, usually</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Thói quen, sự thật</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-present">🔵 Thì 2 — Present Continuous</h4>
+        <div class="cheat-row"><span class="ck">Công thức +</span><span class="cv">S + am/is/are + V-ing</span></div>
+        <div class="cheat-row"><span class="ck">Phủ định</span><span class="cv">S + am/is/are + not + V-ing</span></div>
+        <div class="cheat-row"><span class="ck">Câu hỏi</span><span class="cv">Am/Is/Are + S + V-ing?</span></div>
+        <div class="cheat-row"><span class="ck">Từ báo hiệu</span><span class="cv">now, right now, at the moment</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Đang xảy ra, tạm thời</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-present">🔵 Thì 3 — Present Perfect</h4>
+        <div class="cheat-row"><span class="ck">Công thức +</span><span class="cv">S + have/has + V3</span></div>
+        <div class="cheat-row"><span class="ck">Phủ định</span><span class="cv">S + haven't/hasn't + V3</span></div>
+        <div class="cheat-row"><span class="ck">Câu hỏi</span><span class="cv">Have/Has + S + V3?</span></div>
+        <div class="cheat-row"><span class="ck">Từ báo hiệu</span><span class="cv">ever, never, just, already, yet, for, since</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Kinh nghiệm, vừa xong, kéo dài đến nay</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-present">🔵 Thì 4 — Present Perfect Cont.</h4>
+        <div class="cheat-row"><span class="ck">Công thức +</span><span class="cv">S + have/has + been + V-ing</span></div>
+        <div class="cheat-row"><span class="ck">Phủ định</span><span class="cv">S + haven't/hasn't + been + V-ing</span></div>
+        <div class="cheat-row"><span class="ck">Từ báo hiệu</span><span class="cv">for, since, lately, all day</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Quá trình liên tục, giải thích kết quả HT</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-past">🟣 Thì 5 — Past Simple</h4>
+        <div class="cheat-row"><span class="ck">Công thức +</span><span class="cv">S + V2 (V-ed / irreg.)</span></div>
+        <div class="cheat-row"><span class="ck">Phủ định</span><span class="cv">S + didn't + V</span></div>
+        <div class="cheat-row"><span class="ck">Câu hỏi</span><span class="cv">Did + S + V?</span></div>
+        <div class="cheat-row"><span class="ck">Từ báo hiệu</span><span class="cv">yesterday, last week, ago, in 2020</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Đã xảy ra & kết thúc trong QK</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-past">🟣 Thì 6 — Past Continuous</h4>
+        <div class="cheat-row"><span class="ck">Công thức +</span><span class="cv">S + was/were + V-ing</span></div>
+        <div class="cheat-row"><span class="ck">Phủ định</span><span class="cv">S + wasn't/weren't + V-ing</span></div>
+        <div class="cheat-row"><span class="ck">Câu hỏi</span><span class="cv">Was/Were + S + V-ing?</span></div>
+        <div class="cheat-row"><span class="ck">Từ báo hiệu</span><span class="cv">when, while, at that time</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Đang làm, bị gián đoạn, 2 việc song song</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-past">🟣 Thì 7 — Past Perfect</h4>
+        <div class="cheat-row"><span class="ck">Công thức +</span><span class="cv">S + had + V3</span></div>
+        <div class="cheat-row"><span class="ck">Phủ định</span><span class="cv">S + hadn't + V3</span></div>
+        <div class="cheat-row"><span class="ck">Câu hỏi</span><span class="cv">Had + S + V3?</span></div>
+        <div class="cheat-row"><span class="ck">Từ báo hiệu</span><span class="cv">before, after, already, by the time</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Quá khứ của quá khứ (xảy ra trước)</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-past">🟣 Thì 8 — Past Perfect Cont.</h4>
+        <div class="cheat-row"><span class="ck">Công thức +</span><span class="cv">S + had + been + V-ing</span></div>
+        <div class="cheat-row"><span class="ck">Từ báo hiệu</span><span class="cv">for, since, before, when</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Quá trình liên tục trước 1 thời điểm QK</span></div>
+        <div class="cheat-row"><span class="ck">Mức độ</span><span class="cv">Hiếm dùng</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-future">🟡 Thì 9 — Future Simple (will)</h4>
+        <div class="cheat-row"><span class="ck">Công thức +</span><span class="cv">S + will + V</span></div>
+        <div class="cheat-row"><span class="ck">Phủ định</span><span class="cv">S + won't + V</span></div>
+        <div class="cheat-row"><span class="ck">Câu hỏi</span><span class="cv">Will + S + V?</span></div>
+        <div class="cheat-row"><span class="ck">Từ báo hiệu</span><span class="cv">tomorrow, next week, soon, I think</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Quyết định tức thời, dự đoán, lời hứa</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-future">🟡 Thì 9b — Going to</h4>
+        <div class="cheat-row"><span class="ck">Công thức +</span><span class="cv">S + am/is/are + going to + V</span></div>
+        <div class="cheat-row"><span class="ck">Phủ định</span><span class="cv">S + not going to + V</span></div>
+        <div class="cheat-row"><span class="ck">Câu hỏi</span><span class="cv">Am/Is/Are + S + going to + V?</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Kế hoạch đã có, bằng chứng rõ ràng</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-future">🟡 Thì 10 — Future Continuous</h4>
+        <div class="cheat-row"><span class="ck">Công thức +</span><span class="cv">S + will + be + V-ing</span></div>
+        <div class="cheat-row"><span class="ck">Phủ định</span><span class="cv">S + won't + be + V-ing</span></div>
+        <div class="cheat-row"><span class="ck">Từ báo hiệu</span><span class="cv">at this time tomorrow, at 8pm next...</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Đang làm tại thời điểm xác định trong TL</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-future">🟡 Thì 11+12 — Future Perfect(Cont.)</h4>
+        <div class="cheat-row"><span class="ck">F. Perfect +</span><span class="cv">will + have + V3</span></div>
+        <div class="cheat-row"><span class="ck">F. Perfect Cont. +</span><span class="cv">will + have + been + V-ing</span></div>
+        <div class="cheat-row"><span class="ck">Từ báo hiệu</span><span class="cv">by + thời điểm TL</span></div>
+        <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">Sẽ hoàn thành trước 1 mốc trong TL</span></div>
+        <div class="cheat-row"><span class="ck">Mức độ</span><span class="cv">Hiếm gặp trong giao tiếp</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-ins">✅ Ưu tiên học — Lộ trình</h4>
+        <div class="cheat-row"><span class="ck">Tuần 1-2</span><span class="cv">Present Simple + Past Simple</span></div>
+        <div class="cheat-row"><span class="ck">Tuần 3-4</span><span class="cv">Present Continuous + will/going to</span></div>
+        <div class="cheat-row"><span class="ck">Tháng 2</span><span class="cv">Present Perfect + Past Continuous</span></div>
+        <div class="cheat-row"><span class="ck">Tháng 3-4</span><span class="cv">Past Perfect + Future Continuous</span></div>
+        <div class="cheat-row"><span class="ck">Tháng 5+</span><span class="cv">4 thì Hoàn thành tiếp diễn</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-ch">💡 Mẹo nhớ nhanh</h4>
+        <div class="cheat-row"><span class="ck">Simple = Đơn giản</span><span class="cv">V / V-ed / will+V</span></div>
+        <div class="cheat-row"><span class="ck">Continuous = Đang làm</span><span class="cv">be + V-ing</span></div>
+        <div class="cheat-row"><span class="ck">Perfect = Đã xong</span><span class="cv">have/has/had + V3</span></div>
+        <div class="cheat-row"><span class="ck">Quá khứ = was/were/did/had</span><span class="cv">thay am/is/are/have</span></div>
+        <div class="cheat-row"><span class="ck">Tương lai = will +</span><span class="cv">phần hiện tại tương ứng</span></div>
+      </div>
+
+      <div class="cheat-card">
+        <h4 class="h4-sk">⚠️ Lỗi phổ biến cần tránh</h4>
+        <div class="cheat-row"><span class="ck">She doesn't likes</span><span class="cv">→ doesn't like ✅</span></div>
+        <div class="cheat-row"><span class="ck">I am loving you</span><span class="cv">→ I love you ✅ (stative)</span></div>
+        <div class="cheat-row"><span class="ck">I have went</span><span class="cv">→ I have gone ✅ (V3)</span></div>
+        <div class="cheat-row"><span class="ck">I did not went</span><span class="cv">→ I did not go ✅</span></div>
+        <div class="cheat-row"><span class="ck">Since 3 years</span><span class="cv">→ for 3 years ✅</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SIGNAL WORDS QUICK REFERENCE -->
+  <div class="sub">
+    <div class="sub-title">Từ báo hiệu — Nhìn là biết dùng thì nào</div>
+    <table class="tbl">
+      <thead><tr><th>Khi thấy từ này</th><th>Nghĩ đến thì</th><th>Ví dụ câu</th></tr></thead>
+      <tbody>
+        <tr><td>always, usually, every day, on Mondays</td><td><span class="badge-present">Present Simple</span></td><td><em>I always eat breakfast.</em></td></tr>
+        <tr><td>now, right now, at the moment, Look! Listen!</td><td><span class="badge-present">Present Continuous</span></td><td><em>Look! She is dancing.</em></td></tr>
+        <tr><td>ever, never, just, already, yet, for, since</td><td><span class="badge-present">Present Perfect</span></td><td><em>I have never tried sushi.</em></td></tr>
+        <tr><td>yesterday, last night/week, ago, in 2020</td><td><span class="badge-past">Past Simple</span></td><td><em>I went there last year.</em></td></tr>
+        <tr><td>when + QK, while + QK, at 8pm yesterday</td><td><span class="badge-past">Past Continuous</span></td><td><em>I was sleeping when...</em></td></tr>
+        <tr><td>before, after, already + 2 sự kiện QK</td><td><span class="badge-past">Past Perfect</span></td><td><em>She had left before I came.</em></td></tr>
+        <tr><td>tomorrow, next week, I think, soon, probably</td><td><span class="badge-future">Future (will)</span></td><td><em>I think it will rain.</em></td></tr>
+        <tr><td>tonight/next week (kế hoạch có sẵn)</td><td><span class="badge-future">Going to</span></td><td><em>I'm going to study tonight.</em></td></tr>
+        <tr><td>by + thời điểm tương lai</td><td><span class="badge-future">Future Perfect</span></td><td><em>By 2030, I will have finished.</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info i-ok" style="margin-top:22px">
+    <span class="info-ico">🎯</span>
+    <div style="font-size:13.5px">
+      <strong style="color:var(--text)">Tài nguyên luyện tập 12 thì miễn phí:</strong><br>
+      <span style="color:var(--muted)">
+        <a href="https://www.perfect-english-grammar.com" style="color:var(--acc)">perfect-english-grammar.com</a> — Bài tập 12 thì cực nhiều &nbsp;·&nbsp;
+        <a href="https://www.engvid.com" style="color:var(--acc)">engvid.com</a> — Video giải thích ngữ pháp &nbsp;·&nbsp;
+        <a href="https://learnenglish.britishcouncil.org" style="color:var(--acc)">British Council</a> — Bài tập online &nbsp;·&nbsp;
+        <a href="https://www.grammarly.com" style="color:var(--acc)">Grammarly</a> — Kiểm tra ngữ pháp khi viết
+      </span>
+    </div>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<div class="footer">
+  <span>⏰ 12 Thì Tiếng Anh · Hướng dẫn toàn tập · Dành cho người mất gốc · 2026</span>
+  <span style="margin-left:auto;color:var(--faint)">4 Hiện tại · 4 Quá khứ · 4 Tương lai · Cheat Sheet</span>
+</div>
+</div><!-- /main -->
+
+<script>
+window.addEventListener('scroll',()=>{
+  const el=document.documentElement;
+  document.getElementById('pbar').style.width=(el.scrollTop/(el.scrollHeight-el.clientHeight)*100)+'%';
+});
+const sections=document.querySelectorAll('.section[id]');
+const links=document.querySelectorAll('.nav-link');
+sections.forEach(s=>new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      const a=document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+      if(a)a.classList.add('active');
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'}).observe(s));
+</script>
+</body>
+</html>

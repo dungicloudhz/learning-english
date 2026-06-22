@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔤 Trật Tự Tính Từ · Từ Loại · Mệnh Đề Quan Hệ — Hướng dẫn toàn tập</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080810;--s1:#0e0e1c;--s2:#131326;--s3:#18182e;--s4:#1e1e38;
+  --border:#222240;--border2:#2c2c50;--text:#e6e6f2;--muted:#666698;--faint:#363660;
+  --acc:#ffd060;--acc-d:#c89820;--acc-dim:rgba(255,208,96,.11);--acc-glow:rgba(255,208,96,.24);
+  --green:#40d88e;--green-dim:rgba(64,216,142,.10);
+  --blue:#5ba8ff;--blue-dim:rgba(91,168,255,.10);
+  --purple:#a07af4;--purple-dim:rgba(160,122,244,.10);
+  --yellow:#ffd060;--yellow-dim:rgba(255,208,96,.10);
+  --teal:#30d8c0;--teal-dim:rgba(48,216,192,.10);
+  --orange:#ff8c50;--orange-dim:rgba(255,140,80,.10);
+  --pink:#ff6584;--pink-dim:rgba(255,101,132,.11);--pink-glow:rgba(255,101,132,.22);
+  --sky:#38bdf8;--sky-dim:rgba(56,189,248,.10);
+  --oc:#38bdf8;--oc-dim:rgba(56,189,248,.13);--oc-glow:rgba(56,189,248,.30);
+  --oc2:#5ba8ff;--oc2-dim:rgba(91,168,255,.12);
+  --ins:#40d88e;--ins-dim:rgba(64,216,142,.12);--ins-glow:rgba(64,216,142,.28);
+  --ch:#ffd060;--ch-dim:rgba(255,208,96,.12);--ch-glow:rgba(255,208,96,.28);
+  --sk:#a07af4;--sk-dim:rgba(160,122,244,.12);--sk-glow:rgba(160,122,244,.28);
+  --au:#ff6584;--au-dim:rgba(255,101,132,.12);--au-glow:rgba(255,101,132,.28);
+  --code-bg:#05050e;
+  /* topic colours */
+  --adj:#ff8c50;   --adj-dim:rgba(255,140,80,.13);  --adj-glow:rgba(255,140,80,.28);
+  --wc:#38bdf8;    --wc-dim:rgba(56,189,248,.13);   --wc-glow:rgba(56,189,248,.28);
+  --rel:#a07af4;   --rel-dim:rgba(160,122,244,.13); --rel-glow:rgba(160,122,244,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ── SIDEBAR ── */
+.sidebar{position:fixed;left:0;top:0;width:272px;height:100vh;background:var(--s1);border-right:1px solid var(--border);overflow-y:auto;z-index:400;display:flex;flex-direction:column}
+.sb-logo{padding:20px 18px 16px;border-bottom:1px solid var(--border)}
+.sb-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.logo-icon{width:44px;height:44px;border-radius:11px;flex-shrink:0;background:linear-gradient(135deg,var(--adj),var(--wc),var(--rel));display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 26px var(--adj-glow)}
+.logo-text h2{font-size:15px;font-weight:800;letter-spacing:-.4px}
+.logo-text p{font-size:10.5px;color:var(--muted);margin-top:2px}
+.prog-wrap{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--adj),var(--wc),var(--rel),var(--ch));width:0%;transition:width .4s;border-radius:2px}
+.nav-section{padding:6px 0 4px}
+.nav-group-hdr{display:flex;align-items:center;gap:7px;margin:6px 12px 3px;padding:6px 10px;border-radius:7px;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.ngh-oc{background:var(--oc-dim);color:var(--oc)}
+.ngh-adj{background:var(--adj-dim);color:var(--adj)}
+.ngh-wc{background:var(--wc-dim);color:var(--wc)}
+.ngh-rel{background:var(--rel-dim);color:var(--rel)}
+.ngh-au{background:var(--au-dim);color:var(--au)}
+.nav-link{display:flex;align-items:center;gap:9px;padding:5px 18px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;border-left:2px solid transparent;transition:all .14s}
+.nav-link:hover,.nav-link.active{color:var(--text);background:rgba(255,208,96,.07);border-left-color:var(--acc)}
+.nav-link .ico{font-size:12px;flex-shrink:0;width:16px;text-align:center}
+.nav-badge{margin-left:auto;font-size:9px;font-weight:700;padding:2px 7px;border-radius:100px;background:var(--acc-dim);color:var(--acc)}
+
+/* ── MAIN ── */
+.main{margin-left:272px;min-height:100vh}
+.hero{padding:72px 64px 56px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse 60% 55% at 75% 20%,rgba(255,140,80,.09) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 55% at 10% 80%,rgba(160,122,244,.08) 0%,transparent 55%),
+             radial-gradient(ellipse 45% 50% at 50% 55%,rgba(56,189,248,.05) 0%,transparent 60%),var(--bg)}
+.hero-dots{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+.hero-glow{position:absolute;right:-80px;top:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(255,140,80,.08) 0%,transparent 65%);pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--adj-dim);border:1px solid rgba(255,140,80,.35);color:var(--adj);padding:5px 16px;border-radius:100px;font-size:11.5px;font-weight:700;margin-bottom:24px;letter-spacing:.3px}
+.hero-eyebrow .pulse{width:6px;height:6px;border-radius:50%;background:var(--adj);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero h1{font-size:44px;font-weight:900;letter-spacing:-2.2px;line-height:1.08;margin-bottom:18px}
+.h-grad{background:linear-gradient(135deg,var(--adj) 0%,var(--wc) 50%,var(--rel) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.h-adj{color:var(--adj)}.h-wc{color:var(--wc)}.h-rel{color:var(--rel)}
+.h-acc{color:var(--acc)}.h-ins{color:var(--ins)}
+.hero-desc{font-size:15.5px;color:var(--muted);max-width:620px;line-height:1.75;margin-bottom:28px}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:5px 14px;border-radius:7px;font-size:12px;font-weight:700}
+.chip-adj{background:var(--adj-dim);color:var(--adj)}.chip-wc{background:var(--wc-dim);color:var(--wc)}
+.chip-rel{background:var(--rel-dim);color:var(--rel)}.chip-ins{background:var(--ins-dim);color:var(--ins)}
+.chip-ch{background:var(--ch-dim);color:var(--ch)}.chip-au{background:var(--au-dim);color:var(--au)}
+.chip-t{background:var(--teal-dim);color:var(--teal)}
+
+/* ── CAT BANNERS ── */
+.cat-banner{display:flex;align-items:center;gap:16px;padding:20px 24px;border-radius:14px;margin-bottom:44px;position:relative;overflow:hidden}
+.cat-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cb-adj{background:var(--adj-dim);border:1px solid rgba(255,140,80,.30)}.cb-adj::before{background:linear-gradient(90deg,var(--adj),var(--ch))}
+.cb-wc{background:var(--wc-dim);border:1px solid rgba(56,189,248,.30)}.cb-wc::before{background:linear-gradient(90deg,var(--wc),var(--ins))}
+.cb-rel{background:var(--rel-dim);border:1px solid rgba(160,122,244,.30)}.cb-rel::before{background:linear-gradient(90deg,var(--rel),var(--pink))}
+.cb-cheat{background:var(--au-dim);border:1px solid rgba(255,101,132,.30)}.cb-cheat::before{background:linear-gradient(90deg,var(--au),var(--rel))}
+.cb-icon{font-size:36px;flex-shrink:0}
+.cb-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.cb-adj .cb-badge{background:var(--adj-dim);color:var(--adj)}
+.cb-wc .cb-badge{background:var(--wc-dim);color:var(--wc)}
+.cb-rel .cb-badge{background:var(--rel-dim);color:var(--rel)}
+.cb-cheat .cb-badge{background:var(--au-dim);color:var(--au)}
+.cb-title{font-size:20px;font-weight:800;letter-spacing:-.5px}.cb-sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+/* ── CONTENT ── */
+.content{padding:52px 64px;max-width:1040px}
+.section{margin-bottom:68px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 10px;border-radius:5px;margin-top:5px;flex-shrink:0;letter-spacing:.5px}
+.st-ov{color:var(--oc);background:var(--oc-dim);border:1px solid var(--oc-glow)}
+.st-adj{color:var(--adj);background:var(--adj-dim);border:1px solid var(--adj-glow)}
+.st-wc{color:var(--wc);background:var(--wc-dim);border:1px solid var(--wc-glow)}
+.st-rel{color:var(--rel);background:var(--rel-dim);border:1px solid var(--rel-glow)}
+.st-ch{color:var(--ch);background:var(--ch-dim);border:1px solid var(--ch-glow)}
+.sec-title{font-size:22px;font-weight:800;letter-spacing:-.6px;margin-bottom:5px}
+.sec-sub{font-size:13px;color:var(--muted)}
+
+/* ── SUB ── */
+.sub{margin-bottom:36px}
+.sub-title{font-size:14.5px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:10px}
+.sub-title::before{content:'';display:inline-block;width:14px;height:3px;background:var(--acc);border-radius:2px;flex-shrink:0}
+.sub p,.sub ul,.sub ol{color:var(--muted);font-size:13.5px;margin-bottom:10px;line-height:1.78}
+.sub ul,.sub ol{padding-left:22px}.sub li{margin-bottom:5px}.sub strong{color:var(--text)}
+
+/* ── ADJECTIVE ORDER CHAIN ── */
+.adj-chain{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin:16px 0;padding:18px;background:var(--s2);border:1px solid var(--border2);border-radius:12px}
+.adj-slot{display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 12px;border-radius:9px;min-width:80px;text-align:center;flex-shrink:0}
+.adj-slot-num{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:1px 7px;border-radius:4px}
+.adj-slot-cat{font-size:11px;font-weight:700;color:var(--text)}
+.adj-slot-ex{font-size:10px;color:var(--muted);margin-top:2px}
+.slot-1{background:rgba(255,140,80,.15);border:1.5px solid rgba(255,140,80,.4)}.slot-1 .adj-slot-num{background:var(--adj-dim);color:var(--adj)}
+.slot-2{background:rgba(255,208,96,.12);border:1.5px solid rgba(255,208,96,.35)}.slot-2 .adj-slot-num{background:var(--ch-dim);color:var(--ch)}
+.slot-3{background:rgba(56,189,248,.12);border:1.5px solid rgba(56,189,248,.35)}.slot-3 .adj-slot-num{background:var(--wc-dim);color:var(--wc)}
+.slot-4{background:rgba(64,216,142,.12);border:1.5px solid rgba(64,216,142,.35)}.slot-4 .adj-slot-num{background:var(--ins-dim);color:var(--ins)}
+.slot-5{background:rgba(48,216,192,.12);border:1.5px solid rgba(48,216,192,.35)}.slot-5 .adj-slot-num{background:var(--teal-dim);color:var(--teal)}
+.slot-6{background:rgba(160,122,244,.12);border:1.5px solid rgba(160,122,244,.35)}.slot-6 .adj-slot-num{background:var(--rel-dim);color:var(--rel)}
+.slot-7{background:rgba(255,101,132,.12);border:1.5px solid rgba(255,101,132,.35)}.slot-7 .adj-slot-num{background:var(--au-dim);color:var(--au)}
+.slot-n{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.18)}.slot-n .adj-slot-num{background:rgba(255,255,255,.12);color:var(--text)}
+.adj-arrow{color:var(--faint);font-size:14px;flex-shrink:0}
+
+/* ── WORD CLASS BADGE ── */
+.wc-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:7px;font-size:11.5px;font-weight:700;margin:3px 3px 3px 0}
+.wcb-n{background:rgba(56,189,248,.15);border:1px solid rgba(56,189,248,.35);color:var(--wc)}
+.wcb-v{background:rgba(64,216,142,.15);border:1px solid rgba(64,216,142,.35);color:var(--ins)}
+.wcb-adj{background:rgba(255,140,80,.15);border:1px solid rgba(255,140,80,.35);color:var(--adj)}
+.wcb-adv{background:rgba(255,208,96,.15);border:1px solid rgba(255,208,96,.35);color:var(--ch)}
+.wcb-prep{background:rgba(160,122,244,.15);border:1px solid rgba(160,122,244,.35);color:var(--rel)}
+.wcb-conj{background:rgba(48,216,192,.15);border:1px solid rgba(48,216,192,.35);color:var(--teal)}
+.wcb-pron{background:rgba(255,101,132,.15);border:1px solid rgba(255,101,132,.35);color:var(--au)}
+.wcb-det{background:rgba(91,168,255,.15);border:1px solid rgba(91,168,255,.35);color:var(--blue)}
+
+/* ── WORD FORM CONVERSION TABLE ── */
+.convert-card{background:var(--s1);border:1px solid var(--border2);border-radius:13px;overflow:hidden;margin:13px 0}
+.convert-head{padding:13px 18px;background:var(--s2);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.convert-root{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--wc)}
+.convert-meaning{font-size:12px;color:var(--muted);margin-left:4px}
+.convert-body{padding:14px 18px}
+.convert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.convert-item{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:10px 12px;text-align:center}
+.ci-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px}
+.ci-word{font-size:13.5px;font-weight:800;font-family:'JetBrains Mono',monospace}
+.ci-n .ci-label{color:var(--wc)}.ci-n .ci-word{color:var(--wc)}
+.ci-v .ci-label{color:var(--ins)}.ci-v .ci-word{color:var(--ins)}
+.ci-adj .ci-label{color:var(--adj)}.ci-adj .ci-word{color:var(--adj)}
+.ci-adv .ci-label{color:var(--ch)}.ci-adv .ci-word{color:var(--ch)}
+
+/* ── RELATIVE CLAUSE DIAGRAM ── */
+.rel-diagram{background:var(--s2);border:1px solid var(--border2);border-radius:13px;padding:20px 24px;margin:13px 0}
+.rel-sentence{font-size:14.5px;line-height:2;flex-wrap:wrap;display:flex;gap:4px;align-items:center;margin-bottom:14px}
+.rel-part{padding:4px 11px;border-radius:6px;font-weight:700}
+.rp-main{background:rgba(56,189,248,.15);border:1px solid rgba(56,189,248,.3);color:var(--wc)}
+.rp-ante{background:rgba(255,140,80,.20);border:2px solid var(--adj);color:var(--adj)}
+.rp-pron{background:rgba(160,122,244,.20);border:2px solid var(--rel);color:var(--rel)}
+.rp-clause{background:rgba(64,216,142,.12);border:1px solid rgba(64,216,142,.3);color:var(--ins)}
+.rel-legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.rel-leg-item{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted)}
+.rel-leg-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+.rld-ante{background:var(--adj)}.rld-pron{background:var(--rel)}.rld-clause{background:var(--ins)}.rld-main{background:var(--wc)}
+
+/* ── EXAMPLE BOX ── */
+.ex-box{background:var(--s1);border:1px solid var(--border2);border-radius:11px;overflow:hidden;margin:13px 0}
+.ex-head{display:flex;align-items:center;gap:8px;padding:9px 16px;background:var(--s2);border-bottom:1px solid var(--border)}
+.ex-label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.ex-tag{margin-left:auto;font-size:9px;font-weight:700;padding:2px 9px;border-radius:100px;flex-shrink:0}
+.et-adj{background:var(--adj-dim);color:var(--adj)}
+.et-wc{background:var(--wc-dim);color:var(--wc)}
+.et-rel{background:var(--rel-dim);color:var(--rel)}
+.et-tip{background:var(--ch-dim);color:var(--ch)}
+.ex-body{padding:14px 20px}
+.ex-row{display:flex;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13.5px}
+.ex-row:last-child{border-bottom:none}
+.ex-type{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0}
+.ext-ok{background:var(--ins-dim);color:var(--ins)}
+.ext-bad{background:var(--au-dim);color:var(--au)}
+.ex-en{color:var(--text);font-weight:600;flex:1;min-width:0}
+.ex-vn{color:var(--muted);flex:1;min-width:0}
+.ex-note{font-size:10.5px;color:var(--faint);flex-shrink:0;font-style:italic}
+.ex-arrow{color:var(--faint);flex-shrink:0}
+
+/* ── INFO BOXES ── */
+.info{display:flex;gap:12px;padding:13px 16px;border-radius:9px;margin:12px 0;font-size:13px;line-height:1.65}
+.info-ico{font-size:15px;flex-shrink:0;margin-top:1px}
+.i-ok{background:var(--green-dim);border:1px solid rgba(64,216,142,.2);color:#30a870}
+.i-warn{background:var(--yellow-dim);border:1px solid rgba(255,208,96,.2);color:#b09030}
+.i-tip{background:var(--blue-dim);border:1px solid rgba(91,168,255,.2);color:#3878d0}
+.i-note{background:var(--purple-dim);border:1px solid rgba(160,122,244,.2);color:#8060d0}
+.i-err{background:var(--pink-dim);border:1px solid rgba(255,101,132,.2);color:#cc3355}
+
+/* ── RW BOX ── */
+.rw-box{background:var(--s1);border:1px solid var(--border2);border-radius:12px;padding:16px 20px;margin:13px 0;position:relative;overflow:hidden}
+.rw-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
+.rw-adj::before{background:var(--adj)}.rw-wc::before{background:var(--wc)}
+.rw-rel::before{background:var(--rel)}.rw-ins::before{background:var(--ins)}
+.rw-ch::before{background:var(--ch)}.rw-au::before{background:var(--au)}
+.rw-label{font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.rw-adj .rw-label{color:var(--adj)}.rw-wc .rw-label{color:var(--wc)}
+.rw-rel .rw-label{color:var(--rel)}.rw-ins .rw-label{color:var(--ins)}
+.rw-ch .rw-label{color:var(--ch)}.rw-au .rw-label{color:var(--au)}
+.rw-title{font-size:14px;font-weight:700;margin-bottom:5px}
+.rw-body{font-size:13px;color:var(--muted);line-height:1.68}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:13px 0;border-radius:11px;overflow:hidden}
+.tbl th{background:var(--s3);padding:9px 14px;text-align:left;font-weight:700;font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);border-bottom:1px solid var(--border2)}
+.tbl td{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted);vertical-align:top;font-size:13px}
+.tbl tr:hover td{background:rgba(255,255,255,.022)}
+.tbl td:first-child{color:var(--text);font-weight:600}
+.tbl code{font-family:'JetBrains Mono',monospace;font-size:11px;background:var(--code-bg);padding:2px 6px;border-radius:4px;color:var(--teal)}
+.tbl .b-adj{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--adj-dim);color:var(--adj)}
+.tbl .b-wc{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--wc-dim);color:var(--wc)}
+.tbl .b-rel{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--rel-dim);color:var(--rel)}
+.tbl .en{color:var(--wc);font-weight:700}
+
+/* ── CMP BOX ── */
+.cmp-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:11px;overflow:hidden;margin:13px 0}
+.cmp-bad{background:rgba(255,101,132,.07);border-right:1px solid var(--border);padding:14px 16px}
+.cmp-good{background:rgba(64,216,142,.07);padding:14px 16px}
+.cmp-label{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.cmp-bad .cmp-label{color:var(--au)}.cmp-good .cmp-label{color:var(--ins)}
+.cmp-text{font-size:13.5px;color:var(--text);line-height:1.7}
+.cmp-note{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+
+/* ── GRIDS ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:13px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:13px 0}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:11px;padding:15px;transition:all .2s;cursor:default}
+.card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.38)}
+.card-icon{font-size:22px;margin-bottom:8px}.card-title{font-size:13px;font-weight:700;margin-bottom:4px}.card-desc{font-size:12px;color:var(--muted);line-height:1.55}
+
+/* ── CHEAT SHEET ── */
+.cheat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:13px 0}
+.cheat-card{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:14px}
+.cheat-card h4{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:11px}
+.h4-adj{color:var(--adj)}.h4-wc{color:var(--wc)}.h4-rel{color:var(--rel)}
+.h4-ch{color:var(--ch)}.h4-ins{color:var(--ins)}.h4-au{color:var(--au)}
+.cheat-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;gap:8px}
+.cheat-row:last-child{border-bottom:none}
+.ck{color:var(--muted);flex-shrink:0;font-size:11.5px}
+.cv{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--teal);text-align:right}
+
+/* ── SUFFIX STRIP ── */
+.suffix-strip{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.suffix-pill{padding:5px 14px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700}
+.sp-n{background:rgba(56,189,248,.15);color:var(--wc)}
+.sp-v{background:rgba(64,216,142,.15);color:var(--ins)}
+.sp-adj{background:rgba(255,140,80,.15);color:var(--adj)}
+.sp-adv{background:rgba(255,208,96,.15);color:var(--ch)}
+
+p code,li code,td code{font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(255,208,96,.1);color:var(--yellow);padding:2px 6px;border-radius:4px}
+hr.dv{border:none;border-top:1px solid var(--border);margin:52px 0}
+.footer{border-top:1px solid var(--border);padding:26px 64px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}
+@media(max-width:900px){
+  .sidebar{display:none}.main{margin-left:0}
+  .hero,.content,.footer{padding-left:22px;padding-right:22px}
+  .hero h1{font-size:28px}
+  .adj-chain{gap:6px}.adj-slot{min-width:66px;padding:8px 8px}
+  .grid-2,.grid-3,.grid-4,.cheat-grid,.cmp-box,.convert-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-brand">
+      <div class="logo-icon">🔤</div>
+      <div class="logo-text">
+        <h2>Trật Tự TT · Từ Loại · Mệnh Đề QH</h2>
+        <p>Hướng dẫn toàn tập · Mất gốc OK</p>
+      </div>
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" id="pbar"></div></div>
+  </div>
+
+  <div class="nav-section" style="border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:2px">
+    <div class="nav-group-hdr" style="background:rgba(255,208,96,.12);color:#ffd060">📚 Lộ Trình Học</div>
+    <a href="english-grammar-basics.html" class="nav-link"><span class="ico">①</span> Tiếng Anh Cơ Bản</a>
+    <a href="english-12-tenses.html" class="nav-link"><span class="ico">②</span> 12 Thì Tiếng Anh</a>
+    <a href="subject-verb-agreement-tenses.html" class="nav-link"><span class="ico">③</span> Hòa Hợp C-V &amp; Phối Thì</a>
+    <a href="synonyms-antonyms-guide.html" class="nav-link"><span class="ico">④</span> Đồng Nghĩa &amp; Trái Nghĩa</a>
+    <a href="adjective-order-word-classes-relative-clauses.html" class="nav-link" style="color:var(--acc);background:rgba(255,208,96,.08);border-left-color:var(--acc)"><span class="ico">⑤</span> Trật Tự TT · Từ Loại · MĐ QH</a>
+    <a href="english-grammar-guide.html" class="nav-link"><span class="ico">⑥</span> Ngữ Pháp Tổng Hợp</a>
+    <a href="grammar-comparison-passive-conjunctions.html" class="nav-link"><span class="ico">⑦</span> So Sánh · Bị Động · Liên Từ</a>
+    <a href="prepositions-wish-guide.html" class="nav-link"><span class="ico">⑧</span> Giới Từ &amp; Câu Ước</a>
+    <a href="grammar-modals-quantifiers-stress.html" class="nav-link"><span class="ico">⑨</span> Modal · Lượng Từ · Trọng Âm</a>
+    <a href="grammar-tag-questions-articles-conditionals.html" class="nav-link"><span class="ico">⑩</span> Hỏi Đuôi · Mạo Từ · ĐK</a>
+    <a href="grammar-tov-ving-reported-phrasal.html" class="nav-link"><span class="ico">⑪</span> To V/V-ing · Tường Thuật</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-oc">🗺️ Tổng quan</div>
+    <a href="#s0" class="nav-link"><span class="ico">📊</span> 3 chủ đề là gì?</a>
+    <a href="#s0b" class="nav-link"><span class="ico">⭐</span> Ưu tiên học gì trước</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-adj">🟠 Trật Tự Tính Từ</div>
+    <a href="#s1" class="nav-link"><span class="ico">1️⃣</span> Quy tắc OSACOMP <span class="nav-badge">★★★</span></a>
+    <a href="#s2" class="nav-link"><span class="ico">2️⃣</span> Ví dụ thực tế + Lỗi hay gặp</a>
+    <a href="#s3" class="nav-link"><span class="ico">3️⃣</span> Mẹo nhớ & ngoại lệ</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-wc">🔵 Từ Loại (Word Classes)</div>
+    <a href="#s4" class="nav-link"><span class="ico">4️⃣</span> 8 từ loại tổng quan <span class="nav-badge">★★★</span></a>
+    <a href="#s5" class="nav-link"><span class="ico">5️⃣</span> Chuyển đổi từ loại — Suffix</a>
+    <a href="#s6" class="nav-link"><span class="ico">6️⃣</span> Nhận biết từ loại trong câu</a>
+    <a href="#s7" class="nav-link"><span class="ico">7️⃣</span> Lỗi nhầm từ loại phổ biến</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-rel">🟣 Mệnh Đề Quan Hệ</div>
+    <a href="#s8" class="nav-link"><span class="ico">8️⃣</span> Mệnh đề quan hệ là gì? <span class="nav-badge">★★★</span></a>
+    <a href="#s9" class="nav-link"><span class="ico">9️⃣</span> Who / Which / That</a>
+    <a href="#s10" class="nav-link"><span class="ico">🔟</span> Whom / Whose / Where / When</a>
+    <a href="#s11" class="nav-link"><span class="ico">🔢</span> Xác định vs Không xác định</a>
+    <a href="#s12" class="nav-link"><span class="ico">🔢</span> Rút gọn mệnh đề quan hệ</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-au">📋 Tổng hợp</div>
+    <a href="#s13" class="nav-link"><span class="ico">📋</span> Cheat Sheet toàn bộ</a>
+  </div>
+</aside>
+
+<!-- ══════════ MAIN ══════════ -->
+<div class="main">
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-dots"></div><div class="hero-glow"></div>
+  <div class="hero-eyebrow"><span class="pulse"></span> Adjective Order · Word Classes · Relative Clauses · Dành cho người mất gốc</div>
+  <h1>
+    <span class="h-grad">Trật Tự</span> 🔤<br>
+    <span class="h-adj">Tính Từ</span> · <span class="h-wc">Từ Loại</span><br>
+    & <span class="h-rel">Mệnh Đề Quan Hệ</span>
+  </h1>
+  <p class="hero-desc">Ba chủ đề nền tảng giúp câu tiếng Anh nghe đúng ngữ pháp và tự nhiên hơn. Học khi nào đặt tính từ nào trước, tính từ nào sau; cách nhận diện và chuyển đổi từ loại; và cách dùng who/which/that để ghép câu phức đẹp hơn.</p>
+  <div class="hero-chips">
+    <span class="chip chip-adj">🟠 Trật tự tính từ</span>
+    <span class="chip chip-wc">🔵 Từ loại</span>
+    <span class="chip chip-rel">🟣 Mệnh đề quan hệ</span>
+    <span class="chip chip-ins">✅ Nhiều ví dụ</span>
+    <span class="chip chip-ch">💡 Mẹo nhớ</span>
+    <span class="chip chip-au">📋 Cheat Sheet</span>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ════ S0 ════ -->
+<div class="section" id="s0">
+  <div class="sec-head">
+    <span class="sec-tag st-ov">TỔNG QUAN</span>
+    <div>
+      <h2 class="sec-title">3 chủ đề này quan trọng thế nào?</h2>
+      <p class="sec-sub">Hiểu bức tranh lớn trước khi đi vào chi tiết</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="grid-3">
+      <div class="rw-box rw-adj">
+        <div class="rw-label">🟠 ADJECTIVE ORDER</div>
+        <div class="rw-title">Trật tự tính từ</div>
+        <div class="rw-body">Khi dùng nhiều tính từ cùng lúc, tiếng Anh có <strong style="color:var(--text)">thứ tự cố định</strong>. Sai thứ tự không sai nghĩa nhưng nghe rất "không phải tiếng Anh". Ví dụ: <em>a beautiful old red Italian car</em> ✅ chứ không phải <em>a red Italian old beautiful car</em> ❌.</div>
+      </div>
+      <div class="rw-box rw-wc">
+        <div class="rw-label">🔵 WORD CLASSES</div>
+        <div class="rw-title">Từ loại</div>
+        <div class="rw-body">Biết từ thuộc loại nào giúp bạn <strong style="color:var(--text)">đặt từ đúng vị trí trong câu</strong> và <strong style="color:var(--text)">chuyển đổi dạng từ</strong> linh hoạt (happy → happiness → happily). Lỗi nhầm từ loại là lỗi cực phổ biến.</div>
+      </div>
+      <div class="rw-box rw-rel">
+        <div class="rw-label">🟣 RELATIVE CLAUSES</div>
+        <div class="rw-title">Mệnh đề quan hệ</div>
+        <div class="rw-body">Là cách <strong style="color:var(--text)">ghép 2 câu thành 1</strong> bằng who/which/that, giúp câu văn súc tích và tự nhiên hơn. Đây là cấu trúc cực thông dụng trong cả giao tiếp và văn viết.</div>
+      </div>
+    </div>
+    <div class="info i-ok">
+      <span class="info-ico">🎯</span>
+      <div><strong style="color:var(--text)">Thứ tự học gợi ý:</strong> Mệnh đề quan hệ (dùng nhiều nhất) → Trật tự tính từ (sửa lỗi nhanh) → Chuyển đổi từ loại (mở rộng vốn từ). Cả 3 đều có thể học song song vì không phụ thuộc nhau.</div>
+    </div>
+  </div>
+  <div class="sub" id="s0b">
+    <div class="sub-title">⭐ Ưu tiên theo mức độ dùng trong giao tiếp</div>
+    <table class="tbl">
+      <thead><tr><th>Ưu tiên</th><th>Chủ đề</th><th>Lý do quan trọng</th></tr></thead>
+      <tbody>
+        <tr><td><span style="color:var(--ins)">★★★</span></td><td>Mệnh đề quan hệ cơ bản (who, which, that)</td><td>Dùng hàng ngày khi kể chuyện, mô tả người/vật</td></tr>
+        <tr><td><span style="color:var(--ins)">★★★</span></td><td>8 từ loại cơ bản + nhận biết</td><td>Nền tảng cho mọi ngữ pháp khác</td></tr>
+        <tr><td><span style="color:var(--ch)">★★☆</span></td><td>Trật tự tính từ (OSACOMP)</td><td>Giúp câu nghe tự nhiên khi mô tả chi tiết</td></tr>
+        <tr><td><span style="color:var(--orange)">★☆☆</span></td><td>Rút gọn mệnh đề QH + whose/where/when</td><td>Nâng cấp văn viết và giao tiếp chuyên nghiệp</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     PHẦN 1 — TRẬT TỰ TÍNH TỪ
+════════════════════════════════ -->
+<div class="cat-banner cb-adj">
+  <div class="cb-icon">🟠</div>
+  <div>
+    <div class="cb-badge">ADJECTIVE ORDER</div>
+    <div class="cb-title">Phần 1 — Trật Tự Tính Từ</div>
+    <div class="cb-sub">Khi dùng nhiều tính từ — cái nào đứng trước, cái nào đứng sau?</div>
+  </div>
+</div>
+
+<!-- S1 — OSACOMP -->
+<div class="section" id="s1">
+  <div class="sec-head">
+    <span class="sec-tag st-adj">QUY TẮC 1</span>
+    <div>
+      <h2 class="sec-title">Quy tắc OSACOMP — Thứ tự 7 loại tính từ</h2>
+      <p class="sec-sub">Opinion · Size · Age · Color · Origin · Material · Purpose</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Chuỗi thứ tự tính từ — từ chủ quan đến khách quan</div>
+    <div class="adj-chain">
+      <div class="adj-slot slot-1">
+        <span class="adj-slot-num">1</span>
+        <span class="adj-slot-cat">Opinion</span>
+        <span class="adj-slot-ex">Ý kiến / Đánh giá</span>
+        <span class="adj-slot-ex" style="color:var(--adj);margin-top:4px">beautiful, lovely, ugly, strange</span>
+      </div>
+      <span class="adj-arrow">→</span>
+      <div class="adj-slot slot-2">
+        <span class="adj-slot-num">2</span>
+        <span class="adj-slot-cat">Size</span>
+        <span class="adj-slot-ex">Kích thước</span>
+        <span class="adj-slot-ex" style="color:var(--ch);margin-top:4px">big, small, tall, long, short</span>
+      </div>
+      <span class="adj-arrow">→</span>
+      <div class="adj-slot slot-3">
+        <span class="adj-slot-num">3</span>
+        <span class="adj-slot-cat">Age</span>
+        <span class="adj-slot-ex">Tuổi / Thời gian</span>
+        <span class="adj-slot-ex" style="color:var(--wc);margin-top:4px">old, new, young, ancient</span>
+      </div>
+      <span class="adj-arrow">→</span>
+      <div class="adj-slot slot-4">
+        <span class="adj-slot-num">4</span>
+        <span class="adj-slot-cat">Shape</span>
+        <span class="adj-slot-ex">Hình dạng</span>
+        <span class="adj-slot-ex" style="color:var(--ins);margin-top:4px">round, square, flat</span>
+      </div>
+      <span class="adj-arrow">→</span>
+      <div class="adj-slot slot-5">
+        <span class="adj-slot-num">5</span>
+        <span class="adj-slot-cat">Color</span>
+        <span class="adj-slot-ex">Màu sắc</span>
+        <span class="adj-slot-ex" style="color:var(--teal);margin-top:4px">red, blue, green, dark</span>
+      </div>
+      <span class="adj-arrow">→</span>
+      <div class="adj-slot slot-6">
+        <span class="adj-slot-num">6</span>
+        <span class="adj-slot-cat">Origin</span>
+        <span class="adj-slot-ex">Xuất xứ</span>
+        <span class="adj-slot-ex" style="color:var(--rel);margin-top:4px">Italian, Vietnamese, Asian</span>
+      </div>
+      <span class="adj-arrow">→</span>
+      <div class="adj-slot slot-7">
+        <span class="adj-slot-num">7</span>
+        <span class="adj-slot-cat">Material</span>
+        <span class="adj-slot-ex">Chất liệu</span>
+        <span class="adj-slot-ex" style="color:var(--au);margin-top:4px">wooden, cotton, leather</span>
+      </div>
+      <span class="adj-arrow">→</span>
+      <div class="adj-slot slot-n">
+        <span class="adj-slot-num">N</span>
+        <span class="adj-slot-cat">NOUN</span>
+        <span class="adj-slot-ex">Danh từ</span>
+        <span class="adj-slot-ex" style="color:var(--text);margin-top:4px">car, bag, house...</span>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Câu thần chú ghi nhớ "OSASCOMP":</strong> <em><strong>O</strong>ur <strong>S</strong>chool <strong>A</strong>lways <strong>S</strong>erves <strong>C</strong>offee <strong>O</strong>n <strong>M</strong>ondays <strong>P</strong>lainly</em> → Opinion · Size · Age · Shape · Color · Origin · Material · Purpose. Chỉ cần nhớ từ đầu của mỗi loại là có thứ tự chuẩn ngay!</div>
+    </div>
+  </div>
+</div>
+
+<!-- S2 — VÍ DỤ THỰC TẾ -->
+<div class="section" id="s2">
+  <div class="sec-head">
+    <span class="sec-tag st-adj">QUY TẮC 2</span>
+    <div>
+      <h2 class="sec-title">Ví dụ thực tế & Lỗi hay gặp</h2>
+      <p class="sec-sub">Từ 2 tính từ đến 5 tính từ trong cùng 1 cụm danh từ</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Ví dụ 2–3 tính từ (phổ biến nhất)</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Cụm 2–3 tính từ</span><span class="ex-tag et-adj">EXAMPLES</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">a <strong>beautiful old</strong> house</span><span class="ex-arrow">→</span><span class="ex-vn">ngôi nhà cũ đẹp</span><span class="ex-note">Opinion → Age</span></div>
+        <div class="ex-row"><span class="ex-en">a <strong>big red</strong> car</span><span class="ex-arrow">→</span><span class="ex-vn">chiếc xe đỏ to</span><span class="ex-note">Size → Color</span></div>
+        <div class="ex-row"><span class="ex-en">a <strong>small round wooden</strong> table</span><span class="ex-arrow">→</span><span class="ex-vn">cái bàn gỗ tròn nhỏ</span><span class="ex-note">Size → Shape → Material</span></div>
+        <div class="ex-row"><span class="ex-en">a <strong>lovely young</strong> woman</span><span class="ex-arrow">→</span><span class="ex-vn">người phụ nữ trẻ xinh đẹp</span><span class="ex-note">Opinion → Age</span></div>
+        <div class="ex-row"><span class="ex-en">a <strong>dirty old black</strong> jacket</span><span class="ex-arrow">→</span><span class="ex-vn">chiếc áo khoác đen cũ bẩn</span><span class="ex-note">Opinion → Age → Color</span></div>
+      </div>
+    </div>
+    <div class="sub-title">Ví dụ "đỉnh cao" — 4 tính từ trở lên</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Cụm 4–5 tính từ — câu nổi tiếng</span><span class="ex-tag et-adj">FULL ORDER</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">a <strong>beautiful big old Italian</strong> car</span><span class="ex-arrow">→</span><span class="ex-vn">chiếc xe Ý cổ điển to đẹp</span><span class="ex-note">Opinion→Size→Age→Origin</span></div>
+        <div class="ex-row"><span class="ex-en">a <strong>lovely small antique oval black</strong> vase</span><span class="ex-arrow">→</span><span class="ex-vn">chiếc bình đen hình oval cổ nhỏ xinh</span><span class="ex-note">Op→Size→Age→Shape→Color</span></div>
+        <div class="ex-row"><span class="ex-en">a <strong>gorgeous long red silk</strong> dress</span><span class="ex-arrow">→</span><span class="ex-vn">chiếc váy lụa đỏ dài tuyệt đẹp</span><span class="ex-note">Op→Size→Color→Material</span></div>
+      </div>
+    </div>
+    <div class="cmp-box">
+      <div class="cmp-bad">
+        <div class="cmp-label">❌ Sai thứ tự</div>
+        <div class="cmp-text">a <span style="color:var(--au)">red beautiful big</span> car</div>
+        <div class="cmp-note">Color → Opinion → Size ❌ Nghe rất kỳ với người bản ngữ</div>
+      </div>
+      <div class="cmp-good">
+        <div class="cmp-label">✅ Đúng thứ tự</div>
+        <div class="cmp-text">a <span style="color:var(--ins)">beautiful big red</span> car</div>
+        <div class="cmp-note">Opinion → Size → Color ✅ Hoàn toàn tự nhiên</div>
+      </div>
+    </div>
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Thực tế giao tiếp:</strong> Người bản ngữ hiếm khi dùng quá 2-3 tính từ liên tiếp trong câu nói — nghe rườm rà. Quy tắc này quan trọng nhất khi bạn <strong>viết văn mô tả</strong> hoặc muốn biết "tại sao câu này nghe lạ". Trong giao tiếp hàng ngày, 1-2 tính từ là đủ.</div>
+    </div>
+  </div>
+</div>
+
+<!-- S3 — MẸO & NGOẠI LỆ -->
+<div class="section" id="s3">
+  <div class="sec-head">
+    <span class="sec-tag st-adj">MẸO</span>
+    <div>
+      <h2 class="sec-title">Mẹo nhớ nhanh & Ngoại lệ</h2>
+      <p class="sec-sub">Quy tắc ngón tay · Tính từ sau danh từ · Tính từ ghép</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Mẹo ngón tay — Nhớ thứ tự trong 30 giây</div>
+    <div class="rw-box rw-adj">
+      <div class="rw-label">🤚 KỸ THUẬT NGÓN TAY</div>
+      <div class="rw-title">Đếm từ ngón cái → ngón út = thứ tự tính từ</div>
+      <div class="rw-body">
+        👍 Ngón cái = <strong style="color:var(--adj)">Opinion</strong> (ý kiến — "mình nghĩ như thế")<br>
+        ☝️ Ngón trỏ = <strong style="color:var(--ch)">Size</strong> (kích thước)<br>
+        🖕 Ngón giữa = <strong style="color:var(--ins)">Age + Shape</strong> (tuổi/hình dạng)<br>
+        💍 Ngón áp út = <strong style="color:var(--teal)">Color + Origin</strong> (màu/xuất xứ)<br>
+        🤙 Ngón út = <strong style="color:var(--au)">Material</strong> (chất liệu) → rồi mới đến NOUN
+      </div>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Tính từ đứng SAU danh từ (ngoại lệ quan trọng)</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Trường hợp tính từ đứng sau noun</span><span class="ex-tag et-adj">POST-NOUN ADJECTIVES</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">something <strong>important</strong></span><span class="ex-arrow">→</span><span class="ex-vn">điều gì đó quan trọng</span><span class="ex-note">-thing/-body/-one + adj sau</span></div>
+        <div class="ex-row"><span class="ex-en">someone <strong>special</strong></span><span class="ex-arrow">→</span><span class="ex-vn">ai đó đặc biệt</span></div>
+        <div class="ex-row"><span class="ex-en">nothing <strong>new</strong></span><span class="ex-arrow">→</span><span class="ex-vn">không có gì mới</span></div>
+        <div class="ex-row"><span class="ex-en">attorney general → <strong>attorneys general</strong></span><span class="ex-arrow">→</span><span class="ex-vn">Số nhiều của "luật sư chính" — đây là cụm danh từ mượn tiếng Pháp</span></div>
+      </div>
+    </div>
+    <div class="info i-note">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Quy tắc -thing/-body/-one:</strong> Sau <code>something, anything, nothing, someone, everyone, nobody</code>... tính từ LUÔN đứng SAU, không bao giờ đứng trước. <em>something <u>interesting</u></em> ✅ · <em><u>interesting</u> something</em> ❌</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     PHẦN 2 — TỪ LOẠI
+════════════════════════════════ -->
+<div class="cat-banner cb-wc">
+  <div class="cb-icon">🔵</div>
+  <div>
+    <div class="cb-badge">WORD CLASSES</div>
+    <div class="cb-title">Phần 2 — Từ Loại (Parts of Speech)</div>
+    <div class="cb-sub">8 từ loại · Chuyển đổi · Nhận biết · Lỗi hay gặp</div>
+  </div>
+</div>
+
+<!-- S4 — 8 TỪ LOẠI -->
+<div class="section" id="s4">
+  <div class="sec-head">
+    <span class="sec-tag st-wc">NHÓM 4</span>
+    <div>
+      <h2 class="sec-title">8 từ loại cơ bản — Bản đồ toàn cảnh</h2>
+      <p class="sec-sub">Mỗi từ trong tiếng Anh đều thuộc ít nhất 1 loại trong 8 này</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Bảng tổng hợp 8 từ loại</div>
+    <table class="tbl">
+      <thead><tr><th>#</th><th>Từ loại</th><th>Chức năng</th><th>Ví dụ</th><th>Vị trí điển hình trong câu</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><span class="b-wc">Noun (N)</span> Danh từ</td><td>Người, vật, nơi, ý tưởng</td><td><em>dog, city, love, idea</em></td><td>Chủ ngữ / Tân ngữ</td></tr>
+        <tr><td>2</td><td><span class="b-wc">Verb (V)</span> Động từ</td><td>Hành động hoặc trạng thái</td><td><em>run, is, have, think</em></td><td>Sau chủ ngữ</td></tr>
+        <tr><td>3</td><td><span class="b-adj">Adjective (Adj)</span> Tính từ</td><td>Mô tả danh từ</td><td><em>big, happy, red, old</em></td><td>Trước danh từ / sau "be"</td></tr>
+        <tr><td>4</td><td><span class="b-wc">Adverb (Adv)</span> Trạng từ</td><td>Mô tả V/Adj/Adv khác</td><td><em>quickly, very, here, often</em></td><td>Sau V hoặc trước Adj</td></tr>
+        <tr><td>5</td><td><span class="b-rel">Pronoun (Pro)</span> Đại từ</td><td>Thay thế danh từ</td><td><em>I, you, it, they, who</em></td><td>Thay thế vị trí N</td></tr>
+        <tr><td>6</td><td><span class="b-rel">Preposition (Prep)</span> Giới từ</td><td>Chỉ mối quan hệ</td><td><em>in, on, at, for, with</em></td><td>Trước N/Pro</td></tr>
+        <tr><td>7</td><td><span class="b-wc">Conjunction (Conj)</span> Liên từ</td><td>Nối các vế câu</td><td><em>and, but, or, because</em></td><td>Giữa 2 từ/mệnh đề</td></tr>
+        <tr><td>8</td><td><span class="b-adj">Determiner (Det)</span> Mạo từ/Lượng từ</td><td>Xác định danh từ</td><td><em>a, the, this, some, every</em></td><td>Trước danh từ</td></tr>
+      </tbody>
+    </table>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhận biết từ loại nhanh nhất:</strong> <strong>Hỏi câu hỏi</strong> để xác định: <em>"Từ này chỉ AI/CÁI GÌ?"</em> → Danh từ. <em>"Chỉ LÀM GÌ?"</em> → Động từ. <em>"Mô tả danh từ NHƯ THẾ NÀO?"</em> → Tính từ. <em>"Mô tả động từ NHƯ THẾ NÀO/BAO NHIÊU?"</em> → Trạng từ.</div>
+    </div>
+  </div>
+</div>
+
+<!-- S5 — CHUYỂN ĐỔI TỪ LOẠI -->
+<div class="section" id="s5">
+  <div class="sec-head">
+    <span class="sec-tag st-wc">NHÓM 5</span>
+    <div>
+      <h2 class="sec-title">Chuyển đổi từ loại bằng Suffix (Hậu tố)</h2>
+      <p class="sec-sub">Nhận ra hậu tố = nhận ra từ loại + nhân đôi vốn từ</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Hậu tố tạo Danh từ (Noun Suffixes)</div>
+    <div class="suffix-strip">
+      <span class="suffix-pill sp-n">-tion / -sion</span>
+      <span class="suffix-pill sp-n">-ness</span>
+      <span class="suffix-pill sp-n">-ment</span>
+      <span class="suffix-pill sp-n">-er / -or</span>
+      <span class="suffix-pill sp-n">-ity</span>
+      <span class="suffix-pill sp-n">-ism</span>
+      <span class="suffix-pill sp-n">-ist</span>
+      <span class="suffix-pill sp-n">-ance / -ence</span>
+    </div>
+    <div class="sub-title">Hậu tố tạo Động từ (Verb Suffixes)</div>
+    <div class="suffix-strip">
+      <span class="suffix-pill sp-v">-ize / -ise</span>
+      <span class="suffix-pill sp-v">-ify</span>
+      <span class="suffix-pill sp-v">-en</span>
+      <span class="suffix-pill sp-v">-ate</span>
+    </div>
+    <div class="sub-title">Hậu tố tạo Tính từ (Adjective Suffixes)</div>
+    <div class="suffix-strip">
+      <span class="suffix-pill sp-adj">-ful</span>
+      <span class="suffix-pill sp-adj">-less</span>
+      <span class="suffix-pill sp-adj">-able / -ible</span>
+      <span class="suffix-pill sp-adj">-ous / -ious</span>
+      <span class="suffix-pill sp-adj">-al</span>
+      <span class="suffix-pill sp-adj">-ic</span>
+      <span class="suffix-pill sp-adj">-ive</span>
+      <span class="suffix-pill sp-adj">-ed / -ing</span>
+    </div>
+    <div class="sub-title">Hậu tố tạo Trạng từ (Adverb Suffix)</div>
+    <div class="suffix-strip">
+      <span class="suffix-pill sp-adv">-ly</span>
+      <span class="suffix-pill sp-adv">-ward(s)</span>
+      <span class="suffix-pill sp-adv">-wise</span>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Ví dụ chuyển đổi hoàn chỉnh — 4 dạng từ cùng gốc</div>
+    <div class="convert-card">
+      <div class="convert-head"><span class="convert-root">happy</span><span class="convert-meaning">— hạnh phúc, vui vẻ</span></div>
+      <div class="convert-body">
+        <div class="convert-grid">
+          <div class="convert-item ci-n"><div class="ci-label">Noun</div><div class="ci-word">happiness</div></div>
+          <div class="convert-item ci-v"><div class="ci-label">Verb</div><div class="ci-word">—</div></div>
+          <div class="convert-item ci-adj"><div class="ci-label">Adjective</div><div class="ci-word">happy</div></div>
+          <div class="convert-item ci-adv"><div class="ci-label">Adverb</div><div class="ci-word">happily</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="convert-card">
+      <div class="convert-head"><span class="convert-root">success</span><span class="convert-meaning">— thành công</span></div>
+      <div class="convert-body">
+        <div class="convert-grid">
+          <div class="convert-item ci-n"><div class="ci-label">Noun</div><div class="ci-word">success</div></div>
+          <div class="convert-item ci-v"><div class="ci-label">Verb</div><div class="ci-word">succeed</div></div>
+          <div class="convert-item ci-adj"><div class="ci-label">Adjective</div><div class="ci-word">successful</div></div>
+          <div class="convert-item ci-adv"><div class="ci-label">Adverb</div><div class="ci-word">successfully</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="convert-card">
+      <div class="convert-head"><span class="convert-root">beauty</span><span class="convert-meaning">— vẻ đẹp</span></div>
+      <div class="convert-body">
+        <div class="convert-grid">
+          <div class="convert-item ci-n"><div class="ci-label">Noun</div><div class="ci-word">beauty</div></div>
+          <div class="convert-item ci-v"><div class="ci-label">Verb</div><div class="ci-word">beautify</div></div>
+          <div class="convert-item ci-adj"><div class="ci-label">Adjective</div><div class="ci-word">beautiful</div></div>
+          <div class="convert-item ci-adv"><div class="ci-label">Adverb</div><div class="ci-word">beautifully</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="convert-card">
+      <div class="convert-head"><span class="convert-root">create</span><span class="convert-meaning">— tạo ra, sáng tạo</span></div>
+      <div class="convert-body">
+        <div class="convert-grid">
+          <div class="convert-item ci-n"><div class="ci-label">Noun</div><div class="ci-word">creation / creativity</div></div>
+          <div class="convert-item ci-v"><div class="ci-label">Verb</div><div class="ci-word">create</div></div>
+          <div class="convert-item ci-adj"><div class="ci-label">Adjective</div><div class="ci-word">creative</div></div>
+          <div class="convert-item ci-adv"><div class="ci-label">Adverb</div><div class="ci-word">creatively</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S6 — NHẬN BIẾT TỪ LOẠI TRONG CÂU -->
+<div class="section" id="s6">
+  <div class="sec-head">
+    <span class="sec-tag st-wc">NHÓM 6</span>
+    <div>
+      <h2 class="sec-title">Nhận biết từ loại trong câu thực tế</h2>
+      <p class="sec-sub">Phân tích câu hoàn chỉnh — xem mỗi từ đóng vai trò gì</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Phân tích câu theo từng từ loại</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Phân tích từ loại từng từ</span><span class="ex-tag et-wc">ANALYSIS</span></div>
+      <div class="ex-body">
+        <div class="ex-row" style="flex-wrap:wrap;gap:8px">
+          <span><span class="wc-badge wcb-det">Det</span>The</span>
+          <span><span class="wc-badge wcb-adj">Adj</span>quick</span>
+          <span><span class="wc-badge wcb-adj">Adj</span>brown</span>
+          <span><span class="wc-badge wcb-n">N</span>fox</span>
+          <span><span class="wc-badge wcb-v">V</span>jumps</span>
+          <span><span class="wc-badge wcb-prep">Prep</span>over</span>
+          <span><span class="wc-badge wcb-det">Det</span>the</span>
+          <span><span class="wc-badge wcb-adj">Adj</span>lazy</span>
+          <span><span class="wc-badge wcb-n">N</span>dog</span>
+        </div>
+        <div class="ex-row" style="flex-wrap:wrap;gap:8px">
+          <span><span class="wc-badge wcb-pron">Pro</span>She</span>
+          <span><span class="wc-badge wcb-adv">Adv</span>always</span>
+          <span><span class="wc-badge wcb-v">V</span>works</span>
+          <span><span class="wc-badge wcb-adv">Adv</span>very</span>
+          <span><span class="wc-badge wcb-adv">Adv</span>carefully</span>
+          <span><span class="wc-badge wcb-prep">Prep</span>at</span>
+          <span><span class="wc-badge wcb-n">N</span>night</span>
+        </div>
+        <div class="ex-row" style="flex-wrap:wrap;gap:8px">
+          <span><span class="wc-badge wcb-pron">Pro</span>I</span>
+          <span><span class="wc-badge wcb-v">V</span>bought</span>
+          <span><span class="wc-badge wcb-det">Det</span>a</span>
+          <span><span class="wc-badge wcb-adj">Adj</span>beautiful</span>
+          <span><span class="wc-badge wcb-adj">Adj</span>red</span>
+          <span><span class="wc-badge wcb-n">N</span>bag</span>
+          <span><span class="wc-badge wcb-conj">Conj</span>and</span>
+          <span><span class="wc-badge wcb-pron">Pro</span>she</span>
+          <span><span class="wc-badge wcb-v">V</span>loves</span>
+          <span><span class="wc-badge wcb-pron">Pro</span>it</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S7 — LỖI NHẦM TỪ LOẠI -->
+<div class="section" id="s7">
+  <div class="sec-head">
+    <span class="sec-tag st-wc">NHÓM 7</span>
+    <div>
+      <h2 class="sec-title">Lỗi nhầm từ loại phổ biến nhất</h2>
+      <p class="sec-sub">Dùng tính từ thay trạng từ · Dùng danh từ thay tính từ</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Lỗi 1 — Dùng tính từ thay trạng từ sau động từ</div>
+    <div class="cmp-box">
+      <div class="cmp-bad">
+        <div class="cmp-label">❌ Sai — Tính từ sau động từ</div>
+        <div class="cmp-text">She sings <span style="color:var(--au)">beautiful</span>.</div>
+        <div class="cmp-note">beautiful = tính từ, không bổ nghĩa được cho động từ "sings"</div>
+      </div>
+      <div class="cmp-good">
+        <div class="cmp-label">✅ Đúng — Trạng từ sau động từ</div>
+        <div class="cmp-text">She sings <span style="color:var(--ins)">beautifully</span>.</div>
+        <div class="cmp-note">beautifully = trạng từ, bổ nghĩa cho "sings" ✅</div>
+      </div>
+    </div>
+    <div class="cmp-box">
+      <div class="cmp-bad">
+        <div class="cmp-label">❌ Sai — Danh từ thay tính từ</div>
+        <div class="cmp-text">He is very <span style="color:var(--au)">success</span>.</div>
+        <div class="cmp-note">success = danh từ, không đứng sau "very is"</div>
+      </div>
+      <div class="cmp-good">
+        <div class="cmp-label">✅ Đúng — Tính từ sau "is"</div>
+        <div class="cmp-text">He is very <span style="color:var(--ins)">successful</span>.</div>
+        <div class="cmp-note">successful = tính từ ✅ hoặc "He has achieved great success."</div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Thêm ví dụ lỗi nhầm từ loại hay gặp</span><span class="ex-tag et-wc">COMMON ERRORS</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-bad">✗</span><span class="ex-en">He works very <strong>careful</strong>.</span><span class="ex-arrow">→</span><span class="ex-vn">Đúng: <strong>carefully</strong> (trạng từ sau V)</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">✗</span><span class="ex-en">The food smells <strong>badly</strong>.</span><span class="ex-arrow">→</span><span class="ex-vn">Đúng: <strong>bad</strong> (tính từ sau "smells" — linking verb)</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">✗</span><span class="ex-en">I feel <strong>happily</strong> today.</span><span class="ex-arrow">→</span><span class="ex-vn">Đúng: <strong>happy</strong> (tính từ sau "feel" — linking verb)</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">✗</span><span class="ex-en">Her <strong>beauty</strong> eyes...</span><span class="ex-arrow">→</span><span class="ex-vn">Đúng: <strong>beautiful</strong> eyes (tính từ trước danh từ)</span></div>
+      </div>
+    </div>
+    <div class="info i-note">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Linking Verbs — Nhóm động từ đặc biệt:</strong> Sau các động từ <code>be, seem, look, feel, smell, taste, sound, appear, become</code> → dùng <strong>TÍNH TỪ</strong> (không phải trạng từ). Vì các động từ này mô tả trạng thái chủ ngữ, không mô tả hành động. <em>She looks <u>beautiful</u></em> ✅ · <em>She looks <u>beautifully</u></em> ❌</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     PHẦN 3 — MỆNH ĐỀ QUAN HỆ
+════════════════════════════════ -->
+<div class="cat-banner cb-rel">
+  <div class="cb-icon">🟣</div>
+  <div>
+    <div class="cb-badge">RELATIVE CLAUSES</div>
+    <div class="cb-title">Phần 3 — Mệnh Đề Quan Hệ</div>
+    <div class="cb-sub">Who · Which · That · Whose · Where · When · Rút gọn</div>
+  </div>
+</div>
+
+<!-- S8 — MỆNH ĐỀ QUAN HỆ LÀ GÌ -->
+<div class="section" id="s8">
+  <div class="sec-head">
+    <span class="sec-tag st-rel">NHÓM 8</span>
+    <div>
+      <h2 class="sec-title">Mệnh đề quan hệ là gì? — Khái niệm cốt lõi</h2>
+      <p class="sec-sub">Cách ghép 2 câu thành 1 tự nhiên và súc tích</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Bản chất: Ghép 2 câu → 1 câu bằng đại từ quan hệ</div>
+    <div class="grid-2">
+      <div class="rw-box rw-wc">
+        <div class="rw-label">📝 TRƯỚC KHI GHÉP — 2 câu riêng</div>
+        <div class="rw-body"><em>I have a friend. <strong>She</strong> speaks 5 languages.</em><br><br>→ Phải nói 2 câu riêng, nghe rời rạc</div>
+      </div>
+      <div class="rw-box rw-rel">
+        <div class="rw-label">✅ SAU KHI GHÉP — 1 câu mượt mà</div>
+        <div class="rw-body"><em>I have a friend <strong>who</strong> speaks 5 languages.</em><br><br>→ Dùng "who" thay "she", ghép thành 1 câu đẹp</div>
+      </div>
+    </div>
+    <div class="sub-title">Sơ đồ cấu trúc mệnh đề quan hệ</div>
+    <div class="rel-diagram">
+      <div class="rel-sentence">
+        <span class="rel-part rp-main">The woman</span>
+        <span class="rel-part rp-pron">who</span>
+        <span class="rel-part rp-clause">lives next door</span>
+        <span class="rel-part rp-main">is a doctor.</span>
+      </div>
+      <div class="rel-legend">
+        <div class="rel-leg-item"><span class="rel-leg-dot rld-main"></span>Mệnh đề chính</div>
+        <div class="rel-leg-item"><span class="rel-leg-dot rld-pron"></span>Đại từ quan hệ (thay thế "the woman")</div>
+        <div class="rel-leg-item"><span class="rel-leg-dot rld-clause"></span>Mệnh đề quan hệ (bổ sung thông tin)</div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ cách tạo mệnh đề quan hệ:</strong> (1) Tìm từ chung giữa 2 câu (thường là danh từ được nhắc tới lần 2). (2) Thay từ đó bằng đại từ quan hệ (who/which/that...). (3) Đưa mệnh đề phụ vào ngay sau danh từ nó mô tả. Đơn giản vậy thôi!</div>
+    </div>
+  </div>
+</div>
+
+<!-- S9 — WHO/WHICH/THAT -->
+<div class="section" id="s9">
+  <div class="sec-head">
+    <span class="sec-tag st-rel">NHÓM 9</span>
+    <div>
+      <h2 class="sec-title">Who / Which / That — Bộ 3 quan trọng nhất</h2>
+      <p class="sec-sub">Khi nào dùng cái nào · Có thể thay thế nhau không?</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Bảng phân biệt Who / Which / That</div>
+    <table class="tbl">
+      <thead><tr><th>Đại từ</th><th>Dùng cho</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td><code>who</code></td><td>Người (person)</td><td><em>The teacher <strong>who</strong> helped me is kind.</em> — Người thầy giúp tôi rất tốt bụng.</td></tr>
+        <tr><td><code>which</code></td><td>Vật / Sự việc (thing/fact)</td><td><em>The book <strong>which</strong> I read was boring.</em> — Cuốn sách tôi đọc rất chán.</td></tr>
+        <tr><td><code>that</code></td><td>Người HOẶC Vật (trong mệnh đề xác định)</td><td><em>The car <strong>that</strong> broke down is mine.</em> / <em>The man <strong>that</strong> called you is here.</em></td></tr>
+      </tbody>
+    </table>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ chi tiết Who/Which/That</span><span class="ex-tag et-rel">WHO/WHICH/THAT</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">Do you know the woman <strong>who</strong> is standing over there?</span><span class="ex-vn">Bạn có biết người phụ nữ đang đứng đằng kia không?</span></div>
+        <div class="ex-row"><span class="ex-en">I lost the keys <strong>which</strong> I bought yesterday.</span><span class="ex-vn">Tôi làm mất chùa chìa khóa mà tôi mua hôm qua.</span></div>
+        <div class="ex-row"><span class="ex-en">The movie <strong>that</strong> we watched last night was amazing.</span><span class="ex-vn">Bộ phim chúng tôi xem tối qua thật tuyệt vời.</span></div>
+        <div class="ex-row"><span class="ex-en">She's the student <strong>that/who</strong> won the award.</span><span class="ex-vn">Cô ấy là học sinh đã giành giải thưởng.</span></div>
+      </div>
+    </div>
+    <div class="info i-note">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">That vs Which — Khi nào KHÔNG dùng "that"?</strong> Không dùng <code>that</code> trong: (1) Mệnh đề không xác định (non-defining — có dấu phẩy): <em>My cat, <u>which</u> is orange, loves to sleep.</em> ✅ · Không dùng "that" ở đây. (2) Sau giới từ: <em>the tool <u>with which</u></em> ✅ · không nói "with that". (3) Sau đại từ sở hữu/chỉ định: <em>this cat, <u>which</u>...</em></div>
+    </div>
+  </div>
+</div>
+
+<!-- S10 — WHOM/WHOSE/WHERE/WHEN -->
+<div class="section" id="s10">
+  <div class="sec-head">
+    <span class="sec-tag st-rel">NHÓM 10</span>
+    <div>
+      <h2 class="sec-title">Whom / Whose / Where / When</h2>
+      <p class="sec-sub">Các đại từ quan hệ nâng cao — mỗi cái có vai trò riêng biệt</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Bảng đầy đủ tất cả đại từ quan hệ</div>
+    <table class="tbl">
+      <thead><tr><th>Đại từ</th><th>Thay thế cho</th><th>Vai trò trong mệnh đề</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td><code>who</code></td><td>Người</td><td>Chủ ngữ / Tân ngữ</td><td><em>The man <strong>who</strong> called you...</em></td></tr>
+        <tr><td><code>whom</code></td><td>Người</td><td>Tân ngữ (formal/sau giới từ)</td><td><em>The man to <strong>whom</strong> I spoke...</em></td></tr>
+        <tr><td><code>which</code></td><td>Vật, sự việc</td><td>Chủ ngữ / Tân ngữ</td><td><em>The book <strong>which</strong> I read...</em></td></tr>
+        <tr><td><code>that</code></td><td>Người hoặc vật</td><td>Mệnh đề xác định</td><td><em>The car <strong>that</strong> broke down...</em></td></tr>
+        <tr><td><code>whose</code></td><td>Người hoặc vật</td><td>Sở hữu (thay "his/her/its")</td><td><em>The girl <strong>whose</strong> bag was stolen...</em></td></tr>
+        <tr><td><code>where</code></td><td>Nơi chốn</td><td>Trạng từ chỉ nơi chốn</td><td><em>The city <strong>where</strong> I was born...</em></td></tr>
+        <tr><td><code>when</code></td><td>Thời gian</td><td>Trạng từ chỉ thời gian</td><td><em>The day <strong>when</strong> we met...</em></td></tr>
+      </tbody>
+    </table>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ whose/where/when</span><span class="ex-tag et-rel">ADVANCED PRONOUNS</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">That's the boy <strong>whose</strong> mother is a doctor.</span><span class="ex-arrow">→</span><span class="ex-vn">Đó là cậu bé mà mẹ của cậu ấy là bác sĩ.</span></div>
+        <div class="ex-row"><span class="ex-en">Paris is the city <strong>where</strong> I fell in love.</span><span class="ex-arrow">→</span><span class="ex-vn">Paris là thành phố nơi tôi yêu lần đầu.</span></div>
+        <div class="ex-row"><span class="ex-en">I remember the day <strong>when</strong> you were born.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi nhớ ngày bạn ra đời.</span></div>
+        <div class="ex-row"><span class="ex-en">The person to <strong>whom</strong> this letter is addressed has moved.</span><span class="ex-arrow">→</span><span class="ex-vn">Người mà lá thư này gửi đến đã chuyển đi rồi. (formal)</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ "whose":</strong> <code>whose</code> = "của ai/cái gì" — thay cho "his/her/its/their". Test nhanh: thử thay "whose" = "his/her". Nếu câu có nghĩa → dùng "whose" đúng rồi. <em>The boy <strong>whose</strong> bag is blue</em> = <em>The boy — his bag is blue</em> ✅</div>
+    </div>
+  </div>
+</div>
+
+<!-- S11 — XÁC ĐỊNH vs KHÔNG XÁC ĐỊNH -->
+<div class="section" id="s11">
+  <div class="sec-head">
+    <span class="sec-tag st-rel">NHÓM 11</span>
+    <div>
+      <h2 class="sec-title">Mệnh đề Xác định vs Không xác định</h2>
+      <p class="sec-sub">Defining vs Non-defining — Khác nhau ở dấu phẩy và ý nghĩa</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">So sánh trực tiếp 2 loại</div>
+    <div class="cmp-box">
+      <div class="cmp-bad" style="background:rgba(56,189,248,.06)">
+        <div class="cmp-label" style="color:var(--wc)">📌 DEFINING — Xác định (không có dấu phẩy)</div>
+        <div class="cmp-text" style="font-size:13.5px">The students <strong>who study hard</strong> will pass.</div>
+        <div class="cmp-note">→ Chỉ những học sinh HỌC CHĂM (không phải tất cả) mới đỗ. Mệnh đề này THIẾT YẾU để hiểu nghĩa câu — bỏ đi câu mất nghĩa.</div>
+      </div>
+      <div class="cmp-good" style="background:rgba(160,122,244,.06)">
+        <div class="cmp-label" style="color:var(--rel)">📎 NON-DEFINING — Không xác định (có dấu phẩy)</div>
+        <div class="cmp-text" style="font-size:13.5px">My sister<strong>, who lives in Hanoi,</strong> is a nurse.</div>
+        <div class="cmp-note">→ Chỉ có 1 chị gái → thêm thông tin phụ (bỏ đi vẫn hiểu câu). Luôn có dấu phẩy bao quanh.</div>
+      </div>
+    </div>
+    <table class="tbl">
+      <thead><tr><th></th><th>Defining (Xác định)</th><th>Non-defining (Không xác định)</th></tr></thead>
+      <tbody>
+        <tr><td>Dấu phẩy</td><td>❌ Không có</td><td>✅ Có dấu phẩy bao quanh</td></tr>
+        <tr><td>Dùng "that"</td><td>✅ Được dùng</td><td>❌ Không dùng "that"</td></tr>
+        <tr><td>Bỏ mệnh đề đi</td><td>❌ Câu mất nghĩa</td><td>✅ Câu vẫn hoàn chỉnh</td></tr>
+        <tr><td>Ví dụ</td><td><em>The car that I bought is red.</em></td><td><em>My car, which is red, is old.</em></td></tr>
+      </tbody>
+    </table>
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Lỗi hay gặp nhất:</strong> Nhiều học sinh hay đặt dấu phẩy bừa bãi trước "which" và "who" — điều này thay đổi hoàn toàn nghĩa câu! Hỏi: "Nếu bỏ mệnh đề này đi, câu còn đủ nghĩa không?" → Còn đủ nghĩa = non-defining → cần dấu phẩy. Mất nghĩa = defining → không có dấu phẩy.</div>
+    </div>
+  </div>
+</div>
+
+<!-- S12 — RÚT GỌN MỆNH ĐỀ QUAN HỆ -->
+<div class="section" id="s12">
+  <div class="sec-head">
+    <span class="sec-tag st-rel">NHÓM 12</span>
+    <div>
+      <h2 class="sec-title">Rút gọn mệnh đề quan hệ</h2>
+      <p class="sec-sub">Dùng V-ing / V3 / to-V để câu ngắn gọn hơn</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">3 cách rút gọn phổ biến</div>
+    <table class="tbl">
+      <thead><tr><th>Tình huống</th><th>Rút gọn bằng</th><th>Ví dụ gốc → Rút gọn</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Đại từ QH là chủ ngữ + động từ chủ động (đang xảy ra)</td>
+          <td><strong>V-ing</strong></td>
+          <td><em>The woman who is standing there</em> → <em>The woman <strong>standing there</strong></em></td>
+        </tr>
+        <tr>
+          <td>Đại từ QH là chủ ngữ + động từ bị động</td>
+          <td><strong>V3 (past participle)</strong></td>
+          <td><em>The bridge which was built in 1900</em> → <em>The bridge <strong>built in 1900</strong></em></td>
+        </tr>
+        <tr>
+          <td>Mệnh đề QH sau the first/last/only/so...</td>
+          <td><strong>to-V</strong></td>
+          <td><em>He was the first man who walked on the moon</em> → <em>the first man <strong>to walk</strong> on the moon</em></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ rút gọn hoàn chỉnh</span><span class="ex-tag et-rel">REDUCED CLAUSES</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">Full: People <strong>who live</strong> in cities are busy.</span><span class="ex-arrow">→</span><span class="ex-en" style="min-width:0">Short: People <strong>living</strong> in cities are busy.</span></div>
+        <div class="ex-row"><span class="ex-en">Full: The phone <strong>that was stolen</strong> was expensive.</span><span class="ex-arrow">→</span><span class="ex-en" style="min-width:0">Short: The phone <strong>stolen</strong> was expensive.</span></div>
+        <div class="ex-row"><span class="ex-en">Full: She was the last student <strong>who left</strong> the room.</span><span class="ex-arrow">→</span><span class="ex-en" style="min-width:0">Short: She was the last student <strong>to leave</strong> the room.</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Khi nào nên rút gọn?</strong> Rút gọn giúp câu ngắn gọn, chuyên nghiệp hơn — đặc biệt trong văn viết. Trong giao tiếp hàng ngày, dùng dạng đầy đủ cũng hoàn toàn ổn và tự nhiên. Hãy làm quen với dạng rút gọn khi đọc báo/tài liệu để nhận ra chúng.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ CHEAT SHEET ════ -->
+<div class="cat-banner cb-cheat">
+  <div class="cb-icon">📋</div>
+  <div>
+    <div class="cb-badge">TỔNG HỢP</div>
+    <div class="cb-title">Cheat Sheet — Trật Tự TT · Từ Loại · Mệnh Đề QH</div>
+    <div class="cb-sub">In ra · Dán lên tường · Xem lại mỗi ngày</div>
+  </div>
+</div>
+
+<div class="section" id="s13">
+  <div class="sec-head">
+    <span class="sec-tag st-ch">CHEAT SHEET</span>
+    <div>
+      <h2 class="sec-title">📋 Bảng tổng hợp toàn bộ kiến thức</h2>
+      <p class="sec-sub">Quick reference · 3 phần · Dễ tra cứu</p>
+    </div>
+  </div>
+
+  <div class="cheat-grid">
+    <div class="cheat-card">
+      <h4 class="h4-adj">🟠 Trật tự tính từ — OSASCOMP</h4>
+      <div class="cheat-row"><span class="ck">1. Opinion</span><span class="cv">beautiful, lovely, ugly</span></div>
+      <div class="cheat-row"><span class="ck">2. Size</span><span class="cv">big, small, tall, long</span></div>
+      <div class="cheat-row"><span class="ck">3. Age</span><span class="cv">old, new, young, ancient</span></div>
+      <div class="cheat-row"><span class="ck">4. Shape</span><span class="cv">round, square, flat</span></div>
+      <div class="cheat-row"><span class="ck">5. Color</span><span class="cv">red, blue, dark, pale</span></div>
+      <div class="cheat-row"><span class="ck">6. Origin</span><span class="cv">Italian, Vietnamese</span></div>
+      <div class="cheat-row"><span class="ck">7. Material</span><span class="cv">wooden, cotton, silk</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-adj">🟠 Ví dụ trật tự tính từ</h4>
+      <div class="cheat-row"><span class="ck">2 tính từ</span><span class="cv">a big red car</span></div>
+      <div class="cheat-row"><span class="ck">3 tính từ</span><span class="cv">small round wooden table</span></div>
+      <div class="cheat-row"><span class="ck">4 tính từ</span><span class="cv">beautiful big old Italian car</span></div>
+      <div class="cheat-row"><span class="ck">-thing/-one/-body</span><span class="cv">something interesting (Adj SAU)</span></div>
+      <div class="cheat-row"><span class="ck">Thần chú nhớ</span><span class="cv">Our School Always Serves Coffee...</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-wc">🔵 8 từ loại cơ bản</h4>
+      <div class="cheat-row"><span class="ck">Noun (N)</span><span class="cv">dog, city, love</span></div>
+      <div class="cheat-row"><span class="ck">Verb (V)</span><span class="cv">run, is, think</span></div>
+      <div class="cheat-row"><span class="ck">Adjective (Adj)</span><span class="cv">big, happy, red</span></div>
+      <div class="cheat-row"><span class="ck">Adverb (Adv)</span><span class="cv">quickly, very, here</span></div>
+      <div class="cheat-row"><span class="ck">Pronoun (Pro)</span><span class="cv">I, you, it, they</span></div>
+      <div class="cheat-row"><span class="ck">Preposition (Prep)</span><span class="cv">in, on, at, for</span></div>
+      <div class="cheat-row"><span class="ck">Conjunction (Conj)</span><span class="cv">and, but, because</span></div>
+      <div class="cheat-row"><span class="ck">Determiner (Det)</span><span class="cv">a, the, this, some</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-wc">🔵 Hậu tố chuyển đổi từ loại</h4>
+      <div class="cheat-row"><span class="ck">→ Noun</span><span class="cv">-tion, -ness, -ment, -er, -ity</span></div>
+      <div class="cheat-row"><span class="ck">→ Verb</span><span class="cv">-ize, -ify, -en, -ate</span></div>
+      <div class="cheat-row"><span class="ck">→ Adj</span><span class="cv">-ful, -less, -able, -ous, -ive</span></div>
+      <div class="cheat-row"><span class="ck">→ Adv</span><span class="cv">-ly (adj + ly)</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-wc">🔵 Chuyển đổi từ loại — Ví dụ</h4>
+      <div class="cheat-row"><span class="ck">happy</span><span class="cv">happiness · happily</span></div>
+      <div class="cheat-row"><span class="ck">success</span><span class="cv">succeed · successful · successfully</span></div>
+      <div class="cheat-row"><span class="ck">create</span><span class="cv">creation · creative · creatively</span></div>
+      <div class="cheat-row"><span class="ck">beauty</span><span class="cv">beautify · beautiful · beautifully</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-wc">🔵 Lỗi từ loại thường gặp</h4>
+      <div class="cheat-row"><span class="ck">She sings beautiful</span><span class="cv">→ beautifully ✅</span></div>
+      <div class="cheat-row"><span class="ck">He is very success</span><span class="cv">→ successful ✅</span></div>
+      <div class="cheat-row"><span class="ck">It smells badly</span><span class="cv">→ bad ✅ (linking V)</span></div>
+      <div class="cheat-row"><span class="ck">I feel happily</span><span class="cv">→ happy ✅ (linking V)</span></div>
+      <div class="cheat-row"><span class="ck">Her beauty eyes</span><span class="cv">→ beautiful eyes ✅</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-rel">🟣 Đại từ quan hệ</h4>
+      <div class="cheat-row"><span class="ck">who</span><span class="cv">người (chủ ngữ/tân ngữ)</span></div>
+      <div class="cheat-row"><span class="ck">whom</span><span class="cv">người (tân ngữ, formal)</span></div>
+      <div class="cheat-row"><span class="ck">which</span><span class="cv">vật, sự việc</span></div>
+      <div class="cheat-row"><span class="ck">that</span><span class="cv">người hoặc vật (defining)</span></div>
+      <div class="cheat-row"><span class="ck">whose</span><span class="cv">sở hữu (của ai/cái gì)</span></div>
+      <div class="cheat-row"><span class="ck">where</span><span class="cv">nơi chốn</span></div>
+      <div class="cheat-row"><span class="ck">when</span><span class="cv">thời gian</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-rel">🟣 Defining vs Non-defining</h4>
+      <div class="cheat-row"><span class="ck">Defining</span><span class="cv">không có dấu phẩy</span></div>
+      <div class="cheat-row"><span class="ck">Non-defining</span><span class="cv">có dấu phẩy bao quanh</span></div>
+      <div class="cheat-row"><span class="ck">"that" chỉ dùng trong</span><span class="cv">defining clause</span></div>
+      <div class="cheat-row"><span class="ck">Test</span><span class="cv">Bỏ đi → câu còn đủ nghĩa?</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-rel">🟣 Rút gọn mệnh đề quan hệ</h4>
+      <div class="cheat-row"><span class="ck">Chủ động đang xảy ra</span><span class="cv">→ V-ing</span></div>
+      <div class="cheat-row"><span class="ck">Bị động</span><span class="cv">→ V3 (past participle)</span></div>
+      <div class="cheat-row"><span class="ck">Sau first/last/only</span><span class="cv">→ to-V</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-ins">✅ Lộ trình học gợi ý</h4>
+      <div class="cheat-row"><span class="ck">Tuần 1</span><span class="cv">8 từ loại + nhận biết</span></div>
+      <div class="cheat-row"><span class="ck">Tuần 2</span><span class="cv">Lỗi từ loại + Chuyển đổi suffix</span></div>
+      <div class="cheat-row"><span class="ck">Tuần 3</span><span class="cv">Who/Which/That (mệnh đề QH cơ bản)</span></div>
+      <div class="cheat-row"><span class="ck">Tuần 4</span><span class="cv">Defining vs Non-defining</span></div>
+      <div class="cheat-row"><span class="ck">Tháng 2</span><span class="cv">Trật tự TT + Rút gọn MĐ QH</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-au">⚠️ Top lỗi cần tránh</h4>
+      <div class="cheat-row"><span class="ck">Red beautiful car</span><span class="cv">→ beautiful red car ✅</span></div>
+      <div class="cheat-row"><span class="ck">interesting something</span><span class="cv">→ something interesting ✅</span></div>
+      <div class="cheat-row"><span class="ck">The man that, ...</span><span class="cv">→ The man, who, ... ✅ (non-def.)</span></div>
+      <div class="cheat-row"><span class="ck">She sings beautiful</span><span class="cv">→ beautifully ✅</span></div>
+      <div class="cheat-row"><span class="ck">The city which I was born</span><span class="cv">→ where I was born ✅</span></div>
+    </div>
+  </div>
+
+  <!-- BẢNG TRA NHANH ĐẠI TỪ QUAN HỆ -->
+  <div class="sub">
+    <div class="sub-title">Bảng tra nhanh — Chọn đại từ quan hệ nào?</div>
+    <table class="tbl">
+      <thead><tr><th>Antecedent (danh từ trước)</th><th>Trong câu đóng vai trò</th><th>Dùng</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td>Người</td><td>Chủ ngữ</td><td><code>who / that</code></td><td><em>the man <strong>who/that</strong> called</em></td></tr>
+        <tr><td>Người</td><td>Tân ngữ</td><td><code>who / whom / that</code></td><td><em>the girl <strong>who/that</strong> I met</em></td></tr>
+        <tr><td>Người</td><td>Sở hữu</td><td><code>whose</code></td><td><em>the boy <strong>whose</strong> bag is blue</em></td></tr>
+        <tr><td>Vật / Sự việc</td><td>Chủ ngữ hoặc tân ngữ</td><td><code>which / that</code></td><td><em>the book <strong>which/that</strong> I read</em></td></tr>
+        <tr><td>Nơi chốn</td><td>Trạng ngữ chỉ nơi</td><td><code>where</code></td><td><em>the city <strong>where</strong> I live</em></td></tr>
+        <tr><td>Thời gian</td><td>Trạng ngữ chỉ thời gian</td><td><code>when</code></td><td><em>the day <strong>when</strong> we met</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info i-ok" style="margin-top:22px">
+    <span class="info-ico">🎯</span>
+    <div style="font-size:13.5px">
+      <strong style="color:var(--text)">Tài nguyên luyện tập miễn phí:</strong><br>
+      <span style="color:var(--muted)">
+        <a href="https://www.perfect-english-grammar.com/adjective-order.html" style="color:var(--acc)">Perfect English Grammar</a> — Bài tập trật tự tính từ &nbsp;·&nbsp;
+        <a href="https://www.perfect-english-grammar.com/relative-clauses.html" style="color:var(--acc)">PEG — Mệnh đề quan hệ</a> — Bài tập chi tiết &nbsp;·&nbsp;
+        <a href="https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/relative-clauses" style="color:var(--acc)">British Council</a> — Relative Clauses tương tác &nbsp;·&nbsp;
+        <a href="https://www.grammarly.com/blog/adjective" style="color:var(--acc)">Grammarly Blog</a> — Giải thích từ loại rõ ràng
+      </span>
+    </div>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<div class="footer">
+  <span>🔤 Trật Tự Tính Từ · Từ Loại · Mệnh Đề Quan Hệ · Hướng dẫn toàn tập · 2026</span>
+  <span style="margin-left:auto;color:var(--faint)">3 nhóm TT · 4 nhóm Từ loại · 5 nhóm Mệnh đề QH · Cheat Sheet</span>
+</div>
+</div><!-- /main -->
+
+<script>
+window.addEventListener('scroll',()=>{
+  const el=document.documentElement;
+  document.getElementById('pbar').style.width=(el.scrollTop/(el.scrollHeight-el.clientHeight)*100)+'%';
+});
+const secs=document.querySelectorAll('.section[id]');
+const links=document.querySelectorAll('.nav-link');
+secs.forEach(s=>new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      const a=document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+      if(a)a.classList.add('active');
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'}).observe(s));
+</script>
+</body>
+</html>

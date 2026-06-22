@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔧 To V · V-ing · Câu Tường Thuật · Cụm Động Từ — Hướng dẫn toàn tập</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080810;--s1:#0e0e1c;--s2:#131326;--s3:#18182e;--s4:#1e1e38;
+  --border:#222240;--border2:#2c2c50;--text:#e6e6f2;--muted:#666698;--faint:#363660;
+  --acc:#ffd060;--acc-d:#c89820;--acc-dim:rgba(255,208,96,.11);--acc-glow:rgba(255,208,96,.24);
+  --green:#40d88e;--green-dim:rgba(64,216,142,.10);
+  --blue:#5ba8ff;--blue-dim:rgba(91,168,255,.10);
+  --purple:#a07af4;--purple-dim:rgba(160,122,244,.10);
+  --yellow:#ffd060;--yellow-dim:rgba(255,208,96,.10);
+  --teal:#30d8c0;--teal-dim:rgba(48,216,192,.10);
+  --orange:#ff8c50;--orange-dim:rgba(255,140,80,.10);
+  --pink:#ff6584;--pink-dim:rgba(255,101,132,.11);--pink-glow:rgba(255,101,132,.22);
+  --sky:#38bdf8;--sky-dim:rgba(56,189,248,.10);
+  --oc:#38bdf8;--oc-dim:rgba(56,189,248,.13);--oc-glow:rgba(56,189,248,.30);
+  --oc2:#5ba8ff;--oc2-dim:rgba(91,168,255,.12);
+  --ins:#40d88e;--ins-dim:rgba(64,216,142,.12);--ins-glow:rgba(64,216,142,.28);
+  --ch:#ffd060;--ch-dim:rgba(255,208,96,.12);--ch-glow:rgba(255,208,96,.28);
+  --sk:#a07af4;--sk-dim:rgba(160,122,244,.12);--sk-glow:rgba(160,122,244,.28);
+  --au:#ff6584;--au-dim:rgba(255,101,132,.12);--au-glow:rgba(255,101,132,.28);
+  --code-bg:#05050e;
+  /* Topic colours: to-V/V-ing = emerald, Reported = violet, Phrasal = orange */
+  --tov:#34d399;--tov-dim:rgba(52,211,153,.13);--tov-glow:rgba(52,211,153,.30);
+  --rep:#a78bfa;--rep-dim:rgba(167,139,250,.13);--rep-glow:rgba(167,139,250,.30);
+  --phr:#fb923c;--phr-dim:rgba(251,146,60,.13);--phr-glow:rgba(251,146,60,.30);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ── SIDEBAR ── */
+.sidebar{position:fixed;left:0;top:0;width:272px;height:100vh;background:var(--s1);border-right:1px solid var(--border);overflow-y:auto;z-index:400;display:flex;flex-direction:column}
+.sb-logo{padding:20px 18px 16px;border-bottom:1px solid var(--border)}
+.sb-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.logo-icon{width:44px;height:44px;border-radius:11px;flex-shrink:0;background:linear-gradient(135deg,var(--tov),var(--phr));display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 26px var(--tov-glow)}
+.logo-text h2{font-size:15px;font-weight:800;letter-spacing:-.4px}
+.logo-text p{font-size:10.5px;color:var(--muted);margin-top:2px}
+.prog-wrap{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--tov),var(--rep),var(--phr),var(--ch));width:0%;transition:width .4s;border-radius:2px}
+.nav-section{padding:6px 0 4px}
+.nav-group-hdr{display:flex;align-items:center;gap:7px;margin:6px 12px 3px;padding:6px 10px;border-radius:7px;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.ngh-oc{background:var(--oc-dim);color:var(--oc)}
+.ngh-tov{background:var(--tov-dim);color:var(--tov)}
+.ngh-rep{background:var(--rep-dim);color:var(--rep)}
+.ngh-phr{background:var(--phr-dim);color:var(--phr)}
+.ngh-au{background:var(--au-dim);color:var(--au)}
+.nav-link{display:flex;align-items:center;gap:9px;padding:5px 18px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;border-left:2px solid transparent;transition:all .14s}
+.nav-link:hover,.nav-link.active{color:var(--text);background:rgba(255,208,96,.07);border-left-color:var(--acc)}
+.nav-link .ico{font-size:12px;flex-shrink:0;width:16px;text-align:center}
+.nav-badge{margin-left:auto;font-size:9px;font-weight:700;padding:2px 7px;border-radius:100px;background:var(--acc-dim);color:var(--acc)}
+
+/* ── MAIN ── */
+.main{margin-left:272px;min-height:100vh}
+.hero{padding:72px 64px 56px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse 60% 55% at 75% 20%,rgba(52,211,153,.09) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 55% at 10% 80%,rgba(167,139,250,.08) 0%,transparent 55%),
+             radial-gradient(ellipse 45% 50% at 50% 55%,rgba(251,146,60,.05) 0%,transparent 60%),var(--bg)}
+.hero-dots{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+.hero-glow{position:absolute;right:-80px;top:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(52,211,153,.08) 0%,transparent 65%);pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--tov-dim);border:1px solid rgba(52,211,153,.35);color:var(--tov);padding:5px 16px;border-radius:100px;font-size:11.5px;font-weight:700;margin-bottom:24px;letter-spacing:.3px}
+.hero-eyebrow .pulse{width:6px;height:6px;border-radius:50%;background:var(--tov);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero h1{font-size:46px;font-weight:900;letter-spacing:-2.3px;line-height:1.08;margin-bottom:18px}
+.h-grad{background:linear-gradient(135deg,var(--tov) 0%,var(--rep) 50%,var(--phr) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.h-tov{color:var(--tov)}.h-rep{color:var(--rep)}.h-phr{color:var(--phr)}
+.hero-desc{font-size:15.5px;color:var(--muted);max-width:640px;line-height:1.75;margin-bottom:28px}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:5px 14px;border-radius:7px;font-size:12px;font-weight:700}
+.chip-tov{background:var(--tov-dim);color:var(--tov)}
+.chip-rep{background:var(--rep-dim);color:var(--rep)}
+.chip-phr{background:var(--phr-dim);color:var(--phr)}
+.chip-ins{background:var(--ins-dim);color:var(--ins)}
+.chip-oc{background:var(--oc-dim);color:var(--oc)}
+.chip-ch{background:var(--ch-dim);color:var(--ch)}
+.chip-au{background:var(--au-dim);color:var(--au)}
+
+/* ── CAT BANNERS ── */
+.cat-banner{display:flex;align-items:center;gap:16px;padding:20px 24px;border-radius:14px;margin-bottom:44px;position:relative;overflow:hidden}
+.cat-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cb-tov{background:var(--tov-dim);border:1px solid rgba(52,211,153,.30)}.cb-tov::before{background:linear-gradient(90deg,var(--tov),var(--ins))}
+.cb-rep{background:var(--rep-dim);border:1px solid rgba(167,139,250,.30)}.cb-rep::before{background:linear-gradient(90deg,var(--rep),var(--sk))}
+.cb-phr{background:var(--phr-dim);border:1px solid rgba(251,146,60,.30)}.cb-phr::before{background:linear-gradient(90deg,var(--phr),var(--ch))}
+.cb-cheat{background:var(--au-dim);border:1px solid rgba(255,101,132,.30)}.cb-cheat::before{background:linear-gradient(90deg,var(--au),var(--phr))}
+.cb-icon{font-size:36px;flex-shrink:0}
+.cb-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.cb-tov .cb-badge{background:var(--tov-dim);color:var(--tov)}
+.cb-rep .cb-badge{background:var(--rep-dim);color:var(--rep)}
+.cb-phr .cb-badge{background:var(--phr-dim);color:var(--phr)}
+.cb-cheat .cb-badge{background:var(--au-dim);color:var(--au)}
+.cb-title{font-size:20px;font-weight:800;letter-spacing:-.5px}
+.cb-sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+/* ── CONTENT ── */
+.content{padding:52px 64px;max-width:1060px}
+.section{margin-bottom:68px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 10px;border-radius:5px;margin-top:5px;flex-shrink:0;letter-spacing:.5px}
+.st-overview{color:var(--oc);background:var(--oc-dim);border:1px solid var(--oc-glow)}
+.st-tov{color:var(--tov);background:var(--tov-dim);border:1px solid var(--tov-glow)}
+.st-rep{color:var(--rep);background:var(--rep-dim);border:1px solid var(--rep-glow)}
+.st-phr{color:var(--phr);background:var(--phr-dim);border:1px solid var(--phr-glow)}
+.st-cheat{color:var(--au);background:var(--au-dim);border:1px solid var(--au-glow)}
+.sec-title{font-size:22px;font-weight:800;letter-spacing:-.6px;margin-bottom:5px}
+.sec-sub{font-size:13px;color:var(--muted)}
+
+/* ── SUB ── */
+.sub{margin-bottom:36px}
+.sub-title{font-size:14.5px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:10px}
+.sub-title::before{content:'';display:inline-block;width:14px;height:3px;background:var(--acc);border-radius:2px;flex-shrink:0}
+.sub p,.sub ul,.sub ol{color:var(--muted);font-size:13.5px;margin-bottom:10px;line-height:1.78}
+.sub ul,.sub ol{padding-left:22px}.sub li{margin-bottom:6px}.sub strong{color:var(--text)}
+
+/* ── INFO BOXES ── */
+.info{display:flex;gap:12px;padding:13px 16px;border-radius:9px;margin:12px 0;font-size:13px;line-height:1.65}
+.info-ico{font-size:15px;flex-shrink:0;margin-top:1px}
+.i-ok{background:var(--green-dim);border:1px solid rgba(64,216,142,.2);color:#30a870}
+.i-warn{background:var(--yellow-dim);border:1px solid rgba(255,208,96,.2);color:#b09030}
+.i-tip{background:var(--blue-dim);border:1px solid rgba(91,168,255,.2);color:#3878d0}
+.i-note{background:var(--purple-dim);border:1px solid rgba(160,122,244,.2);color:#8060d0}
+.i-err{background:var(--pink-dim);border:1px solid rgba(255,101,132,.2);color:#cc3355}
+.i-tov{background:var(--tov-dim);border:1px solid rgba(52,211,153,.2);color:#1a9070}
+.i-rep{background:var(--rep-dim);border:1px solid rgba(167,139,250,.2);color:#7060d0}
+.i-phr{background:var(--phr-dim);border:1px solid rgba(251,146,60,.2);color:#c06020}
+
+/* ── RW BOX ── */
+.rw-box{background:var(--s1);border:1px solid var(--border2);border-radius:12px;padding:16px 20px;margin:13px 0;position:relative;overflow:hidden}
+.rw-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
+.rw-tov::before{background:var(--tov)}.rw-rep::before{background:var(--rep)}
+.rw-phr::before{background:var(--phr)}.rw-ins::before{background:var(--ins)}
+.rw-ch::before{background:var(--ch)}.rw-warn::before{background:var(--au)}
+.rw-label{font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.rw-tov .rw-label{color:var(--tov)}.rw-rep .rw-label{color:var(--rep)}
+.rw-phr .rw-label{color:var(--phr)}.rw-ins .rw-label{color:var(--ins)}
+.rw-ch .rw-label{color:var(--ch)}.rw-warn .rw-label{color:var(--au)}
+.rw-title{font-size:14px;font-weight:700;margin-bottom:5px}
+.rw-body{font-size:13px;color:var(--muted);line-height:1.68}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:13px 0;border-radius:11px;overflow:hidden}
+.tbl th{background:var(--s3);padding:9px 14px;text-align:left;font-weight:700;font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);border-bottom:1px solid var(--border2)}
+.tbl td{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted);vertical-align:top;font-size:13px}
+.tbl tr:hover td{background:rgba(255,255,255,.022)}
+.tbl td:first-child{color:var(--text);font-weight:600}
+.tbl code{font-family:'JetBrains Mono',monospace;font-size:11px;background:var(--code-bg);padding:2px 6px;border-radius:4px;color:var(--teal)}
+.bdg-tov{font-size:9px;font-weight:700;padding:1px 8px;border-radius:4px;background:var(--tov-dim);color:var(--tov);white-space:nowrap}
+.bdg-rep{font-size:9px;font-weight:700;padding:1px 8px;border-radius:4px;background:var(--rep-dim);color:var(--rep);white-space:nowrap}
+.bdg-phr{font-size:9px;font-weight:700;padding:1px 8px;border-radius:4px;background:var(--phr-dim);color:var(--phr);white-space:nowrap}
+
+/* ── GRIDS ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:13px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:13px 0}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:11px;padding:15px;transition:all .2s;cursor:default}
+.card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.38)}
+.card-icon{font-size:22px;margin-bottom:8px}
+.card-title{font-size:13px;font-weight:700;margin-bottom:4px}
+.card-desc{font-size:12px;color:var(--muted);line-height:1.55}
+
+/* ── CMP BOX ── */
+.cmp-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:11px;overflow:hidden;margin:13px 0}
+.cmp-bad{background:rgba(255,101,132,.07);border-right:1px solid var(--border);padding:14px 16px}
+.cmp-good{background:rgba(64,216,142,.07);padding:14px 16px}
+.cmp-label{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.cmp-bad .cmp-label{color:var(--au)}.cmp-good .cmp-label{color:var(--ins)}
+.cmp-text{font-size:13.5px;color:var(--text);line-height:1.65}
+.cmp-note{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+
+/* ── EX BOX ── */
+.ex-box{background:var(--s1);border:1px solid var(--border2);border-radius:11px;overflow:hidden;margin:13px 0}
+.ex-head{display:flex;align-items:center;gap:8px;padding:9px 16px;background:var(--s2);border-bottom:1px solid var(--border)}
+.ex-label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.ex-tag{margin-left:auto;font-size:9px;font-weight:700;padding:2px 9px;border-radius:100px;flex-shrink:0}
+.et-tov{background:var(--tov-dim);color:var(--tov)}
+.et-rep{background:var(--rep-dim);color:var(--rep)}
+.et-phr{background:var(--phr-dim);color:var(--phr)}
+.et-tip{background:var(--ch-dim);color:var(--ch)}
+.et-warn{background:var(--au-dim);color:var(--au)}
+.ex-body{padding:14px 20px}
+.ex-row{display:flex;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13.5px;flex-wrap:wrap}
+.ex-row:last-child{border-bottom:none}
+.ex-type{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0;white-space:nowrap}
+.ext-pos{background:var(--ins-dim);color:var(--ins)}
+.ext-neg{background:var(--au-dim);color:var(--au)}
+.ext-note{background:var(--ch-dim);color:var(--ch)}
+.ex-en{color:var(--text);font-weight:600;flex-shrink:0;min-width:200px}
+.ex-vn{color:var(--muted);font-size:12.5px}
+
+/* ── FORMULA ── */
+.formula{background:var(--s2);border:1px solid var(--border2);border-radius:10px;padding:13px 18px;margin:10px 0;font-family:'JetBrains Mono',monospace;font-size:13px;text-align:center;line-height:1.8}
+.fm-tov{color:var(--tov)}.fm-rep{color:var(--rep)}.fm-phr{color:var(--phr)}.fm-teal{color:var(--teal)}.fm-ch{color:var(--ch)}
+
+/* ── VERB LIST GRID ── */
+.verb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:13px 0}
+.verb-pill{padding:6px 12px;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;text-align:center;transition:all .15s;cursor:default}
+.verb-pill:hover{filter:brightness(1.2);transform:translateY(-1px)}
+.vp-tov{background:var(--tov-dim);color:var(--tov);border:1px solid rgba(52,211,153,.3)}
+.vp-ving{background:var(--rep-dim);color:var(--rep);border:1px solid rgba(167,139,250,.3)}
+.vp-both{background:var(--phr-dim);color:var(--phr);border:1px solid rgba(251,146,60,.3)}
+
+/* ── REPORTED SPEECH SHIFT BOX ── */
+.shift-box{background:var(--s2);border:1px solid var(--border2);border-radius:12px;padding:18px 22px;margin:13px 0}
+.shift-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.04)}
+.shift-row:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.shift-from{padding:7px 14px;border-radius:8px;font-size:12.5px;font-weight:700;background:rgba(52,211,153,.15);border:1.5px solid var(--tov);color:var(--tov);font-family:'JetBrains Mono',monospace;white-space:nowrap}
+.shift-arrow{color:var(--faint);font-size:18px;flex-shrink:0}
+.shift-to{padding:7px 14px;border-radius:8px;font-size:12.5px;font-weight:700;background:rgba(167,139,250,.15);border:1.5px solid var(--rep);color:var(--rep);font-family:'JetBrains Mono',monospace;white-space:nowrap}
+.shift-note{font-size:11.5px;color:var(--muted);flex:1;min-width:140px}
+
+/* ── PHRASAL VERB CARD ── */
+.pv-card{background:var(--s1);border:1px solid var(--border2);border-radius:13px;overflow:hidden;margin:12px 0}
+.pv-head{padding:12px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.pv-word{font-size:17px;font-weight:900;font-family:'JetBrains Mono',monospace;color:var(--phr)}
+.pv-sep{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;margin-left:auto}
+.pv-sep-y{background:var(--ins-dim);color:var(--ins)}
+.pv-sep-n{background:var(--au-dim);color:var(--au)}
+.pv-body{padding:12px 18px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pv-use{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.pv-use-vn{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.pv-use-ex{font-size:12px;color:var(--text);line-height:1.5}
+.pv-use-tr{font-size:11px;color:var(--muted);margin-top:2px}
+
+/* ── MEANING CHANGE DEMO ── */
+.meaning-demo{background:var(--s2);border:1px solid var(--border2);border-radius:12px;overflow:hidden;margin:13px 0}
+.md-header{padding:10px 18px;background:var(--s3);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.md-verb{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:900;color:var(--phr)}
+.md-note{font-size:11.5px;color:var(--muted)}
+.md-body{padding:4px 0}
+.md-row{display:flex;align-items:baseline;gap:10px;padding:9px 18px;border-bottom:1px solid rgba(255,255,255,.03)}
+.md-row:last-child{border-bottom:none}
+.md-particle{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:800;color:var(--ch);width:50px;flex-shrink:0}
+.md-meaning{font-size:12.5px;color:var(--tov);font-weight:700;width:130px;flex-shrink:0}
+.md-ex{font-size:12px;color:var(--muted)}
+
+/* ── CHEAT SHEET ── */
+.cheat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:13px 0}
+.cheat-card{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:14px}
+.cheat-card h4{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:11px}
+.h4-tov{color:var(--tov)}.h4-rep{color:var(--rep)}.h4-phr{color:var(--phr)}
+.h4-ch{color:var(--ch)}.h4-ins{color:var(--ins)}.h4-au{color:var(--au)}
+.cheat-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;gap:8px}
+.cheat-row:last-child{border-bottom:none}
+.ck{color:var(--muted);flex-shrink:0;font-size:11.5px}
+.cv{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--teal);text-align:right}
+
+p code,li code,td code{font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(255,208,96,.1);color:var(--yellow);padding:2px 6px;border-radius:4px}
+hr.dv{border:none;border-top:1px solid var(--border);margin:52px 0}
+.footer{border-top:1px solid var(--border);padding:26px 64px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}
+
+@media(max-width:900px){
+  .sidebar{display:none}.main{margin-left:0}
+  .hero,.content,.footer{padding-left:22px;padding-right:22px}
+  .hero h1{font-size:28px}
+  .grid-2,.grid-3,.grid-4,.cheat-grid,.cmp-box,.pv-body,.verb-grid{grid-template-columns:1fr 1fr}
+  .verb-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-brand">
+      <div class="logo-icon">🔧</div>
+      <div class="logo-text"><h2>Grammar Master</h2><p>Dành cho người mất gốc · 2026</p></div>
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" id="pbar"></div></div>
+  </div>
+
+  <div class="nav-section" style="border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:2px">
+    <div class="nav-group-hdr" style="background:rgba(255,208,96,.12);color:#ffd060">📚 Lộ Trình Học</div>
+    <a href="english-grammar-basics.html" class="nav-link"><span class="ico">①</span> Tiếng Anh Cơ Bản</a>
+    <a href="english-12-tenses.html" class="nav-link"><span class="ico">②</span> 12 Thì Tiếng Anh</a>
+    <a href="subject-verb-agreement-tenses.html" class="nav-link"><span class="ico">③</span> Hòa Hợp C-V &amp; Phối Thì</a>
+    <a href="synonyms-antonyms-guide.html" class="nav-link"><span class="ico">④</span> Đồng Nghĩa &amp; Trái Nghĩa</a>
+    <a href="adjective-order-word-classes-relative-clauses.html" class="nav-link"><span class="ico">⑤</span> Trật Tự TT · Từ Loại · MĐ QH</a>
+    <a href="english-grammar-guide.html" class="nav-link"><span class="ico">⑥</span> Ngữ Pháp Tổng Hợp</a>
+    <a href="grammar-comparison-passive-conjunctions.html" class="nav-link"><span class="ico">⑦</span> So Sánh · Bị Động · Liên Từ</a>
+    <a href="prepositions-wish-guide.html" class="nav-link"><span class="ico">⑧</span> Giới Từ &amp; Câu Ước</a>
+    <a href="grammar-modals-quantifiers-stress.html" class="nav-link"><span class="ico">⑨</span> Modal · Lượng Từ · Trọng Âm</a>
+    <a href="grammar-tag-questions-articles-conditionals.html" class="nav-link"><span class="ico">⑩</span> Hỏi Đuôi · Mạo Từ · ĐK</a>
+    <a href="grammar-tov-ving-reported-phrasal.html" class="nav-link" style="color:var(--acc);background:rgba(255,208,96,.08);border-left-color:var(--acc)"><span class="ico">⑪</span> To V/V-ing · Tường Thuật</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-oc">📌 Tổng quan</div>
+    <a href="#s0" class="nav-link"><span class="ico">🏠</span> Giới thiệu & Ưu tiên <span class="nav-badge">START</span></a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-tov">🟢 To V / V-ing</div>
+    <a href="#s1" class="nav-link"><span class="ico">1️⃣</span> Khái niệm & Logic cốt lõi <span class="nav-badge">★★★</span></a>
+    <a href="#s2" class="nav-link"><span class="ico">2️⃣</span> Động từ + To V</a>
+    <a href="#s3" class="nav-link"><span class="ico">3️⃣</span> Động từ + V-ing</a>
+    <a href="#s4" class="nav-link"><span class="ico">4️⃣</span> Động từ + cả hai (nghĩa khác)</a>
+    <a href="#s5" class="nav-link"><span class="ico">5️⃣</span> V + O + To V / V-ing</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-rep">🟣 Câu Tường Thuật</div>
+    <a href="#s6" class="nav-link"><span class="ico">6️⃣</span> Reported Speech là gì? <span class="nav-badge">★★★</span></a>
+    <a href="#s7" class="nav-link"><span class="ico">7️⃣</span> Lùi thì — Backshift</a>
+    <a href="#s8" class="nav-link"><span class="ico">8️⃣</span> Đổi đại từ & Trạng từ</a>
+    <a href="#s9" class="nav-link"><span class="ico">9️⃣</span> Tường thuật câu hỏi & mệnh lệnh</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-phr">🟠 Cụm Động Từ</div>
+    <a href="#s10" class="nav-link"><span class="ico">🔟</span> Phrasal Verbs là gì? <span class="nav-badge">★★★</span></a>
+    <a href="#s11" class="nav-link"><span class="ico">🔢</span> Separable vs Inseparable</a>
+    <a href="#s12" class="nav-link"><span class="ico">🔣</span> Nhóm GET / TAKE / GIVE</a>
+    <a href="#s13" class="nav-link"><span class="ico">🔤</span> Nhóm COME / GO / LOOK</a>
+    <a href="#s14" class="nav-link"><span class="ico">🔡</span> Nhóm PUT / TURN / MAKE / BREAK</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-au">📋 Tổng hợp</div>
+    <a href="#s15" class="nav-link"><span class="ico">📋</span> Cheat Sheet toàn bộ</a>
+  </div>
+</aside>
+
+<!-- ══════════ MAIN ══════════ -->
+<div class="main">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-dots"></div><div class="hero-glow"></div>
+  <div class="hero-eyebrow"><span class="pulse"></span> To-Infinitive · V-ing · Reported Speech · Phrasal Verbs · Dành cho người mất gốc</div>
+  <h1>
+    <span class="h-grad">To V / V-ing</span> 🔧<br>
+    <span class="h-rep">Tường Thuật</span> &<br>
+    <span class="h-phr">Cụm Động Từ</span>
+  </h1>
+  <p class="hero-desc">Ba chủ đề mà người học tiếng Anh hay "học rồi vẫn dùng sai" vì không nắm được <strong style="color:var(--text)">logic đằng sau</strong>. Mình giải thích từ gốc rễ, cho thật nhiều ví dụ thực chiến, và chia sẻ <strong style="color:var(--text)">mẹo ghi nhớ</strong> để bạn tự tin dùng ngay.</p>
+  <div class="hero-chips">
+    <span class="chip chip-tov">🟢 To V / V-ing</span>
+    <span class="chip chip-rep">🟣 Câu tường thuật</span>
+    <span class="chip chip-phr">🟠 Cụm động từ</span>
+    <span class="chip chip-ins">✅ Nhiều ví dụ</span>
+    <span class="chip chip-oc">💡 Mẹo nhớ</span>
+    <span class="chip chip-ch">📋 Cheat Sheet</span>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ════ S0 ════ -->
+<div class="section" id="s0">
+  <div class="sec-head">
+    <span class="sec-tag st-overview">TỔNG QUAN</span>
+    <div>
+      <h2 class="sec-title">Tại sao 3 chủ đề này quan trọng?</h2>
+      <p class="sec-sub">Hiểu đúng mục tiêu → chọn đúng thứ để học trước</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="grid-3">
+      <div class="rw-box rw-tov">
+        <div class="rw-label">🟢 TO V / V-ING</div>
+        <div class="rw-title">Động từ + dạng nào?</div>
+        <div class="rw-body">Hàng trăm động từ trong tiếng Anh yêu cầu theo sau là <code>to + V</code> hoặc <code>V-ing</code>. Dùng sai thì câu sai hoàn toàn. Một số động từ dùng được cả hai nhưng <strong style="color:var(--text)">nghĩa thay đổi</strong> — đây là điểm tinh tế nhất.</div>
+      </div>
+      <div class="rw-box rw-rep">
+        <div class="rw-label">🟣 REPORTED SPEECH</div>
+        <div class="rw-title">Câu tường thuật</div>
+        <div class="rw-body">Khi thuật lại lời ai đó nói, tiếng Anh phải <strong style="color:var(--text)">lùi thì, đổi đại từ, đổi trạng từ</strong>. Tiếng Việt không làm vậy, nên người Việt hay quên hoặc làm sai khi viết lại lời nói.</div>
+      </div>
+      <div class="rw-box rw-phr">
+        <div class="rw-label">🟠 PHRASAL VERBS</div>
+        <div class="rw-title">Cụm động từ</div>
+        <div class="rw-body">Là tổ hợp động từ + giới từ/trạng từ tạo ra nghĩa <strong style="color:var(--text)">hoàn toàn mới</strong> không đoán được từ nghĩa từng từ. <em>Give up</em> không phải "trao lên" mà là "từ bỏ". Cực quan trọng để hiểu tiếng Anh tự nhiên.</div>
+      </div>
+    </div>
+    <div class="info i-ok">
+      <span class="info-ico">🎯</span>
+      <div><strong style="color:var(--text)">Thứ tự học hiệu quả:</strong> To V/V-ing với động từ thông dụng nhất → Phrasal Verbs nhóm GET/TAKE/GO → Câu tường thuật dạng câu kể → Động từ dùng được cả hai → Tường thuật câu hỏi & mệnh lệnh → Phrasal Verbs nâng cao.</div>
+    </div>
+    <table class="tbl">
+      <thead><tr><th>Ưu tiên</th><th>Nội dung</th><th>Vì sao quan trọng</th></tr></thead>
+      <tbody>
+        <tr><td><span style="color:var(--ins)">★★★ Học ngay</span></td><td>want/need/like/enjoy + to V hay V-ing, Reported câu kể, GET/TAKE phrasal verbs</td><td>Dùng trong gần như mọi cuộc hội thoại</td></tr>
+        <tr><td><span style="color:var(--ch)">★★☆ Tiếp theo</span></td><td>Động từ dùng cả hai (stop/remember/try), Reported câu hỏi, GO/LOOK/COME</td><td>Tránh sai nghĩa, nói tự nhiên hơn</td></tr>
+        <tr><td><span style="color:var(--orange)">★☆☆ Nâng cao</span></td><td>V + O + To V / bare infinitive, PUT/TURN/MAKE/BREAK phrasal verbs</td><td>Mở rộng vốn từ và cách diễn đạt</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════
+     PHẦN 1: TO V / V-ING
+════════════════════ -->
+<div class="cat-banner cb-tov">
+  <div class="cb-icon">🟢</div>
+  <div>
+    <div class="cb-badge">TO-INFINITIVE & GERUND</div>
+    <div class="cb-title">Phần 1 — Động từ + To V / V-ing</div>
+    <div class="cb-sub">Logic cốt lõi · Động từ + To V · Động từ + V-ing · Dùng cả hai · V + O + To V</div>
+  </div>
+</div>
+
+<!-- ════ S1 — KHÁI NIỆM ════ -->
+<div class="section" id="s1">
+  <div class="sec-head">
+    <span class="sec-tag st-tov">NHÓM 1</span>
+    <div>
+      <h2 class="sec-title">Logic cốt lõi — Tại sao có sự phân biệt này?</h2>
+      <p class="sec-sub">Hiểu "cảm giác" của To V và V-ing → không cần học thuộc từng từ</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="info i-tov">
+      <span class="info-ico">🔑</span>
+      <div><strong style="color:var(--text)">Logic tổng quát (không phải quy tắc tuyệt đối, nhưng giúp nhớ):</strong><br>
+      <strong>To V (to-infinitive)</strong> → hướng về <strong>tương lai, mục đích, kế hoạch</strong> — điều chưa xảy ra hoặc muốn làm.<br>
+      <strong>V-ing (gerund)</strong> → hướng về <strong>hành động đang/đã xảy ra, sự thật hiện thực</strong> — điều đang diễn ra hoặc đã quen thuộc.<br>
+      Ví dụ: <em>"I stopped <strong>to drink</strong>"</em> (dừng lại ĐỂ uống — mục đích) ≠ <em>"I stopped <strong>drinking</strong>"</em> (tôi bỏ uống — sự thật mới).</div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">➡️</div>
+        <div class="card-title">To V — Hướng tới tương lai</div>
+        <div class="card-desc">Kế hoạch, mong muốn, quyết định, mục đích chưa xảy ra.<br><em>I want <strong>to travel</strong>. She hopes <strong>to get</strong> the job.</em></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔄</div>
+        <div class="card-title">V-ing — Hành động thực tế</div>
+        <div class="card-desc">Thói quen, sở thích, trải nghiệm đã/đang có.<br><em>I enjoy <strong>travelling</strong>. She hates <strong>getting</strong> up early.</em></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <div class="card-title">Dùng cả hai — Nghĩa đổi!</div>
+        <div class="card-desc">stop, remember, forget, try, regret...<br><em>He stopped <strong>to smoke</strong> ≠ He stopped <strong>smoking</strong></em></div>
+      </div>
+    </div>
+
+    <div class="sub-title">V-ing còn dùng khi nào?</div>
+    <table class="tbl">
+      <thead><tr><th>Vị trí V-ing</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td>Sau giới từ (after, before, by, without, about, of...)</td><td>She left <strong>without saying</strong> goodbye. / I'm good at <strong>cooking</strong>.</td></tr>
+        <tr><td>Làm chủ ngữ câu</td><td><strong>Smoking</strong> is bad for health. / <strong>Learning</strong> English takes time.</td></tr>
+        <tr><td>Sau "mind" khi hỏi phép</td><td>Do you mind <strong>closing</strong> the window?</td></tr>
+        <tr><td>Sau "go" trong các hoạt động</td><td>go <strong>swimming</strong>, go <strong>shopping</strong>, go <strong>hiking</strong></td></tr>
+        <tr><td>Sau "spend/waste time"</td><td>I spent hours <strong>fixing</strong> this. / Stop <strong>wasting</strong> time!</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ════ S2 — ĐỘNG TỪ + TO V ════ -->
+<div class="section" id="s2">
+  <div class="sec-head">
+    <span class="sec-tag st-tov">NHÓM 2</span>
+    <div>
+      <h2 class="sec-title">Động từ chỉ dùng với To V</h2>
+      <p class="sec-sub">Học theo nhóm nghĩa → dễ nhớ hơn học từng từ riêng lẻ</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="info i-ok">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ nhóm To V:</strong> Hầu hết là các động từ diễn đạt <strong>ý muốn, quyết định, kế hoạch, cố gắng</strong> — những thứ hướng về tương lai hoặc chưa xảy ra. <em>want, need, hope, plan, decide, agree, offer, promise, refuse, manage, fail...</em></div>
+    </div>
+
+    <div class="grid-4">
+      <div class="rw-box rw-tov" style="margin:0">
+        <div class="rw-label">💭 Mong muốn / Kế hoạch</div>
+        <div class="rw-body" style="font-size:12px">
+          <span class="bdg-tov">want</span> <span class="bdg-tov">need</span> <span class="bdg-tov">hope</span> <span class="bdg-tov">wish</span> <span class="bdg-tov">plan</span> <span class="bdg-tov">expect</span> <span class="bdg-tov">intend</span> <span class="bdg-tov">would like</span> <span class="bdg-tov">would love</span>
+        </div>
+      </div>
+      <div class="rw-box rw-tov" style="margin:0">
+        <div class="rw-label">✅ Quyết định / Đồng ý</div>
+        <div class="rw-body" style="font-size:12px">
+          <span class="bdg-tov">decide</span> <span class="bdg-tov">agree</span> <span class="bdg-tov">choose</span> <span class="bdg-tov">refuse</span> <span class="bdg-tov">promise</span> <span class="bdg-tov">offer</span> <span class="bdg-tov">demand</span> <span class="bdg-tov">threaten</span>
+        </div>
+      </div>
+      <div class="rw-box rw-tov" style="margin:0">
+        <div class="rw-label">💪 Cố gắng / Kết quả</div>
+        <div class="rw-body" style="font-size:12px">
+          <span class="bdg-tov">manage</span> <span class="bdg-tov">fail</span> <span class="bdg-tov">afford</span> <span class="bdg-tov">struggle</span> <span class="bdg-tov">attempt</span> <span class="bdg-tov">claim</span> <span class="bdg-tov">tend</span>
+        </div>
+      </div>
+      <div class="rw-box rw-tov" style="margin:0">
+        <div class="rw-label">📚 Học / Nhớ / Dạy</div>
+        <div class="rw-body" style="font-size:12px">
+          <span class="bdg-tov">learn</span> <span class="bdg-tov">teach</span> <span class="bdg-tov">ask</span> <span class="bdg-tov">appear</span> <span class="bdg-tov">seem</span> <span class="bdg-tov">pretend</span> <span class="bdg-tov">hesitate</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ thực tế — Động từ + To V</span><span class="ex-tag et-tov">TO V</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ext-pos ex-type">WANT</span><span class="ex-en">I want <strong>to learn</strong> Spanish.</span><span class="ex-vn">Tôi muốn học tiếng Tây Ban Nha.</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">NEED</span><span class="ex-en">She needs <strong>to rest</strong> more.</span><span class="ex-vn">Cô ấy cần nghỉ ngơi nhiều hơn.</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">MANAGE</span><span class="ex-en">He managed <strong>to finish</strong> on time.</span><span class="ex-vn">Anh ấy đã xoay sở xong đúng giờ. (thực sự làm được)</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">REFUSE</span><span class="ex-en">She refused <strong>to answer</strong> the question.</span><span class="ex-vn">Cô ấy từ chối trả lời câu hỏi.</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">AFFORD</span><span class="ex-en">I can't afford <strong>to buy</strong> a new car.</span><span class="ex-vn">Tôi không đủ tiền mua xe mới.</span></div>
+        <div class="ex-row"><span class="ext-neg ex-type">✗ SAI</span><span class="ex-en">I want going to the beach.</span><span class="ex-vn">→ I want <strong>to go</strong> to the beach. ✅</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S3 — ĐỘNG TỪ + V-ING ════ -->
+<div class="section" id="s3">
+  <div class="sec-head">
+    <span class="sec-tag st-tov">NHÓM 3</span>
+    <div>
+      <h2 class="sec-title">Động từ chỉ dùng với V-ing</h2>
+      <p class="sec-sub">Chủ yếu là cảm xúc, thói quen, sự thực tế — học theo nhóm cảm xúc</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="info i-ok">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ nhóm V-ing:</strong> Hầu hết là các động từ diễn đạt <strong>cảm xúc với hành động thực tế, thói quen, kinh nghiệm đã có</strong>. <em>enjoy, love, hate, like, avoid, finish, keep, mind, suggest, consider, miss, admit, deny, imagine, practice...</em></div>
+    </div>
+
+    <div class="grid-4">
+      <div class="rw-box rw-rep" style="margin:0">
+        <div class="rw-label">❤️ Cảm xúc với hành động</div>
+        <div class="rw-body" style="font-size:12px">
+          <span class="bdg-rep">enjoy</span> <span class="bdg-rep">love</span> <span class="bdg-rep">hate</span> <span class="bdg-rep">like</span> <span class="bdg-rep">dislike</span> <span class="bdg-rep">mind</span> <span class="bdg-rep">miss</span> <span class="bdg-rep">can't stand</span> <span class="bdg-rep">can't help</span>
+        </div>
+      </div>
+      <div class="rw-box rw-rep" style="margin:0">
+        <div class="rw-label">🚫 Tránh / Kết thúc</div>
+        <div class="rw-body" style="font-size:12px">
+          <span class="bdg-rep">avoid</span> <span class="bdg-rep">finish</span> <span class="bdg-rep">quit</span> <span class="bdg-rep">give up</span> <span class="bdg-rep">delay</span> <span class="bdg-rep">postpone</span> <span class="bdg-rep">keep</span> <span class="bdg-rep">keep on</span>
+        </div>
+      </div>
+      <div class="rw-box rw-rep" style="margin:0">
+        <div class="rw-label">💭 Suy nghĩ / Thừa nhận</div>
+        <div class="rw-body" style="font-size:12px">
+          <span class="bdg-rep">consider</span> <span class="bdg-rep">imagine</span> <span class="bdg-rep">suggest</span> <span class="bdg-rep">admit</span> <span class="bdg-rep">deny</span> <span class="bdg-rep">recommend</span> <span class="bdg-rep">risk</span>
+        </div>
+      </div>
+      <div class="rw-box rw-rep" style="margin:0">
+        <div class="rw-label">🔄 Tiếp tục / Thực hành</div>
+        <div class="rw-body" style="font-size:12px">
+          <span class="bdg-rep">practice</span> <span class="bdg-rep">involve</span> <span class="bdg-rep">include</span> <span class="bdg-rep">spend</span> <span class="bdg-rep">waste</span> <span class="bdg-rep">be worth</span> <span class="bdg-rep">feel like</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ thực tế — Động từ + V-ing</span><span class="ex-tag et-tov">V-ING</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ext-pos ex-type">ENJOY</span><span class="ex-en">I enjoy <strong>cooking</strong> on weekends.</span><span class="ex-vn">Tôi thích nấu ăn vào cuối tuần.</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">AVOID</span><span class="ex-en">Try to avoid <strong>eating</strong> late at night.</span><span class="ex-vn">Cố gắng tránh ăn muộn vào ban đêm.</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">CONSIDER</span><span class="ex-en">I'm considering <strong>moving</strong> to a bigger apartment.</span><span class="ex-vn">Tôi đang cân nhắc chuyển sang căn hộ lớn hơn.</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">DENY</span><span class="ex-en">He denied <strong>stealing</strong> the money.</span><span class="ex-vn">Anh ấy phủ nhận đã ăn cắp tiền.</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">CAN'T HELP</span><span class="ex-en">I can't help <strong>laughing</strong> when I see that.</span><span class="ex-vn">Tôi không nhịn được cười khi thấy điều đó.</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">BE WORTH</span><span class="ex-en">This book is worth <strong>reading</strong> twice.</span><span class="ex-vn">Cuốn sách này đáng đọc hai lần.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S4 — DÙNG CẢ HAI (NGHĨA KHÁC) ════ -->
+<div class="section" id="s4">
+  <div class="sec-head">
+    <span class="sec-tag st-tov">NHÓM 4</span>
+    <div>
+      <h2 class="sec-title">Động từ dùng cả To V và V-ing — Nghĩa thay đổi!</h2>
+      <p class="sec-sub">Đây là điểm tinh tế nhất — hiểu sai nghĩa → truyền đạt sai ý hoàn toàn</p>
+    </div>
+  </div>
+  <div class="sub">
+    <table class="tbl">
+      <thead><tr><th>Động từ</th><th>+ To V → Nghĩa</th><th>+ V-ing → Nghĩa</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>STOP</strong></td>
+          <td><em>stop <strong>to do</strong></em> = dừng lại <strong>để làm</strong> việc khác<br><span style="color:var(--muted);font-size:12px">I stopped to check my phone.</span></td>
+          <td><em>stop <strong>doing</strong></em> = bỏ / ngừng hẳn việc đó<br><span style="color:var(--muted);font-size:12px">He stopped smoking last year.</span></td>
+        </tr>
+        <tr>
+          <td><strong>REMEMBER</strong></td>
+          <td><em>remember <strong>to do</strong></em> = nhớ (phải làm) điều gì đó sắp đến<br><span style="color:var(--muted);font-size:12px">Remember to lock the door!</span></td>
+          <td><em>remember <strong>doing</strong></em> = nhớ lại mình đã làm gì<br><span style="color:var(--muted);font-size:12px">I remember meeting her at the party.</span></td>
+        </tr>
+        <tr>
+          <td><strong>FORGET</strong></td>
+          <td><em>forget <strong>to do</strong></em> = quên mất (chưa làm)<br><span style="color:var(--muted);font-size:12px">I forgot to call him. (chưa gọi)</span></td>
+          <td><em>forget <strong>doing</strong></em> = quên rằng mình đã làm<br><span style="color:var(--muted);font-size:12px">I'll never forget meeting you.</span></td>
+        </tr>
+        <tr>
+          <td><strong>TRY</strong></td>
+          <td><em>try <strong>to do</strong></em> = cố gắng làm (nhưng khó)<br><span style="color:var(--muted);font-size:12px">I tried to open the jar. (khó mở)</span></td>
+          <td><em>try <strong>doing</strong></em> = thử xem có được không<br><span style="color:var(--muted);font-size:12px">Try adding some salt — it might help.</span></td>
+        </tr>
+        <tr>
+          <td><strong>REGRET</strong></td>
+          <td><em>regret <strong>to do</strong></em> = tiếc khi phải thông báo (ngay bây giờ)<br><span style="color:var(--muted);font-size:12px">I regret to inform you that...</span></td>
+          <td><em>regret <strong>doing</strong></em> = hối tiếc vì đã làm gì<br><span style="color:var(--muted);font-size:12px">I regret saying that to her.</span></td>
+        </tr>
+        <tr>
+          <td><strong>NEED</strong></td>
+          <td><em>need <strong>to do</strong></em> = cần phải làm (chủ thể cần)<br><span style="color:var(--muted);font-size:12px">I need to rest.</span></td>
+          <td><em>need <strong>doing</strong></em> = cần được làm (bị động nghĩa)<br><span style="color:var(--muted);font-size:12px">This car needs fixing. (= needs to be fixed)</span></td>
+        </tr>
+        <tr>
+          <td><strong>MEAN</strong></td>
+          <td><em>mean <strong>to do</strong></em> = có ý định làm<br><span style="color:var(--muted);font-size:12px">I didn't mean to hurt you.</span></td>
+          <td><em>mean <strong>doing</strong></em> = có nghĩa là / đòi hỏi<br><span style="color:var(--muted);font-size:12px">This means working overtime.</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="info i-err">
+      <span class="info-ico">🚨</span>
+      <div><strong style="color:var(--text)">Phân biệt STOP quan trọng nhất:</strong><br>
+      <em>"He stopped <strong>to smoke</strong>"</em> = Anh ấy dừng lại (đang làm gì đó) <strong>để hút thuốc</strong> (vẫn hút)<br>
+      <em>"He stopped <strong>smoking</strong>"</em> = Anh ấy <strong>bỏ thuốc lá</strong> (không hút nữa)<br>
+      Hai câu này nghĩa trái ngược hoàn toàn!</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S5 — V + O + TO V / V-ING ════ -->
+<div class="section" id="s5">
+  <div class="sec-head">
+    <span class="sec-tag st-tov">NHÓM 5</span>
+    <div>
+      <h2 class="sec-title">V + Object + To V / V-ing — Nhờ người khác làm gì</h2>
+      <p class="sec-sub">Cấu trúc "tôi muốn BẠN làm gì" — rất hay dùng nhưng hay bị nhầm</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="info i-tov">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Khi nào dùng cấu trúc này?</strong> Khi chủ ngữ muốn/yêu cầu/thuyết phục <strong>người khác</strong> làm gì đó — chủ ngữ của hành động phụ là tân ngữ, không phải chủ ngữ câu chính.</div>
+    </div>
+
+    <table class="tbl">
+      <thead><tr><th>Cấu trúc</th><th>Động từ thường dùng</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>V + O + to V</code></td>
+          <td>want, ask, tell, order, expect, allow, force, encourage, teach, help, invite, remind</td>
+          <td>She <strong>asked him to help</strong>. / I <strong>told her to wait</strong>. / He <strong>encouraged me to try</strong>.</td>
+        </tr>
+        <tr>
+          <td><code>V + O + V (bare inf)</code></td>
+          <td>make, let, have<br><em>(causative verbs)</em></td>
+          <td>She <strong>made him clean</strong> his room. / Let <strong>me help</strong> you. / I'll <strong>have him call</strong> you.</td>
+        </tr>
+        <tr>
+          <td><code>V + O + V-ing</code></td>
+          <td>see, watch, hear, feel, notice, catch, find, imagine, keep</td>
+          <td>I <strong>saw her running</strong>. / We <strong>heard him singing</strong>. / I <strong>caught him lying</strong>.</td>
+        </tr>
+        <tr>
+          <td><code>Help + O + to V / V</code></td>
+          <td>help (linh hoạt nhất)</td>
+          <td>Can you <strong>help me (to) carry</strong> this? — Cả hai đều đúng!</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ giao tiếp tự nhiên</span><span class="ex-tag et-tov">V + O + TO V</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ext-pos ex-type">WANT + O</span><span class="ex-en">I want you to be honest with me.</span><span class="ex-vn">Tôi muốn bạn thành thật với tôi.</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">TELL + O</span><span class="ex-en">She told the kids to go to bed.</span><span class="ex-vn">Cô ấy bảo bọn trẻ đi ngủ đi.</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">MAKE + O</span><span class="ex-en">The movie made me cry.</span><span class="ex-vn">Bộ phim khiến tôi khóc. (không dùng "to cry")</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">SEE + O</span><span class="ex-en">I saw him leave / leaving the office.</span><span class="ex-vn">Tôi thấy anh ấy rời văn phòng. (cả hai đều OK)</span></div>
+        <div class="ex-row"><span class="ext-neg ex-type">✗ SAI</span><span class="ex-en">I want that you come to my party.</span><span class="ex-vn">→ I want <strong>you to come</strong> to my party. ✅</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════
+     PHẦN 2: CÂU TƯỜNG THUẬT
+════════════════════ -->
+<div class="cat-banner cb-rep">
+  <div class="cb-icon">🟣</div>
+  <div>
+    <div class="cb-badge">REPORTED SPEECH</div>
+    <div class="cb-title">Phần 2 — Câu Tường Thuật</div>
+    <div class="cb-sub">Lùi thì · Đổi đại từ & Trạng từ · Tường thuật câu hỏi · Mệnh lệnh · Động từ tường thuật</div>
+  </div>
+</div>
+
+<!-- ════ S6 — LÀ GÌ ════ -->
+<div class="section" id="s6">
+  <div class="sec-head">
+    <span class="sec-tag st-rep">NHÓM 6</span>
+    <div>
+      <h2 class="sec-title">Câu tường thuật là gì và tại sao cần "lùi thì"?</h2>
+      <p class="sec-sub">Hiểu lý do → nhớ quy tắc dễ hơn nhiều</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="info i-rep">
+      <span class="info-ico">💬</span>
+      <div><strong style="color:var(--text)">Tại sao phải lùi thì?</strong> Khi bạn kể lại lời ai đó nói, thời điểm họ nói đã qua rồi. Tiếng Anh "lùi thì" để phản ánh khoảng cách thời gian đó.<br>
+      <em>Trực tiếp:</em> "I <strong>am</strong> tired." → Lúc đó hiện tại<br>
+      <em>Tường thuật:</em> She said she <strong>was</strong> tired. → Bây giờ nhìn lại, đó là quá khứ</div>
+    </div>
+
+    <div class="cmp-box">
+      <div class="cmp-bad">
+        <div class="cmp-label">💬 Lời nói trực tiếp (Direct Speech)</div>
+        <div class="cmp-text">He said: <strong>"I love this city."</strong></div>
+        <div class="cmp-note">Trích dẫn nguyên văn — có dấu ngoặc kép, dùng thì gốc.</div>
+      </div>
+      <div class="cmp-good">
+        <div class="cmp-label">📝 Câu tường thuật (Reported Speech)</div>
+        <div class="cmp-text">He said <strong>(that) he loved that city.</strong></div>
+        <div class="cmp-note">Lùi thì, đổi đại từ this→that, bỏ dấu ngoặc kép.</div>
+      </div>
+    </div>
+
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Khi nào KHÔNG cần lùi thì?</strong><br>
+      ① Sự thật khoa học / phổ quát: <em>She said the Earth <strong>is</strong> round.</em> (không lùi)<br>
+      ② Lời vừa nói xong (reporting verb ở hiện tại): <em>She <strong>says</strong> she is tired.</em><br>
+      ③ Dùng <code>said that</code> về sự thật vẫn còn đúng: <em>He said he <strong>works</strong> in IT.</em> (chấp nhận được)</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S7 — LÙI THÌ ════ -->
+<div class="section" id="s7">
+  <div class="sec-head">
+    <span class="sec-tag st-rep">NHÓM 7</span>
+    <div>
+      <h2 class="sec-title">Bảng lùi thì — Backshift Rules</h2>
+      <p class="sec-sub">Học bảng này một lần — áp dụng cho mọi câu tường thuật</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="shift-box">
+      <div class="shift-row">
+        <span class="shift-from">Present Simple</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">Past Simple</span>
+        <span class="shift-note"><em>"I work here"</em> → He said he <strong>worked</strong> there.</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-from">Present Continuous</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">Past Continuous</span>
+        <span class="shift-note"><em>"I'm eating"</em> → She said she <strong>was eating</strong>.</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-from">Present Perfect</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">Past Perfect</span>
+        <span class="shift-note"><em>"I have finished"</em> → He said he <strong>had finished</strong>.</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-from">Past Simple</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">Past Perfect</span>
+        <span class="shift-note"><em>"I called you"</em> → She said she <strong>had called</strong> me.</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-from">will</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">would</span>
+        <span class="shift-note"><em>"I will help"</em> → He said he <strong>would help</strong>.</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-from">can</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">could</span>
+        <span class="shift-note"><em>"I can swim"</em> → She said she <strong>could swim</strong>.</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-from">may</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">might</span>
+        <span class="shift-note"><em>"It may rain"</em> → She said it <strong>might rain</strong>.</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-from">must / have to</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">had to</span>
+        <span class="shift-note"><em>"I must go"</em> → He said he <strong>had to go</strong>.</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-from">should / would / could / might</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">Không đổi</span>
+        <span class="shift-note"><em>"I should rest"</em> → He said he <strong>should rest</strong>. (giữ nguyên)</span>
+      </div>
+    </div>
+
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Luyện tập lùi thì</span><span class="ex-tag et-rep">BACKSHIFT</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ext-note ex-type">TRỰC TIẾP</span><span class="ex-en">"I am going to the market."</span><span class="ex-vn">→ Past Simple để lùi</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">TƯỜNG THUẬT</span><span class="ex-en">She said she <strong>was going</strong> to the market.</span><span class="ex-vn">Cô ấy nói cô ấy đang đi chợ.</span></div>
+        <div class="ex-row"><span class="ext-note ex-type">TRỰC TIẾP</span><span class="ex-en">"We have already eaten."</span><span class="ex-vn">→ HTHT → Past Perfect</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">TƯỜNG THUẬT</span><span class="ex-en">They said they <strong>had already eaten</strong>.</span><span class="ex-vn">Họ nói họ đã ăn rồi.</span></div>
+        <div class="ex-row"><span class="ext-note ex-type">TRỰC TIẾP</span><span class="ex-en">"I will call you tomorrow."</span><span class="ex-vn">→ will → would</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">TƯỜNG THUẬT</span><span class="ex-en">He said he <strong>would call</strong> me the next day.</span><span class="ex-vn">Anh ấy nói anh ấy sẽ gọi tôi ngày hôm sau.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S8 — ĐỔI ĐẠI TỪ & TRẠNG TỪ ════ -->
+<div class="section" id="s8">
+  <div class="sec-head">
+    <span class="sec-tag st-rep">NHÓM 8</span>
+    <div>
+      <h2 class="sec-title">Đổi đại từ & Trạng từ thời gian/nơi chốn</h2>
+      <p class="sec-sub">Không chỉ lùi thì — đại từ và trạng từ cũng phải thay đổi theo ngữ cảnh</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="grid-2">
+      <div>
+        <div class="sub-title">Đổi đại từ</div>
+        <table class="tbl">
+          <thead><tr><th>Trực tiếp</th><th>Tường thuật</th></tr></thead>
+          <tbody>
+            <tr><td>I / me / my / mine</td><td>he/she / him/her / his/her / his/hers</td></tr>
+            <tr><td>you / your</td><td>I/he/she/they / my/his/her/their</td></tr>
+            <tr><td>we / us / our</td><td>they / them / their</td></tr>
+            <tr><td>my / your</td><td>his/her / my/their (tùy ngữ cảnh)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="sub-title">Đổi trạng từ & đại từ chỉ định</div>
+        <table class="tbl">
+          <thead><tr><th>Trực tiếp</th><th>Tường thuật</th></tr></thead>
+          <tbody>
+            <tr><td>now</td><td>then</td></tr>
+            <tr><td>today</td><td>that day</td></tr>
+            <tr><td>yesterday</td><td>the day before / the previous day</td></tr>
+            <tr><td>tomorrow</td><td>the next day / the following day</td></tr>
+            <tr><td>last week</td><td>the week before / the previous week</td></tr>
+            <tr><td>next week</td><td>the following week</td></tr>
+            <tr><td>here</td><td>there</td></tr>
+            <tr><td>this / these</td><td>that / those</td></tr>
+            <tr><td>ago</td><td>before / earlier</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ tổng hợp — Đổi đại từ & Trạng từ</span><span class="ex-tag et-rep">FULL CHANGE</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ext-note ex-type">TRỰC TIẾP</span><span class="ex-en">"I'll meet you here tomorrow."</span><span class="ex-vn">(John nói với Mary)</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">TƯỜNG THUẬT</span><span class="ex-en">John told Mary (that) he would meet her there the next day.</span><span class="ex-vn">I→he, you→her, here→there, tomorrow→the next day, will→would</span></div>
+        <div class="ex-row"><span class="ext-note ex-type">TRỰC TIẾP</span><span class="ex-en">"I bought this yesterday for my sister."</span><span class="ex-vn">(She said)</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">TƯỜNG THUẬT</span><span class="ex-en">She said she had bought that the day before for her sister.</span><span class="ex-vn">I→she, this→that, yesterday→the day before, my→her, bought→had bought</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S9 — TƯỜNG THUẬT CÂU HỎI & LỆNH ════ -->
+<div class="section" id="s9">
+  <div class="sec-head">
+    <span class="sec-tag st-rep">NHÓM 9</span>
+    <div>
+      <h2 class="sec-title">Tường thuật câu hỏi & câu mệnh lệnh</h2>
+      <p class="sec-sub">Cấu trúc khác hẳn câu kể — không dùng that mà dùng if/whether/to V</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Tường thuật câu hỏi Yes/No</div>
+    <div class="formula">She asked + <span class="fm-rep">if/whether</span> + S + V (trật tự câu kể, không đảo)</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Câu hỏi Yes/No</span><span class="ex-tag et-rep">YES/NO QUESTION</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ext-note ex-type">TRỰC TIẾP</span><span class="ex-en">"Are you coming to the party?"</span><span class="ex-vn">Câu hỏi Yes/No</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">TƯỜNG THUẬT</span><span class="ex-en">She asked <strong>if/whether I was coming</strong> to the party.</span><span class="ex-vn">Dùng if/whether + S + V (không đảo), lùi thì</span></div>
+        <div class="ex-row"><span class="ext-neg ex-type">✗ SAI</span><span class="ex-en">She asked if was I coming...</span><span class="ex-vn">→ KHÔNG đảo chủ ngữ trong tường thuật!</span></div>
+      </div>
+    </div>
+
+    <div class="sub-title" style="margin-top:20px">Tường thuật câu hỏi có từ hỏi (Wh-)</div>
+    <div class="formula">He asked + <span class="fm-rep">what/where/when/why/how/who</span> + S + V (trật tự câu kể)</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Câu hỏi Wh-</span><span class="ex-tag et-rep">WH- QUESTION</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ext-note ex-type">TRỰC TIẾP</span><span class="ex-en">"Where do you live?"</span><span class="ex-vn">Câu hỏi Where</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">TƯỜNG THUẬT</span><span class="ex-en">He asked <strong>where I lived</strong>.</span><span class="ex-vn">where + S + V (không đảo, lùi thì)</span></div>
+        <div class="ex-row"><span class="ext-note ex-type">TRỰC TIẾP</span><span class="ex-en">"What time did the meeting start?"</span><span class="ex-vn">Câu hỏi What time</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">TƯỜNG THUẬT</span><span class="ex-en">She asked <strong>what time the meeting had started</strong>.</span><span class="ex-vn">Lùi thì: did start → had started</span></div>
+      </div>
+    </div>
+
+    <div class="sub-title" style="margin-top:20px">Tường thuật câu mệnh lệnh</div>
+    <div class="formula">He told/asked/ordered/warned + O + <span class="fm-rep">to V</span> / <span class="fm-phr">not to V</span></div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Câu mệnh lệnh & yêu cầu</span><span class="ex-tag et-rep">COMMANDS</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ext-note ex-type">TRỰC TIẾP</span><span class="ex-en">"Please close the window."</span><span class="ex-vn">Yêu cầu lịch sự</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">TƯỜNG THUẬT</span><span class="ex-en">She asked me <strong>to close</strong> the window.</span><span class="ex-vn">ask + O + to V</span></div>
+        <div class="ex-row"><span class="ext-note ex-type">TRỰC TIẾP</span><span class="ex-en">"Don't touch that!"</span><span class="ex-vn">Cấm</span></div>
+        <div class="ex-row"><span class="ext-pos ex-type">TƯỜNG THUẬT</span><span class="ex-en">He told me <strong>not to touch</strong> that.</span><span class="ex-vn">tell + O + not to V</span></div>
+        <div class="ex-row"><span class="ext-note ex-type">MẸO</span><span class="ex-en">say vs tell: say (that)... | tell + O + to V</span><span class="ex-vn">He said "..." → He told me... / He said...</span></div>
+      </div>
+    </div>
+
+    <div class="sub-title" style="margin-top:20px">Động từ tường thuật thay thế "say/tell"</div>
+    <table class="tbl">
+      <thead><tr><th>Động từ tường thuật</th><th>Cấu trúc</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td><span class="bdg-rep">admit</span></td><td>admit + V-ing</td><td>He admitted <strong>stealing</strong> the money.</td></tr>
+        <tr><td><span class="bdg-rep">promise</span></td><td>promise + to V</td><td>She promised <strong>to call</strong> back.</td></tr>
+        <tr><td><span class="bdg-rep">suggest</span></td><td>suggest + V-ing / that S should</td><td>He suggested <strong>going</strong> out for dinner.</td></tr>
+        <tr><td><span class="bdg-rep">refuse</span></td><td>refuse + to V</td><td>She refused <strong>to apologize</strong>.</td></tr>
+        <tr><td><span class="bdg-rep">warn</span></td><td>warn + O + not to V</td><td>He warned me <strong>not to touch</strong> it.</td></tr>
+        <tr><td><span class="bdg-rep">encourage</span></td><td>encourage + O + to V</td><td>She encouraged him <strong>to apply</strong>.</td></tr>
+        <tr><td><span class="bdg-rep">deny</span></td><td>deny + V-ing</td><td>He denied <strong>knowing</strong> anything.</td></tr>
+        <tr><td><span class="bdg-rep">explain</span></td><td>explain + that / how</td><td>She explained <strong>that she was busy</strong>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════
+     PHẦN 3: CỤM ĐỘNG TỪ
+════════════════════ -->
+<div class="cat-banner cb-phr">
+  <div class="cb-icon">🟠</div>
+  <div>
+    <div class="cb-badge">PHRASAL VERBS</div>
+    <div class="cb-title">Phần 3 — Cụm Động Từ</div>
+    <div class="cb-sub">Separable vs Inseparable · GET · TAKE · GIVE · COME · GO · LOOK · PUT · TURN · MAKE · BREAK</div>
+  </div>
+</div>
+
+<!-- ════ S10 — LÀ GÌ ════ -->
+<div class="section" id="s10">
+  <div class="sec-head">
+    <span class="sec-tag st-phr">NHÓM 10</span>
+    <div>
+      <h2 class="sec-title">Cụm động từ là gì và tại sao khó?</h2>
+      <p class="sec-sub">Nghĩa của cụm = KHÔNG phải tổng nghĩa các từ thành phần</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="info i-phr">
+      <span class="info-ico">🔑</span>
+      <div><strong style="color:var(--text)">Phrasal Verb = Động từ + Particle (giới từ/trạng từ)</strong><br>
+      Nghĩa thường <strong>hoàn toàn mới và không đoán được</strong> từ nghĩa gốc.<br>
+      <em>give</em> = trao tặng, nhưng <em>give up</em> = từ bỏ (không liên quan gì!)<br>
+      <em>look</em> = nhìn, nhưng <em>look after</em> = chăm sóc, <em>look up</em> = tra cứu, <em>look forward to</em> = mong đợi<br>
+      <strong>Cách học hiệu quả nhất:</strong> Học theo nhóm động từ + ngữ cảnh, không học riêng lẻ từng từ.</div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card"><div class="card-icon">✂️</div><div class="card-title">Separable (tách được)</div><div class="card-desc">Tân ngữ có thể đứng giữa hoặc sau particle.<br><em>"Turn <strong>off</strong> the TV" = "Turn the TV <strong>off</strong>"</em></div></div>
+      <div class="card"><div class="card-icon">🔒</div><div class="card-title">Inseparable (không tách)</div><div class="card-desc">Tân ngữ phải đứng sau particle.<br>✅ <em>"Look <strong>after</strong> the kids"</em><br>❌ <em>"Look the kids after"</em></div></div>
+      <div class="card"><div class="card-icon">📌</div><div class="card-title">Đại từ → luôn đứng giữa</div><div class="card-desc">Nếu tân ngữ là đại từ (it, him, them...) và cụm là separable → PHẢI đứng giữa.<br><em>Turn <strong>it</strong> off ✅ | Turn off <strong>it</strong> ❌</em></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S11 — SEPARABLE vs INSEPARABLE ════ -->
+<div class="section" id="s11">
+  <div class="sec-head">
+    <span class="sec-tag st-phr">NHÓM 11</span>
+    <div>
+      <h2 class="sec-title">Separable vs Inseparable — Quy tắc đặt tân ngữ</h2>
+      <p class="sec-sub">Quy tắc này ảnh hưởng vị trí tân ngữ trong câu — quan trọng khi viết</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="info i-ok">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ quy tắc đại từ:</strong> Nếu tân ngữ là <strong>đại từ</strong> (it, him, her, them, us...) và cụm động từ là separable → tân ngữ <strong>PHẢI đứng giữa</strong>, không được đứng sau particle.<br>
+      ✅ <em>"Turn <strong>it</strong> off"</em> &nbsp;|&nbsp; ✅ <em>"Pick <strong>her</strong> up"</em> &nbsp;|&nbsp; ✅ <em>"Fill <strong>it</strong> in"</em><br>
+      ❌ <em>"Turn off <strong>it</strong>"</em> &nbsp;|&nbsp; ❌ <em>"Pick up <strong>her</strong>"</em></div>
+    </div>
+
+    <table class="tbl">
+      <thead><tr><th>Separable ✂️</th><th>Inseparable 🔒</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>
+            <em>turn off</em> — tắt<br>
+            <em>put on</em> — mặc/đeo/bật<br>
+            <em>pick up</em> — đón / nhặt<br>
+            <em>give up</em> — từ bỏ<br>
+            <em>take off</em> — cởi ra / cất cánh<br>
+            <em>fill in/out</em> — điền vào<br>
+            <em>call off</em> — hủy<br>
+            <em>turn on</em> — bật<br>
+            <em>write down</em> — viết xuống<br>
+            <em>bring up</em> — nuôi dưỡng / đề cập
+          </td>
+          <td>
+            <em>look after</em> — chăm sóc<br>
+            <em>run into</em> — tình cờ gặp<br>
+            <em>come across</em> — tình cờ tìm thấy<br>
+            <em>look into</em> — điều tra<br>
+            <em>stand for</em> — đại diện cho<br>
+            <em>get over</em> — hồi phục / vượt qua<br>
+            <em>look forward to</em> — mong chờ<br>
+            <em>deal with</em> — xử lý<br>
+            <em>come up with</em> — nghĩ ra<br>
+            <em>go through</em> — trải qua / xem qua
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ════ S12 — GET / TAKE / GIVE ════ -->
+<div class="section" id="s12">
+  <div class="sec-head">
+    <span class="sec-tag st-phr">NHÓM 12</span>
+    <div>
+      <h2 class="sec-title">Nhóm GET / TAKE / GIVE — Phổ biến nhất trong giao tiếp</h2>
+      <p class="sec-sub">Ba động từ này tạo ra hàng chục cụm hay dùng mỗi ngày</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="meaning-demo">
+      <div class="md-header"><span class="md-verb">GET</span><span class="md-note">— Cụm phổ biến nhất trong tiếng Anh giao tiếp</span></div>
+      <div class="md-body">
+        <div class="md-row"><span class="md-particle">up</span><span class="md-meaning">thức dậy</span><span class="md-ex">I get up at 6 every morning.</span></div>
+        <div class="md-row"><span class="md-particle">on</span><span class="md-meaning">hợp nhau / tiến bộ</span><span class="md-ex">Do you get on well with your boss? / How are you getting on?</span></div>
+        <div class="md-row"><span class="md-particle">over</span><span class="md-meaning">hồi phục / vượt qua</span><span class="md-ex">It took me weeks to get over the flu.</span></div>
+        <div class="md-row"><span class="md-particle">along</span><span class="md-meaning">hòa thuận</span><span class="md-ex">My kids get along really well.</span></div>
+        <div class="md-row"><span class="md-particle">away</span><span class="md-meaning">trốn thoát / đi nghỉ</span><span class="md-ex">The thief got away. / We need to get away for a weekend.</span></div>
+        <div class="md-row"><span class="md-particle">rid of</span><span class="md-meaning">loại bỏ / thoát khỏi</span><span class="md-ex">I need to get rid of these old clothes.</span></div>
+        <div class="md-row"><span class="md-particle">in touch</span><span class="md-meaning">liên lạc</span><span class="md-ex">Let's get in touch next week.</span></div>
+        <div class="md-row"><span class="md-particle">across</span><span class="md-meaning">truyền đạt được ý</span><span class="md-ex">Did I get my point across?</span></div>
+      </div>
+    </div>
+
+    <div class="meaning-demo" style="margin-top:14px">
+      <div class="md-header"><span class="md-verb">TAKE</span><span class="md-note">— Liên quan đến hành động cụ thể</span></div>
+      <div class="md-body">
+        <div class="md-row"><span class="md-particle">off</span><span class="md-meaning">cởi ra / cất cánh / thành công</span><span class="md-ex">Take off your shoes. / The plane takes off at 9. / Her career took off.</span></div>
+        <div class="md-row"><span class="md-particle">on</span><span class="md-meaning">đảm nhận / thuê thêm</span><span class="md-ex">Don't take on too much work. / They're taking on new staff.</span></div>
+        <div class="md-row"><span class="md-particle">after</span><span class="md-meaning">trông giống / giống tính cách</span><span class="md-ex">She takes after her mother — same eyes.</span></div>
+        <div class="md-row"><span class="md-particle">over</span><span class="md-meaning">tiếp quản</span><span class="md-ex">A new manager took over the department.</span></div>
+        <div class="md-row"><span class="md-particle">back</span><span class="md-meaning">trả lại / thu hồi lời nói</span><span class="md-ex">I take back what I said — I was wrong.</span></div>
+        <div class="md-row"><span class="md-particle">up</span><span class="md-meaning">bắt đầu thú vui mới / chiếm chỗ</span><span class="md-ex">She took up yoga last year. / This table takes up too much space.</span></div>
+      </div>
+    </div>
+
+    <div class="meaning-demo" style="margin-top:14px">
+      <div class="md-header"><span class="md-verb">GIVE</span><span class="md-note">— Liên quan đến cho/bỏ</span></div>
+      <div class="md-body">
+        <div class="md-row"><span class="md-particle">up</span><span class="md-meaning">từ bỏ</span><span class="md-ex">Never give up on your dreams! / She gave up smoking.</span></div>
+        <div class="md-row"><span class="md-particle">away</span><span class="md-meaning">cho không / tiết lộ</span><span class="md-ex">They're giving away free tickets! / Don't give away the surprise.</span></div>
+        <div class="md-row"><span class="md-particle">out</span><span class="md-meaning">phát / cạn kiệt</span><span class="md-ex">She gave out the leaflets. / My phone battery gave out.</span></div>
+        <div class="md-row"><span class="md-particle">in</span><span class="md-meaning">nộp / chịu thua</span><span class="md-ex">Please give in your homework by Friday. / He finally gave in and agreed.</span></div>
+        <div class="md-row"><span class="md-particle">back</span><span class="md-meaning">trả lại</span><span class="md-ex">Can you give me back my pen?</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S13 — COME / GO / LOOK ════ -->
+<div class="section" id="s13">
+  <div class="sec-head">
+    <span class="sec-tag st-phr">NHÓM 13</span>
+    <div>
+      <h2 class="sec-title">Nhóm COME / GO / LOOK</h2>
+      <p class="sec-sub">Ba động từ chuyển động và nhận thức tạo ra nhiều cụm cực kỳ quan trọng</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="meaning-demo">
+      <div class="md-header"><span class="md-verb">COME</span><span class="md-note">— Chuyển động & phát sinh</span></div>
+      <div class="md-body">
+        <div class="md-row"><span class="md-particle">up with</span><span class="md-meaning">nghĩ ra ý tưởng</span><span class="md-ex">She came up with a great solution.</span></div>
+        <div class="md-row"><span class="md-particle">across</span><span class="md-meaning">tình cờ tìm thấy</span><span class="md-ex">I came across this photo while cleaning.</span></div>
+        <div class="md-row"><span class="md-particle">up</span><span class="md-meaning">nảy sinh / được đề cập</span><span class="md-ex">An issue came up in the meeting.</span></div>
+        <div class="md-row"><span class="md-particle">down with</span><span class="md-meaning">bị ốm, mắc bệnh</span><span class="md-ex">I came down with a cold last week.</span></div>
+        <div class="md-row"><span class="md-particle">along</span><span class="md-meaning">đi cùng / xuất hiện</span><span class="md-ex">A job opportunity came along.</span></div>
+        <div class="md-row"><span class="md-particle">out</span><span class="md-meaning">ra mắt / lộ ra</span><span class="md-ex">When does the new album come out?</span></div>
+      </div>
+    </div>
+
+    <div class="meaning-demo" style="margin-top:14px">
+      <div class="md-header"><span class="md-verb">LOOK</span><span class="md-note">— Nhìn & tìm kiếm</span></div>
+      <div class="md-body">
+        <div class="md-row"><span class="md-particle">after</span><span class="md-meaning">chăm sóc</span><span class="md-ex">Can you look after my cat this weekend? 🔒</span></div>
+        <div class="md-row"><span class="md-particle">up</span><span class="md-meaning">tra cứu</span><span class="ex-vn" style="font-size:12px"></span><span class="md-ex">Look it up in the dictionary. ✂️</span></div>
+        <div class="md-row"><span class="md-particle">into</span><span class="md-meaning">điều tra / xem xét</span><span class="md-ex">The police are looking into the case. 🔒</span></div>
+        <div class="md-row"><span class="md-particle">forward to</span><span class="md-meaning">mong đợi</span><span class="md-ex">I look forward to hearing from you. 🔒 (+ V-ing)</span></div>
+        <div class="md-row"><span class="md-particle">out</span><span class="md-meaning">cẩn thận!</span><span class="md-ex">Look out! There's a car coming!</span></div>
+        <div class="md-row"><span class="md-particle">up to</span><span class="md-meaning">ngưỡng mộ</span><span class="md-ex">I've always looked up to my dad. 🔒</span></div>
+        <div class="md-row"><span class="md-particle">down on</span><span class="md-meaning">coi thường</span><span class="md-ex">Don't look down on others. 🔒</span></div>
+      </div>
+    </div>
+
+    <div class="meaning-demo" style="margin-top:14px">
+      <div class="md-header"><span class="md-verb">GO</span><span class="md-note">— Diễn biến & kết quả</span></div>
+      <div class="md-body">
+        <div class="md-row"><span class="md-particle">on</span><span class="md-meaning">tiếp tục</span><span class="md-ex">Please go on — I'm listening.</span></div>
+        <div class="md-row"><span class="md-particle">through</span><span class="md-meaning">trải qua / xem qua</span><span class="md-ex">She went through a tough time. / Go through the checklist.</span></div>
+        <div class="md-row"><span class="md-particle">off</span><span class="md-meaning">kêu inh ỏi / hỏng / xảy ra</span><span class="md-ex">The alarm went off. / The milk went off.</span></div>
+        <div class="md-row"><span class="md-particle">ahead</span><span class="md-meaning">tiến hành / được phép</span><span class="md-ex">Go ahead — I'm ready. / The project went ahead as planned.</span></div>
+        <div class="md-row"><span class="md-particle">out</span><span class="md-meaning">ra ngoài / tắt ngấm</span><span class="md-ex">Shall we go out tonight? / The lights went out.</span></div>
+        <div class="md-row"><span class="md-particle">over</span><span class="md-meaning">xem lại / ôn lại</span><span class="md-ex">Let's go over the plan one more time.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S14 — PUT / TURN / MAKE / BREAK ════ -->
+<div class="section" id="s14">
+  <div class="sec-head">
+    <span class="sec-tag st-phr">NHÓM 14</span>
+    <div>
+      <h2 class="sec-title">Nhóm PUT / TURN / MAKE / BREAK</h2>
+      <p class="sec-sub">Bốn động từ tạo ra nhiều cụm quan trọng trong công việc và đời sống</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="grid-2">
+      <div class="meaning-demo">
+        <div class="md-header"><span class="md-verb">PUT</span><span class="md-note">— Đặt & thực hiện</span></div>
+        <div class="md-body">
+          <div class="md-row"><span class="md-particle">off</span><span class="md-meaning">trì hoãn</span><span class="md-ex">Stop putting off your work!</span></div>
+          <div class="md-row"><span class="md-particle">up with</span><span class="md-meaning">chịu đựng</span><span class="md-ex">I can't put up with this noise.</span></div>
+          <div class="md-row"><span class="md-particle">on</span><span class="md-meaning">mặc / bật / tổ chức</span><span class="md-ex">Put on a jacket. / Put on the light.</span></div>
+          <div class="md-row"><span class="md-particle">out</span><span class="md-meaning">dập tắt</span><span class="md-ex">They put out the fire quickly.</span></div>
+          <div class="md-row"><span class="md-particle">forward</span><span class="md-meaning">đề xuất</span><span class="md-ex">She put forward a new idea.</span></div>
+        </div>
+      </div>
+      <div class="meaning-demo">
+        <div class="md-header"><span class="md-verb">TURN</span><span class="md-note">— Bật/tắt & chuyển hướng</span></div>
+        <div class="md-body">
+          <div class="md-row"><span class="md-particle">on/off</span><span class="md-meaning">bật / tắt</span><span class="md-ex">Turn on/off the TV. ✂️</span></div>
+          <div class="md-row"><span class="md-particle">up</span><span class="md-meaning">tăng âm / xuất hiện bất ngờ</span><span class="md-ex">Turn up the music! / He just turned up.</span></div>
+          <div class="md-row"><span class="md-particle">down</span><span class="md-meaning">giảm / từ chối</span><span class="md-ex">Turn down the volume. / She turned down the offer.</span></div>
+          <div class="md-row"><span class="md-particle">out</span><span class="md-meaning">hóa ra / sản xuất</span><span class="md-ex">It turned out to be wrong.</span></div>
+          <div class="md-row"><span class="md-particle">into</span><span class="md-meaning">biến thành</span><span class="md-ex">The caterpillar turns into a butterfly.</span></div>
+        </div>
+      </div>
+      <div class="meaning-demo">
+        <div class="md-header"><span class="md-verb">MAKE</span><span class="md-note">— Tạo ra & kết quả</span></div>
+        <div class="md-body">
+          <div class="md-row"><span class="md-particle">up</span><span class="md-meaning">bịa ra / hòa giải / trang điểm</span><span class="md-ex">Don't make up excuses. / Let's make up after the fight.</span></div>
+          <div class="md-row"><span class="md-particle">out</span><span class="md-meaning">hiểu ra / nhìn thấy mờ</span><span class="md-ex">I can't make out what he's saying.</span></div>
+          <div class="md-row"><span class="md-particle">off</span><span class="md-meaning">chạy trốn</span><span class="md-ex">The suspect made off before police arrived.</span></div>
+          <div class="md-row"><span class="md-particle">do with</span><span class="md-meaning">chấp nhận / liên quan đến</span><span class="md-ex">I can make do with what I have.</span></div>
+        </div>
+      </div>
+      <div class="meaning-demo">
+        <div class="md-header"><span class="md-verb">BREAK</span><span class="md-note">— Ngắt & kết thúc</span></div>
+        <div class="md-body">
+          <div class="md-row"><span class="md-particle">up</span><span class="md-meaning">chia tay / tan rã</span><span class="md-ex">They broke up after 3 years.</span></div>
+          <div class="md-row"><span class="md-particle">down</span><span class="md-meaning">hỏng máy / đổ vỡ / chia nhỏ</span><span class="md-ex">My car broke down. / She broke down crying.</span></div>
+          <div class="md-row"><span class="md-particle">out</span><span class="md-meaning">bùng phát / trốn thoát</span><span class="md-ex">A fire broke out. / He broke out of prison.</span></div>
+          <div class="md-row"><span class="md-particle">into</span><span class="md-meaning">đột nhập</span><span class="md-ex">Someone broke into our office last night.</span></div>
+          <div class="md-row"><span class="md-particle">through</span><span class="md-meaning">đột phá / vượt qua</span><span class="md-ex">The team finally broke through the barrier.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S15 — CHEAT SHEET ════ -->
+<div class="cat-banner cb-cheat">
+  <div class="cb-icon">📋</div>
+  <div>
+    <div class="cb-badge">CHEAT SHEET</div>
+    <div class="cb-title">Bảng Tổng Hợp — Tra Nhanh</div>
+    <div class="cb-sub">Tất cả công thức & điểm mấu chốt trong một trang</div>
+  </div>
+</div>
+
+<div class="section" id="s15">
+  <div class="sec-head">
+    <span class="sec-tag st-cheat">CHEAT SHEET</span>
+    <div>
+      <h2 class="sec-title">Tổng hợp toàn bộ kiến thức</h2>
+      <p class="sec-sub">Lưu lại — tra bất cứ lúc nào cần ôn nhanh</p>
+    </div>
+  </div>
+
+  <div class="cheat-grid">
+    <div class="cheat-card">
+      <h4 class="h4-tov">🟢 Động từ + To V</h4>
+      <div class="cheat-row"><span class="ck">Mong muốn / Kế hoạch</span><span class="cv">want, need, hope, plan</span></div>
+      <div class="cheat-row"><span class="ck">Quyết định / Đồng ý</span><span class="cv">decide, agree, refuse, promise</span></div>
+      <div class="cheat-row"><span class="ck">Cố gắng / Thất bại</span><span class="cv">manage, fail, afford, attempt</span></div>
+      <div class="cheat-row"><span class="ck">Vẻ bề ngoài</span><span class="cv">seem, appear, pretend, tend</span></div>
+      <div class="cheat-row"><span class="ck">Ngữ pháp: sau "it + be + adj"</span><span class="cv">It's easy to learn.</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-tov">🟢 Động từ + V-ing</h4>
+      <div class="cheat-row"><span class="ck">Cảm xúc</span><span class="cv">enjoy, love, hate, mind, miss</span></div>
+      <div class="cheat-row"><span class="ck">Tránh / Kết thúc</span><span class="cv">avoid, finish, quit, give up, delay</span></div>
+      <div class="cheat-row"><span class="ck">Suy nghĩ / Thừa nhận</span><span class="cv">consider, imagine, deny, admit</span></div>
+      <div class="cheat-row"><span class="ck">Sau giới từ</span><span class="cv">good at doing, before going...</span></div>
+      <div class="cheat-row"><span class="ck">be worth / can't help</span><span class="cv">worth trying / can't help laughing</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-tov">🟢 Dùng cả hai — Nghĩa KHÁC</h4>
+      <div class="cheat-row"><span class="ck">stop to V</span><span class="cv">dừng để làm việc khác</span></div>
+      <div class="cheat-row"><span class="ck">stop V-ing</span><span class="cv">bỏ hẳn / ngừng hoàn toàn</span></div>
+      <div class="cheat-row"><span class="ck">remember to V</span><span class="cv">nhớ phải làm (tương lai)</span></div>
+      <div class="cheat-row"><span class="ck">remember V-ing</span><span class="cv">nhớ lại đã làm (quá khứ)</span></div>
+      <div class="cheat-row"><span class="ck">try to V</span><span class="cv">cố gắng (khó)</span></div>
+      <div class="cheat-row"><span class="ck">try V-ing</span><span class="cv">thử xem sao</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-rep">🟣 Câu Tường Thuật — Lùi thì</h4>
+      <div class="cheat-row"><span class="ck">Present Simple</span><span class="cv">→ Past Simple</span></div>
+      <div class="cheat-row"><span class="ck">Present Continuous</span><span class="cv">→ Past Continuous</span></div>
+      <div class="cheat-row"><span class="ck">Present Perfect</span><span class="cv">→ Past Perfect</span></div>
+      <div class="cheat-row"><span class="ck">Past Simple</span><span class="cv">→ Past Perfect</span></div>
+      <div class="cheat-row"><span class="ck">will</span><span class="cv">→ would</span></div>
+      <div class="cheat-row"><span class="ck">can / may / must</span><span class="cv">→ could / might / had to</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-rep">🟣 Đổi Trạng từ</h4>
+      <div class="cheat-row"><span class="ck">now → </span><span class="cv">then</span></div>
+      <div class="cheat-row"><span class="ck">today → </span><span class="cv">that day</span></div>
+      <div class="cheat-row"><span class="ck">yesterday → </span><span class="cv">the day before</span></div>
+      <div class="cheat-row"><span class="ck">tomorrow → </span><span class="cv">the next day</span></div>
+      <div class="cheat-row"><span class="ck">this / these → </span><span class="cv">that / those</span></div>
+      <div class="cheat-row"><span class="ck">here → </span><span class="cv">there</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-rep">🟣 Tường thuật Hỏi & Lệnh</h4>
+      <div class="cheat-row"><span class="ck">Yes/No question</span><span class="cv">asked + if/whether + S+V</span></div>
+      <div class="cheat-row"><span class="ck">Wh- question</span><span class="cv">asked + wh- + S+V</span></div>
+      <div class="cheat-row"><span class="ck">Mệnh lệnh</span><span class="cv">told/asked + O + to V</span></div>
+      <div class="cheat-row"><span class="ck">Cấm</span><span class="cv">told/warned + O + not to V</span></div>
+      <div class="cheat-row"><span class="ck">KHÔNG đảo chủ ngữ</span><span class="cv">asked if I was... ✅</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-phr">🟠 Cụm Động Từ — Separable</h4>
+      <div class="cheat-row"><span class="ck">turn on/off</span><span class="cv">bật / tắt ✂️</span></div>
+      <div class="cheat-row"><span class="ck">pick up</span><span class="cv">đón / nhặt ✂️</span></div>
+      <div class="cheat-row"><span class="ck">give up</span><span class="cv">từ bỏ ✂️</span></div>
+      <div class="cheat-row"><span class="ck">put off</span><span class="cv">trì hoãn ✂️</span></div>
+      <div class="cheat-row"><span class="ck">take off</span><span class="cv">cởi ra / cất cánh ✂️</span></div>
+      <div class="cheat-row"><span class="ck">fill in/out</span><span class="cv">điền vào ✂️</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-au">⚠️ Top lỗi cần tránh</h4>
+      <div class="cheat-row"><span class="ck">I want going</span><span class="cv">→ want to go ✅</span></div>
+      <div class="cheat-row"><span class="ck">stopped to smoke (bỏ thuốc)</span><span class="cv">→ stopped smoking ✅</span></div>
+      <div class="cheat-row"><span class="ck">He said me (that)...</span><span class="cv">→ He told me... ✅</span></div>
+      <div class="cheat-row"><span class="ck">asked if was I...</span><span class="cv">→ asked if I was ✅</span></div>
+      <div class="cheat-row"><span class="ck">Turn off it</span><span class="cv">→ Turn it off ✅</span></div>
+      <div class="cheat-row"><span class="ck">look after her → tách được</span><span class="cv">→ KHÔNG tách được ❌</span></div>
+    </div>
+  </div>
+
+  <!-- BẢNG TO V / V-ING -->
+  <div class="sub" style="margin-top:32px">
+    <div class="sub-title">Bảng tra nhanh — Động từ + To V, V-ing hay cả hai</div>
+    <table class="tbl">
+      <thead><tr><th>Chỉ dùng To V</th><th>Chỉ dùng V-ing</th><th>Cả hai — Nghĩa KHÁC</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>want, need, hope, plan, decide, agree, refuse, promise, manage, fail, afford, expect, wish, intend, offer, tend, seem, appear, pretend, threaten, choose, demand</td>
+          <td>enjoy, avoid, finish, keep, mind, miss, consider, imagine, deny, admit, suggest, risk, practice, involve, include, delay, postpone, quit, give up, can't stand, can't help, be worth, feel like, spend time</td>
+          <td><strong>stop, remember, forget, try, regret, mean, need</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- BẢNG CÂU TƯỜNG THUẬT -->
+  <div class="sub">
+    <div class="sub-title">Bảng tra nhanh — Lùi thì trong câu tường thuật</div>
+    <table class="tbl">
+      <thead><tr><th>Thì gốc (Trực tiếp)</th><th>Thì lùi (Tường thuật)</th><th>Ví dụ nhanh</th></tr></thead>
+      <tbody>
+        <tr><td>Present Simple</td><td><span class="bdg-rep">Past Simple</span></td><td>"I work" → said she <strong>worked</strong></td></tr>
+        <tr><td>Present Continuous</td><td><span class="bdg-rep">Past Continuous</span></td><td>"I'm leaving" → said she <strong>was leaving</strong></td></tr>
+        <tr><td>Present Perfect</td><td><span class="bdg-rep">Past Perfect</span></td><td>"I've eaten" → said he <strong>had eaten</strong></td></tr>
+        <tr><td>Past Simple</td><td><span class="bdg-rep">Past Perfect</span></td><td>"I went" → said she <strong>had gone</strong></td></tr>
+        <tr><td>will</td><td><span class="bdg-rep">would</span></td><td>"I'll help" → said he <strong>would help</strong></td></tr>
+        <tr><td>can</td><td><span class="bdg-rep">could</span></td><td>"I can drive" → said she <strong>could drive</strong></td></tr>
+        <tr><td>may</td><td><span class="bdg-rep">might</span></td><td>"It may rain" → said it <strong>might rain</strong></td></tr>
+        <tr><td>must / have to</td><td><span class="bdg-rep">had to</span></td><td>"I must go" → said he <strong>had to go</strong></td></tr>
+        <tr><td>should / would / could / might</td><td><span class="bdg-rep">Không đổi</span></td><td>"I should rest" → said he <strong>should rest</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- BẢNG PHRASAL VERBS -->
+  <div class="sub">
+    <div class="sub-title">Bảng tra nhanh — Cụm động từ quan trọng nhất</div>
+    <table class="tbl">
+      <thead><tr><th>Cụm động từ</th><th>Nghĩa</th><th>Separable?</th><th>Ví dụ nhanh</th></tr></thead>
+      <tbody>
+        <tr><td>get up</td><td>thức dậy</td><td>🔒</td><td>I get up at 7.</td></tr>
+        <tr><td>get over</td><td>hồi phục / vượt qua</td><td>🔒</td><td>She got over the cold.</td></tr>
+        <tr><td>give up</td><td>từ bỏ</td><td>✂️</td><td>Don't give up! / Give it up.</td></tr>
+        <tr><td>look after</td><td>chăm sóc</td><td>🔒</td><td>Look after your health.</td></tr>
+        <tr><td>look up</td><td>tra cứu</td><td>✂️</td><td>Look it up online.</td></tr>
+        <tr><td>look forward to</td><td>mong đợi</td><td>🔒</td><td>I look forward to seeing you. (+V-ing)</td></tr>
+        <tr><td>turn on/off</td><td>bật / tắt</td><td>✂️</td><td>Turn it on/off.</td></tr>
+        <tr><td>turn out</td><td>hóa ra</td><td>🔒</td><td>It turned out fine.</td></tr>
+        <tr><td>take off</td><td>cởi / cất cánh</td><td>✂️</td><td>Take off your shoes / take them off.</td></tr>
+        <tr><td>take over</td><td>tiếp quản</td><td>✂️</td><td>She took over the project.</td></tr>
+        <tr><td>put off</td><td>trì hoãn</td><td>✂️</td><td>Don't put it off any longer.</td></tr>
+        <tr><td>put up with</td><td>chịu đựng</td><td>🔒</td><td>I can't put up with this.</td></tr>
+        <tr><td>come up with</td><td>nghĩ ra</td><td>🔒</td><td>She came up with a great idea.</td></tr>
+        <tr><td>break down</td><td>hỏng / vỡ vụn</td><td>🔒</td><td>My car broke down.</td></tr>
+        <tr><td>break up</td><td>chia tay</td><td>🔒</td><td>They broke up last month.</td></tr>
+        <tr><td>go through</td><td>trải qua</td><td>🔒</td><td>She went through a hard time.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info i-ok" style="margin-top:22px">
+    <span class="info-ico">🎯</span>
+    <div style="font-size:13.5px">
+      <strong style="color:var(--text)">Tài nguyên luyện tập miễn phí:</strong><br>
+      <span style="color:var(--muted)">
+        <a href="https://www.perfect-english-grammar.com/infinitive-or-gerund.html" style="color:var(--acc)">Perfect English Grammar — To V vs V-ing</a> &nbsp;·&nbsp;
+        <a href="https://www.perfect-english-grammar.com/reported-speech.html" style="color:var(--acc)">Perfect English Grammar — Reported Speech</a> &nbsp;·&nbsp;
+        <a href="https://www.perfect-english-grammar.com/phrasal-verbs.html" style="color:var(--acc)">Perfect English Grammar — Phrasal Verbs</a> &nbsp;·&nbsp;
+        <a href="https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/infinitive-or-ing" style="color:var(--acc)">British Council — Infinitive or -ing?</a> &nbsp;·&nbsp;
+        <a href="https://www.phrasalverbdemon.com" style="color:var(--acc)">PhrasalVerbDemon.com</a> — luyện cụm động từ
+      </span>
+    </div>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<div class="footer">
+  <span>🔧 To V / V-ing · Câu Tường Thuật · Cụm Động Từ · Hướng dẫn toàn tập · Dành cho người mất gốc · 2026</span>
+  <span style="margin-left:auto;color:var(--faint)">5 nhóm To V/V-ing · 4 nhóm Tường thuật · 5 nhóm Phrasal Verbs · Cheat Sheet</span>
+</div>
+</div><!-- /main -->
+
+<script>
+window.addEventListener('scroll',()=>{
+  const el=document.documentElement;
+  document.getElementById('pbar').style.width=(el.scrollTop/(el.scrollHeight-el.clientHeight)*100)+'%';
+});
+const sections=document.querySelectorAll('.section[id]');
+const links=document.querySelectorAll('.nav-link');
+sections.forEach(s=>new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      const a=document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+      if(a)a.classList.add('active');
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'}).observe(s));
+</script>
+</body>
+</html>

@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📍 Giới Từ Cơ Bản & Câu Ước — Hướng dẫn toàn tập</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080810;--s1:#0e0e1c;--s2:#131326;--s3:#18182e;--s4:#1e1e38;
+  --border:#222240;--border2:#2c2c50;--text:#e6e6f2;--muted:#666698;--faint:#363660;
+  --acc:#ffd060;--acc-d:#c89820;--acc-dim:rgba(255,208,96,.11);--acc-glow:rgba(255,208,96,.24);
+  --green:#40d88e;--green-dim:rgba(64,216,142,.10);
+  --blue:#5ba8ff;--blue-dim:rgba(91,168,255,.10);
+  --purple:#a07af4;--purple-dim:rgba(160,122,244,.10);
+  --yellow:#ffd060;--yellow-dim:rgba(255,208,96,.10);
+  --teal:#30d8c0;--teal-dim:rgba(48,216,192,.10);
+  --orange:#ff8c50;--orange-dim:rgba(255,140,80,.10);
+  --pink:#ff6584;--pink-dim:rgba(255,101,132,.11);--pink-glow:rgba(255,101,132,.22);
+  --sky:#38bdf8;--sky-dim:rgba(56,189,248,.10);
+  /* Brand */
+  --oc:#38bdf8;--oc-dim:rgba(56,189,248,.13);--oc-glow:rgba(56,189,248,.30);
+  --oc2:#5ba8ff;--oc2-dim:rgba(91,168,255,.12);
+  /* section colours */
+  --ins:#40d88e;--ins-dim:rgba(64,216,142,.12);--ins-glow:rgba(64,216,142,.28);
+  --ch:#ffd060;--ch-dim:rgba(255,208,96,.12);--ch-glow:rgba(255,208,96,.28);
+  --sk:#a07af4;--sk-dim:rgba(160,122,244,.12);--sk-glow:rgba(160,122,244,.28);
+  --au:#ff6584;--au-dim:rgba(255,101,132,.12);--au-glow:rgba(255,101,132,.28);
+  --code-bg:#05050e;
+  /* topic group colours: Prep-Time = sky/blue, Prep-Place = teal/green, Wish = purple/pink */
+  --prept:#38bdf8;--prept-dim:rgba(56,189,248,.13);--prept-glow:rgba(56,189,248,.28);
+  --prepp:#30d8c0;--prepp-dim:rgba(48,216,192,.13);--prepp-glow:rgba(48,216,192,.28);
+  --wish:#a07af4;--wish-dim:rgba(160,122,244,.13);--wish-glow:rgba(160,122,244,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ── SIDEBAR ── */
+.sidebar{position:fixed;left:0;top:0;width:272px;height:100vh;background:var(--s1);border-right:1px solid var(--border);overflow-y:auto;z-index:400;display:flex;flex-direction:column}
+.sb-logo{padding:20px 18px 16px;border-bottom:1px solid var(--border)}
+.sb-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.logo-icon{width:44px;height:44px;border-radius:11px;flex-shrink:0;background:linear-gradient(135deg,var(--prept),var(--wish));display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 26px var(--prept-glow)}
+.logo-text h2{font-size:15px;font-weight:800;letter-spacing:-.4px}
+.logo-text p{font-size:10.5px;color:var(--muted);margin-top:2px}
+.prog-wrap{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--prept),var(--prepp),var(--wish),var(--ch));width:0%;transition:width .4s;border-radius:2px}
+.nav-section{padding:6px 0 4px}
+.nav-group-hdr{display:flex;align-items:center;gap:7px;margin:6px 12px 3px;padding:6px 10px;border-radius:7px;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.ngh-oc{background:var(--oc-dim);color:var(--oc)}
+.ngh-prept{background:var(--prept-dim);color:var(--prept)}
+.ngh-prepp{background:var(--prepp-dim);color:var(--prepp)}
+.ngh-wish{background:var(--wish-dim);color:var(--wish)}
+.ngh-au{background:var(--au-dim);color:var(--au)}
+.nav-link{display:flex;align-items:center;gap:9px;padding:5px 18px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;border-left:2px solid transparent;transition:all .14s}
+.nav-link:hover,.nav-link.active{color:var(--text);background:rgba(255,208,96,.07);border-left-color:var(--acc)}
+.nav-link .ico{font-size:12px;flex-shrink:0;width:16px;text-align:center}
+.nav-badge{margin-left:auto;font-size:9px;font-weight:700;padding:2px 7px;border-radius:100px;background:var(--acc-dim);color:var(--acc)}
+
+/* ── MAIN ── */
+.main{margin-left:272px;min-height:100vh}
+.hero{padding:72px 64px 56px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse 60% 55% at 75% 20%,rgba(56,189,248,.10) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 55% at 10% 80%,rgba(160,122,244,.08) 0%,transparent 55%),
+             radial-gradient(ellipse 45% 50% at 50% 55%,rgba(48,216,192,.05) 0%,transparent 60%),var(--bg)}
+.hero-dots{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+.hero-glow{position:absolute;right:-80px;top:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(56,189,248,.09) 0%,transparent 65%);pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--prept-dim);border:1px solid rgba(56,189,248,.35);color:var(--prept);padding:5px 16px;border-radius:100px;font-size:11.5px;font-weight:700;margin-bottom:24px;letter-spacing:.3px}
+.hero-eyebrow .pulse{width:6px;height:6px;border-radius:50%;background:var(--prept);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero h1{font-size:46px;font-weight:900;letter-spacing:-2.3px;line-height:1.08;margin-bottom:18px}
+.h-grad{background:linear-gradient(135deg,var(--prept) 0%,var(--prepp) 50%,var(--wish) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.h-prept{color:var(--prept)}.h-prepp{color:var(--prepp)}.h-wish{color:var(--wish)}
+.h-acc{color:var(--acc)}.h-ins{color:var(--ins)}.h-sk{color:var(--sk)}
+.hero-desc{font-size:15.5px;color:var(--muted);max-width:620px;line-height:1.75;margin-bottom:28px}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:5px 14px;border-radius:7px;font-size:12px;font-weight:700}
+.chip-oc{background:var(--oc-dim);color:var(--oc)}.chip-prept{background:var(--prept-dim);color:var(--prept)}
+.chip-prepp{background:var(--prepp-dim);color:var(--prepp)}.chip-wish{background:var(--wish-dim);color:var(--wish)}
+.chip-ins{background:var(--ins-dim);color:var(--ins)}.chip-au{background:var(--au-dim);color:var(--au)}
+.chip-t{background:var(--teal-dim);color:var(--teal)}
+
+/* ── CATEGORY BANNERS ── */
+.cat-banner{display:flex;align-items:center;gap:16px;padding:20px 24px;border-radius:14px;margin-bottom:44px;position:relative;overflow:hidden}
+.cat-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cb-prept{background:var(--prept-dim);border:1px solid rgba(56,189,248,.30)}.cb-prept::before{background:linear-gradient(90deg,var(--prept),var(--oc2))}
+.cb-prepp{background:var(--prepp-dim);border:1px solid rgba(48,216,192,.30)}.cb-prepp::before{background:linear-gradient(90deg,var(--prepp),var(--ins))}
+.cb-wish{background:var(--wish-dim);border:1px solid rgba(160,122,244,.30)}.cb-wish::before{background:linear-gradient(90deg,var(--wish),var(--pink))}
+.cb-cheat{background:var(--au-dim);border:1px solid rgba(255,101,132,.30)}.cb-cheat::before{background:linear-gradient(90deg,var(--au),var(--wish))}
+.cb-icon{font-size:36px;flex-shrink:0}
+.cb-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.cb-prept .cb-badge{background:var(--prept-dim);color:var(--prept)}
+.cb-prepp .cb-badge{background:var(--prepp-dim);color:var(--prepp)}
+.cb-wish .cb-badge{background:var(--wish-dim);color:var(--wish)}
+.cb-cheat .cb-badge{background:var(--au-dim);color:var(--au)}
+.cb-title{font-size:20px;font-weight:800;letter-spacing:-.5px}.cb-sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+/* ── CONTENT ── */
+.content{padding:52px 64px;max-width:1040px}
+.section{margin-bottom:68px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 10px;border-radius:5px;margin-top:5px;flex-shrink:0;letter-spacing:.5px}
+.st-overview{color:var(--oc);background:var(--oc-dim);border:1px solid var(--oc-glow)}
+.st-prept{color:var(--prept);background:var(--prept-dim);border:1px solid var(--prept-glow)}
+.st-prepp{color:var(--prepp);background:var(--prepp-dim);border:1px solid var(--prepp-glow)}
+.st-wish{color:var(--wish);background:var(--wish-dim);border:1px solid var(--wish-glow)}
+.st-cheat{color:var(--au);background:var(--au-dim);border:1px solid var(--au-glow)}
+.sec-title{font-size:22px;font-weight:800;letter-spacing:-.6px;margin-bottom:5px}
+.sec-sub{font-size:13px;color:var(--muted)}
+
+/* ── SUB SECTIONS ── */
+.sub{margin-bottom:36px}
+.sub-title{font-size:14.5px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:10px}
+.sub-title::before{content:'';display:inline-block;width:14px;height:3px;background:var(--acc);border-radius:2px;flex-shrink:0}
+.sub p,.sub ul,.sub ol{color:var(--muted);font-size:13.5px;margin-bottom:10px;line-height:1.78}
+.sub ul,.sub ol{padding-left:22px}.sub li{margin-bottom:5px}.sub strong{color:var(--text)}
+
+/* ── PREP CARD (core display) ── */
+.prep-card{background:var(--s1);border:1px solid var(--border2);border-radius:14px;overflow:hidden;margin:14px 0}
+.prep-card-head{padding:16px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.prep-word{font-size:22px;font-weight:900;letter-spacing:-.4px;font-family:'JetBrains Mono',monospace}
+.prep-vn{font-size:12.5px;color:var(--muted)}
+.prep-level{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;padding:2px 9px;border-radius:5px;margin-left:auto;letter-spacing:.5px}
+.pl-time{background:var(--prept-dim);color:var(--prept)}
+.pl-place{background:var(--prepp-dim);color:var(--prepp)}
+.prep-body{padding:16px 22px}
+.use-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.use-item{background:var(--s2);border:1px solid var(--border);border-radius:9px;padding:11px 14px}
+.use-item-title{font-size:12.5px;font-weight:700;color:var(--text);margin-bottom:4px}
+.use-item-ex{font-size:11.5px;color:var(--muted)}
+
+/* ── EXAMPLE BOX ── */
+.ex-box{background:var(--s1);border:1px solid var(--border2);border-radius:11px;overflow:hidden;margin:13px 0}
+.ex-head{display:flex;align-items:center;gap:8px;padding:9px 16px;background:var(--s2);border-bottom:1px solid var(--border)}
+.ex-label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.ex-tag{margin-left:auto;font-size:9px;font-weight:700;padding:2px 9px;border-radius:100px;flex-shrink:0}
+.et-prept{background:var(--prept-dim);color:var(--prept)}
+.et-prepp{background:var(--prepp-dim);color:var(--prepp)}
+.et-wish{background:var(--wish-dim);color:var(--wish)}
+.et-tip{background:var(--ch-dim);color:var(--ch)}
+.ex-body{padding:14px 20px}
+.ex-row{display:flex;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13.5px}
+.ex-row:last-child{border-bottom:none}
+.ex-type{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0}
+.ext-pos{background:var(--ins-dim);color:var(--ins)}
+.ext-neg{background:var(--au-dim);color:var(--au)}
+.ex-en{color:var(--text);font-weight:600;min-width:230px;flex-shrink:0}
+.ex-vn{color:var(--muted)}
+.ex-note{font-size:11px;color:var(--faint);margin-left:auto;flex-shrink:0;font-style:italic}
+.ex-arrow{color:var(--faint);flex-shrink:0}
+
+/* ── INFO BOXES ── */
+.info{display:flex;gap:12px;padding:13px 16px;border-radius:9px;margin:12px 0;font-size:13px;line-height:1.65}
+.info-ico{font-size:15px;flex-shrink:0;margin-top:1px}
+.i-ok{background:var(--green-dim);border:1px solid rgba(64,216,142,.2);color:#30a870}
+.i-warn{background:var(--yellow-dim);border:1px solid rgba(255,208,96,.2);color:#b09030}
+.i-tip{background:var(--blue-dim);border:1px solid rgba(91,168,255,.2);color:#3878d0}
+.i-note{background:var(--purple-dim);border:1px solid rgba(160,122,244,.2);color:#8060d0}
+.i-err{background:var(--pink-dim);border:1px solid rgba(255,101,132,.2);color:#cc3355}
+
+/* ── RW BOX ── */
+.rw-box{background:var(--s1);border:1px solid var(--border2);border-radius:12px;padding:16px 20px;margin:13px 0;position:relative;overflow:hidden}
+.rw-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
+.rw-prept::before{background:var(--prept)}.rw-prepp::before{background:var(--prepp)}
+.rw-wish::before{background:var(--wish)}.rw-ins::before{background:var(--ins)}
+.rw-ch::before{background:var(--ch)}.rw-oc::before{background:var(--oc)}
+.rw-label{font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.rw-prept .rw-label{color:var(--prept)}.rw-prepp .rw-label{color:var(--prepp)}
+.rw-wish .rw-label{color:var(--wish)}.rw-ins .rw-label{color:var(--ins)}
+.rw-ch .rw-label{color:var(--ch)}.rw-oc .rw-label{color:var(--oc)}
+.rw-title{font-size:14px;font-weight:700;margin-bottom:5px}
+.rw-body{font-size:13px;color:var(--muted);line-height:1.68}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:13px 0;border-radius:11px;overflow:hidden}
+.tbl th{background:var(--s3);padding:9px 14px;text-align:left;font-weight:700;font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);border-bottom:1px solid var(--border2)}
+.tbl td{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted);vertical-align:top;font-size:13px}
+.tbl tr:hover td{background:rgba(255,255,255,.022)}
+.tbl td:first-child{color:var(--text);font-weight:600}
+.tbl code{font-family:'JetBrains Mono',monospace;font-size:11px;background:var(--code-bg);padding:2px 6px;border-radius:4px;color:var(--teal)}
+.tbl .badge-time{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--prept-dim);color:var(--prept)}
+.tbl .badge-place{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--prepp-dim);color:var(--prepp)}
+.tbl .badge-wish{font-size:9px;font-weight:700;padding:1px 7px;border-radius:4px;background:var(--wish-dim);color:var(--wish)}
+.tbl .en{color:var(--oc);font-weight:700}
+
+/* ── GRIDS ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:13px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:13px 0}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:11px;padding:15px;transition:all .2s;cursor:default}
+.card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.38)}
+.card-icon{font-size:22px;margin-bottom:8px}.card-title{font-size:13px;font-weight:700;margin-bottom:4px}.card-desc{font-size:12px;color:var(--muted);line-height:1.55}
+
+/* ── COMPARE BOX ── */
+.cmp-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:11px;overflow:hidden;margin:13px 0}
+.cmp-bad{background:rgba(255,101,132,.07);border-right:1px solid var(--border);padding:14px 16px}
+.cmp-good{background:rgba(64,216,142,.07);padding:14px 16px}
+.cmp-label{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.cmp-bad .cmp-label{color:var(--au)}.cmp-good .cmp-label{color:var(--ins)}
+.cmp-text{font-size:13.5px;color:var(--text);line-height:1.65}
+.cmp-note{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+
+/* ── PREP VISUAL DIAGRAM (spatial) ── */
+.spatial-diagram{background:var(--s2);border:1px solid var(--border2);border-radius:12px;padding:24px;margin:13px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.spatial-box{background:var(--s3);border:1px solid var(--border2);border-radius:9px;padding:14px;text-align:center}
+.spatial-prep{font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px;color:var(--prepp);margin-bottom:6px}
+.spatial-visual{font-size:26px;margin-bottom:6px}
+.spatial-ex{font-size:11px;color:var(--muted)}
+
+/* ── WISH FORMULA BOX ── */
+.wish-formula{background:var(--s2);border:1px solid var(--border2);border-radius:10px;padding:14px 18px;margin:10px 0;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--teal);text-align:center}
+
+/* ── TENSE SHIFT (for wish) ── */
+.shift-diagram{background:var(--s2);border:1px solid var(--border2);border-radius:12px;padding:18px 22px;margin:13px 0}
+.shift-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.shift-row:last-child{margin-bottom:0}
+.shift-box{padding:7px 14px;border-radius:8px;font-size:12.5px;font-weight:700;font-family:'JetBrains Mono',monospace}
+.sb-real{background:rgba(56,189,248,.18);border:1.5px solid var(--oc);color:var(--oc)}
+.sb-wish{background:rgba(160,122,244,.18);border:1.5px solid var(--wish);color:var(--wish)}
+.shift-arrow{color:var(--faint);font-size:16px}
+.shift-label{font-size:11.5px;color:var(--muted);margin-left:6px}
+
+/* ── CHEAT SHEET ── */
+.cheat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:13px 0}
+.cheat-card{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:14px}
+.cheat-card h4{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:11px}
+.h4-prept{color:var(--prept)}.h4-prepp{color:var(--prepp)}.h4-wish{color:var(--wish)}
+.h4-ch{color:var(--ch)}.h4-ins{color:var(--ins)}.h4-au{color:var(--au)}
+.cheat-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;gap:8px}
+.cheat-row:last-child{border-bottom:none}
+.ck{color:var(--muted);flex-shrink:0;font-size:11.5px}
+.cv{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--teal);text-align:right}
+
+p code,li code,td code{font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(255,208,96,.1);color:var(--yellow);padding:2px 6px;border-radius:4px}
+hr.dv{border:none;border-top:1px solid var(--border);margin:52px 0}
+.footer{border-top:1px solid var(--border);padding:26px 64px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}
+@media(max-width:900px){
+  .sidebar{display:none}.main{margin-left:0}
+  .hero,.content,.footer{padding-left:22px;padding-right:22px}
+  .hero h1{font-size:28px}
+  .grid-2,.grid-3,.grid-4,.cheat-grid,.cmp-box,.use-grid,.spatial-diagram{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-brand">
+      <div class="logo-icon">📍</div>
+      <div class="logo-text">
+        <h2>Giới Từ & Câu Ước</h2>
+        <p>Hướng dẫn toàn tập · Mất gốc OK</p>
+      </div>
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" id="pbar"></div></div>
+  </div>
+
+  <div class="nav-section" style="border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:2px">
+    <div class="nav-group-hdr" style="background:rgba(255,208,96,.12);color:#ffd060">📚 Lộ Trình Học</div>
+    <a href="english-grammar-basics.html" class="nav-link"><span class="ico">①</span> Tiếng Anh Cơ Bản</a>
+    <a href="english-12-tenses.html" class="nav-link"><span class="ico">②</span> 12 Thì Tiếng Anh</a>
+    <a href="subject-verb-agreement-tenses.html" class="nav-link"><span class="ico">③</span> Hòa Hợp C-V &amp; Phối Thì</a>
+    <a href="synonyms-antonyms-guide.html" class="nav-link"><span class="ico">④</span> Đồng Nghĩa &amp; Trái Nghĩa</a>
+    <a href="adjective-order-word-classes-relative-clauses.html" class="nav-link"><span class="ico">⑤</span> Trật Tự TT · Từ Loại · MĐ QH</a>
+    <a href="english-grammar-guide.html" class="nav-link"><span class="ico">⑥</span> Ngữ Pháp Tổng Hợp</a>
+    <a href="grammar-comparison-passive-conjunctions.html" class="nav-link"><span class="ico">⑦</span> So Sánh · Bị Động · Liên Từ</a>
+    <a href="prepositions-wish-guide.html" class="nav-link" style="color:var(--acc);background:rgba(255,208,96,.08);border-left-color:var(--acc)"><span class="ico">⑧</span> Giới Từ &amp; Câu Ước</a>
+    <a href="grammar-modals-quantifiers-stress.html" class="nav-link"><span class="ico">⑨</span> Modal · Lượng Từ · Trọng Âm</a>
+    <a href="grammar-tag-questions-articles-conditionals.html" class="nav-link"><span class="ico">⑩</span> Hỏi Đuôi · Mạo Từ · ĐK</a>
+    <a href="grammar-tov-ving-reported-phrasal.html" class="nav-link"><span class="ico">⑪</span> To V/V-ing · Tường Thuật</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-oc">🗺️ Tổng quan</div>
+    <a href="#s0" class="nav-link"><span class="ico">📊</span> Giới từ & Câu ước là gì?</a>
+    <a href="#s0b" class="nav-link"><span class="ico">⭐</span> Ưu tiên học gì trước</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-prept">🔵 Giới Từ Thời Gian</div>
+    <a href="#s1" class="nav-link"><span class="ico">1️⃣</span> At / On / In <span class="nav-badge">★★★</span></a>
+    <a href="#s2" class="nav-link"><span class="ico">2️⃣</span> For / Since / During</a>
+    <a href="#s3" class="nav-link"><span class="ico">3️⃣</span> Before / After / By / Until</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-prepp">🟢 Giới Từ Nơi Chốn</div>
+    <a href="#s4" class="nav-link"><span class="ico">4️⃣</span> At / On / In (nơi chốn) <span class="nav-badge">★★★</span></a>
+    <a href="#s5" class="nav-link"><span class="ico">5️⃣</span> Giới từ vị trí không gian</a>
+    <a href="#s6" class="nav-link"><span class="ico">6️⃣</span> Giới từ chuyển động</a>
+    <a href="#s7" class="nav-link"><span class="ico">7️⃣</span> Giới từ đi với động từ/tính từ</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-wish">🟣 Câu Ước (Wish)</div>
+    <a href="#s8" class="nav-link"><span class="ico">8️⃣</span> Câu ước là gì? <span class="nav-badge">★★★</span></a>
+    <a href="#s9" class="nav-link"><span class="ico">9️⃣</span> Wish ở hiện tại</a>
+    <a href="#s10" class="nav-link"><span class="ico">🔟</span> Wish ở quá khứ</a>
+    <a href="#s11" class="nav-link"><span class="ico">🔢</span> Wish + would & If only</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-au">📋 Tổng hợp</div>
+    <a href="#s12" class="nav-link"><span class="ico">📋</span> Cheat Sheet toàn bộ</a>
+  </div>
+</aside>
+
+<!-- ══════════ MAIN ══════════ -->
+<div class="main">
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-dots"></div><div class="hero-glow"></div>
+  <div class="hero-eyebrow"><span class="pulse"></span> Prepositions & Wish Sentences · Dành cho người mất gốc</div>
+  <h1>
+    <span class="h-grad">Giới Từ</span> 📍<br>
+    <span class="h-prept">Cơ Bản</span> &<br>
+    <span class="h-wish">Câu Ước</span>
+  </h1>
+  <p class="hero-desc">Giới từ là "chất keo" nối các từ trong câu — sai 1 giới từ có thể khiến cả câu nghe rất lạ. Học cách chọn đúng at/on/in, các giới từ vị trí/chuyển động, và cách diễn đạt mong ước, tiếc nuối bằng câu "wish" tự nhiên như người bản ngữ.</p>
+  <div class="hero-chips">
+    <span class="chip chip-prept">🔵 Giới từ Thời gian</span>
+    <span class="chip chip-prepp">🟢 Giới từ Nơi chốn</span>
+    <span class="chip chip-wish">🟣 Câu ước (Wish)</span>
+    <span class="chip chip-ins">✅ Nhiều ví dụ</span>
+    <span class="chip chip-oc">💡 Mẹo nhớ</span>
+    <span class="chip chip-au">📋 Cheat Sheet</span>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ════ S0 — TỔNG QUAN ════ -->
+<div class="section" id="s0">
+  <div class="sec-head">
+    <span class="sec-tag st-overview">TỔNG QUAN</span>
+    <div>
+      <h2 class="sec-title">Giới từ & Câu ước là gì?</h2>
+      <p class="sec-sub">Hiểu khái niệm trước khi học chi tiết</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="grid-2">
+      <div class="rw-box rw-prept">
+        <div class="rw-label">📍 PREPOSITIONS</div>
+        <div class="rw-title">Giới từ</div>
+        <div class="rw-body">Là những từ nhỏ (<code>at, on, in, for, by...</code>) đứng trước danh từ/đại từ để chỉ <strong style="color:var(--text)">thời gian, vị trí, hướng, mối quan hệ</strong>. Tiếng Anh có rất nhiều giới từ và cách dùng <strong style="color:var(--text)">không theo logic dịch trực tiếp từ tiếng Việt</strong> — phải học thuộc theo "cụm cố định".</div>
+      </div>
+      <div class="rw-box rw-wish">
+        <div class="rw-label">🌟 WISH SENTENCES</div>
+        <div class="rw-title">Câu ước</div>
+        <div class="rw-body">Là cấu trúc dùng để diễn tả <strong style="color:var(--text)">mong muốn, ước ao, tiếc nuối</strong> về điều không có thật. Câu ước dùng "lùi thì" đặc biệt — không phải để chỉ thời gian quá khứ mà để chỉ <strong style="color:var(--text)">sự không có thật / giả định</strong>.</div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Vì sao 2 chủ đề này khó với người mất gốc?</strong> Giới từ không thể dịch máy móc từ tiếng Việt (vd: "vào thứ Hai" → không phải lúc nào cũng "in Monday" mà là <code>on Monday</code>). Câu ước thì dùng thì "ngược đời" (nói về hiện tại nhưng dùng thì quá khứ). Cả 2 đều cần <strong>học thuộc khuôn mẫu</strong>, không suy luận theo tiếng Việt.</div>
+    </div>
+  </div>
+
+  <div class="sub" id="s0b">
+    <div class="sub-title">⭐ Ưu tiên học gì trước?</div>
+    <table class="tbl">
+      <thead><tr><th>Ưu tiên</th><th>Chủ đề</th><th>Lý do</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span style="color:var(--ins)">★★★</span> Học trước</td>
+          <td>At/On/In (thời gian + nơi chốn) + Wish ở hiện tại</td>
+          <td>Dùng liên tục mỗi ngày — nói thời gian, địa điểm, mong muốn</td>
+        </tr>
+        <tr>
+          <td><span style="color:var(--ch)">★★☆</span> Học tiếp theo</td>
+          <td>Giới từ vị trí/chuyển động + Wish ở quá khứ</td>
+          <td>Mô tả không gian chi tiết, diễn tả tiếc nuối</td>
+        </tr>
+        <tr>
+          <td><span style="color:var(--orange)">★☆☆</span> Nâng cao</td>
+          <td>For/Since/During + Giới từ đi với động từ + Wish + would</td>
+          <td>Tinh tế hơn, dùng khi đã vững nền tảng</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="info i-ok">
+      <span class="info-ico">🎯</span>
+      <div><strong style="color:var(--text)">Tin vui:</strong> 3 giới từ <code>at, on, in</code> chiếm tới <strong>70-80%</strong> tần suất sử dụng giới từ trong giao tiếp hàng ngày. Nắm vững quy tắc của riêng 3 từ này (cho cả thời gian và nơi chốn) là bạn đã giỏi hơn rất nhiều người học rồi.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     NHÓM GIỚI TỪ THỜI GIAN
+════════════════════════════════ -->
+<div class="cat-banner cb-prept">
+  <div class="cb-icon">🔵</div>
+  <div>
+    <div class="cb-badge">PREPOSITIONS OF TIME</div>
+    <div class="cb-title">Phần 1 — Giới Từ Chỉ Thời Gian</div>
+    <div class="cb-sub">At · On · In · For · Since · Before · After · By · Until</div>
+  </div>
+</div>
+
+<!-- ════ S1 — AT/ON/IN THỜI GIAN ════ -->
+<div class="section" id="s1">
+  <div class="sec-head">
+    <span class="sec-tag st-prept">NHÓM 1</span>
+    <div>
+      <h2 class="sec-title">At / On / In — Giới từ thời gian quan trọng nhất</h2>
+      <p class="sec-sub">Quy tắc "từ nhỏ đến lớn" — dễ nhớ nhất</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Quy tắc tổng quát: AT (điểm nhỏ) → ON (ngày) → IN (khoảng lớn)</div>
+    <div class="grid-3">
+      <div class="prep-card">
+        <div class="prep-card-head">
+          <span class="prep-word">AT</span>
+          <span class="prep-level pl-time">ĐIỂM CHÍNH XÁC</span>
+        </div>
+        <div class="prep-body">
+          <p style="margin-bottom:8px">Dùng cho <strong>thời điểm chính xác</strong> — giờ, khoảnh khắc cụ thể.</p>
+          <div class="use-item"><div class="use-item-title">Giờ cụ thể</div><div class="use-item-ex">at 7am, at noon, at midnight</div></div>
+          <div class="use-item" style="margin-top:8px"><div class="use-item-title">Cụm cố định</div><div class="use-item-ex">at night, at the weekend, at Christmas</div></div>
+        </div>
+      </div>
+      <div class="prep-card">
+        <div class="prep-card-head">
+          <span class="prep-word">ON</span>
+          <span class="prep-level pl-time">NGÀY</span>
+        </div>
+        <div class="prep-body">
+          <p style="margin-bottom:8px">Dùng cho <strong>ngày cụ thể</strong> — thứ, ngày trong tháng, ngày lễ.</p>
+          <div class="use-item"><div class="use-item-title">Thứ trong tuần</div><div class="use-item-ex">on Monday, on Fridays</div></div>
+          <div class="use-item" style="margin-top:8px"><div class="use-item-title">Ngày cụ thể</div><div class="use-item-ex">on July 4th, on Christmas Day</div></div>
+        </div>
+      </div>
+      <div class="prep-card">
+        <div class="prep-card-head">
+          <span class="prep-word">IN</span>
+          <span class="prep-level pl-time">KHOẢNG LỚN</span>
+        </div>
+        <div class="prep-body">
+          <p style="margin-bottom:8px">Dùng cho <strong>khoảng thời gian dài</strong> — tháng, năm, mùa, thế kỷ.</p>
+          <div class="use-item"><div class="use-item-title">Tháng / Năm</div><div class="use-item-ex">in July, in 2024</div></div>
+          <div class="use-item" style="margin-top:8px"><div class="use-item-title">Mùa / Buổi</div><div class="use-item-ex">in summer, in the morning</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ tổng hợp At/On/In thời gian</span><span class="ex-tag et-prept">AT/ON/IN</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">I wake up <strong>at</strong> 6am.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi thức dậy lúc 6 giờ sáng.</span></div>
+        <div class="ex-row"><span class="ex-en">We meet <strong>on</strong> Mondays.</span><span class="ex-arrow">→</span><span class="ex-vn">Chúng tôi gặp nhau vào các thứ Hai.</span></div>
+        <div class="ex-row"><span class="ex-en">She was born <strong>in</strong> 1995.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy sinh năm 1995.</span></div>
+        <div class="ex-row"><span class="ex-en">I'll see you <strong>at</strong> the party <strong>on</strong> Saturday <strong>in</strong> June.</span><span class="ex-arrow">→</span><span class="ex-vn">Gặp bạn ở bữa tiệc thứ Bảy trong tháng 6. (3 giới từ trong 1 câu)</span></div>
+      </div>
+    </div>
+
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ "Từ nhỏ đến lớn":</strong> Tưởng tượng cái phễu thời gian: <code>AT</code> (điểm nhỏ nhất: giờ) → <code>ON</code> (ngày, lớn hơn 1 chút) → <code>IN</code> (tháng/năm/mùa, lớn nhất). Càng cụ thể, càng nhỏ → dùng AT. Càng rộng, càng dài → dùng IN.</div>
+    </div>
+
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Ngoại lệ cần nhớ:</strong> <code>at night</code> (không phải "in night"), <code>in the morning/afternoon/evening</code> (nhưng <code>at night</code>) — vì "night" được coi là một "điểm" đặc biệt, không phải khoảng thời gian kéo dài như sáng/chiều/tối.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S2 — FOR/SINCE/DURING ════ -->
+<div class="section" id="s2">
+  <div class="sec-head">
+    <span class="sec-tag st-prept">NHÓM 2</span>
+    <div>
+      <h2 class="sec-title">For / Since / During — Bộ ba hay nhầm lẫn</h2>
+      <p class="sec-sub">Khoảng thời gian · Mốc bắt đầu · Trong suốt</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Phân biệt rõ ràng</div>
+    <table class="tbl">
+      <thead><tr><th>Giới từ</th><th>Dùng với</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td><code>for</code></td><td>+ khoảng thời gian (bao lâu)</td><td><em>for 3 years, for 2 hours, for a week</em></td></tr>
+        <tr><td><code>since</code></td><td>+ mốc thời gian bắt đầu (từ khi nào)</td><td><em>since 2020, since Monday, since I was born</em></td></tr>
+        <tr><td><code>during</code></td><td>+ danh từ chỉ sự kiện (trong suốt khi nào)</td><td><em>during the meeting, during the summer</em></td></tr>
+      </tbody>
+    </table>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ so sánh</span><span class="ex-tag et-prept">FOR vs SINCE vs DURING</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">I have lived here <strong>for</strong> 5 years.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi đã sống ở đây 5 năm. (khoảng = 5 năm)</span></div>
+        <div class="ex-row"><span class="ex-en">I have lived here <strong>since</strong> 2019.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi đã sống ở đây từ 2019. (mốc bắt đầu)</span></div>
+        <div class="ex-row"><span class="ex-en">He fell asleep <strong>during</strong> the movie.</span><span class="ex-arrow">→</span><span class="ex-vn">Anh ấy ngủ quên trong lúc xem phim.</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo phân biệt nhanh:</strong> Sau <code>for</code> là <strong>con số</strong> (for 3 days). Sau <code>since</code> là <strong>1 mốc thời gian cố định</strong> (since 2020, since Monday). Sau <code>during</code> là <strong>1 danh từ sự kiện</strong>, không phải con số (during the trip, KHÔNG NÓI "during 3 days").</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S3 — BEFORE/AFTER/BY/UNTIL ════ -->
+<div class="section" id="s3">
+  <div class="sec-head">
+    <span class="sec-tag st-prept">NHÓM 3</span>
+    <div>
+      <h2 class="sec-title">Before / After / By / Until</h2>
+      <p class="sec-sub">Trước · Sau · Trước hạn (deadline) · Cho đến khi</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Phân biệt BY và UNTIL — Bẫy phổ biến nhất</div>
+    <div class="cmp-box">
+      <div class="cmp-bad" style="background:rgba(56,189,248,.05);border-right:1px solid var(--border)">
+        <div class="cmp-label" style="color:var(--prept)">📅 BY — Trước hạn (deadline)</div>
+        <div class="cmp-text">Hành động xảy ra <strong>bất cứ lúc nào trước hoặc đúng</strong> thời điểm đó (chỉ 1 lần).</div>
+        <div class="cmp-note"><em>Please finish this <u>by</u> Friday.</em><br>→ Xong trước hoặc đúng thứ Sáu (deadline)</div>
+      </div>
+      <div class="cmp-good" style="background:rgba(48,216,192,.05)">
+        <div class="cmp-label" style="color:var(--prepp)">⏳ UNTIL — Cho đến khi (liên tục)</div>
+        <div class="cmp-text">Hành động <strong>kéo dài liên tục</strong> cho đến thời điểm đó rồi DỪNG.</div>
+        <div class="cmp-note"><em>I will wait <u>until</u> Friday.</em><br>→ Chờ liên tục từ giờ đến thứ Sáu</div>
+      </div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Thêm ví dụ Before/After/By/Until</span><span class="ex-tag et-prept">BEFORE/AFTER/BY/UNTIL</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">I always brush my teeth <strong>before</strong> bed.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi luôn đánh răng trước khi ngủ.</span></div>
+        <div class="ex-row"><span class="ex-en">We'll go out <strong>after</strong> lunch.</span><span class="ex-arrow">→</span><span class="ex-vn">Chúng tôi sẽ ra ngoài sau bữa trưa.</span></div>
+        <div class="ex-row"><span class="ex-en">The report is due <strong>by</strong> 5pm.</span><span class="ex-arrow">→</span><span class="ex-vn">Báo cáo phải nộp trước 5 giờ chiều.</span></div>
+        <div class="ex-row"><span class="ex-en">She studied <strong>until</strong> midnight.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy học liên tục đến tận nửa đêm.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     NHÓM GIỚI TỪ NƠI CHỐN
+════════════════════════════════ -->
+<div class="cat-banner cb-prepp">
+  <div class="cb-icon">🟢</div>
+  <div>
+    <div class="cb-badge">PREPOSITIONS OF PLACE</div>
+    <div class="cb-title">Phần 2 — Giới Từ Chỉ Nơi Chốn</div>
+    <div class="cb-sub">At · On · In · Vị trí không gian · Chuyển động</div>
+  </div>
+</div>
+
+<!-- ════ S4 — AT/ON/IN NƠI CHỐN ════ -->
+<div class="section" id="s4">
+  <div class="sec-head">
+    <span class="sec-tag st-prepp">NHÓM 4</span>
+    <div>
+      <h2 class="sec-title">At / On / In — Giới từ nơi chốn quan trọng nhất</h2>
+      <p class="sec-sub">Quy tắc "từ điểm đến không gian 3D"</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Quy tắc tổng quát: AT (điểm) → ON (bề mặt) → IN (bên trong)</div>
+    <div class="grid-3">
+      <div class="prep-card">
+        <div class="prep-card-head">
+          <span class="prep-word">AT</span>
+          <span class="prep-level pl-place">ĐIỂM/ĐỊA CHỈ</span>
+        </div>
+        <div class="prep-body">
+          <p style="margin-bottom:8px">Dùng cho <strong>1 điểm cụ thể</strong> — địa chỉ, sự kiện, nơi tụ tập.</p>
+          <div class="use-item"><div class="use-item-title">Địa chỉ / Điểm</div><div class="use-item-ex">at 123 Main St, at the door</div></div>
+          <div class="use-item" style="margin-top:8px"><div class="use-item-title">Nơi tụ tập</div><div class="use-item-ex">at school, at work, at home</div></div>
+        </div>
+      </div>
+      <div class="prep-card">
+        <div class="prep-card-head">
+          <span class="prep-word">ON</span>
+          <span class="prep-level pl-place">BỀ MẶT</span>
+        </div>
+        <div class="prep-body">
+          <p style="margin-bottom:8px">Dùng cho vị trí <strong>trên bề mặt</strong> — tiếp xúc trực tiếp với mặt phẳng.</p>
+          <div class="use-item"><div class="use-item-title">Trên bề mặt</div><div class="use-item-ex">on the table, on the wall</div></div>
+          <div class="use-item" style="margin-top:8px"><div class="use-item-title">Trên đường/tầng</div><div class="use-item-ex">on the street, on the 2nd floor</div></div>
+        </div>
+      </div>
+      <div class="prep-card">
+        <div class="prep-card-head">
+          <span class="prep-word">IN</span>
+          <span class="prep-level pl-place">BÊN TRONG</span>
+        </div>
+        <div class="prep-body">
+          <p style="margin-bottom:8px">Dùng cho vị trí <strong>bên trong không gian 3D</strong> — kín, có ranh giới bao quanh.</p>
+          <div class="use-item"><div class="use-item-title">Trong không gian kín</div><div class="use-item-ex">in the room, in the box</div></div>
+          <div class="use-item" style="margin-top:8px"><div class="use-item-title">Trong khu vực lớn</div><div class="use-item-ex">in Vietnam, in the city</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ tổng hợp At/On/In nơi chốn</span><span class="ex-tag et-prepp">AT/ON/IN PLACE</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">I'm <strong>at</strong> the bus stop.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi đang ở trạm xe buýt.</span></div>
+        <div class="ex-row"><span class="ex-en">The book is <strong>on</strong> the shelf.</span><span class="ex-arrow">→</span><span class="ex-vn">Cuốn sách ở trên kệ.</span></div>
+        <div class="ex-row"><span class="ex-en">She lives <strong>in</strong> Hanoi.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy sống ở Hà Nội.</span></div>
+        <div class="ex-row"><span class="ex-en">Meet me <strong>at</strong> the cafe <strong>on</strong> Nguyen Hue street <strong>in</strong> District 1.</span><span class="ex-arrow">→</span><span class="ex-vn">Gặp tôi ở quán cà phê trên đường Nguyễn Huệ, Quận 1.</span></div>
+      </div>
+    </div>
+
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ "Điểm → Mặt → Khối":</strong> <code>AT</code> = 1 chấm (điểm) · <code>ON</code> = 1 mặt phẳng (2D, tiếp xúc bề mặt) · <code>IN</code> = 1 khối không gian (3D, bên trong). Hãy hình dung: đứng <strong>AT</strong> cửa hàng (điểm) → đặt đồ <strong>ON</strong> bàn (mặt) → đứng <strong>IN</strong> phòng (không gian kín).</div>
+    </div>
+
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Lưu ý phương tiện giao thông:</strong> <code>in</code> + xe nhỏ (car, taxi) — vì phải "chui vào" · <code>on</code> + phương tiện lớn (bus, train, plane, bike) — vì coi như đứng/ngồi "trên" nó. Ví dụ: <em>in the car</em> nhưng <em>on the bus / on the plane / on a bike</em>.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S5 — GIỚI TỪ VỊ TRÍ KHÔNG GIAN ════ -->
+<div class="section" id="s5">
+  <div class="sec-head">
+    <span class="sec-tag st-prepp">NHÓM 5</span>
+    <div>
+      <h2 class="sec-title">Giới từ vị trí không gian chi tiết</h2>
+      <p class="sec-sub">Above, below, next to, between, in front of...</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Sơ đồ trực quan các giới từ vị trí</div>
+    <div class="spatial-diagram">
+      <div class="spatial-box"><div class="spatial-prep">above / over</div><div class="spatial-visual">⬆️📦</div><div class="spatial-ex">phía trên, cao hơn</div></div>
+      <div class="spatial-box"><div class="spatial-prep">below / under</div><div class="spatial-visual">📦⬇️</div><div class="spatial-ex">phía dưới, thấp hơn</div></div>
+      <div class="spatial-box"><div class="spatial-prep">next to / beside</div><div class="spatial-visual">📦↔️📦</div><div class="spatial-ex">bên cạnh</div></div>
+      <div class="spatial-box"><div class="spatial-prep">between</div><div class="spatial-visual">📦🔲📦</div><div class="spatial-ex">ở giữa (2 vật)</div></div>
+      <div class="spatial-box"><div class="spatial-prep">in front of</div><div class="spatial-visual">🔲➡️📦</div><div class="spatial-ex">phía trước</div></div>
+      <div class="spatial-box"><div class="spatial-prep">behind</div><div class="spatial-visual">📦⬅️🔲</div><div class="spatial-ex">phía sau</div></div>
+      <div class="spatial-box"><div class="spatial-prep">near / close to</div><div class="spatial-visual">📦~🔲</div><div class="spatial-ex">gần</div></div>
+      <div class="spatial-box"><div class="spatial-prep">opposite</div><div class="spatial-visual">📦↔🔲</div><div class="spatial-ex">đối diện</div></div>
+      <div class="spatial-box"><div class="spatial-prep">among</div><div class="spatial-visual">🔲🔲📦🔲</div><div class="spatial-ex">ở giữa (nhiều vật)</div></div>
+    </div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ giới từ vị trí</span><span class="ex-tag et-prepp">SPATIAL PREPOSITIONS</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">The lamp is <strong>above</strong> the table.</span><span class="ex-arrow">→</span><span class="ex-vn">Cái đèn ở phía trên bàn.</span></div>
+        <div class="ex-row"><span class="ex-en">The cat is <strong>under</strong> the chair.</span><span class="ex-arrow">→</span><span class="ex-vn">Con mèo ở dưới ghế.</span></div>
+        <div class="ex-row"><span class="ex-en">My house is <strong>between</strong> the bank and the school.</span><span class="ex-arrow">→</span><span class="ex-vn">Nhà tôi ở giữa ngân hàng và trường học.</span></div>
+        <div class="ex-row"><span class="ex-en">She sat <strong>next to</strong> me.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy ngồi cạnh tôi.</span></div>
+      </div>
+    </div>
+    <div class="info i-note">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Phân biệt "between" và "among":</strong> <code>between</code> dùng khi nói về <strong>2 đối tượng cụ thể</strong> (between A and B). <code>among</code> dùng khi nói về vị trí <strong>giữa một nhóm từ 3 đối tượng trở lên</strong> (among the students, among the crowd).</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S6 — GIỚI TỪ CHUYỂN ĐỘNG ════ -->
+<div class="section" id="s6">
+  <div class="sec-head">
+    <span class="sec-tag st-prepp">NHÓM 6</span>
+    <div>
+      <h2 class="sec-title">Giới từ chỉ chuyển động (Movement)</h2>
+      <p class="sec-sub">To, into, out of, through, across, along...</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Bảng giới từ chuyển động</div>
+    <table class="tbl">
+      <thead><tr><th>Giới từ</th><th>Nghĩa</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td><code>to</code></td><td>đi đến (hướng tới)</td><td><em>I'm going <strong>to</strong> school.</em></td></tr>
+        <tr><td><code>into</code></td><td>đi vào trong</td><td><em>She walked <strong>into</strong> the room.</em></td></tr>
+        <tr><td><code>out of</code></td><td>đi ra khỏi</td><td><em>He ran <strong>out of</strong> the house.</em></td></tr>
+        <tr><td><code>through</code></td><td>đi xuyên qua</td><td><em>We drove <strong>through</strong> the tunnel.</em></td></tr>
+        <tr><td><code>across</code></td><td>đi ngang qua, băng qua</td><td><em>She swam <strong>across</strong> the river.</em></td></tr>
+        <tr><td><code>along</code></td><td>đi dọc theo</td><td><em>We walked <strong>along</strong> the beach.</em></td></tr>
+        <tr><td><code>up / down</code></td><td>lên / xuống</td><td><em>He ran <strong>up</strong> the stairs.</em></td></tr>
+        <tr><td><code>past</code></td><td>đi qua, vượt qua</td><td><em>She walked <strong>past</strong> me.</em></td></tr>
+      </tbody>
+    </table>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo phân biệt "to" và "into":</strong> <code>to</code> = đi đến một <strong>điểm/địa điểm</strong> (go to school). <code>into</code> = đi vào <strong>bên trong</strong> một không gian (go into the room). Đi "to school" là đến trường nói chung, đi "into the classroom" là bước chân vào lớp học cụ thể.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S7 — GIỚI TỪ ĐI VỚI ĐỘNG TỪ/TÍNH TỪ ════ -->
+<div class="section" id="s7">
+  <div class="sec-head">
+    <span class="sec-tag st-prepp">NHÓM 7</span>
+    <div>
+      <h2 class="sec-title">Giới từ đi kèm cố định với Động từ & Tính từ</h2>
+      <p class="sec-sub">Phải học thuộc theo cụm — không thể đoán theo logic</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Động từ + giới từ cố định (Verb + Preposition)</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Cụm động từ + giới từ thông dụng</span><span class="ex-tag et-prepp">VERB + PREP</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">listen <strong>to</strong></span><span class="ex-arrow">→</span><span class="ex-vn">nghe (something)</span></div>
+        <div class="ex-row"><span class="ex-en">look <strong>at</strong></span><span class="ex-arrow">→</span><span class="ex-vn">nhìn vào</span></div>
+        <div class="ex-row"><span class="ex-en">wait <strong>for</strong></span><span class="ex-arrow">→</span><span class="ex-vn">chờ đợi</span></div>
+        <div class="ex-row"><span class="ex-en">depend <strong>on</strong></span><span class="ex-arrow">→</span><span class="ex-vn">phụ thuộc vào</span></div>
+        <div class="ex-row"><span class="ex-en">think <strong>about/of</strong></span><span class="ex-arrow">→</span><span class="ex-vn">nghĩ về</span></div>
+        <div class="ex-row"><span class="ex-en">talk <strong>to/with</strong></span><span class="ex-arrow">→</span><span class="ex-vn">nói chuyện với</span></div>
+        <div class="ex-row"><span class="ex-en">apologize <strong>for</strong></span><span class="ex-arrow">→</span><span class="ex-vn">xin lỗi vì</span></div>
+        <div class="ex-row"><span class="ex-en">arrive <strong>at/in</strong></span><span class="ex-arrow">→</span><span class="ex-vn">đến (nơi nhỏ/nơi lớn)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Tính từ + giới từ cố định (Adjective + Preposition)</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Cụm tính từ + giới từ thông dụng</span><span class="ex-tag et-prepp">ADJ + PREP</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">interested <strong>in</strong></span><span class="ex-arrow">→</span><span class="ex-vn">quan tâm đến</span></div>
+        <div class="ex-row"><span class="ex-en">afraid <strong>of</strong></span><span class="ex-arrow">→</span><span class="ex-vn">sợ</span></div>
+        <div class="ex-row"><span class="ex-en">good <strong>at</strong></span><span class="ex-arrow">→</span><span class="ex-vn">giỏi về</span></div>
+        <div class="ex-row"><span class="ex-en">married <strong>to</strong></span><span class="ex-arrow">→</span><span class="ex-vn">kết hôn với</span></div>
+        <div class="ex-row"><span class="ex-en">proud <strong>of</strong></span><span class="ex-arrow">→</span><span class="ex-vn">tự hào về</span></div>
+        <div class="ex-row"><span class="ex-en">tired <strong>of</strong></span><span class="ex-arrow">→</span><span class="ex-vn">chán, mệt mỏi vì</span></div>
+        <div class="ex-row"><span class="ex-en">different <strong>from</strong></span><span class="ex-arrow">→</span><span class="ex-vn">khác với</span></div>
+        <div class="ex-row"><span class="ex-en">similar <strong>to</strong></span><span class="ex-arrow">→</span><span class="ex-vn">giống với</span></div>
+      </div>
+    </div>
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Không có quy tắc chung!</strong> Những cụm này không thể suy luận logic — phải học thuộc từng cụm như "công thức cố định". Mẹo: mỗi khi học từ mới (động từ/tính từ), luôn tra luôn giới từ đi kèm và viết chung thành 1 cụm để nhớ.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     NHÓM CÂU ƯỚC
+════════════════════════════════ -->
+<div class="cat-banner cb-wish">
+  <div class="cb-icon">🟣</div>
+  <div>
+    <div class="cb-badge">WISH SENTENCES</div>
+    <div class="cb-title">Phần 3 — Câu Ước (Wish)</div>
+    <div class="cb-sub">Diễn tả mong muốn, tiếc nuối về điều không có thật</div>
+  </div>
+</div>
+
+<!-- ════ S8 — CÂU ƯỚC LÀ GÌ ════ -->
+<div class="section" id="s8">
+  <div class="sec-head">
+    <span class="sec-tag st-wish">NHÓM 8</span>
+    <div>
+      <h2 class="sec-title">Câu ước là gì? — Khái niệm cốt lõi</h2>
+      <p class="sec-sub">Tại sao câu ước lại dùng thì "lùi" kỳ lạ</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Hiểu bản chất: Wish = Mong điều KHÔNG có thật</div>
+    <p>"Wish" (ước) dùng để nói về điều <strong>trái với thực tế</strong> — bạn mong nó khác đi nhưng thực tế không phải vậy. Vì diễn tả sự "không có thật", tiếng Anh dùng <strong>"lùi 1 bậc thì"</strong> so với thì bình thường — giống logic của câu điều kiện loại 2/3.</p>
+    <div class="rw-box rw-wish">
+      <div class="rw-label">🔑 NGUYÊN TẮC VÀNG</div>
+      <div class="rw-title">Wish + thì LÙI 1 bậc so với thực tế</div>
+      <div class="rw-body">Thực tế ở <strong style="color:var(--text)">hiện tại</strong> → Wish dùng <strong style="color:var(--text)">Quá khứ đơn</strong>. Thực tế ở <strong style="color:var(--text)">quá khứ</strong> → Wish dùng <strong style="color:var(--text)">Quá khứ hoàn thành</strong>.</div>
+    </div>
+    <div class="shift-diagram">
+      <div class="shift-row">
+        <span class="shift-box sb-real">Thực tế: Present</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-box sb-wish">Wish + Past Simple</span>
+        <span class="shift-label">I am tired → I wish I were not tired</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-box sb-real">Thực tế: Past</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-box sb-wish">Wish + Past Perfect</span>
+        <span class="shift-label">I didn't study → I wish I had studied</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-box sb-real">Thực tế: Future / Muốn ai đó thay đổi</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-box sb-wish">Wish + would</span>
+        <span class="shift-label">It's raining → I wish it would stop</span>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ logic:</strong> Hãy nhớ công thức đơn giản: "Wish luôn nói DỐI về thì" — Wish về hiện tại thì "giả vờ" đang nói quá khứ (Past Simple). Wish về quá khứ thì "giả vờ" còn xa hơn nữa (Past Perfect). Càng giả định "không thật", thì càng lùi xa.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S9 — WISH HIỆN TẠI ════ -->
+<div class="section" id="s9">
+  <div class="sec-head">
+    <span class="sec-tag st-wish">NHÓM 9</span>
+    <div>
+      <h2 class="sec-title">Wish ở hiện tại — Ước điều khác với hiện tại</h2>
+      <p class="sec-sub">Cấu trúc dùng nhiều nhất trong giao tiếp hàng ngày</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức: S + wish(es) + S + Past Simple / were</div>
+    <div class="wish-formula">S + wish(es) + (that) + S + V2/Ved/were ...</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ Wish hiện tại</span><span class="ex-tag et-wish">WISH + PRESENT</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">I wish I <strong>had</strong> more time.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi ước có nhiều thời gian hơn. (thực tế: không có nhiều TG)</span></div>
+        <div class="ex-row"><span class="ex-en">She wishes she <strong>spoke</strong> French.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy ước biết nói tiếng Pháp. (thực tế: không biết)</span></div>
+        <div class="ex-row"><span class="ex-en">I wish I <strong>were</strong> taller.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi ước mình cao hơn. (thực tế: không cao)</span></div>
+        <div class="ex-row"><span class="ex-en">We wish we <strong>didn't have</strong> to work today.</span><span class="ex-arrow">→</span><span class="ex-vn">Chúng tôi ước hôm nay không phải làm việc.</span></div>
+      </div>
+    </div>
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Quy tắc đặc biệt với "to be":</strong> Trong câu ước trang trọng, dùng <code>were</code> cho TẤT CẢ các ngôi (kể cả I/he/she/it), không dùng "was". Đúng: <em>I wish I <u>were</u> rich.</em> ✅ — Trong văn nói thân mật, nhiều người vẫn dùng "was" nhưng "were" được coi là chuẩn mực hơn.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S10 — WISH QUÁ KHỨ ════ -->
+<div class="section" id="s10">
+  <div class="sec-head">
+    <span class="sec-tag st-wish">NHÓM 10</span>
+    <div>
+      <h2 class="sec-title">Wish ở quá khứ — Diễn tả sự hối tiếc</h2>
+      <p class="sec-sub">Dùng khi tiếc nuối về điều đã xảy ra hoặc không xảy ra</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức: S + wish(es) + S + Past Perfect (had + V3)</div>
+    <div class="wish-formula">S + wish(es) + (that) + S + had + V3 ...</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ Wish quá khứ — Hối tiếc</span><span class="ex-tag et-wish">WISH + PAST</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">I wish I <strong>had studied</strong> harder.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi ước mình đã học chăm hơn. (thực tế: đã không học chăm)</span></div>
+        <div class="ex-row"><span class="ex-en">She wishes she <strong>hadn't said</strong> that.</span><span class="ex-arrow">→</span><span class="ex-vn">Cô ấy ước mình đã không nói điều đó. (thực tế: đã nói rồi)</span></div>
+        <div class="ex-row"><span class="ex-en">I wish I <strong>had known</strong> about this earlier.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi ước mình đã biết điều này sớm hơn.</span></div>
+        <div class="ex-row"><span class="ex-en">We wish we <strong>hadn't missed</strong> the flight.</span><span class="ex-arrow">→</span><span class="ex-vn">Chúng tôi ước đã không lỡ chuyến bay.</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🎯</span>
+      <div><strong style="color:var(--text)">So sánh với "If only":</strong> <code>If only</code> mang nghĩa tương tự "wish" nhưng nhấn mạnh cảm xúc <strong>mạnh hơn</strong> (tiếc nuối sâu sắc, thường dùng trong văn nói cảm thán). <em>If only I had studied harder!</em> = <em>I wish I had studied harder.</em> nhưng "If only" nghe day dứt hơn.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ S11 — WISH + WOULD & IF ONLY ════ -->
+<div class="section" id="s11">
+  <div class="sec-head">
+    <span class="sec-tag st-wish">NHÓM 11</span>
+    <div>
+      <h2 class="sec-title">Wish + would & If only — Mở rộng nâng cao</h2>
+      <p class="sec-sub">Phàn nàn về thói quen/tình huống · Mong muốn ai đó thay đổi</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Wish + would — Mong điều gì đó THAY ĐỔI (thường để phàn nàn)</div>
+    <div class="wish-formula">S + wish + S(khác) + would + V (nguyên thể)</div>
+    <p>Dùng khi <strong>mong người khác hoặc sự việc thay đổi hành vi</strong> — thường mang ý than phiền, khó chịu về thói quen hiện tại.</p>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Ví dụ Wish + would</span><span class="ex-tag et-wish">WISH + WOULD</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">I wish you <strong>would stop</strong> smoking.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi ước bạn dừng hút thuốc. (phàn nàn về thói quen)</span></div>
+        <div class="ex-row"><span class="ex-en">I wish it <strong>would stop</strong> raining.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi ước trời ngừng mưa. (mong tình huống thay đổi)</span></div>
+        <div class="ex-row"><span class="ex-en">I wish he <strong>wouldn't shout</strong> so loudly.</span><span class="ex-arrow">→</span><span class="ex-vn">Tôi ước anh ấy đừng la to như vậy.</span></div>
+      </div>
+    </div>
+    <div class="info i-err">
+      <span class="info-ico">🚫</span>
+      <div><strong style="color:var(--text)">Lỗi cực kỳ phổ biến:</strong> KHÔNG dùng "wish + would" cho chính chủ ngữ của câu ("I wish I would..."). Sai: <em>I wish I <u>would be</u> taller.</em> ❌ — Đúng phải dùng Past Simple: <em>I wish I <u>were</u> taller.</em> ✅ "wish + would" chỉ dùng khi chủ ngữ mệnh đề sau khác với chủ ngữ "wish" (muốn người khác/vật khác thay đổi).</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">If only — Phiên bản nhấn mạnh hơn của Wish</div>
+    <table class="tbl">
+      <thead><tr><th>Cấu trúc</th><th>Dùng khi</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td><code>If only + Past Simple</code></td><td>Ước hiện tại (nhấn mạnh)</td><td><em>If only I <strong>had</strong> more money!</em></td></tr>
+        <tr><td><code>If only + Past Perfect</code></td><td>Ước/tiếc quá khứ (nhấn mạnh)</td><td><em>If only I <strong>had listened</strong> to you!</em></td></tr>
+        <tr><td><code>If only + would</code></td><td>Mong thay đổi (nhấn mạnh)</td><td><em>If only he <strong>would call</strong> me!</em></td></tr>
+      </tbody>
+    </table>
+    <div class="info i-note">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Khi nào dùng "If only" thay vì "Wish"?</strong> "If only" thường đứng đầu câu cảm thán (có dấu !), mang sắc thái <strong>cảm xúc mạnh hơn, day dứt hơn</strong> wish. Trong giao tiếp thường ngày, "wish" phổ biến và tự nhiên hơn; "if only" hay xuất hiện trong văn viết, lời thoại phim, bài hát.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     CHEAT SHEET
+════════════════════════════════ -->
+<div class="cat-banner cb-cheat">
+  <div class="cb-icon">📋</div>
+  <div>
+    <div class="cb-badge">TỔNG HỢP</div>
+    <div class="cb-title">Cheat Sheet — Giới từ & Câu ước</div>
+    <div class="cb-sub">In ra · Dán lên tường · Xem lại nhanh mỗi ngày</div>
+  </div>
+</div>
+
+<div class="section" id="s12">
+  <div class="sec-head">
+    <span class="sec-tag st-cheat">CHEAT SHEET</span>
+    <div>
+      <h2 class="sec-title">📋 Bảng tổng hợp toàn bộ kiến thức</h2>
+      <p class="sec-sub">Quy tắc nhanh · Công thức wish · Cụm cố định hay dùng</p>
+    </div>
+  </div>
+
+  <div class="cheat-grid">
+
+    <div class="cheat-card">
+      <h4 class="h4-prept">🔵 At/On/In — Thời gian</h4>
+      <div class="cheat-row"><span class="ck">at</span><span class="cv">giờ: at 7am, at noon</span></div>
+      <div class="cheat-row"><span class="ck">on</span><span class="cv">ngày: on Monday, on July 4th</span></div>
+      <div class="cheat-row"><span class="ck">in</span><span class="cv">tháng/năm/mùa: in July, in 2024</span></div>
+      <div class="cheat-row"><span class="ck">Ngoại lệ</span><span class="cv">at night (không phải "in night")</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-prept">🔵 For/Since/During</h4>
+      <div class="cheat-row"><span class="ck">for</span><span class="cv">+ khoảng TG: for 3 years</span></div>
+      <div class="cheat-row"><span class="ck">since</span><span class="cv">+ mốc TG: since 2020</span></div>
+      <div class="cheat-row"><span class="ck">during</span><span class="cv">+ sự kiện: during the trip</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-prept">🔵 By vs Until</h4>
+      <div class="cheat-row"><span class="ck">by</span><span class="cv">deadline (1 lần, trước/đúng hạn)</span></div>
+      <div class="cheat-row"><span class="ck">until</span><span class="cv">liên tục đến khi đó rồi dừng</span></div>
+      <div class="cheat-row"><span class="ck">before/after</span><span class="cv">trước / sau</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-prepp">🟢 At/On/In — Nơi chốn</h4>
+      <div class="cheat-row"><span class="ck">at</span><span class="cv">điểm: at the door, at school</span></div>
+      <div class="cheat-row"><span class="ck">on</span><span class="cv">bề mặt: on the table, on the wall</span></div>
+      <div class="cheat-row"><span class="ck">in</span><span class="cv">bên trong: in the room, in Vietnam</span></div>
+      <div class="cheat-row"><span class="ck">Xe</span><span class="cv">in car/taxi · on bus/train/plane/bike</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-prepp">🟢 Giới từ vị trí</h4>
+      <div class="cheat-row"><span class="ck">above/below</span><span class="cv">trên / dưới</span></div>
+      <div class="cheat-row"><span class="ck">next to/beside</span><span class="cv">bên cạnh</span></div>
+      <div class="cheat-row"><span class="ck">between A and B</span><span class="cv">giữa 2 vật</span></div>
+      <div class="cheat-row"><span class="ck">among</span><span class="cv">giữa nhiều vật (3+)</span></div>
+      <div class="cheat-row"><span class="ck">in front of/behind</span><span class="cv">trước / sau</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-prepp">🟢 Giới từ chuyển động</h4>
+      <div class="cheat-row"><span class="ck">to</span><span class="cv">đến (điểm)</span></div>
+      <div class="cheat-row"><span class="ck">into / out of</span><span class="cv">vào trong / ra khỏi</span></div>
+      <div class="cheat-row"><span class="ck">through</span><span class="cv">xuyên qua</span></div>
+      <div class="cheat-row"><span class="ck">across</span><span class="cv">băng qua</span></div>
+      <div class="cheat-row"><span class="ck">along</span><span class="cv">dọc theo</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-prepp">🟢 Verb/Adj + Giới từ cố định</h4>
+      <div class="cheat-row"><span class="ck">interested in</span><span class="cv">quan tâm đến</span></div>
+      <div class="cheat-row"><span class="ck">good at</span><span class="cv">giỏi về</span></div>
+      <div class="cheat-row"><span class="ck">afraid of</span><span class="cv">sợ</span></div>
+      <div class="cheat-row"><span class="ck">depend on</span><span class="cv">phụ thuộc vào</span></div>
+      <div class="cheat-row"><span class="ck">listen to</span><span class="cv">nghe</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-wish">🟣 Wish — Hiện tại</h4>
+      <div class="cheat-row"><span class="ck">Công thức</span><span class="cv">S + wish + S + Past Simple</span></div>
+      <div class="cheat-row"><span class="ck">To be</span><span class="cv">dùng "were" mọi ngôi</span></div>
+      <div class="cheat-row"><span class="ck">Ví dụ</span><span class="cv">I wish I were rich.</span></div>
+      <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">ước điều khác hiện tại</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-wish">🟣 Wish — Quá khứ</h4>
+      <div class="cheat-row"><span class="ck">Công thức</span><span class="cv">S + wish + S + had + V3</span></div>
+      <div class="cheat-row"><span class="ck">Ví dụ</span><span class="cv">I wish I had studied.</span></div>
+      <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">tiếc nuối về quá khứ</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-wish">🟣 Wish + would</h4>
+      <div class="cheat-row"><span class="ck">Công thức</span><span class="cv">S + wish + S(khác) + would + V</span></div>
+      <div class="cheat-row"><span class="ck">Ví dụ</span><span class="cv">I wish you would stop smoking.</span></div>
+      <div class="cheat-row"><span class="ck">Dùng khi</span><span class="cv">mong người/vật khác thay đổi</span></div>
+      <div class="cheat-row"><span class="ck">Lưu ý</span><span class="cv">KHÔNG dùng cho chính chủ ngữ</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-wish">🟣 If only</h4>
+      <div class="cheat-row"><span class="ck">If only + Past Simple</span><span class="cv">ước hiện tại (nhấn mạnh)</span></div>
+      <div class="cheat-row"><span class="ck">If only + Past Perfect</span><span class="cv">tiếc quá khứ (nhấn mạnh)</span></div>
+      <div class="cheat-row"><span class="ck">If only + would</span><span class="cv">mong thay đổi (nhấn mạnh)</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-au">⚠️ Top lỗi cần tránh</h4>
+      <div class="cheat-row"><span class="ck">at Monday</span><span class="cv">→ on Monday ✅</span></div>
+      <div class="cheat-row"><span class="ck">in night</span><span class="cv">→ at night ✅</span></div>
+      <div class="cheat-row"><span class="ck">arrive to school</span><span class="cv">→ arrive at school ✅</span></div>
+      <div class="cheat-row"><span class="ck">I wish I would be...</span><span class="cv">→ I wish I were... ✅</span></div>
+      <div class="cheat-row"><span class="ck">married with</span><span class="cv">→ married to ✅</span></div>
+    </div>
+
+  </div>
+
+  <!-- BẢNG TỔNG HỢP TOÀN DIỆN -->
+  <div class="sub">
+    <div class="sub-title">Bảng tra nhanh — At / On / In (Thời gian & Nơi chốn)</div>
+    <table class="tbl">
+      <thead><tr><th>Giới từ</th><th>Thời gian</th><th>Nơi chốn</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge-time">AT</span></td><td>Giờ: at 7am, at noon, at night</td><td>Điểm: at home, at the door</td></tr>
+        <tr><td><span class="badge-time">ON</span></td><td>Ngày: on Monday, on July 4th</td><td>Bề mặt: on the table, on the street</td></tr>
+        <tr><td><span class="badge-time">IN</span></td><td>Tháng/Năm/Mùa: in July, in 2024, in summer</td><td>Không gian kín: in the room, in Vietnam</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info i-ok" style="margin-top:22px">
+    <span class="info-ico">🎯</span>
+    <div style="font-size:13.5px">
+      <strong style="color:var(--text)">Tài nguyên luyện tập miễn phí:</strong><br>
+      <span style="color:var(--muted)">
+        <a href="https://www.perfect-english-grammar.com/prepositions.html" style="color:var(--acc)">Perfect English Grammar</a> — Bài tập giới từ chi tiết &nbsp;·&nbsp;
+        <a href="https://www.perfect-english-grammar.com/wish.html" style="color:var(--acc)">Perfect English Grammar (Wish)</a> — Bài tập câu ước &nbsp;·&nbsp;
+        <a href="https://learnenglish.britishcouncil.org" style="color:var(--acc)">British Council</a> — Bài tập tương tác &nbsp;·&nbsp;
+        <a href="https://dictionary.cambridge.org" style="color:var(--acc)">Cambridge Dictionary</a> — Tra cụm giới từ cố định
+      </span>
+    </div>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<div class="footer">
+  <span>📍 Giới Từ Cơ Bản & Câu Ước · Hướng dẫn toàn tập · Dành cho người mất gốc · 2026</span>
+  <span style="margin-left:auto;color:var(--faint)">3 nhóm Giới từ Thời gian · 4 nhóm Giới từ Nơi chốn · 4 nhóm Câu ước · Cheat Sheet</span>
+</div>
+</div><!-- /main -->
+
+<script>
+window.addEventListener('scroll',()=>{
+  const el=document.documentElement;
+  document.getElementById('pbar').style.width=(el.scrollTop/(el.scrollHeight-el.clientHeight)*100)+'%';
+});
+const sections=document.querySelectorAll('.section[id]');
+const links=document.querySelectorAll('.nav-link');
+sections.forEach(s=>new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      const a=document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+      if(a)a.classList.add('active');
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'}).observe(s));
+</script>
+</body>
+</html>
