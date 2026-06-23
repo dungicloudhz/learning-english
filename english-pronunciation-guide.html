@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔊 Tiếng Anh Mất Gốc — Phát Âm Chi Tiết</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080810;--s1:#0e0e1c;--s2:#131326;--s3:#18182e;--s4:#1e1e38;
+  --border:#222240;--border2:#2c2c50;--text:#e6e6f2;--muted:#666698;--faint:#363660;
+  --acc:#ffd060;--acc-d:#c89820;--acc-dim:rgba(255,208,96,.11);--acc-glow:rgba(255,208,96,.24);
+  --green:#40d88e;--green-dim:rgba(64,216,142,.10);
+  --blue:#5ba8ff;--blue-dim:rgba(91,168,255,.10);
+  --purple:#a07af4;--purple-dim:rgba(160,122,244,.10);
+  --yellow:#ffd060;--yellow-dim:rgba(255,208,96,.10);
+  --teal:#30d8c0;--teal-dim:rgba(48,216,192,.10);
+  --orange:#ff8c50;--orange-dim:rgba(255,140,80,.10);
+  --pink:#ff6584;--pink-dim:rgba(255,101,132,.11);--pink-glow:rgba(255,101,132,.22);
+  --sky:#38bdf8;--sky-dim:rgba(56,189,248,.10);
+  --oc:#38bdf8;--oc-dim:rgba(56,189,248,.13);--oc-glow:rgba(56,189,248,.30);
+  --oc2:#5ba8ff;--oc2-dim:rgba(91,168,255,.12);
+  --ins:#40d88e;--ins-dim:rgba(64,216,142,.12);--ins-glow:rgba(64,216,142,.28);
+  --ch:#ffd060;--ch-dim:rgba(255,208,96,.12);--ch-glow:rgba(255,208,96,.28);
+  --sk:#a07af4;--sk-dim:rgba(160,122,244,.12);--sk-glow:rgba(160,122,244,.28);
+  --au:#ff6584;--au-dim:rgba(255,101,132,.12);--au-glow:rgba(255,101,132,.28);
+  --code-bg:#05050e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* SIDEBAR */
+.sidebar{position:fixed;left:0;top:0;width:268px;height:100vh;background:var(--s1);border-right:1px solid var(--border);overflow-y:auto;z-index:400;display:flex;flex-direction:column}
+.sb-logo{padding:20px 18px 16px;border-bottom:1px solid var(--border)}
+.sb-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.logo-icon{width:44px;height:44px;border-radius:11px;flex-shrink:0;background:linear-gradient(135deg,var(--oc),var(--oc2));display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 26px var(--oc-glow)}
+.logo-text h2{font-size:15px;font-weight:800;letter-spacing:-.4px}
+.logo-text p{font-size:10.5px;color:var(--muted);margin-top:2px}
+.prog-wrap{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--oc),var(--ins),var(--ch),var(--sk),var(--au));width:0%;transition:width .4s;border-radius:2px}
+.nav-section{padding:8px 0 4px}
+.nav-sect-label{padding:8px 18px 3px;font-size:9.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--faint)}
+.nav-group-hdr{display:flex;align-items:center;gap:7px;margin:6px 12px 3px;padding:6px 10px;border-radius:7px;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.ngh-oc{background:var(--oc-dim);color:var(--oc)}
+.ngh-ins{background:var(--ins-dim);color:var(--ins)}
+.ngh-ch{background:var(--ch-dim);color:var(--ch)}
+.ngh-sk{background:var(--sk-dim);color:var(--sk)}
+.ngh-au{background:var(--au-dim);color:var(--au)}
+.ngh-other{background:rgba(255,255,255,.05);color:var(--muted)}
+.nav-link{display:flex;align-items:center;gap:9px;padding:6px 18px;color:var(--muted);text-decoration:none;font-size:12.5px;font-weight:600;border-left:2px solid transparent;transition:all .14s}
+.nav-link:hover,.nav-link.active{color:var(--text);background:rgba(255,208,96,.07);border-left-color:var(--acc)}
+.nav-link .ico{font-size:13px;flex-shrink:0;width:16px;text-align:center}
+.nav-badge{margin-left:auto;font-size:9px;font-weight:700;padding:2px 7px;border-radius:100px;background:var(--acc-dim);color:var(--acc)}
+
+/* MAIN */
+.main{margin-left:268px;min-height:100vh}
+.hero{padding:80px 64px 64px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse 65% 55% at 75% 22%,rgba(56,189,248,.10) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 55% at 10% 82%,rgba(64,216,142,.07) 0%,transparent 55%),
+             radial-gradient(ellipse 40% 50% at 50% 50%,rgba(160,122,244,.04) 0%,transparent 60%),var(--bg)}
+.hero-dots{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.028) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+.hero-glow{position:absolute;right:-90px;top:-90px;width:520px;height:520px;background:radial-gradient(circle,rgba(56,189,248,.10) 0%,transparent 65%);pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--oc-dim);border:1px solid rgba(56,189,248,.38);color:var(--oc);padding:5px 16px;border-radius:100px;font-size:11.5px;font-weight:700;margin-bottom:26px;letter-spacing:.3px}
+.hero-eyebrow .pulse{width:6px;height:6px;border-radius:50%;background:var(--oc);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero h1{font-size:52px;font-weight:900;letter-spacing:-2.5px;line-height:1.04;margin-bottom:18px}
+.h-oc{color:var(--oc)}.h-ins{color:var(--ins)}.h-ch{color:var(--ch)}.h-sk{color:var(--sk)}.h-au{color:var(--au)}.h-acc{color:var(--acc)}
+.h-grad{background:linear-gradient(135deg,var(--oc) 0%,var(--oc2) 50%,var(--ins) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-desc{font-size:16px;color:var(--muted);max-width:580px;line-height:1.72;margin-bottom:30px}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:5px 14px;border-radius:7px;font-size:12px;font-weight:700}
+.chip-oc{background:var(--oc-dim);color:var(--oc)}.chip-ins{background:var(--ins-dim);color:var(--ins)}
+.chip-ch{background:var(--ch-dim);color:var(--ch)}.chip-sk{background:var(--sk-dim);color:var(--sk)}
+.chip-au{background:var(--au-dim);color:var(--au)}.chip-t{background:var(--teal-dim);color:var(--teal)}
+.chip-p{background:var(--pink-dim);color:var(--pink)}.chip-s{background:var(--sky-dim);color:var(--sky)}
+
+/* CAT BANNERS */
+.cat-banner{display:flex;align-items:center;gap:16px;padding:20px 24px;border-radius:14px;margin-bottom:44px;position:relative;overflow:hidden}
+.cat-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cb-oc{background:var(--oc-dim);border:1px solid rgba(56,189,248,.30)}.cb-oc::before{background:linear-gradient(90deg,var(--oc),var(--oc2))}
+.cb-ins{background:var(--ins-dim);border:1px solid rgba(64,216,142,.30)}.cb-ins::before{background:linear-gradient(90deg,var(--ins),var(--teal))}
+.cb-ch{background:var(--ch-dim);border:1px solid rgba(255,208,96,.30)}.cb-ch::before{background:linear-gradient(90deg,var(--ch),var(--orange))}
+.cb-sk{background:var(--sk-dim);border:1px solid rgba(160,122,244,.30)}.cb-sk::before{background:linear-gradient(90deg,var(--sk),var(--pink))}
+.cb-au{background:var(--au-dim);border:1px solid rgba(255,101,132,.30)}.cb-au::before{background:linear-gradient(90deg,var(--au),var(--orange))}
+.cb-icon{font-size:38px;flex-shrink:0}
+.cb-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.cb-oc .cb-badge{background:var(--oc-dim);color:var(--oc)}
+.cb-ins .cb-badge{background:var(--ins-dim);color:var(--ins)}
+.cb-ch .cb-badge{background:var(--ch-dim);color:var(--ch)}
+.cb-sk .cb-badge{background:var(--sk-dim);color:var(--sk)}
+.cb-au .cb-badge{background:var(--au-dim);color:var(--au)}
+.cb-title{font-size:20px;font-weight:800;letter-spacing:-.5px}.cb-sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+/* CONTENT */
+.content{padding:56px 64px;max-width:1020px}
+.section{margin-bottom:72px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:30px;padding-bottom:18px;border-bottom:1px solid var(--border)}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 10px;border-radius:5px;margin-top:5px;flex-shrink:0;letter-spacing:.5px}
+.st-oc{color:var(--oc);background:var(--oc-dim);border:1px solid var(--oc-glow)}
+.st-ins{color:var(--ins);background:var(--ins-dim);border:1px solid var(--ins-glow)}
+.st-ch{color:var(--ch);background:var(--ch-dim);border:1px solid var(--ch-glow)}
+.st-sk{color:var(--sk);background:var(--sk-dim);border:1px solid var(--sk-glow)}
+.st-au{color:var(--au);background:var(--au-dim);border:1px solid var(--au-glow)}
+.st-y{color:var(--yellow);background:var(--yellow-dim);border:1px solid rgba(255,208,96,.24)}
+.sec-title{font-size:23px;font-weight:800;letter-spacing:-.6px;margin-bottom:5px}
+.sec-sub{font-size:13px;color:var(--muted)}
+.sub{margin-bottom:38px}
+.sub-title{font-size:14.5px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:10px}
+.sub-title::before{content:'';display:inline-block;width:14px;height:3px;background:var(--acc);border-radius:2px;flex-shrink:0}
+.sub p,.sub ul,.sub ol{color:var(--muted);font-size:13.5px;margin-bottom:11px;line-height:1.75}
+.sub ul,.sub ol{padding-left:22px}.sub li{margin-bottom:5px}.sub strong{color:var(--text)}
+
+/* GRIDS */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:11px;padding:16px;transition:all .2s;cursor:default}
+.card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.38)}
+.card-icon{font-size:24px;margin-bottom:8px}.card-title{font-size:13px;font-weight:700;margin-bottom:4px}.card-desc{font-size:12px;color:var(--muted);line-height:1.55}
+
+/* EXAMPLE BOXES */
+.ex-box{background:var(--s1);border:1px solid var(--border2);border-radius:11px;overflow:hidden;margin:13px 0}
+.ex-head{display:flex;align-items:center;gap:8px;padding:9px 16px;background:var(--s2);border-bottom:1px solid var(--border)}
+.ex-label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.ex-tag{margin-left:auto;font-size:9px;font-weight:700;padding:2px 9px;border-radius:100px;flex-shrink:0}
+.et-en{background:var(--oc-dim);color:var(--oc)}
+.et-vn{background:var(--ins-dim);color:var(--ins)}
+.et-tip{background:var(--ch-dim);color:var(--ch)}
+.et-sk{background:var(--sk-dim);color:var(--sk)}
+.et-au{background:var(--au-dim);color:var(--au)}
+.ex-body{padding:16px 20px}
+.ex-row{display:flex;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13.5px}
+.ex-row:last-child{border-bottom:none}
+.ex-en{color:var(--text);font-weight:600;min-width:200px;flex-shrink:0}
+.ex-vn{color:var(--muted)}
+.ex-note{font-size:11px;color:var(--faint);margin-left:auto;flex-shrink:0}
+.ex-arrow{color:var(--faint);flex-shrink:0}
+.ex-ipa{color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:12px;flex-shrink:0;min-width:100px}
+
+/* INFO BOXES */
+.info{display:flex;gap:12px;padding:14px 16px;border-radius:9px;margin:13px 0;font-size:13px;line-height:1.6}
+.info-ico{font-size:16px;flex-shrink:0;margin-top:1px}
+.i-ok{background:var(--green-dim);border:1px solid rgba(64,216,142,.2);color:#30a870}
+.i-warn{background:var(--yellow-dim);border:1px solid rgba(255,208,96,.2);color:#b09030}
+.i-tip{background:var(--blue-dim);border:1px solid rgba(91,168,255,.2);color:#3878d0}
+.i-note{background:var(--purple-dim);border:1px solid rgba(160,122,244,.2);color:#8060d0}
+.i-err{background:var(--pink-dim);border:1px solid rgba(255,101,132,.2);color:#cc3355}
+
+/* RW BOX */
+.rw-box{background:var(--s1);border:1px solid var(--border2);border-radius:12px;padding:18px 20px;margin:14px 0;position:relative;overflow:hidden}
+.rw-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
+.rw-oc::before{background:var(--oc)}.rw-ins::before{background:var(--ins)}
+.rw-ch::before{background:var(--ch)}.rw-sk::before{background:var(--sk)}
+.rw-au::before{background:var(--au)}.rw-y::before{background:var(--yellow)}
+.rw-label{font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:7px;display:flex;align-items:center;gap:6px}
+.rw-oc .rw-label{color:var(--oc)}.rw-ins .rw-label{color:var(--ins)}
+.rw-ch .rw-label{color:var(--ch)}.rw-sk .rw-label{color:var(--sk)}
+.rw-au .rw-label{color:var(--au)}.rw-y .rw-label{color:var(--yellow)}
+.rw-title{font-size:14px;font-weight:700;margin-bottom:5px}
+.rw-body{font-size:13px;color:var(--muted);line-height:1.65}
+
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:13px 0;border-radius:11px;overflow:hidden}
+.tbl th{background:var(--s3);padding:10px 14px;text-align:left;font-weight:700;font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);border-bottom:1px solid var(--border2)}
+.tbl td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted);vertical-align:top}
+.tbl tr:hover td{background:rgba(255,255,255,.025)}
+.tbl td:first-child{color:var(--text);font-weight:600}
+.tbl code{font-family:'JetBrains Mono',monospace;font-size:11.5px;background:var(--code-bg);padding:2px 7px;border-radius:4px;color:var(--teal)}
+.tbl .en{color:var(--oc);font-weight:700}
+.tbl .ipa{color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:12px}
+.tbl .vn{color:var(--muted)}
+.tbl .badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:100px}
+.badge-oc{background:var(--oc-dim);color:var(--oc)}
+.badge-ins{background:var(--ins-dim);color:var(--ins)}
+.badge-ch{background:var(--ch-dim);color:var(--ch)}
+.badge-sk{background:var(--sk-dim);color:var(--sk)}
+.badge-au{background:var(--au-dim);color:var(--au)}
+
+/* IPA GRID */
+.ipa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:14px 0}
+.ipa-card{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:13px 15px;transition:all .18s}
+.ipa-card:hover{border-color:var(--teal);transform:translateY(-1px)}
+.ipa-sym{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;color:var(--teal);margin-bottom:4px;letter-spacing:-.5px}
+.ipa-name{font-size:11px;font-weight:700;color:var(--text);margin-bottom:3px}
+.ipa-hint{font-size:11px;color:var(--muted);margin-bottom:4px}
+.ipa-ex{font-size:11px;color:var(--oc)}
+
+/* STRESS BOX */
+.stress-demo{background:var(--s2);border:1px solid var(--border2);border-radius:11px;padding:18px 22px;margin:14px 0}
+.stress-word{display:flex;align-items:flex-end;gap:6px;margin-bottom:8px;flex-wrap:wrap}
+.syl{display:inline-block;padding:6px 12px;border-radius:7px;font-size:15px;font-weight:700;background:var(--s3)}
+.syl-stress{background:var(--oc-dim);border:2px solid var(--oc);color:var(--oc);font-size:17px}
+.syl-unstress{color:var(--muted)}
+.stress-label{font-size:11px;color:var(--muted);margin-top:6px}
+
+/* COMPARE BOX */
+.cmp-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:11px;overflow:hidden;margin:13px 0}
+.cmp-bad{background:rgba(255,101,132,.07);border-right:1px solid var(--border);padding:14px 16px}
+.cmp-good{background:rgba(64,216,142,.07);padding:14px 16px}
+.cmp-label{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.cmp-bad .cmp-label{color:var(--au)}.cmp-good .cmp-label{color:var(--ins)}
+.cmp-text{font-size:13.5px;color:var(--text);line-height:1.6}
+.cmp-sub{font-size:11.5px;color:var(--muted);margin-top:5px}
+
+/* CHEAT SHEET */
+.cheat-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:14px 0}
+.cheat-card{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:15px}
+.cheat-card h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:11px}
+.h4-oc{color:var(--oc)}.h4-ins{color:var(--ins)}.h4-ch{color:var(--ch)}.h4-sk{color:var(--sk)}.h4-au{color:var(--au)}
+.cheat-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;gap:8px}
+.cheat-row:last-child{border-bottom:none}.ck{color:var(--muted);flex-shrink:0}.cv{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--teal);text-align:right}
+
+p code,li code,td code{font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(255,208,96,.1);color:var(--yellow);padding:2px 6px;border-radius:4px}
+hr.dv{border:none;border-top:1px solid var(--border);margin:58px 0}
+.footer{border-top:1px solid var(--border);padding:28px 64px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}
+@media(max-width:900px){.sidebar{display:none}.main{margin-left:0}.hero,.content,.footer{padding-left:22px;padding-right:22px}.hero h1{font-size:32px}.grid-2,.grid-3,.grid-4,.cheat-grid,.ipa-grid{grid-template-columns:1fr 1fr}.cmp-box{grid-template-columns:1fr}}
+@media(max-width:480px){.ipa-grid{grid-template-columns:1fr 1fr}.cheat-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- ══ SIDEBAR ══ -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-brand">
+      <div class="logo-icon">🔊</div>
+      <div class="logo-text">
+        <h2>Phát Âm Tiếng Anh</h2>
+        <p>Dành cho người mất gốc · 2026</p>
+      </div>
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" id="pbar"></div></div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr" style="background:rgba(255,208,96,.12);color:#ffd060">📚 Các trang khác</div>
+    <a href="english-grammar-basics.html" class="nav-link"><span class="ico">①</span> Tiếng Anh Cơ Bản</a>
+    <a href="english-12-tenses.html" class="nav-link"><span class="ico">②</span> 12 Thì Tiếng Anh</a>
+    <a href="subject-verb-agreement-tenses.html" class="nav-link"><span class="ico">③</span> Hòa Hợp C-V & Phối Thì</a>
+    <a href="synonyms-antonyms-guide.html" class="nav-link"><span class="ico">④</span> Đồng Nghĩa & Trái Nghĩa</a>
+    <a href="adjective-order-word-classes-relative-clauses.html" class="nav-link"><span class="ico">⑤</span> Trật Tự TT · Từ Loại · MĐ QH</a>
+    <a href="english-grammar-guide.html" class="nav-link"><span class="ico">⑥</span> Ngữ Pháp Tổng Hợp</a>
+    <a href="grammar-comparison-passive-conjunctions.html" class="nav-link"><span class="ico">⑦</span> So Sánh · Bị Động · Liên Từ</a>
+    <a href="prepositions-wish-guide.html" class="nav-link"><span class="ico">⑧</span> Giới Từ & Câu Ước</a>
+    <a href="grammar-modals-quantifiers-stress.html" class="nav-link"><span class="ico">⑨</span> Modal · Lượng Từ · Trọng Âm</a>
+    <a href="grammar-tag-questions-articles-conditionals.html" class="nav-link"><span class="ico">⑩</span> Hỏi Đuôi · Mạo Từ · ĐK</a>
+    <a href="grammar-tov-ving-reported-phrasal.html" class="nav-link"><span class="ico">⑪</span> To V / V-ing · Tường Thuật</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-oc">🔤 Nền tảng phát âm</div>
+    <a href="#s0" class="nav-link"><span class="ico">🗺️</span> Tổng quan & Lộ trình</a>
+    <a href="#s1" class="nav-link"><span class="ico">🔤</span> Bảng IPA — Phiên âm quốc tế</a>
+    <a href="#s2" class="nav-link"><span class="ico">🎵</span> Nguyên âm (Vowels)</a>
+    <a href="#s3" class="nav-link"><span class="ico">💨</span> Phụ âm (Consonants)</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-ins">🔊 Quy tắc đọc</div>
+    <a href="#s4" class="nav-link"><span class="ico">🔗</span> Kết hợp nguyên âm</a>
+    <a href="#s5" class="nav-link"><span class="ico">🎯</span> Nhấn trọng âm (Word Stress)</a>
+    <a href="#s6" class="nav-link"><span class="ico">🔚</span> Phát âm đuôi -s / -es / -ed</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-ch">🗣️ Phát âm tự nhiên</div>
+    <a href="#s7" class="nav-link"><span class="ico">🔗</span> Nối âm (Linking)</a>
+    <a href="#s8" class="nav-link"><span class="ico">🍃</span> Âm yếu & Giảm âm</a>
+    <a href="#s9" class="nav-link"><span class="ico">🎭</span> Ngữ điệu (Intonation)</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-sk">⚠️ Âm khó với người Việt</div>
+    <a href="#s10" class="nav-link"><span class="ico">😤</span> Âm Việt không có trong Anh</a>
+    <a href="#s11" class="nav-link"><span class="ico">🔄</span> Âm hay nhầm lẫn</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-au">💡 Mẹo & Tổng hợp</div>
+    <a href="#s12" class="nav-link"><span class="ico">🧠</span> Mẹo luyện phát âm nhanh</a>
+    <a href="#s13" class="nav-link"><span class="ico">📋</span> Cheat Sheet tổng hợp</a>
+  </div>
+</aside>
+
+<!-- ══ MAIN ══ -->
+<div class="main">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-dots"></div><div class="hero-glow"></div>
+  <div class="hero-eyebrow"><span class="pulse"></span> Phát Âm · Dành cho người mất gốc · Từ cơ bản đến tự nhiên</div>
+  <h1><span class="h-grad">Phát Âm</span> 🔊<br><span class="h-acc">Tiếng Anh</span><br><span class="h-ins">Từ A đến Z</span></h1>
+  <p class="hero-desc">Hướng dẫn phát âm tiếng Anh chi tiết cho người mất gốc — từ IPA, nguyên âm, phụ âm, trọng âm đến nối âm và ngữ điệu tự nhiên. Đầy đủ ví dụ, so sánh tiếng Việt, mẹo nhớ và bảng tổng hợp nhanh.</p>
+  <div class="hero-chips">
+    <span class="chip chip-oc">🔤 Bảng IPA</span>
+    <span class="chip chip-ins">🎵 Nguyên âm</span>
+    <span class="chip chip-ch">💨 Phụ âm</span>
+    <span class="chip chip-sk">🎯 Trọng âm</span>
+    <span class="chip chip-au">🔗 Nối âm</span>
+    <span class="chip chip-t">🎭 Ngữ điệu</span>
+    <span class="chip chip-p">⚠️ Âm khó</span>
+    <span class="chip chip-s">📋 Cheat Sheet</span>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ════ S0 — TỔNG QUAN ════ -->
+<div class="section" id="s0">
+  <div class="sec-head">
+    <span class="sec-tag st-oc">TỔNG QUAN</span>
+    <div><h2 class="sec-title">Tại sao phát âm quan trọng & Học thứ tự nào?</h2>
+    <p class="sec-sub">Hiểu đúng trước khi bắt đầu — tránh học sai thứ tự, tránh phát âm theo kiểu Việt hóa</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Vấn đề phổ biến của người Việt học phát âm Anh</div>
+    <p>Người Việt mất gốc thường mắc 3 lỗi lớn: <strong>đọc theo chữ cái kiểu Việt</strong> (đọc "education" là "ê-đu-ca-ti-on"), <strong>bỏ qua IPA</strong> nên không tự đọc từ mới được, và <strong>không biết nhấn trọng âm</strong> dẫn đến người bản ngữ nghe không hiểu.</p>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">1️⃣</div>
+        <div class="card-title" style="color:var(--oc)">Học IPA cơ bản</div>
+        <div class="card-desc">Bảng phiên âm quốc tế — biết IPA là tự đọc được mọi từ trong từ điển. Không cần nhờ ai dạy phát âm nữa.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">2️⃣</div>
+        <div class="card-title" style="color:var(--ins)">Nguyên âm & Phụ âm</div>
+        <div class="card-desc">Nắm vững 20 nguyên âm và 24 phụ âm tiếng Anh. Đặc biệt chú ý các âm không có trong tiếng Việt.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">3️⃣</div>
+        <div class="card-title" style="color:var(--ch)">Quy tắc & Trọng âm</div>
+        <div class="card-desc">Học quy tắc phát âm đuôi -s/-ed, nhấn trọng âm — đây là bí quyết để người bản ngữ hiểu bạn ngay.</div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">⚡</span>
+      <div><strong style="color:var(--text)">Mẹo quan trọng nhất:</strong> Đừng cố phát âm "đúng 100%" ngay. Hãy tập trung <strong>trọng âm đúng vị trí</strong> trước — sai trọng âm gây hiểu lầm nhiều hơn sai âm. Ví dụ: <em>PREsent</em> (danh từ) khác <em>preSENT</em> (động từ).</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Lộ trình học phát âm cho người mất gốc</div>
+    <div class="grid-2">
+      <div class="rw-box rw-oc">
+        <div class="rw-label">⏱️ TUẦN 1–2</div>
+        <div class="rw-title">Nền tảng IPA + Nguyên âm & Phụ âm</div>
+        <div class="rw-body">Học 44 âm vị IPA. Luyện từng âm đơn lẻ, đặc biệt /θ/ /ð/ /æ/ /ʌ/ là những âm không có trong tiếng Việt. Dùng Cambridge Dictionary để tra và nghe.</div>
+      </div>
+      <div class="rw-box rw-ins">
+        <div class="rw-label">⏱️ TUẦN 3–4</div>
+        <div class="rw-title">Trọng âm + Quy tắc đuôi -s/-ed</div>
+        <div class="rw-body">Luyện nhấn trọng âm đúng trong 100 từ thông dụng nhất. Nắm 3 quy tắc phát âm đuôi -ed (3 cách đọc) và đuôi -s (3 cách đọc).</div>
+      </div>
+      <div class="rw-box rw-ch">
+        <div class="rw-label">⏱️ TUẦN 5–6</div>
+        <div class="rw-title">Nối âm + Giảm âm</div>
+        <div class="rw-body">Học cách người bản ngữ "nuốt âm" và nối từ. Đây là lý do bạn nghe tiếng Anh bản ngữ không ra chữ nào dù đã biết từ rồi.</div>
+      </div>
+      <div class="rw-box rw-sk">
+        <div class="rw-label">⏱️ TUẦN 7+</div>
+        <div class="rw-title">Ngữ điệu + Luyện nói liên tục</div>
+        <div class="rw-body">Học lên giọng/xuống giọng theo đúng ngữ cảnh. Bắt đầu Shadowing với BBC, TED hoặc phim có phụ đề để luyện tốc độ tự nhiên.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S1 — IPA ════ -->
+<div class="section" id="s1">
+  <div class="sec-head">
+    <span class="sec-tag st-oc">NỀN TẢNG</span>
+    <div><h2 class="sec-title">Bảng IPA — Phiên âm Quốc tế</h2>
+    <p class="sec-sub">International Phonetic Alphabet · 44 âm vị · Chìa khóa để tự đọc mọi từ trong từ điển</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">IPA là gì và tại sao phải học?</div>
+    <p>IPA (International Phonetic Alphabet) là <strong>bảng ký hiệu phiên âm quốc tế</strong> — mỗi ký hiệu tương ứng với MỘT âm duy nhất. Trong tiếng Anh, chữ viết và cách đọc thường KHÔNG khớp nhau:</p>
+    <div class="cmp-box">
+      <div class="cmp-bad">
+        <div class="cmp-label">❌ Đọc theo chữ kiểu Việt</div>
+        <div class="cmp-text"><em>phone</em> → "phôn" (?)<br><em>knife</em> → "k-ni-phờ" (?)<br><em>through</em> → "t-h-r-ô-u-g-h" (?)</div>
+        <div class="cmp-sub">Sai hoàn toàn — nhiều chữ câm, nhiều cách đọc khác nhau</div>
+      </div>
+      <div class="cmp-good">
+        <div class="cmp-label">✅ Dùng IPA</div>
+        <div class="cmp-text"><em>phone</em> → /fəʊn/<br><em>knife</em> → /naɪf/<br><em>through</em> → /θruː/</div>
+        <div class="cmp-sub">Nhìn IPA là biết đọc đúng ngay — không cần đoán</div>
+      </div>
+    </div>
+    <div class="info i-note">
+      <span class="info-ico">📖</span>
+      <div><strong style="color:var(--text)">Cách tra IPA:</strong> Vào <strong>dictionary.cambridge.org</strong>, gõ bất kỳ từ nào sẽ thấy phiên âm IPA ngay bên cạnh. Bấm nút loa để nghe người bản ngữ đọc. Đây là công cụ miễn phí tốt nhất để học phát âm.</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">44 Âm vị tiếng Anh — Tổng quan</div>
+    <table class="tbl">
+      <thead><tr><th>Nhóm</th><th>Số lượng</th><th>Gồm những âm nào</th><th>Khó nhất với người Việt</th></tr></thead>
+      <tbody>
+        <tr><td>🎵 Nguyên âm đơn (Monophthongs)</td><td><span class="badge badge-oc">12 âm</span></td><td>/iː/ /ɪ/ /e/ /æ/ /ɑː/ /ɒ/ /ɔː/ /ʊ/ /uː/ /ʌ/ /ɜː/ /ə/</td><td>/æ/ /ʌ/ /ɜː/ /ə/</td></tr>
+        <tr><td>🎼 Nguyên âm đôi (Diphthongs)</td><td><span class="badge badge-ins">8 âm</span></td><td>/eɪ/ /aɪ/ /ɔɪ/ /əʊ/ /aʊ/ /ɪə/ /eə/ /ʊə/</td><td>/ɪə/ /eə/ /ʊə/</td></tr>
+        <tr><td>💨 Phụ âm (Consonants)</td><td><span class="badge badge-ch">24 âm</span></td><td>Tất cả phụ âm</td><td>/θ/ /ð/ /v/ /r/ (American)</td></tr>
+      </tbody>
+    </table>
+    <div class="info i-ok">
+      <span class="info-ico">✅</span>
+      <div><strong style="color:var(--text)">Tin vui:</strong> Bạn không cần học hết 44 âm trong 1 tuần. Hãy học 10 âm quan trọng nhất trước (các âm không có trong tiếng Việt), sau đó mở rộng dần. Não bộ sẽ tự điều chỉnh theo thời gian luyện tập.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S2 — NGUYÊN ÂM ════ -->
+<div class="section" id="s2">
+  <div class="sec-head">
+    <span class="sec-tag st-ins">NGUYÊN ÂM</span>
+    <div><h2 class="sec-title">Nguyên âm tiếng Anh (Vowels)</h2>
+    <p class="sec-sub">20 nguyên âm · 12 đơn + 8 đôi · So sánh với tiếng Việt để dễ nhớ</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">12 Nguyên âm đơn — Chi tiết từng âm</div>
+    <div class="ipa-grid">
+      <div class="ipa-card">
+        <div class="ipa-sym">/iː/</div>
+        <div class="ipa-name">Âm "i" dài</div>
+        <div class="ipa-hint">Như "i" tiếng Việt nhưng kéo dài hơn, kéo căng hai khóe miệng</div>
+        <div class="ipa-ex">see /siː/ · tree /triː/ · me /miː/</div>
+      </div>
+      <div class="ipa-card">
+        <div class="ipa-sym">/ɪ/</div>
+        <div class="ipa-name">Âm "i" ngắn</div>
+        <div class="ipa-hint">Ngắn hơn /iː/, miệng thả lỏng hơn — như "i" mờ</div>
+        <div class="ipa-ex">sit /sɪt/ · fish /fɪʃ/ · big /bɪɡ/</div>
+      </div>
+      <div class="ipa-card" style="border-color:rgba(255,140,80,.4)">
+        <div class="ipa-sym" style="color:var(--orange)">/æ/</div>
+        <div class="ipa-name">⚠️ Âm "a" mở rộng</div>
+        <div class="ipa-hint">KHÔNG có trong tiếng Việt! Há miệng rộng + kéo ngang như cười gượng</div>
+        <div class="ipa-ex">cat /kæt/ · bad /bæd/ · man /mæn/</div>
+      </div>
+      <div class="ipa-card">
+        <div class="ipa-sym">/e/</div>
+        <div class="ipa-name">Âm "e" ngắn</div>
+        <div class="ipa-hint">Như "e" trong "em" tiếng Việt — ngắn và dứt khoát</div>
+        <div class="ipa-ex">bed /bed/ · red /red/ · ten /ten/</div>
+      </div>
+      <div class="ipa-card">
+        <div class="ipa-sym">/ɑː/</div>
+        <div class="ipa-name">Âm "a" dài sâu</div>
+        <div class="ipa-hint">Há miệng to, âm phát từ sâu trong họng — như "a" kéo dài</div>
+        <div class="ipa-ex">car /kɑː/ · far /fɑː/ · arm /ɑːm/</div>
+      </div>
+      <div class="ipa-card">
+        <div class="ipa-sym">/ɒ/</div>
+        <div class="ipa-name">Âm "o" ngắn</div>
+        <div class="ipa-hint">Như "o" ngắn — môi tròn nhẹ, miệng hơi mở. Phổ biến trong giọng Anh-Anh</div>
+        <div class="ipa-ex">hot /hɒt/ · dog /dɒɡ/ · not /nɒt/</div>
+      </div>
+      <div class="ipa-card">
+        <div class="ipa-sym">/ɔː/</div>
+        <div class="ipa-name">Âm "o" dài</div>
+        <div class="ipa-hint">Như "ô" tiếng Việt nhưng kéo dài — môi tròn, miệng mở vừa</div>
+        <div class="ipa-ex">door /dɔː/ · more /mɔː/ · four /fɔː/</div>
+      </div>
+      <div class="ipa-card">
+        <div class="ipa-sym">/ʊ/</div>
+        <div class="ipa-name">Âm "u" ngắn</div>
+        <div class="ipa-hint">Như "u" mờ, ngắn — môi tròn nhẹ, không căng</div>
+        <div class="ipa-ex">book /bʊk/ · good /ɡʊd/ · look /lʊk/</div>
+      </div>
+      <div class="ipa-card">
+        <div class="ipa-sym">/uː/</div>
+        <div class="ipa-name">Âm "u" dài</div>
+        <div class="ipa-hint">Như "u" tiếng Việt kéo dài — môi tròn chặt và chìa ra</div>
+        <div class="ipa-ex">food /fuːd/ · blue /bluː/ · moon /muːn/</div>
+      </div>
+      <div class="ipa-card" style="border-color:rgba(255,140,80,.4)">
+        <div class="ipa-sym" style="color:var(--orange)">/ʌ/</div>
+        <div class="ipa-name">⚠️ Âm "ă" nhanh</div>
+        <div class="ipa-hint">KHÔNG có trong tiếng Việt! Gần như "ă" nhưng phát từ cổ họng — miệng mở vừa, không căng</div>
+        <div class="ipa-ex">cup /kʌp/ · bus /bʌs/ · run /rʌn/</div>
+      </div>
+      <div class="ipa-card" style="border-color:rgba(255,140,80,.4)">
+        <div class="ipa-sym" style="color:var(--orange)">/ɜː/</div>
+        <div class="ipa-name">⚠️ Âm "ơ" kéo dài</div>
+        <div class="ipa-hint">Gần như "ơ" tiếng Việt nhưng kéo dài và phát từ giữa miệng — môi không tròn</div>
+        <div class="ipa-ex">bird /bɜːd/ · work /wɜːk/ · girl /ɡɜːl/</div>
+      </div>
+      <div class="ipa-card" style="border-color:rgba(255,140,80,.4)">
+        <div class="ipa-sym" style="color:var(--orange)">/ə/</div>
+        <div class="ipa-name">⚠️ Schwa — Âm mờ</div>
+        <div class="ipa-hint">Âm QUAN TRỌNG NHẤT tiếng Anh! Âm "ơ" ngắn, mờ, không nhấn. Xuất hiện trong mọi từ nhiều âm tiết</div>
+        <div class="ipa-ex">about /əˈbaʊt/ · the /ðə/ · again /əˈɡen/</div>
+      </div>
+    </div>
+    <div class="info i-warn">
+      <span class="info-ico">🔑</span>
+      <div><strong style="color:var(--text)">Schwa /ə/ — Bí mật của người nói tiếng Anh tự nhiên:</strong> Đây là âm phổ biến NHẤT trong tiếng Anh. Hầu hết các từ không được nhấn mạnh đều đọc thành /ə/. Ví dụ: "the" thường đọc là /ðə/ chứ không phải /ðiː/. Học Schwa = nghe tiếng Anh rõ hơn ngay lập tức.</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">8 Nguyên âm đôi (Diphthongs) — Âm trượt từ vị trí này sang vị trí khác</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Nguyên âm đôi</span><span class="ex-tag et-en">DIPHTHONGS</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-ipa">/eɪ/</span><span class="ex-en">Như "ây" — "e" trượt sang "i"</span><span class="ex-arrow">→</span><span class="ex-vn">say /seɪ/, name /neɪm/, day /deɪ/</span></div>
+        <div class="ex-row"><span class="ex-ipa">/aɪ/</span><span class="ex-en">Như "ai" — "a" trượt sang "i"</span><span class="ex-arrow">→</span><span class="ex-vn">my /maɪ/, like /laɪk/, night /naɪt/</span></div>
+        <div class="ex-row"><span class="ex-ipa">/ɔɪ/</span><span class="ex-en">Như "oi" — "ô" trượt sang "i"</span><span class="ex-arrow">→</span><span class="ex-vn">boy /bɔɪ/, coin /kɔɪn/, toy /tɔɪ/</span></div>
+        <div class="ex-row"><span class="ex-ipa">/əʊ/</span><span class="ex-en">Như "âu" — "ơ" trượt sang "u"</span><span class="ex-arrow">→</span><span class="ex-vn">go /ɡəʊ/, home /həʊm/, no /nəʊ/</span></div>
+        <div class="ex-row"><span class="ex-ipa">/aʊ/</span><span class="ex-en">Như "au" — "a" trượt sang "u"</span><span class="ex-arrow">→</span><span class="ex-vn">now /naʊ/, out /aʊt/, how /haʊ/</span></div>
+        <div class="ex-row"><span class="ex-ipa">/ɪə/</span><span class="ex-en">Như "ia" — "i" + "ơ" mờ</span><span class="ex-arrow">→</span><span class="ex-vn">ear /ɪə/, here /hɪə/, near /nɪə/</span></div>
+        <div class="ex-row"><span class="ex-ipa">/eə/</span><span class="ex-en">Như "ê-ơ" — "e" + "ơ" mờ</span><span class="ex-arrow">→</span><span class="ex-vn">air /eə/, care /keə/, where /weə/</span></div>
+        <div class="ex-row"><span class="ex-ipa">/ʊə/</span><span class="ex-en">Như "ua" — "u" + "ơ" mờ</span><span class="ex-arrow">→</span><span class="ex-vn">tour /tʊə/, sure /ʃʊə/, pure /pjʊə/</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Mẹo luyện nguyên âm đôi:</strong> Nguyên âm đôi là âm "trượt" — bắt đầu ở một vị trí, kết thúc ở vị trí khác. Hãy luyện chậm: phát âm âm đầu → chuyển dần sang âm sau. Ví dụ /eɪ/: "ê... ê... ây" → tăng tốc dần lên.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S3 — PHỤ ÂM ════ -->
+<div class="section" id="s3">
+  <div class="sec-head">
+    <span class="sec-tag st-ch">PHỤ ÂM</span>
+    <div><h2 class="sec-title">Phụ âm tiếng Anh (Consonants)</h2>
+    <p class="sec-sub">24 phụ âm · Hữu thanh vs Vô thanh · Các âm đặc biệt không có trong tiếng Việt</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Hữu thanh vs Vô thanh — Khái niệm quan trọng</div>
+    <p>Phụ âm tiếng Anh chia làm 2 nhóm chính. Để kiểm tra: đặt tay lên cổ họng, phát âm — nếu <strong>cảm thấy rung</strong> là <strong>hữu thanh</strong> (voiced), không rung là <strong>vô thanh</strong> (voiceless).</p>
+    <div class="grid-2">
+      <div class="rw-box rw-oc">
+        <div class="rw-label">🔊 Hữu thanh (Voiced)</div>
+        <div class="rw-title">Dây thanh rung khi phát âm</div>
+        <div class="rw-body">/b/ /d/ /g/ /v/ /ð/ /z/ /ʒ/ /dʒ/ /m/ /n/ /ŋ/ /l/ /r/ /j/ /w/<br><br>Ví dụ: <em>bag, dog, very, this, zoo</em></div>
+      </div>
+      <div class="rw-box rw-ins">
+        <div class="rw-label">🔇 Vô thanh (Voiceless)</div>
+        <div class="rw-title">Dây thanh không rung khi phát âm</div>
+        <div class="rw-body">/p/ /t/ /k/ /f/ /θ/ /s/ /ʃ/ /tʃ/ /h/<br><br>Ví dụ: <em>pen, top, key, fish, think, sun</em></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Các phụ âm ĐẶC BIỆT cần học kỹ</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Phụ âm khó</span><span class="ex-tag et-au">⚠️ KHÔNG CÓ TRONG TIẾNG VIỆT</span></div>
+      <div class="ex-body">
+        <div class="ex-row">
+          <span class="ex-ipa">/θ/</span>
+          <span class="ex-en">th- vô thanh (think)</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Thè lưỡi nhẹ giữa 2 hàng răng + thở ra — <em>think, three, bath, tooth</em></span>
+        </div>
+        <div class="ex-row">
+          <span class="ex-ipa">/ð/</span>
+          <span class="ex-en">th- hữu thanh (this)</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Giống /θ/ nhưng dây thanh rung — <em>this, that, the, mother</em></span>
+        </div>
+        <div class="ex-row">
+          <span class="ex-ipa">/v/</span>
+          <span class="ex-en">Âm "v" rung</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Răng trên chạm môi dưới + rung — <em>very, love, have, live</em></span>
+        </div>
+        <div class="ex-row">
+          <span class="ex-ipa">/ʃ/</span>
+          <span class="ex-en">sh- (she)</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Như "sh" tiếng Việt không có — môi chìa ra, thở ra — <em>she, shop, wash, fish</em></span>
+        </div>
+        <div class="ex-row">
+          <span class="ex-ipa">/ʒ/</span>
+          <span class="ex-en">Âm "zh" (vision)</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Như /ʃ/ nhưng có rung — <em>vision, television, measure, pleasure</em></span>
+        </div>
+        <div class="ex-row">
+          <span class="ex-ipa">/tʃ/</span>
+          <span class="ex-en">ch- (chair)</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Như "ch" + "sh" ghép lại — <em>chair, check, much, watch</em></span>
+        </div>
+        <div class="ex-row">
+          <span class="ex-ipa">/dʒ/</span>
+          <span class="ex-en">Âm "j" (job)</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Như /tʃ/ nhưng rung — <em>job, judge, age, bridge</em></span>
+        </div>
+        <div class="ex-row">
+          <span class="ex-ipa">/ŋ/</span>
+          <span class="ex-en">ng- cuối từ</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Như "ng" trong "mang" tiếng Việt — <em>sing, long, bring, thing</em></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong style="color:var(--text)">Lỗi phổ biến nhất của người Việt:</strong> Đọc /θ/ thành "t" (<em>think → tink</em>) hoặc "s" (<em>think → sink</em>). Đọc /v/ thành "b" (<em>very → bery</em>). Đọc /ʃ/ thành "s" (<em>she → se</em>). Hãy luyện riêng 3 âm này!</div>
+    </div>
+
+    <div class="sub-title" style="margin-top:24px">Bảng phụ âm đầy đủ</div>
+    <table class="tbl">
+      <thead><tr><th>Ký hiệu IPA</th><th>Ví dụ</th><th>Cách đọc</th><th>Loại</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ipa">/p/</span></td><td><span class="en">pen, lip, stop</span></td><td>Như "p" tiếng Việt — bật hơi mạnh hơn</td><td><span class="badge badge-ins">Vô thanh</span></td></tr>
+        <tr><td><span class="ipa">/b/</span></td><td><span class="en">bed, lab, job</span></td><td>Như "b" tiếng Việt</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/t/</span></td><td><span class="en">top, cat, hit</span></td><td>Như "t" tiếng Việt — bật hơi ở đuôi từ</td><td><span class="badge badge-ins">Vô thanh</span></td></tr>
+        <tr><td><span class="ipa">/d/</span></td><td><span class="en">dog, bad, said</span></td><td>Như "đ" tiếng Việt</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/k/</span></td><td><span class="en">key, back, clock</span></td><td>Như "k/c" tiếng Việt — bật hơi</td><td><span class="badge badge-ins">Vô thanh</span></td></tr>
+        <tr><td><span class="ipa">/g/</span></td><td><span class="en">go, big, bag</span></td><td>Như "g" tiếng Việt (trước a/o/u)</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/f/</span></td><td><span class="en">fish, off, leaf</span></td><td>Như "ph" tiếng Việt — răng trên môi dưới</td><td><span class="badge badge-ins">Vô thanh</span></td></tr>
+        <tr><td><span class="ipa">/v/</span></td><td><span class="en">very, love, have</span></td><td>Như /f/ nhưng có rung — KHÔNG phải "b"!</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/θ/</span></td><td><span class="en">think, bath, both</span></td><td>Thè lưỡi giữa răng + thở ra, vô thanh</td><td><span class="badge badge-ins">Vô thanh</span></td></tr>
+        <tr><td><span class="ipa">/ð/</span></td><td><span class="en">this, that, breathe</span></td><td>Thè lưỡi giữa răng + rung, hữu thanh</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/s/</span></td><td><span class="en">sun, this, cats</span></td><td>Như "s/x" tiếng Việt</td><td><span class="badge badge-ins">Vô thanh</span></td></tr>
+        <tr><td><span class="ipa">/z/</span></td><td><span class="en">zoo, buzz, dogs</span></td><td>Như /s/ nhưng có rung</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/ʃ/</span></td><td><span class="en">she, wash, fish</span></td><td>Môi chìa ra + thở — như "sh" tiếng Anh</td><td><span class="badge badge-ins">Vô thanh</span></td></tr>
+        <tr><td><span class="ipa">/ʒ/</span></td><td><span class="en">vision, measure</span></td><td>Như /ʃ/ nhưng rung</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/h/</span></td><td><span class="en">hat, hello, who</span></td><td>Như "h" tiếng Việt</td><td><span class="badge badge-ins">Vô thanh</span></td></tr>
+        <tr><td><span class="ipa">/tʃ/</span></td><td><span class="en">chair, lunch, watch</span></td><td>"ch" — lưỡi sau răng + thở ra</td><td><span class="badge badge-ins">Vô thanh</span></td></tr>
+        <tr><td><span class="ipa">/dʒ/</span></td><td><span class="en">job, age, bridge</span></td><td>Như /tʃ/ nhưng rung</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/m/</span></td><td><span class="en">man, swim, some</span></td><td>Như "m" tiếng Việt</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/n/</span></td><td><span class="en">no, sun, man</span></td><td>Như "n" tiếng Việt</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/ŋ/</span></td><td><span class="en">sing, long, ring</span></td><td>Như "ng/nh" cuối — lưỡi sau chạm vòm</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/l/</span></td><td><span class="en">leg, feel, bell</span></td><td>Như "l" tiếng Việt</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/r/</span></td><td><span class="en">red, far, very</span></td><td>Cong lưỡi lên — KHÔNG rung như "r" Việt/Pháp</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/j/</span></td><td><span class="en">yes, year, you</span></td><td>Như "y" trong "yêu" tiếng Việt</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+        <tr><td><span class="ipa">/w/</span></td><td><span class="en">we, water, queen</span></td><td>Môi tròn + đẩy ra trước như "u" nhanh</td><td><span class="badge badge-oc">Hữu thanh</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S4 — KẾT HỢP NGUYÊN ÂM ════ -->
+<div class="section" id="s4">
+  <div class="sec-head">
+    <span class="sec-tag st-ins">QUY TẮC ĐỌC</span>
+    <div><h2 class="sec-title">Kết hợp nguyên âm — Vowel Combinations</h2>
+    <p class="sec-sub">Khi 2+ nguyên âm đứng cạnh nhau thì đọc thế nào? Quy tắc thực tế nhất</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Quy tắc "hai nguyên âm — đọc âm đầu dài"</div>
+    <p>Quy tắc phổ biến: <strong>khi 2 nguyên âm đứng liền nhau</strong>, thường đọc nguyên âm đầu theo tên chữ cái (âm dài), nguyên âm sau câm. Nhưng có NHIỀU ngoại lệ — cần học riêng từng trường hợp.</p>
+    <table class="tbl">
+      <thead><tr><th>Tổ hợp</th><th>Cách đọc</th><th>Ví dụ</th><th>Ngoại lệ</th></tr></thead>
+      <tbody>
+        <tr><td><code>ai / ay</code></td><td><span class="ipa">/eɪ/</span> — như "ây"</td><td><span class="en">rain, wait, pay, say, day</span></td><td>— </td></tr>
+        <tr><td><code>ea</code></td><td><span class="ipa">/iː/</span> — như "i" dài</td><td><span class="en">eat, sea, meat, read</span></td><td><span class="en">bread /bred/, great /ɡreɪt/</span></td></tr>
+        <tr><td><code>ee</code></td><td><span class="ipa">/iː/</span> — như "i" dài</td><td><span class="en">see, tree, feel, keep</span></td><td>— (rất ổn định)</td></tr>
+        <tr><td><code>oa</code></td><td><span class="ipa">/əʊ/</span> — như "âu"</td><td><span class="en">boat, road, coat, soap</span></td><td>— </td></tr>
+        <tr><td><code>oo</code></td><td><span class="ipa">/uː/</span> hoặc <span class="ipa">/ʊ/</span></td><td><span class="en">food /fuːd/, book /bʊk/</span></td><td>Phải học riêng từng từ</td></tr>
+        <tr><td><code>ou / ow</code></td><td><span class="ipa">/aʊ/</span> — như "au"</td><td><span class="en">out, now, how, cow</span></td><td><span class="en">four /fɔː/, know /nəʊ/</span></td></tr>
+        <tr><td><code>oi / oy</code></td><td><span class="ipa">/ɔɪ/</span> — như "oi"</td><td><span class="en">oil, coin, boy, toy</span></td><td>— (rất ổn định)</td></tr>
+        <tr><td><code>ie</code></td><td><span class="ipa">/iː/</span> hoặc <span class="ipa">/aɪ/</span></td><td><span class="en">field /fiːld/, pie /paɪ/</span></td><td>Phụ thuộc vị trí trong từ</td></tr>
+        <tr><td><code>au / aw</code></td><td><span class="ipa">/ɔː/</span> — như "ô" dài</td><td><span class="en">autumn, because, saw, draw</span></td><td>— </td></tr>
+      </tbody>
+    </table>
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Mẹo thực tế:</strong> Đừng cố nhớ hết quy tắc ngay. Hãy học theo nhóm từ: học hết các từ có <code>ee</code> (see, tree, fee, bee...) trong một buổi → tự động nhớ âm /iː/. Học theo pattern sẽ nhanh hơn học từng quy tắc lý thuyết.</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Nguyên âm + "r" — Vowel + R (rất phổ biến)</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Vowel + R combinations</span><span class="ex-tag et-en">R-CONTROLLED VOWELS</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-ipa">ar</span><span class="ex-en">/ɑː/ — "a" dài sâu</span><span class="ex-arrow">→</span><span class="ex-vn">car, bar, far, star, park</span></div>
+        <div class="ex-row"><span class="ex-ipa">er/ir/ur</span><span class="ex-en">/ɜː/ — "ơ" kéo dài</span><span class="ex-arrow">→</span><span class="ex-vn">her, bird, turn, work, first</span></div>
+        <div class="ex-row"><span class="ex-ipa">or</span><span class="ex-en">/ɔː/ — "ô" dài</span><span class="ex-arrow">→</span><span class="ex-vn">for, more, door, sport, short</span></div>
+        <div class="ex-row"><span class="ex-ipa">ear</span><span class="ex-en">/ɪə/ — "ia"</span><span class="ex-arrow">→</span><span class="ex-vn">ear, near, here, fear, clear</span></div>
+        <div class="ex-row"><span class="ex-ipa">air/are</span><span class="ex-en">/eə/ — "ê-ơ"</span><span class="ex-arrow">→</span><span class="ex-vn">hair, care, share, there, where</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S5 — TRỌNG ÂM ════ -->
+<div class="section" id="s5">
+  <div class="sec-head">
+    <span class="sec-tag st-ch">TRỌNG ÂM</span>
+    <div><h2 class="sec-title">Nhấn trọng âm (Word Stress)</h2>
+    <p class="sec-sub">Quy tắc nhấn âm · Sai trọng âm = người bản ngữ không hiểu dù âm đúng</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Trọng âm là gì? Tại sao quan trọng hơn phát âm đúng từng âm?</div>
+    <p>Trong tiếng Anh, mỗi từ có nhiều âm tiết nhưng chỉ có <strong>MỘT âm tiết được nhấn mạnh</strong> (to hơn, dài hơn, cao hơn). Nhấn sai vị trí → người nghe không nhận ra từ đó.</p>
+    <div class="stress-demo">
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px;font-weight:600;text-transform:uppercase;letter-spacing:.8px">Ví dụ trực quan — ô màu xanh = âm tiết được nhấn</div>
+      <div style="margin-bottom:16px">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">PHO·to·graph /ˈfəʊ.tə.ɡrɑːf/</div>
+        <div class="stress-word">
+          <span class="syl syl-stress">PHO</span>
+          <span class="syl syl-unstress">to</span>
+          <span class="syl syl-unstress">graph</span>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">pho·TOG·ra·phy /fəˈtɒɡ.rə.fi/</div>
+        <div class="stress-word">
+          <span class="syl syl-unstress">pho</span>
+          <span class="syl syl-stress">TOG</span>
+          <span class="syl syl-unstress">ra</span>
+          <span class="syl syl-unstress">phy</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">pho·to·GRAPH·ic /ˌfəʊ.təˈɡræf.ɪk/</div>
+        <div class="stress-word">
+          <span class="syl syl-unstress">pho</span>
+          <span class="syl syl-unstress">to</span>
+          <span class="syl syl-stress">GRAPH</span>
+          <span class="syl syl-unstress">ic</span>
+        </div>
+      </div>
+      <div class="stress-label">Cùng gốc từ nhưng trọng âm thay đổi khi thêm hậu tố!</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">5 Quy tắc nhấn trọng âm quan trọng nhất</div>
+    <div class="grid-2">
+      <div class="rw-box rw-oc">
+        <div class="rw-label">📌 QUY TẮC 1</div>
+        <div class="rw-title">Danh từ 2 âm tiết → nhấn âm 1</div>
+        <div class="rw-body"><strong style="color:var(--oc)">TA-ble</strong> /ˈteɪ.bəl/ · <strong style="color:var(--oc)">WIN-dow</strong> /ˈwɪn.dəʊ/ · <strong style="color:var(--oc)">SIS-ter</strong> /ˈsɪs.tər/ · <strong style="color:var(--oc)">MO-ney</strong> /ˈmʌn.i/<br><br>Ngoại lệ: hotel /həʊˈtel/ — nhấn âm 2</div>
+      </div>
+      <div class="rw-box rw-ins">
+        <div class="rw-label">📌 QUY TẮC 2</div>
+        <div class="rw-title">Động từ 2 âm tiết → nhấn âm 2</div>
+        <div class="rw-body"><strong style="color:var(--ins)">be-GIN</strong> /bɪˈɡɪn/ · <strong style="color:var(--ins)">de-CIDE</strong> /dɪˈsaɪd/ · <strong style="color:var(--ins)">for-GET</strong> /fəˈɡet/ · <strong style="color:var(--ins)">re-TURN</strong> /rɪˈtɜːn/<br><br>Ngoại lệ: answer /ˈɑːn.sər/ — nhấn âm 1</div>
+      </div>
+      <div class="rw-box rw-ch">
+        <div class="rw-label">📌 QUY TẮC 3</div>
+        <div class="rw-title">Danh từ/Tính từ ghép → nhấn từ đầu</div>
+        <div class="rw-body"><strong style="color:var(--ch)">BLACK-bird</strong> · <strong style="color:var(--ch)">FOOT-ball</strong> · <strong style="color:var(--ch)">SUN-flower</strong> · <strong style="color:var(--ch)">FIRE-place</strong><br><br>Động từ ghép: to un-der-STAND (nhấn cuối)</div>
+      </div>
+      <div class="rw-box rw-sk">
+        <div class="rw-label">📌 QUY TẮC 4</div>
+        <div class="rw-title">Hậu tố -tion/-sion/-ic → nhấn âm trước hậu tố</div>
+        <div class="rw-body"><strong style="color:var(--sk)">e-DU-ca-tion</strong> · <strong style="color:var(--sk)">in-for-MA-tion</strong> · <strong style="color:var(--sk)">e-LEC-tric</strong> · <strong style="color:var(--sk)">ge-O-gra-phic</strong><br><br>Quy tắc này rất ổn định — gần như không có ngoại lệ!</div>
+      </div>
+    </div>
+    <div class="rw-box rw-au">
+      <div class="rw-label">📌 QUY TẮC 5 — Từ vừa là danh từ vừa là động từ</div>
+      <div class="rw-title">Cùng một từ — nhấn khác nhau tùy loại từ</div>
+      <div class="rw-body">
+        <table class="tbl" style="margin:8px 0">
+          <thead><tr><th>Từ</th><th>Danh từ (nhấn âm 1)</th><th>Động từ (nhấn âm 2)</th></tr></thead>
+          <tbody>
+            <tr><td>record</td><td><span class="en">RE-cord</span> — đĩa nhạc, hồ sơ</td><td><span class="en">re-CORD</span> — ghi âm, ghi lại</td></tr>
+            <tr><td>present</td><td><span class="en">PRE-sent</span> — món quà, hiện tại</td><td><span class="en">pre-SENT</span> — tặng, trình bày</td></tr>
+            <tr><td>permit</td><td><span class="en">PER-mit</span> — giấy phép</td><td><span class="en">per-MIT</span> — cho phép</td></tr>
+            <tr><td>object</td><td><span class="en">OB-ject</span> — đồ vật</td><td><span class="en">ob-JECT</span> — phản đối</td></tr>
+            <tr><td>conduct</td><td><span class="en">CON-duct</span> — hành vi</td><td><span class="en">con-DUCT</span> — dẫn đầu, điều hành</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S6 — ĐẦU -S/-ED ════ -->
+<div class="section" id="s6">
+  <div class="sec-head">
+    <span class="sec-tag st-ins">QUY TẮC ĐỌC</span>
+    <div><h2 class="sec-title">Phát âm đuôi -s / -es / -ed</h2>
+    <p class="sec-sub">3 cách đọc đuôi -s · 3 cách đọc đuôi -ed · Quy tắc đơn giản & dễ nhớ</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Phát âm đuôi -s / -es (Số nhiều & Chia động từ ngôi 3)</div>
+    <div class="grid-3">
+      <div class="rw-box rw-au">
+        <div class="rw-label">📢 ĐỌC /ɪz/ — THÊM ÂM TIẾT</div>
+        <div class="rw-title">Sau: /s/ /z/ /ʃ/ /ʒ/ /tʃ/ /dʒ/</div>
+        <div class="rw-body">Các âm "xì-xào-rè-rẹt"<br><br><strong style="color:var(--au)">buses</strong> /ˈbʌs.<strong>ɪz</strong>/<br><strong style="color:var(--au)">watches</strong> /ˈwɒtʃ.<strong>ɪz</strong>/<br><strong style="color:var(--au)">judges</strong> /ˈdʒʌdʒ.<strong>ɪz</strong>/<br><strong style="color:var(--au)">dishes</strong> /ˈdɪʃ.<strong>ɪz</strong>/</div>
+      </div>
+      <div class="rw-box rw-ins">
+        <div class="rw-label">📢 ĐỌC /z/ — ÂM RUNG</div>
+        <div class="rw-title">Sau nguyên âm và phụ âm hữu thanh</div>
+        <div class="rw-body">Sau: /b/ /d/ /g/ /v/ /ð/ /m/ /n/ /ŋ/ /l/ /r/ + nguyên âm<br><br><strong style="color:var(--ins)">dogs</strong> /dɒɡ<strong>z</strong>/<br><strong style="color:var(--ins)">boys</strong> /bɔɪ<strong>z</strong>/<br><strong style="color:var(--ins)">cars</strong> /kɑː<strong>z</strong>/<br><strong style="color:var(--ins)">bags</strong> /bæɡ<strong>z</strong>/</div>
+      </div>
+      <div class="rw-box rw-oc">
+        <div class="rw-label">📢 ĐỌC /s/ — ÂM KHÔNG RUNG</div>
+        <div class="rw-title">Sau phụ âm vô thanh</div>
+        <div class="rw-body">Sau: /p/ /t/ /k/ /f/ /θ/<br><br><strong style="color:var(--oc)">cats</strong> /kæt<strong>s</strong>/<br><strong style="color:var(--oc)">books</strong> /bʊk<strong>s</strong>/<br><strong style="color:var(--oc)">cups</strong> /kʌp<strong>s</strong>/<br><strong style="color:var(--oc)">months</strong> /mʌnθ<strong>s</strong>/</div>
+      </div>
+    </div>
+    <div class="info i-ok">
+      <span class="info-ico">🎯</span>
+      <div><strong style="color:var(--text)">Mẹo nhớ đuôi -s:</strong> Nhớ chữ <strong>Z-S-IZ</strong> — khi âm trước <strong>rung → /z/</strong>, khi âm trước <strong>không rung → /s/</strong>, khi âm trước <strong>"xì rè" → /ɪz/</strong>. Luyện 10 từ mỗi loại là tự khắc quen.</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Phát âm đuôi -ed (Thì quá khứ & Tính từ)</div>
+    <div class="grid-3">
+      <div class="rw-box rw-ch">
+        <div class="rw-label">📢 ĐỌC /ɪd/ — THÊM ÂM TIẾT</div>
+        <div class="rw-title">Sau: /t/ và /d/</div>
+        <div class="rw-body">Chỉ 2 âm này! Dễ nhớ nhất<br><br><strong style="color:var(--ch)">wanted</strong> /ˈwɒnt.<strong>ɪd</strong>/<br><strong style="color:var(--ch)">needed</strong> /ˈniːd.<strong>ɪd</strong>/<br><strong style="color:var(--ch)">started</strong> /ˈstɑːt.<strong>ɪd</strong>/<br><strong style="color:var(--ch)">ended</strong> /ˈend.<strong>ɪd</strong>/</div>
+      </div>
+      <div class="rw-box rw-au">
+        <div class="rw-label">📢 ĐỌC /d/ — ÂM RUNG</div>
+        <div class="rw-title">Sau nguyên âm và phụ âm hữu thanh</div>
+        <div class="rw-body">Sau: /b/ /g/ /v/ /ð/ /z/ /ʒ/ /dʒ/ /m/ /n/ /ŋ/ /l/ /r/ + nguyên âm<br><br><strong style="color:var(--au)">loved</strong> /lʌv<strong>d</strong>/<br><strong style="color:var(--au)">played</strong> /pleɪ<strong>d</strong>/<br><strong style="color:var(--au)">moved</strong> /muːv<strong>d</strong>/</div>
+      </div>
+      <div class="rw-box rw-sk">
+        <div class="rw-label">📢 ĐỌC /t/ — ÂM KHÔNG RUNG</div>
+        <div class="rw-title">Sau phụ âm vô thanh (trừ /t/)</div>
+        <div class="rw-body">Sau: /p/ /k/ /f/ /θ/ /s/ /ʃ/ /tʃ/<br><br><strong style="color:var(--sk)">walked</strong> /wɔːk<strong>t</strong>/<br><strong style="color:var(--sk)">stopped</strong> /stɒp<strong>t</strong>/<br><strong style="color:var(--sk)">laughed</strong> /lɑːf<strong>t</strong>/<br><strong style="color:var(--sk)">watched</strong> /wɒtʃ<strong>t</strong>/</div>
+      </div>
+    </div>
+    <div class="ex-box" style="margin-top:16px">
+      <div class="ex-head"><span class="ex-label">Luyện tập — Phát âm đuôi -ed</span><span class="ex-tag et-tip">THỰC HÀNH</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">asked /ɑːskt/</span><span class="ex-arrow">→</span><span class="ex-vn">đuôi /t/ — sau /s/ vô thanh</span><span class="ex-note">/t/</span></div>
+        <div class="ex-row"><span class="ex-en">listened /ˈlɪsnd/</span><span class="ex-arrow">→</span><span class="ex-vn">đuôi /d/ — sau /n/ hữu thanh</span><span class="ex-note">/d/</span></div>
+        <div class="ex-row"><span class="ex-en">visited /ˈvɪzɪtɪd/</span><span class="ex-arrow">→</span><span class="ex-vn">đuôi /ɪd/ — sau /t/ vô thanh</span><span class="ex-note">/ɪd/</span></div>
+        <div class="ex-row"><span class="ex-en">called /kɔːld/</span><span class="ex-arrow">→</span><span class="ex-vn">đuôi /d/ — sau /l/ hữu thanh</span><span class="ex-note">/d/</span></div>
+        <div class="ex-row"><span class="ex-en">decided /dɪˈsaɪdɪd/</span><span class="ex-arrow">→</span><span class="ex-vn">đuôi /ɪd/ — sau /d/ hữu thanh</span><span class="ex-note">/ɪd/</span></div>
+        <div class="ex-row"><span class="ex-en">watched /wɒtʃt/</span><span class="ex-arrow">→</span><span class="ex-vn">đuôi /t/ — sau /tʃ/ vô thanh</span><span class="ex-note">/t/</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S7 — NỐI ÂM ════ -->
+<div class="section" id="s7">
+  <div class="sec-head">
+    <span class="sec-tag st-ch">NỐI ÂM</span>
+    <div><h2 class="sec-title">Nối âm (Linking / Connected Speech)</h2>
+    <p class="sec-sub">Tại sao nghe tiếng Anh bản ngữ không ra từ dù đã biết từ đó · 4 kiểu nối âm phổ biến</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Tại sao người bản ngữ nghe "nhanh" như vậy?</div>
+    <p>Người bản ngữ không phát âm từng từ riêng lẻ — họ <strong>nối các từ lại với nhau</strong> thành một dòng âm thanh liên tục. Đây là lý do bạn học từ rồi mà vẫn không nghe ra trong câu.</p>
+    <div class="info i-note">
+      <span class="info-ico">🎵</span>
+      <div><strong style="color:var(--text)">Ví dụ thực tế:</strong> "What are you doing?" người bản ngữ đọc là <strong>"Wha-da-ya doin'?"</strong> — 5 từ riêng nhưng nghe như 2 từ ghép. Khi biết luật nối âm, bạn sẽ "giải mã" được chuỗi âm thanh này.</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">4 Kiểu nối âm phổ biến nhất</div>
+
+    <div class="rw-box rw-oc" style="margin-bottom:12px">
+      <div class="rw-label">🔗 KIỂU 1 — Consonant + Vowel Linking</div>
+      <div class="rw-title">Phụ âm cuối từ + Nguyên âm đầu từ tiếp theo → Nối thẳng</div>
+      <div class="rw-body">
+        <div style="margin-top:8px">
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"turn it off"</span><span class="ex-arrow">→</span><span class="ex-vn">"tur-ni-toff" /ˈtɜː.nɪ.tɒf/</span></div>
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"pick it up"</span><span class="ex-arrow">→</span><span class="ex-vn">"pi-ki-tup" /ˈpɪ.kɪ.tʌp/</span></div>
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"an apple"</span><span class="ex-arrow">→</span><span class="ex-vn">"a-nap-ple" /ə.ˈnæp.əl/</span></div>
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"look at it"</span><span class="ex-arrow">→</span><span class="ex-vn">"loo-ka-tit" /ˈlʊ.kə.tɪt/</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rw-box rw-ins" style="margin-bottom:12px">
+      <div class="rw-label">🔗 KIỂU 2 — Same Consonant Linking (Đồng âm)</div>
+      <div class="rw-title">Hai từ cùng kết thúc và bắt đầu bằng cùng một phụ âm → Đọc một lần dài hơn</div>
+      <div class="rw-body">
+        <div style="margin-top:8px">
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"good day"</span><span class="ex-arrow">→</span><span class="ex-vn">"goo-day" /ˈɡuː.deɪ/ — 1 âm /d/ kéo dài</span></div>
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"hot tea"</span><span class="ex-arrow">→</span><span class="ex-vn">"ho-tea" — 1 âm /t/ kéo dài</span></div>
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"big game"</span><span class="ex-arrow">→</span><span class="ex-vn">"bi-game" — 1 âm /g/ kéo dài</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rw-box rw-ch" style="margin-bottom:12px">
+      <div class="rw-label">🔗 KIỂU 3 — Intrusive /w/ và /j/ Linking</div>
+      <div class="rw-title">Nguyên âm + Nguyên âm → Tự nhiên chen /w/ hoặc /j/ vào giữa</div>
+      <div class="rw-body">
+        <div style="margin-top:8px">
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"go on"</span><span class="ex-arrow">→</span><span class="ex-vn">"go<strong>-w-</strong>on" — chen /w/ vào</span></div>
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"do it"</span><span class="ex-arrow">→</span><span class="ex-vn">"do<strong>-w-</strong>it" — chen /w/ vào</span></div>
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"see it"</span><span class="ex-arrow">→</span><span class="ex-vn">"see<strong>-y-</strong>it" — chen /j/ vào</span></div>
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"play it"</span><span class="ex-arrow">→</span><span class="ex-vn">"play<strong>-y-</strong>it" — chen /j/ vào</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rw-box rw-sk">
+      <div class="rw-label">🔗 KIỂU 4 — Elision (Nuốt âm)</div>
+      <div class="rw-title">Một số âm bị "nuốt" hoàn toàn trong dòng nói nhanh</div>
+      <div class="rw-body">
+        <div style="margin-top:8px">
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"next door"</span><span class="ex-arrow">→</span><span class="ex-vn">"nex-door" — /t/ bị nuốt</span></div>
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"sandwich"</span><span class="ex-arrow">→</span><span class="ex-vn">"san-wich" — /d/ bị nuốt</span></div>
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"want to"</span><span class="ex-arrow">→</span><span class="ex-vn">"wanna" — rút gọn cả từ</span></div>
+          <div class="ex-row" style="border:none;padding:4px 0"><span class="ex-en" style="min-width:180px">"going to"</span><span class="ex-arrow">→</span><span class="ex-vn">"gonna" — rút gọn cả từ</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S8 — ÂM YẾU ════ -->
+<div class="section" id="s8">
+  <div class="sec-head">
+    <span class="sec-tag st-sk">ÂM YẾU</span>
+    <div><h2 class="sec-title">Âm yếu & Giảm âm (Weak Forms & Reduction)</h2>
+    <p class="sec-sub">Tại sao "and" không đọc là "ænd" trong câu · Danh sách âm yếu cần biết</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Âm yếu là gì? Khi nào dùng?</div>
+    <p>Nhiều từ chức năng (articles, prepositions, conjunctions, pronouns, auxiliaries) có 2 dạng phát âm: <strong>dạng mạnh</strong> (khi nhấn mạnh/đứng cuối câu) và <strong>dạng yếu</strong> (khi trong câu bình thường). Người bản ngữ hầu như luôn dùng dạng yếu.</p>
+    <table class="tbl">
+      <thead><tr><th>Từ</th><th>Dạng mạnh</th><th>Dạng yếu (hay gặp)</th><th>Ví dụ trong câu</th></tr></thead>
+      <tbody>
+        <tr><td>a</td><td><span class="ipa">/eɪ/</span></td><td><span class="ipa">/ə/</span></td><td><span class="en">"a book"</span> → /ə bʊk/ chứ không phải /eɪ bʊk/</td></tr>
+        <tr><td>the</td><td><span class="ipa">/ðiː/</span></td><td><span class="ipa">/ðə/</span></td><td><span class="en">"the dog"</span> → /ðə dɒɡ/ (trước phụ âm)</td></tr>
+        <tr><td>and</td><td><span class="ipa">/ænd/</span></td><td><span class="ipa">/ənd/ hoặc /ən/</span></td><td><span class="en">"fish and chips"</span> → "fish-ən-chips"</td></tr>
+        <tr><td>to</td><td><span class="ipa">/tuː/</span></td><td><span class="ipa">/tə/</span></td><td><span class="en">"go to school"</span> → "go-tə-school"</td></tr>
+        <tr><td>for</td><td><span class="ipa">/fɔː/</span></td><td><span class="ipa">/fə/</span></td><td><span class="en">"for you"</span> → "fə-you"</td></tr>
+        <tr><td>of</td><td><span class="ipa">/ɒv/</span></td><td><span class="ipa">/əv/ hoặc /ə/</span></td><td><span class="en">"cup of tea"</span> → "cup-ə-tea"</td></tr>
+        <tr><td>at</td><td><span class="ipa">/æt/</span></td><td><span class="ipa">/ət/</span></td><td><span class="en">"meet at noon"</span> → "meet-ət-noon"</td></tr>
+        <tr><td>can</td><td><span class="ipa">/kæn/</span></td><td><span class="ipa">/kən/</span></td><td><span class="en">"I can do it"</span> → "I-kən-do-it"</td></tr>
+        <tr><td>have</td><td><span class="ipa">/hæv/</span></td><td><span class="ipa">/həv/ hoặc /əv/</span></td><td><span class="en">"I have been"</span> → "I-əv-been"</td></tr>
+        <tr><td>him/her</td><td><span class="ipa">/hɪm/ /hɜː/</span></td><td><span class="ipa">/ɪm/ /ə/</span></td><td><span class="en">"tell him"</span> → "tel-ɪm"</td></tr>
+      </tbody>
+    </table>
+    <div class="info i-ok">
+      <span class="info-ico">✅</span>
+      <div><strong style="color:var(--text)">Tác dụng kép:</strong> Học âm yếu giúp bạn vừa <strong>nghe tốt hơn</strong> (hiểu tại sao nghe không ra "and", "the"...) vừa <strong>nói tự nhiên hơn</strong> (tránh nhấn mạnh những từ không quan trọng). Đây là bí quyết giọng Anh nghe "native" hơn.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S9 — NGỮ ĐIỆU ════ -->
+<div class="section" id="s9">
+  <div class="sec-head">
+    <span class="sec-tag st-sk">NGỮ ĐIỆU</span>
+    <div><h2 class="sec-title">Ngữ điệu (Intonation)</h2>
+    <p class="sec-sub">Lên giọng · Xuống giọng · Cảm xúc & Ý nghĩa thay đổi theo ngữ điệu</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">2 Ngữ điệu cơ bản cần nắm</div>
+    <div class="grid-2">
+      <div class="rw-box rw-ins">
+        <div class="rw-label">📉 XUỐNG GIỌNG (Falling Intonation) ↘</div>
+        <div class="rw-title">Dùng khi: Câu khẳng định · Câu hỏi Wh- · Mệnh lệnh</div>
+        <div class="rw-body">
+          <div style="margin:6px 0">✔ <em>She works at a hospital.</em> ↘</div>
+          <div style="margin:6px 0">✔ <em>Where do you live?</em> ↘</div>
+          <div style="margin:6px 0">✔ <em>Please sit down.</em> ↘</div>
+          <div style="margin-top:10px;font-size:12px;color:var(--faint)">Xuống giọng = câu hoàn chỉnh, đã kết luận</div>
+        </div>
+      </div>
+      <div class="rw-box rw-oc">
+        <div class="rw-label">📈 LÊN GIỌNG (Rising Intonation) ↗</div>
+        <div class="rw-title">Dùng khi: Câu hỏi Yes/No · Liệt kê chưa xong · Lịch sự</div>
+        <div class="rw-body">
+          <div style="margin:6px 0">✔ <em>Do you speak English?</em> ↗</div>
+          <div style="margin:6px 0">✔ <em>I need apples ↗, oranges ↗, and bananas ↘</em></div>
+          <div style="margin:6px 0">✔ <em>Could you help me?</em> ↗</div>
+          <div style="margin-top:10px;font-size:12px;color:var(--faint)">Lên giọng = câu chưa kết thúc, đang chờ trả lời</div>
+        </div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong style="color:var(--text)">Mẹo ngữ điệu thực tế:</strong> Người Việt thường nói tiếng Anh với ngữ điệu phẳng (đều đều) — nghe rất nhàm và khó hiểu. Hãy luyện <strong>phóng đại</strong> ngữ điệu khi luyện một mình: lên giọng cao hơn bình thường, xuống giọng thấp hơn bình thường. Khi nói thật sẽ tự nhiên hơn.</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Nhấn từ trong câu — Sentence Stress</div>
+    <p>Trong câu tiếng Anh, không phải từ nào cũng được nhấn. Thường chỉ nhấn <strong>từ nội dung</strong> (content words) — danh từ, động từ chính, tính từ, trạng từ. Các từ chức năng thường bị lướt qua.</p>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Nhấn câu thực tế</span><span class="ex-tag et-en">SENTENCE STRESS</span></div>
+      <div class="ex-body">
+        <div class="ex-row">
+          <span class="ex-en">"I want to BUY a NEW CAR."</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Nhấn: BUY, NEW, CAR — các từ quan trọng</span>
+        </div>
+        <div class="ex-row">
+          <span class="ex-en">"She's GOING to the STORE."</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Nhấn: GOING, STORE — động từ và danh từ</span>
+        </div>
+        <div class="ex-row">
+          <span class="ex-en">"It's REALLY BEAUTIFUL here."</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Nhấn: REALLY, BEAUTIFUL — trạng từ và tính từ</span>
+        </div>
+        <div class="ex-row">
+          <span class="ex-en">"I didn't SAY she STOLE the MONEY."</span>
+          <span class="ex-arrow">→</span>
+          <span class="ex-vn">Nhấn từ khác nhau → nghĩa thay đổi hoàn toàn!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S10 — ÂM KHÓ ════ -->
+<div class="section" id="s10">
+  <div class="sec-head">
+    <span class="sec-tag st-au">ÂM KHÓ</span>
+    <div><h2 class="sec-title">Âm Tiếng Anh không có trong Tiếng Việt</h2>
+    <p class="sec-sub">Top 6 âm khó nhất · Nguyên nhân · Cách luyện step-by-step</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Top 6 âm khó nhất với người Việt — Hướng dẫn chi tiết</div>
+
+    <div class="rw-box rw-au" style="margin-bottom:12px">
+      <div class="rw-label">⚠️ ÂM SỐ 1 — /θ/ (th- vô thanh)</div>
+      <div class="rw-title">think, three, bath, teeth, birthday</div>
+      <div class="rw-body">
+        <strong style="color:var(--text)">Cách phát âm:</strong> Thè đầu lưỡi nhẹ nhàng ra ngoài (chạm nhẹ mép răng dưới) → thở ra → rút lưỡi vào. Không rung dây thanh.<br><br>
+        <strong style="color:var(--text)">Lỗi thường gặp:</strong> Đọc thành "t" (think → tink) hoặc "s" (think → sink) hoặc "đ" (think → đink)<br><br>
+        <strong style="color:var(--text)">Bài tập:</strong> 1) Nhìn gương thè lưỡi ra → 2) Thổi hơi → 3) Nói chậm "th...ink" → 4) Tăng tốc dần
+      </div>
+    </div>
+
+    <div class="rw-box rw-ch" style="margin-bottom:12px">
+      <div class="rw-label">⚠️ ÂM SỐ 2 — /ð/ (th- hữu thanh)</div>
+      <div class="rw-title">this, that, the, mother, father, breathe</div>
+      <div class="rw-body">
+        <strong style="color:var(--text)">Cách phát âm:</strong> Giống /θ/ nhưng thêm rung dây thanh. Đặt tay vào cổ họng để kiểm tra — phải cảm thấy rung.<br><br>
+        <strong style="color:var(--text)">Lỗi thường gặp:</strong> Đọc thành "đ" (this → đis) hoặc "z" (this → zis)<br><br>
+        <strong style="color:var(--text)">Mẹo phân biệt /θ/ và /ð/:</strong> Thường th- đầu từ trong danh từ/tính từ = /θ/ (think, thick, thin). Th- trong từ chức năng = /ð/ (the, this, that, they, them, those, though).
+      </div>
+    </div>
+
+    <div class="rw-box rw-oc" style="margin-bottom:12px">
+      <div class="rw-label">⚠️ ÂM SỐ 3 — /v/ (v hữu thanh)</div>
+      <div class="rw-title">very, love, have, live, voice, van, video</div>
+      <div class="rw-body">
+        <strong style="color:var(--text)">Cách phát âm:</strong> Răng trên chạm môi dưới (giống /f/) nhưng RUNG dây thanh. Khác hoàn toàn với /b/ (hai môi chạm nhau).<br><br>
+        <strong style="color:var(--text)">Lỗi thường gặp:</strong> Đọc "v" thành "b" (very → bery). Đây là lỗi phổ biến nhất của người Việt vì /v/ trong tiếng Việt phương Nam gần như là /b/.<br><br>
+        <strong style="color:var(--text)">Bài tập:</strong> Cắn nhẹ môi dưới bằng răng trên → "fffff" → thêm rung → "vvvvv" → nói "very"
+      </div>
+    </div>
+
+    <div class="rw-box rw-ins" style="margin-bottom:12px">
+      <div class="rw-label">⚠️ ÂM SỐ 4 — /æ/ (a mở rộng)</div>
+      <div class="rw-title">cat, bad, man, apple, back, hand, black</div>
+      <div class="rw-body">
+        <strong style="color:var(--text)">Cách phát âm:</strong> Miệng mở rộng (như đang cười gượng) + hơi há xuống. Âm "a" nhưng miệng kéo ngang ra hai bên. Ngắn và dứt khoát.<br><br>
+        <strong style="color:var(--text)">Lỗi thường gặp:</strong> Đọc thành "a" thuần tiếng Việt — coi như đúng 60% nhưng nghe không native. Phân biệt /æ/ (cat) với /ɑː/ (car).<br><br>
+        <strong style="color:var(--text)">Bài tập:</strong> Nhìn gương → há miệng → kéo hai khóe miệng ngang ra → "æ æ æ" → cat, bat, hat
+      </div>
+    </div>
+
+    <div class="rw-box rw-sk" style="margin-bottom:12px">
+      <div class="rw-label">⚠️ ÂM SỐ 5 — /ʌ/ (ă ngắn từ cổ họng)</div>
+      <div class="rw-title">cup, bus, run, love, come, blood, son, fun</div>
+      <div class="rw-body">
+        <strong style="color:var(--text)">Cách phát âm:</strong> Miệng mở vừa phải, lưỡi ở vị trí nghỉ tự nhiên, âm phát ra ngắn và từ trung tâm miệng. Gần như "ă" tiếng Việt nhưng không cần kéo miệng.<br><br>
+        <strong style="color:var(--text)">Lỗi thường gặp:</strong> Đọc thành "u" hoặc "ô" (cup → cúp/cốp). <br><br>
+        <strong style="color:var(--text)">Cặp tối thiểu để luyện:</strong> <em>cut /kʌt/</em> vs <em>cat /kæt/</em> vs <em>cart /kɑːt/</em> vs <em>coot /kuːt/</em>
+      </div>
+    </div>
+
+    <div class="rw-box rw-y">
+      <div class="rw-label">⚠️ ÂM SỐ 6 — /r/ (r uốn lưỡi kiểu Mỹ)</div>
+      <div class="rw-title">red, run, very, read, right, around, really</div>
+      <div class="rw-body">
+        <strong style="color:var(--text)">Cách phát âm (Anh-Mỹ):</strong> Cong lưỡi lên phía sau, KHÔNG chạm vào đâu cả — chỉ cong lên → phát âm. Môi hơi tròn nhẹ.<br><br>
+        <strong style="color:var(--text)">Cách phát âm (Anh-Anh):</strong> Chỉ nhấn /r/ đầu từ hoặc trước nguyên âm — "r" cuối từ thường câm (car /kɑː/).<br><br>
+        <strong style="color:var(--text)">Lỗi thường gặp:</strong> Rung lưỡi kiểu Pháp/Việt (trr-trr), hoặc đọc như "l".<br><br>
+        <strong style="color:var(--text)">Bài tập:</strong> Cong lưỡi lên + ra sau → "rrr" không rung → thêm nguyên âm → "red"
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S11 — ÂM NHẦM LẪN ════ -->
+<div class="section" id="s11">
+  <div class="sec-head">
+    <span class="sec-tag st-au">ÂM NHẦM LẪN</span>
+    <div><h2 class="sec-title">Các cặp âm hay nhầm lẫn nhất</h2>
+    <p class="sec-sub">Minimal pairs · Luyện phân biệt từng cặp âm hay bị đọc như nhau</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Minimal Pairs — Từ chỉ khác 1 âm nhưng nghĩa khác hoàn toàn</div>
+    <p>Luyện Minimal Pairs là cách hiệu quả nhất để phân biệt các cặp âm khó. Nghe — phân biệt — nói lại — ghi nhớ.</p>
+    <table class="tbl">
+      <thead><tr><th>Cặp âm</th><th>Từ 1</th><th>Từ 2</th><th>Mẹo phân biệt</th></tr></thead>
+      <tbody>
+        <tr><td>/ɪ/ vs /iː/</td><td><span class="en">ship /ʃɪp/</span> (tàu)</td><td><span class="en">sheep /ʃiːp/</span> (con cừu)</td><td>/ɪ/ ngắn · /iː/ dài — kéo dài âm "i"</td></tr>
+        <tr><td>/e/ vs /æ/</td><td><span class="en">bed /bed/</span> (giường)</td><td><span class="en">bad /bæd/</span> (tệ)</td><td>/æ/ há miệng rộng hơn nhiều</td></tr>
+        <tr><td>/ʌ/ vs /ɑː/</td><td><span class="en">cut /kʌt/</span> (cắt)</td><td><span class="en">cart /kɑːt/</span> (xe đẩy)</td><td>/ɑː/ dài hơn và sâu hơn trong họng</td></tr>
+        <tr><td>/p/ vs /b/</td><td><span class="en">pen /pen/</span> (bút)</td><td><span class="en">ben /ben/</span> (ngọn núi)</td><td>/p/ vô thanh · /b/ hữu thanh (rung)</td></tr>
+        <tr><td>/f/ vs /v/</td><td><span class="en">fan /fæn/</span> (quạt)</td><td><span class="en">van /væn/</span> (xe van)</td><td>/f/ vô thanh · /v/ hữu thanh — tay vào cổ</td></tr>
+        <tr><td>/s/ vs /z/</td><td><span class="en">sue /suː/</span> (kiện)</td><td><span class="en">zoo /zuː/</span> (sở thú)</td><td>/z/ có rung — nghe như "z" trong buzz</td></tr>
+        <tr><td>/θ/ vs /s/</td><td><span class="en">think /θɪŋk/</span></td><td><span class="en">sink /sɪŋk/</span> (bồn rửa)</td><td">/θ/ thè lưỡi · /s/ lưỡi sau răng</td></tr>
+        <tr><td>/θ/ vs /t/</td><td><span class="en">three /θriː/</span> (số 3)</td><td><span class="en">tree /triː/</span> (cây)</td><td>/θ/ thè lưỡi · /t/ lưỡi chạm sau răng trên</td></tr>
+        <tr><td>/l/ vs /r/</td><td><span class="en">led /led/</span> (dẫn đường)</td><td><span class="en">red /red/</span> (đỏ)</td><td>/l/ lưỡi chạm vòm · /r/ lưỡi cong lên không chạm</td></tr>
+        <tr><td>/n/ vs /ŋ/</td><td><span class="en">sin /sɪn/</span> (tội lỗi)</td><td><span class="en">sing /sɪŋ/</span> (hát)</td><td>/ŋ/ cuối từ — lưỡi sau chạm vòm mềm</td></tr>
+      </tbody>
+    </table>
+    <div class="info i-tip">
+      <span class="info-ico">🎯</span>
+      <div><strong style="color:var(--text)">Cách luyện Minimal Pairs hiệu quả:</strong> 1) Tra IPA cả 2 từ trên Cambridge Dictionary · 2) Nghe lại 10 lần · 3) Tự nói và ghi âm lại · 4) So sánh với bản gốc · 5) Lặp lại mỗi ngày 5 phút. Sau 2 tuần tai bạn sẽ phân biệt được.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S12 — MẸO ════ -->
+<div class="section" id="s12">
+  <div class="sec-head">
+    <span class="sec-tag st-y">MẸO LUYỆN TẬP</span>
+    <div><h2 class="sec-title">Mẹo luyện phát âm nhanh và nhớ lâu</h2>
+    <p class="sec-sub">Kỹ thuật Shadowing · Ghi âm · Công cụ miễn phí · Lịch luyện tập</p></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Kỹ thuật Shadowing — Phương pháp số 1 để có giọng tự nhiên</div>
+    <p><strong>Shadowing</strong> là kỹ thuật nghe người bản ngữ nói và <strong>bắt chước ngay lập tức</strong> — cả tốc độ, ngữ điệu, cách nối âm. Được dùng bởi các phiên dịch viên chuyên nghiệp.</p>
+    <div class="grid-2">
+      <div class="rw-box rw-oc">
+        <div class="rw-label">📋 CÁCH THỰC HIỆN</div>
+        <div class="rw-title">5 bước Shadowing đúng cách</div>
+        <div class="rw-body">
+          1. Chọn đoạn audio ngắn 1-2 phút (BBC, TED, phim)<br>
+          2. Nghe 3-5 lần, đọc transcript song song<br>
+          3. Che transcript, nghe và nhại lại đồng thời<br>
+          4. Ghi âm giọng mình, so sánh với bản gốc<br>
+          5. Làm lại đến khi gần giống — không cần hoàn hảo
+        </div>
+      </div>
+      <div class="rw-box rw-ins">
+        <div class="rw-label">✅ NGUỒN TỐT ĐỂ SHADOWING</div>
+        <div class="rw-title">Chọn audio phù hợp với bạn</div>
+        <div class="rw-body">
+          🎙️ <strong>BBC 6 Minute English</strong> — chậm, rõ, có transcript<br>
+          📺 <strong>TED-Ed</strong> — phụ đề tiếng Anh, chủ đề hay<br>
+          🎬 <strong>Phim có phụ đề Anh</strong> — Friends, The Office<br>
+          📱 <strong>Elsa Speak</strong> — app AI chấm phát âm từng âm<br>
+          🌐 <strong>YouGlish.com</strong> — nghe từ đó trong câu thật
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Top 7 mẹo nhớ phát âm lâu nhất</div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-icon">🎙️</div>
+        <div class="card-title" style="color:var(--oc)">Ghi âm giọng mình mỗi ngày</div>
+        <div class="card-desc">Tai mình không nghe được lỗi của chính mình. Ghi âm và nghe lại — bạn sẽ tự phát hiện ra lỗi. Dùng Voice Memo trên điện thoại.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🪞</div>
+        <div class="card-title" style="color:var(--ins)">Luyện trước gương</div>
+        <div class="card-desc">Nhìn vị trí miệng, lưỡi, răng khi phát âm. Đặc biệt quan trọng khi luyện /θ/ /ð/ và /æ/. 10 phút mỗi ngày là đủ.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <div class="card-title" style="color:var(--ch)">Dùng AI để luyện nói</div>
+        <div class="card-desc">Nói chuyện với Claude, ChatGPT hoặc Elsa Speak. AI có thể nhận xét phát âm, gợi ý cách cải thiện mà không ngại ngùng.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎵</div>
+        <div class="card-title" style="color:var(--sk)">Học qua âm nhạc tiếng Anh</div>
+        <div class="card-desc">Nghe nhạc tiếng Anh, đọc lyric song song. Pop và ballad thường phát âm rõ. Ed Sheeran, Taylor Swift — nhạc chậm, rõ lời.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔄</div>
+        <div class="card-title" style="color:var(--au)">Luyện theo chủ đề từng tuần</div>
+        <div class="card-desc">Tuần 1: luyện /θ/ và /ð/ · Tuần 2: luyện /v/ · Tuần 3: luyện trọng âm 2 âm tiết. Tập trung vào 1 điểm mỗi lần thay vì tất cả cùng lúc.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <div class="card-title" style="color:var(--teal)">Dùng YouGlish.com</div>
+        <div class="card-desc">Gõ bất kỳ từ nào — YouGlish hiện hàng trăm video YouTube người bản ngữ dùng từ đó trong câu thật. Nghe context thực tế ngay.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🗣️</div>
+        <div class="card-title" style="color:var(--orange)">Nói to khi đọc sách/bài</div>
+        <div class="card-desc">Khi đọc bất kỳ văn bản tiếng Anh nào, hãy đọc to thành tiếng. Không cần hoàn hảo — quan trọng là luyện miệng và tai cùng lúc.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Lịch luyện phát âm 4 tuần cho người mất gốc</div>
+    <table class="tbl">
+      <thead><tr><th>Tuần</th><th>Mục tiêu chính</th><th>Nội dung luyện mỗi ngày (15–20 phút)</th></tr></thead>
+      <tbody>
+        <tr><td>Tuần 1</td><td><span class="badge badge-oc">IPA + Nguyên âm</span></td><td>Nghe 12 nguyên âm đơn → luyện từng âm 3 phút → Shadowing 5 từ mỗi âm</td></tr>
+        <tr><td>Tuần 2</td><td><span class="badge badge-ins">Phụ âm khó</span></td><td>Tập /θ/ /ð/ /v/ /r/ mỗi ngày — nhìn gương, ghi âm. Luyện minimal pairs</td></tr>
+        <tr><td>Tuần 3</td><td><span class="badge badge-ch">Trọng âm + Đuôi -s/-ed</span></td><td>Tra trọng âm 20 từ mới mỗi ngày. Luyện đọc câu có đuôi -s và -ed</td></tr>
+        <tr><td>Tuần 4</td><td><span class="badge badge-sk">Nối âm + Ngữ điệu</span></td><td>Shadowing 2 phút audio BBC mỗi ngày. Chú ý nối âm và lên/xuống giọng</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════ S13 — CHEAT SHEET ════ -->
+<div class="section" id="s13">
+  <div class="sec-head">
+    <span class="sec-tag st-y">CHEAT SHEET</span>
+    <div><h2 class="sec-title">📋 Cheat Sheet — Tổng hợp Phát Âm Tiếng Anh</h2>
+    <p class="sec-sub">Ôn lại toàn bộ kiến thức trong 1 trang · In ra dán bàn học</p></div>
+  </div>
+
+  <div class="cheat-grid">
+
+    <div class="cheat-card">
+      <h4 class="h4-oc">🔵 12 Nguyên âm đơn (Monophthongs)</h4>
+      <div class="cheat-row"><span class="ck">/iː/ — i dài</span><span class="cv">see, tree, me</span></div>
+      <div class="cheat-row"><span class="ck">/ɪ/ — i ngắn</span><span class="cv">sit, fish, big</span></div>
+      <div class="cheat-row"><span class="ck">/e/ — e ngắn</span><span class="cv">bed, red, ten</span></div>
+      <div class="cheat-row"><span class="ck">/æ/ — a mở ⚠️</span><span class="cv">cat, bad, man</span></div>
+      <div class="cheat-row"><span class="ck">/ɑː/ — a dài sâu</span><span class="cv">car, far, arm</span></div>
+      <div class="cheat-row"><span class="ck">/ɒ/ — o ngắn</span><span class="cv">hot, dog, not</span></div>
+      <div class="cheat-row"><span class="ck">/ɔː/ — o dài</span><span class="cv">door, more, four</span></div>
+      <div class="cheat-row"><span class="ck">/ʊ/ — u ngắn</span><span class="cv">book, good, look</span></div>
+      <div class="cheat-row"><span class="ck">/uː/ — u dài</span><span class="cv">food, blue, moon</span></div>
+      <div class="cheat-row"><span class="ck">/ʌ/ — ă ngắn ⚠️</span><span class="cv">cup, bus, run</span></div>
+      <div class="cheat-row"><span class="ck">/ɜː/ — ơ dài ⚠️</span><span class="cv">bird, work, girl</span></div>
+      <div class="cheat-row"><span class="ck">/ə/ — Schwa ⚠️</span><span class="cv">about, the, again</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-ins">🟢 8 Nguyên âm đôi (Diphthongs)</h4>
+      <div class="cheat-row"><span class="ck">/eɪ/ — như "ây"</span><span class="cv">say, name, day</span></div>
+      <div class="cheat-row"><span class="ck">/aɪ/ — như "ai"</span><span class="cv">my, like, night</span></div>
+      <div class="cheat-row"><span class="ck">/ɔɪ/ — như "oi"</span><span class="cv">boy, coin, toy</span></div>
+      <div class="cheat-row"><span class="ck">/əʊ/ — như "âu"</span><span class="cv">go, home, no</span></div>
+      <div class="cheat-row"><span class="ck">/aʊ/ — như "au"</span><span class="cv">now, out, how</span></div>
+      <div class="cheat-row"><span class="ck">/ɪə/ — như "ia"</span><span class="cv">ear, here, near</span></div>
+      <div class="cheat-row"><span class="ck">/eə/ — như "ê-ơ"</span><span class="cv">air, care, where</span></div>
+      <div class="cheat-row"><span class="ck">/ʊə/ — như "ua"</span><span class="cv">tour, sure, pure</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-ch">🟡 Phụ âm đặc biệt — Không có trong Tiếng Việt</h4>
+      <div class="cheat-row"><span class="ck">/θ/ — th vô thanh</span><span class="cv">think, three, bath</span></div>
+      <div class="cheat-row"><span class="ck">/ð/ — th hữu thanh</span><span class="cv">this, that, the</span></div>
+      <div class="cheat-row"><span class="ck">/v/ — v rung</span><span class="cv">very, love, have</span></div>
+      <div class="cheat-row"><span class="ck">/ʃ/ — sh</span><span class="cv">she, wash, fish</span></div>
+      <div class="cheat-row"><span class="ck">/ʒ/ — zh</span><span class="cv">vision, measure</span></div>
+      <div class="cheat-row"><span class="ck">/tʃ/ — ch</span><span class="cv">chair, watch</span></div>
+      <div class="cheat-row"><span class="ck">/dʒ/ — j</span><span class="cv">job, age, bridge</span></div>
+      <div class="cheat-row"><span class="ck">/ŋ/ — ng cuối</span><span class="cv">sing, long, ring</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-sk">🟣 Đuôi -s — 3 cách đọc</h4>
+      <div class="cheat-row"><span class="ck">/ɪz/ sau s/z/sh/ch...</span><span class="cv">buses, watches, judges</span></div>
+      <div class="cheat-row"><span class="ck">/z/ sau nguyên âm + hữu thanh</span><span class="cv">dogs, boys, cars</span></div>
+      <div class="cheat-row"><span class="ck">/s/ sau vô thanh</span><span class="cv">cats, books, cups</span></div>
+      <div style="height:8px"></div>
+      <h4 class="h4-au" style="margin-top:8px">🔴 Đuôi -ed — 3 cách đọc</h4>
+      <div class="cheat-row"><span class="ck">/ɪd/ sau /t/ và /d/</span><span class="cv">wanted, needed</span></div>
+      <div class="cheat-row"><span class="ck">/d/ sau nguyên âm + hữu thanh</span><span class="cv">loved, played</span></div>
+      <div class="cheat-row"><span class="ck">/t/ sau vô thanh</span><span class="cv">walked, stopped</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-oc">🔵 Quy tắc Trọng âm</h4>
+      <div class="cheat-row"><span class="ck">Danh từ 2 âm tiết</span><span class="cv">TA-ble, WIN-dow</span></div>
+      <div class="cheat-row"><span class="ck">Động từ 2 âm tiết</span><span class="cv">be-GIN, de-CIDE</span></div>
+      <div class="cheat-row"><span class="ck">Hậu tố -tion/-sion</span><span class="cv">edu-CA-tion (âm trước đuôi)</span></div>
+      <div class="cheat-row"><span class="ck">Hậu tố -ic</span><span class="cv">e-LEC-tric</span></div>
+      <div class="cheat-row"><span class="ck">Danh từ ghép</span><span class="cv">FOOT-ball, SUN-flower</span></div>
+      <div class="cheat-row"><span class="ck">N→DT nhấn âm 1</span><span class="cv">RE-cord (đĩa)</span></div>
+      <div class="cheat-row"><span class="ck">N→ĐT nhấn âm 2</span><span class="cv">re-CORD (ghi)</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-ins">🟢 Nối âm & Âm yếu</h4>
+      <div class="cheat-row"><span class="ck">Phụ âm + Nguyên âm</span><span class="cv">"pick it up" → pi-ki-tup</span></div>
+      <div class="cheat-row"><span class="ck">Đồng âm cuối-đầu</span><span class="cv">"good day" → goo-day</span></div>
+      <div class="cheat-row"><span class="ck">Nguyên âm + Nguyên âm</span><span class="cv">"go on" → go-w-on</span></div>
+      <div class="cheat-row"><span class="ck">Nuốt âm (elision)</span><span class="cv">"want to" → wanna</span></div>
+      <div class="cheat-row"><span class="ck">"the" + phụ âm</span><span class="cv">/ðə/ (âm yếu)</span></div>
+      <div class="cheat-row"><span class="ck">"and" trong câu</span><span class="cv">/ən/ hoặc /n/</span></div>
+      <div class="cheat-row"><span class="ck">"can" không nhấn</span><span class="cv">/kən/ không phải /kæn/</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-sk">🟣 Ngữ điệu</h4>
+      <div class="cheat-row"><span class="ck">Câu khẳng định ↘</span><span class="cv">She works there. ↘</span></div>
+      <div class="cheat-row"><span class="ck">Câu hỏi Wh- ↘</span><span class="cv">Where do you live? ↘</span></div>
+      <div class="cheat-row"><span class="ck">Câu hỏi Yes/No ↗</span><span class="cv">Do you speak Eng? ↗</span></div>
+      <div class="cheat-row"><span class="ck">Liệt kê chưa xong ↗</span><span class="cv">apples ↗, oranges ↗...</span></div>
+      <div class="cheat-row"><span class="ck">Từ quan trọng</span><span class="cv">Nhấn: danh từ, động từ, tính từ</span></div>
+      <div class="cheat-row"><span class="ck">Từ không nhấn</span><span class="cv">a, the, and, to, for, of...</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-au">🔴 Minimal Pairs hay nhầm nhất</h4>
+      <div class="cheat-row"><span class="ck">ship vs sheep</span><span class="cv">/ɪ/ vs /iː/</span></div>
+      <div class="cheat-row"><span class="ck">bed vs bad</span><span class="cv">/e/ vs /æ/</span></div>
+      <div class="cheat-row"><span class="ck">fan vs van</span><span class="cv">/f/ vs /v/</span></div>
+      <div class="cheat-row"><span class="ck">think vs sink</span><span class="cv">/θ/ vs /s/</span></div>
+      <div class="cheat-row"><span class="ck">three vs tree</span><span class="cv">/θ/ vs /t/</span></div>
+      <div class="cheat-row"><span class="ck">led vs red</span><span class="cv">/l/ vs /r/</span></div>
+      <div class="cheat-row"><span class="ck">sin vs sing</span><span class="cv">/n/ vs /ŋ/</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-oc">🔵 Nguyên âm đôi — Tổ hợp chữ → Âm</h4>
+      <div class="cheat-row"><span class="ck">ai / ay</span><span class="cv">/eɪ/ — rain, say, day</span></div>
+      <div class="cheat-row"><span class="ck">ea (phổ biến)</span><span class="cv">/iː/ — eat, sea, meat</span></div>
+      <div class="cheat-row"><span class="ck">ee</span><span class="cv">/iː/ — see, tree, feel</span></div>
+      <div class="cheat-row"><span class="ck">oa</span><span class="cv">/əʊ/ — boat, road, coat</span></div>
+      <div class="cheat-row"><span class="ck">ou / ow</span><span class="cv">/aʊ/ — out, now, how</span></div>
+      <div class="cheat-row"><span class="ck">oi / oy</span><span class="cv">/ɔɪ/ — oil, boy, toy</span></div>
+      <div class="cheat-row"><span class="ck">au / aw</span><span class="cv">/ɔː/ — autumn, saw, draw</span></div>
+    </div>
+
+    <div class="cheat-card">
+      <h4 class="h4-ins">🟢 Checklist Luyện Phát Âm Mỗi Ngày</h4>
+      <div class="cheat-row"><span class="ck">✅ Tra IPA từ mới</span><span class="cv">Cambridge Dictionary</span></div>
+      <div class="cheat-row"><span class="ck">✅ Luyện Shadowing</span><span class="cv">BBC 6min English · 10 phút</span></div>
+      <div class="cheat-row"><span class="ck">✅ Ghi âm giọng mình</span><span class="cv">So sánh với bản gốc</span></div>
+      <div class="cheat-row"><span class="ck">✅ Luyện 1 âm khó/tuần</span><span class="cv">Không học tất cả cùng lúc</span></div>
+      <div class="cheat-row"><span class="ck">✅ Dùng YouGlish</span><span class="cv">Nghe từ trong câu thật</span></div>
+      <div class="cheat-row"><span class="ck">✅ Nói to khi đọc</span><span class="cv">Luyện miệng + tai cùng lúc</span></div>
+      <div class="cheat-row"><span class="ck">✅ Minimal pairs mỗi ngày</span><span class="cv">5 phút là đủ</span></div>
+    </div>
+
+  </div>
+
+  <div class="info i-ok" style="margin-top:22px">
+    <span class="info-ico">🎯</span>
+    <div style="font-size:13.5px">
+      <strong style="color:var(--text)">Tài nguyên học phát âm miễn phí tốt nhất:</strong><br>
+      <span style="color:var(--muted)">
+        <a href="https://dictionary.cambridge.org" style="color:var(--acc)">Cambridge Dictionary</a> — Tra IPA + nghe phát âm chuẩn &nbsp;·&nbsp;
+        <a href="https://www.bbc.co.uk/learningenglish" style="color:var(--acc)">BBC Learning English</a> — Nghe rõ, có transcript &nbsp;·&nbsp;
+        <a href="https://youglish.com" style="color:var(--acc)">YouGlish</a> — Nghe từ trong ngữ cảnh thật &nbsp;·&nbsp;
+        <a href="https://elsaspeak.com" style="color:var(--acc)">Elsa Speak</a> — AI chấm phát âm từng âm &nbsp;·&nbsp;
+        <a href="https://www.youtube.com/@RachelEnglish" style="color:var(--acc)">Rachel's English</a> — Phát âm Mỹ siêu chi tiết &nbsp;·&nbsp;
+        <a href="https://www.youtube.com/@EnglishwithLucy" style="color:var(--acc)">English with Lucy</a> — Phát âm Anh-Anh chuẩn
+      </span>
+    </div>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<div class="footer">
+  <span>🔊 Phát Âm Tiếng Anh · Dành cho người mất gốc · 2026</span>
+  <span style="margin-left:auto;color:var(--faint)">IPA · Nguyên âm · Phụ âm · Trọng âm · Nối âm · Ngữ điệu · Cheat Sheet</span>
+</div>
+</div><!-- /main -->
+
+<script>
+window.addEventListener('scroll',()=>{
+  const el=document.documentElement;
+  document.getElementById('pbar').style.width=(el.scrollTop/(el.scrollHeight-el.clientHeight)*100)+'%';
+});
+const sections=document.querySelectorAll('.section[id]');
+const links=document.querySelectorAll('.nav-link');
+sections.forEach(s=>new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      const a=document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+      if(a)a.classList.add('active');
+    }
+  });
+},{rootMargin:'-20% 0px -70% 0px'}).observe(s));
+</script>
+</body>
+</html>
