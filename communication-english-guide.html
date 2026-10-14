@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>💬 Tiếng Anh Giao Tiếp — Hướng dẫn toàn tập từ con số 0</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#080810;--s1:#0e0e1c;--s2:#131326;--s3:#18182e;--s4:#1e1e38;
+  --border:#222240;--border2:#2c2c50;--text:#e6e6f2;--muted:#8a8ab8;--faint:#4a4a78;
+  --acc:#ffd060;--acc-dim:rgba(255,208,96,.11);
+  --green:#40d88e;--green-dim:rgba(64,216,142,.10);
+  --blue:#5ba8ff;--blue-dim:rgba(91,168,255,.10);
+  --purple:#a07af4;--purple-dim:rgba(160,122,244,.10);
+  --yellow:#ffd060;--yellow-dim:rgba(255,208,96,.10);
+  --teal:#30d8c0;--teal-dim:rgba(48,216,192,.10);
+  --pink:#ff6584;--pink-dim:rgba(255,101,132,.11);
+  --oc:#38bdf8;--oc-dim:rgba(56,189,248,.13);--oc-glow:rgba(56,189,248,.30);
+  --ins:#40d88e;--ins-dim:rgba(64,216,142,.12);
+  --ch:#ffd060;--ch-dim:rgba(255,208,96,.12);--ch-glow:rgba(255,208,96,.28);
+  --au:#ff6584;--au-dim:rgba(255,101,132,.12);--au-glow:rgba(255,101,132,.28);
+  /* topic colours */
+  --g1:#ff8c50;--g1-dim:rgba(255,140,80,.13);--g1-glow:rgba(255,140,80,.28);
+  --g2:#38bdf8;--g2-dim:rgba(56,189,248,.13);--g2-glow:rgba(56,189,248,.28);
+  --g3:#a07af4;--g3-dim:rgba(160,122,244,.13);--g3-glow:rgba(160,122,244,.28);
+  --g4:#40d88e;--g4-dim:rgba(64,216,142,.12);--g4-glow:rgba(64,216,142,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+
+/* ── SIDEBAR ── */
+.sidebar{position:fixed;left:0;top:0;width:272px;height:100%;background:var(--s1);border-right:1px solid var(--border);overflow-y:auto;z-index:400;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+.sb-logo{padding:20px 18px 16px;border-bottom:1px solid var(--border)}
+.sb-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.logo-icon{width:44px;height:44px;border-radius:11px;flex-shrink:0;background:linear-gradient(135deg,var(--g1),var(--g2),var(--g3));display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 26px var(--g1-glow)}
+.logo-text h2{font-size:15px;font-weight:800;letter-spacing:-.4px}
+.logo-text p{font-size:10.5px;color:var(--muted);margin-top:2px}
+.prog-wrap{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3),var(--ch));width:0%;transition:width .4s;border-radius:2px}
+.nav-section{padding:6px 0 4px}
+.nav-group-hdr{display:flex;align-items:center;gap:7px;margin:6px 12px 3px;padding:6px 10px;border-radius:7px;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.ngh-oc{background:var(--oc-dim);color:var(--oc)}
+.ngh-g1{background:var(--g1-dim);color:var(--g1)}.ngh-g2{background:var(--g2-dim);color:var(--g2)}
+.ngh-g3{background:var(--g3-dim);color:var(--g3)}.ngh-g4{background:var(--g4-dim);color:var(--g4)}
+.ngh-au{background:var(--au-dim);color:var(--au)}
+.nav-link{display:flex;align-items:center;gap:9px;padding:5px 18px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;border-left:2px solid transparent;transition:all .14s}
+.nav-link:hover,.nav-link.active{color:var(--text);background:rgba(255,208,96,.07);border-left-color:var(--acc)}
+.nav-link .ico{font-size:12px;flex-shrink:0;width:16px;text-align:center}
+.nav-badge{margin-left:auto;font-size:9px;font-weight:700;padding:2px 7px;border-radius:100px;background:var(--acc-dim);color:var(--acc)}
+.mnav{display:none}
+
+/* ── MAIN ── */
+.main{margin-left:272px;min-height:100vh}
+.hero{padding:72px 64px 56px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse 60% 55% at 75% 20%,rgba(255,140,80,.09) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 55% at 10% 80%,rgba(160,122,244,.08) 0%,transparent 55%),
+             radial-gradient(ellipse 45% 50% at 50% 55%,rgba(56,189,248,.05) 0%,transparent 60%),var(--bg)}
+.hero-dots{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+.hero-glow{position:absolute;right:-80px;top:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(255,140,80,.08) 0%,transparent 65%);pointer-events:none}
+.hero>*:not(.hero-dots):not(.hero-glow){position:relative}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--g1-dim);border:1px solid rgba(255,140,80,.35);color:var(--g1);padding:5px 16px;border-radius:100px;font-size:11.5px;font-weight:700;margin-bottom:24px;letter-spacing:.3px}
+.hero-eyebrow .pulse{width:6px;height:6px;border-radius:50%;background:var(--g1);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+@media(prefers-reduced-motion:reduce){.hero-eyebrow .pulse{animation:none}html{scroll-behavior:auto}}
+.hero h1{font-size:44px;font-weight:900;letter-spacing:-2.2px;line-height:1.08;margin-bottom:18px}
+.h-grad{background:linear-gradient(135deg,var(--g1) 0%,var(--g2) 50%,var(--g3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.h-g1{color:var(--g1)}.h-g2{color:var(--g2)}.h-g3{color:var(--g3)}.h-g4{color:var(--g4)}
+.hero-desc{font-size:15.5px;color:var(--muted);max-width:640px;line-height:1.75;margin-bottom:28px}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:5px 14px;border-radius:7px;font-size:12px;font-weight:700}
+.chip-g1{background:var(--g1-dim);color:var(--g1)}.chip-g2{background:var(--g2-dim);color:var(--g2)}
+.chip-g3{background:var(--g3-dim);color:var(--g3)}.chip-g4{background:var(--g4-dim);color:var(--g4)}
+.chip-ch{background:var(--ch-dim);color:var(--ch)}.chip-au{background:var(--au-dim);color:var(--au)}
+
+/* ── CAT BANNERS ── */
+.cat-banner{display:flex;align-items:center;gap:16px;padding:20px 24px;border-radius:14px;margin-bottom:44px;position:relative;overflow:hidden}
+.cat-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cb-g1{background:var(--g1-dim);border:1px solid rgba(255,140,80,.30)}.cb-g1::before{background:linear-gradient(90deg,var(--g1),var(--ch))}
+.cb-g2{background:var(--g2-dim);border:1px solid rgba(56,189,248,.30)}.cb-g2::before{background:linear-gradient(90deg,var(--g2),var(--ins))}
+.cb-g3{background:var(--g3-dim);border:1px solid rgba(160,122,244,.30)}.cb-g3::before{background:linear-gradient(90deg,var(--g3),var(--pink))}
+.cb-g4{background:var(--g4-dim);border:1px solid rgba(64,216,142,.30)}.cb-g4::before{background:linear-gradient(90deg,var(--g4),var(--teal))}
+.cb-cheat{background:var(--au-dim);border:1px solid rgba(255,101,132,.30)}.cb-cheat::before{background:linear-gradient(90deg,var(--au),var(--g3))}
+.cb-icon{font-size:36px;flex-shrink:0}
+.cb-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.cb-g1 .cb-badge{background:var(--g1-dim);color:var(--g1)}.cb-g2 .cb-badge{background:var(--g2-dim);color:var(--g2)}
+.cb-g3 .cb-badge{background:var(--g3-dim);color:var(--g3)}.cb-g4 .cb-badge{background:var(--g4-dim);color:var(--g4)}
+.cb-cheat .cb-badge{background:var(--au-dim);color:var(--au)}
+.cb-title{font-size:20px;font-weight:800;letter-spacing:-.5px}.cb-sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+/* ── CONTENT ── */
+.content{padding:52px 64px;max-width:1040px}
+.section{margin-bottom:68px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 10px;border-radius:5px;margin-top:5px;flex-shrink:0;letter-spacing:.5px}
+.st-ov{color:var(--oc);background:var(--oc-dim);border:1px solid var(--oc-glow)}
+.st-g1{color:var(--g1);background:var(--g1-dim);border:1px solid var(--g1-glow)}
+.st-g2{color:var(--g2);background:var(--g2-dim);border:1px solid var(--g2-glow)}
+.st-g3{color:var(--g3);background:var(--g3-dim);border:1px solid var(--g3-glow)}
+.st-g4{color:var(--g4);background:var(--g4-dim);border:1px solid var(--g4-glow)}
+.st-ch{color:var(--ch);background:var(--ch-dim);border:1px solid var(--ch-glow)}
+.sec-title{font-size:22px;font-weight:800;letter-spacing:-.6px;margin-bottom:5px}
+.sec-sub{font-size:13px;color:var(--muted)}
+
+/* ── SUB ── */
+.sub{margin-bottom:36px}
+.sub-title{font-size:14.5px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:10px}
+.sub-title::before{content:'';display:inline-block;width:14px;height:3px;background:var(--acc);border-radius:2px;flex-shrink:0}
+.sub p,.sub ul,.sub ol{color:var(--muted);font-size:13.5px;margin-bottom:10px;line-height:1.78}
+.sub ul,.sub ol{padding-left:22px}.sub li{margin-bottom:5px}.sub strong{color:var(--text)}
+
+/* ── FLOW CHAIN ── */
+.flow{display:flex;align-items:stretch;gap:4px;flex-wrap:wrap;margin:16px 0;padding:18px;background:var(--s2);border:1px solid var(--border2);border-radius:12px}
+.fl-slot{display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 12px;border-radius:9px;min-width:110px;flex:1;text-align:center}
+.fl-num{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:1px 7px;border-radius:4px}
+.fl-cat{font-size:12px;font-weight:700;color:var(--text)}
+.fl-ex{font-size:10.5px;color:var(--muted);line-height:1.5}
+.fl-1{background:rgba(255,140,80,.15);border:1.5px solid rgba(255,140,80,.4)}.fl-1 .fl-num{background:var(--g1-dim);color:var(--g1)}
+.fl-2{background:rgba(255,208,96,.12);border:1.5px solid rgba(255,208,96,.35)}.fl-2 .fl-num{background:var(--ch-dim);color:var(--ch)}
+.fl-3{background:rgba(56,189,248,.12);border:1.5px solid rgba(56,189,248,.35)}.fl-3 .fl-num{background:var(--g2-dim);color:var(--g2)}
+.fl-4{background:rgba(64,216,142,.12);border:1.5px solid rgba(64,216,142,.35)}.fl-4 .fl-num{background:var(--g4-dim);color:var(--g4)}
+.fl-5{background:rgba(160,122,244,.12);border:1.5px solid rgba(160,122,244,.35)}.fl-5 .fl-num{background:var(--g3-dim);color:var(--g3)}
+.fl-arrow{color:var(--faint);font-size:14px;flex-shrink:0;align-self:center}
+
+/* ── EXAMPLE BOX ── */
+.ex-box{background:var(--s1);border:1px solid var(--border2);border-radius:11px;overflow:hidden;margin:13px 0}
+.ex-head{display:flex;align-items:center;gap:8px;padding:9px 16px;background:var(--s2);border-bottom:1px solid var(--border)}
+.ex-label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.ex-tag{margin-left:auto;font-size:9px;font-weight:700;padding:2px 9px;border-radius:100px;flex-shrink:0}
+.et-g1{background:var(--g1-dim);color:var(--g1)}.et-g2{background:var(--g2-dim);color:var(--g2)}
+.et-g3{background:var(--g3-dim);color:var(--g3)}.et-g4{background:var(--g4-dim);color:var(--g4)}
+.et-tip{background:var(--ch-dim);color:var(--ch)}
+.ex-body{padding:14px 20px}
+.ex-row{display:flex;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13.5px}
+.ex-row:last-child{border-bottom:none}
+.ex-type{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0}
+.ext-ok{background:var(--ins-dim);color:var(--ins)}
+.ext-bad{background:var(--au-dim);color:var(--au)}
+.ex-en{color:var(--text);font-weight:600;flex:1;min-width:0}
+.ex-vn{color:var(--muted);flex:1;min-width:0}
+.ex-note{font-size:10.5px;color:var(--muted);flex-shrink:0;font-style:italic;max-width:200px}
+.ex-arrow{color:var(--faint);flex-shrink:0}
+.ex-en,.dl-en,.say{cursor:pointer;transition:color .14s}
+.ex-en:hover,.dl-en:hover,.say:hover{color:var(--acc)}
+.speaking{color:var(--acc)!important}
+
+/* ── DIALOGUE ── */
+.dlg{background:var(--s1);border:1px solid var(--border2);border-radius:12px;overflow:hidden;margin:14px 0}
+.dlg-body{padding:12px 20px 16px}
+.dl{display:flex;gap:12px;padding:8px 0;align-items:flex-start}
+.who{width:26px;height:26px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:1px}
+.dl.a .who{background:var(--g2-dim);color:var(--g2);border:1px solid var(--g2-glow)}
+.dl.b .who{background:var(--g1-dim);color:var(--g1);border:1px solid var(--g1-glow)}
+.dl-en{font-size:14px;font-weight:600;color:var(--text)}
+.dl-vn{font-size:12px;color:var(--muted);margin-top:1px}
+
+/* ── INFO BOXES ── */
+.info{display:flex;gap:12px;padding:13px 16px;border-radius:9px;margin:12px 0;font-size:13px;line-height:1.65}
+.info-ico{font-size:15px;flex-shrink:0;margin-top:1px}
+.i-ok{background:var(--green-dim);border:1px solid rgba(64,216,142,.2);color:#4cc58b}
+.i-warn{background:var(--yellow-dim);border:1px solid rgba(255,208,96,.2);color:#cfa83c}
+.i-tip{background:var(--blue-dim);border:1px solid rgba(91,168,255,.2);color:#6aa6e8}
+.i-note{background:var(--purple-dim);border:1px solid rgba(160,122,244,.2);color:#a58ce6}
+.i-err{background:var(--pink-dim);border:1px solid rgba(255,101,132,.2);color:#e8718a}
+.info strong{color:var(--text)}
+
+/* ── RW BOX ── */
+.rw-box{background:var(--s1);border:1px solid var(--border2);border-radius:12px;padding:16px 20px;margin:13px 0;position:relative;overflow:hidden}
+.rw-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
+.rw-g1::before{background:var(--g1)}.rw-g2::before{background:var(--g2)}.rw-g3::before{background:var(--g3)}.rw-g4::before{background:var(--g4)}
+.rw-label{font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.rw-g1 .rw-label{color:var(--g1)}.rw-g2 .rw-label{color:var(--g2)}.rw-g3 .rw-label{color:var(--g3)}.rw-g4 .rw-label{color:var(--g4)}
+.rw-title{font-size:14px;font-weight:700;margin-bottom:5px}
+.rw-body{font-size:13px;color:var(--muted);line-height:1.68}
+.rw-body strong{color:var(--text)}
+
+/* ── TABLE ── */
+.tbl-wrap{overflow-x:auto;margin:13px 0;border-radius:11px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;border-radius:11px;overflow:hidden}
+.tbl th{background:var(--s3);padding:9px 14px;text-align:left;font-weight:700;font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);border-bottom:1px solid var(--border2)}
+.tbl td{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted);vertical-align:top;font-size:13px}
+.tbl tr:hover td{background:rgba(255,255,255,.022)}
+.tbl td:first-child{color:var(--text);font-weight:600}
+.tbl .en{color:var(--g2);font-weight:700}
+.tbl td strong{color:var(--text)}
+
+/* ── CMP BOX ── */
+.cmp-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:11px;overflow:hidden;margin:13px 0}
+.cmp-bad{background:rgba(255,101,132,.07);border-right:1px solid var(--border);padding:14px 16px}
+.cmp-good{background:rgba(64,216,142,.07);padding:14px 16px}
+.cmp-label{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.cmp-bad .cmp-label{color:var(--au)}.cmp-good .cmp-label{color:var(--ins)}
+.cmp-text{font-size:13.5px;color:var(--text);line-height:1.7}
+.cmp-note{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+
+/* ── GRIDS ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:13px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:13px 0}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:11px;padding:15px;transition:all .2s}
+.card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.38)}
+.card-icon{font-size:22px;margin-bottom:8px}.card-title{font-size:13px;font-weight:700;margin-bottom:4px}.card-desc{font-size:12px;color:var(--muted);line-height:1.55}
+
+/* ── PHRASE CARDS / CHEAT ── */
+.cheat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:13px 0}
+.cheat-card{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:14px}
+.cheat-card h4{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:11px}
+.h4-g1{color:var(--g1)}.h4-g2{color:var(--g2)}.h4-g3{color:var(--g3)}.h4-g4{color:var(--g4)}.h4-ch{color:var(--ch)}.h4-au{color:var(--au)}
+.cheat-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;gap:10px}
+.cheat-row:last-child{border-bottom:none}
+.ck{color:var(--text);flex:1;font-size:12px;font-weight:600}
+.cv{font-size:11.5px;color:var(--teal);text-align:right;flex:1}
+
+/* ── PILLS ── */
+.pill-strip{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer}
+.pl-g1{background:rgba(255,140,80,.15);color:var(--g1)}.pl-g2{background:rgba(56,189,248,.15);color:var(--g2)}
+.pl-g3{background:rgba(160,122,244,.15);color:var(--g3)}.pl-g4{background:rgba(64,216,142,.15);color:var(--g4)}
+.pl-ch{background:rgba(255,208,96,.15);color:var(--ch)}
+
+/* ── SELF-TEST ── */
+.qa{background:var(--s1);border:1px solid var(--border2);border-radius:10px;margin:9px 0;overflow:hidden}
+.qa summary{cursor:pointer;padding:12px 16px;font-size:13.5px;font-weight:600;list-style:none;display:flex;gap:10px;align-items:baseline}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:'▸';color:var(--acc);transition:transform .15s;flex-shrink:0}
+.qa[open] summary::before{transform:rotate(90deg)}
+.qa[open] summary{border-bottom:1px solid var(--border);background:var(--s2)}
+.qa-a{padding:12px 16px 14px 36px;font-size:13px;color:var(--muted);line-height:1.7}
+.qa-a strong{color:var(--ins)}
+
+p code,li code,td code{font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(255,208,96,.1);color:var(--yellow);padding:2px 6px;border-radius:4px}
+hr.dv{border:none;border-top:1px solid var(--border);margin:52px 0}
+.footer{border-top:1px solid var(--border);padding:26px 64px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.footer a,.sub a,.info a{color:var(--acc)}
+
+@media(max-width:900px){
+  .sidebar{display:none}.main{margin-left:0}
+  .mnav{display:flex;gap:6px;overflow-x:auto;position:sticky;top:env(safe-area-inset-top,0px);z-index:300;background:var(--s1);border-bottom:1px solid var(--border);padding:9px 14px}
+  .mnav a{flex-shrink:0;font-size:11.5px;font-weight:700;color:var(--muted);text-decoration:none;padding:5px 12px;border-radius:100px;background:var(--s3)}
+  .mnav a.active{color:var(--acc);background:var(--acc-dim)}
+  .hero,.content,.footer{padding-left:22px;padding-right:22px}
+  .hero{padding-top:48px}
+  .hero h1{font-size:30px;letter-spacing:-1.4px}
+  .grid-2,.grid-3,.grid-4,.cheat-grid,.cmp-box{grid-template-columns:1fr}
+  .cmp-bad{border-right:none;border-bottom:1px solid var(--border)}
+  .ex-row{flex-wrap:wrap;gap:4px 10px}.ex-note{max-width:none}
+  .ex-en,.ex-vn{flex-basis:100%}.ex-arrow{display:none}
+  .fl-arrow{display:none}.fl-slot{min-width:46%}
+  .cat-banner{padding:16px}.cb-icon{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-brand">
+      <div class="logo-icon">💬</div>
+      <div class="logo-text">
+        <h2>Tiếng Anh Giao Tiếp</h2>
+        <p>Hướng dẫn toàn tập · Mất gốc OK</p>
+      </div>
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" id="pbar"></div></div>
+  </div>
+
+  <div class="nav-section" style="border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:2px">
+    <div class="nav-group-hdr" style="background:rgba(255,208,96,.12);color:#ffd060">📚 Lộ Trình Học</div>
+    <a href="english-grammar-basics.html" class="nav-link"><span class="ico">①</span> Tiếng Anh Cơ Bản</a>
+    <a href="english-12-tenses.html" class="nav-link"><span class="ico">②</span> 12 Thì Tiếng Anh</a>
+    <a href="subject-verb-agreement-tenses.html" class="nav-link"><span class="ico">③</span> Hòa Hợp C-V &amp; Phối Thì</a>
+    <a href="synonyms-antonyms-guide.html" class="nav-link"><span class="ico">④</span> Đồng Nghĩa &amp; Trái Nghĩa</a>
+    <a href="adjective-order-word-classes-relative-clauses.html" class="nav-link"><span class="ico">⑤</span> Trật Tự TT · Từ Loại · MĐ QH</a>
+    <a href="english-grammar-guide.html" class="nav-link"><span class="ico">⑥</span> Ngữ Pháp Tổng Hợp</a>
+    <a href="grammar-comparison-passive-conjunctions.html" class="nav-link"><span class="ico">⑦</span> So Sánh · Bị Động · Liên Từ</a>
+    <a href="prepositions-wish-guide.html" class="nav-link"><span class="ico">⑧</span> Giới Từ &amp; Câu Ước</a>
+    <a href="grammar-modals-quantifiers-stress.html" class="nav-link"><span class="ico">⑨</span> Modal · Lượng Từ · Trọng Âm</a>
+    <a href="grammar-tag-questions-articles-conditionals.html" class="nav-link"><span class="ico">⑩</span> Hỏi Đuôi · Mạo Từ · ĐK</a>
+    <a href="grammar-tov-ving-reported-phrasal.html" class="nav-link"><span class="ico">⑪</span> To V/V-ing · Tường Thuật</a>
+    <a href="english-pronunciation-guide.html" class="nav-link"><span class="ico">⑫</span> Phát Âm Tiếng Anh</a>
+    <a href="communication-english-guide.html" class="nav-link" style="color:var(--acc);background:rgba(255,208,96,.08);border-left-color:var(--acc)"><span class="ico">⑬</span> Tiếng Anh Giao Tiếp</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-oc">🗺️ Tổng quan</div>
+    <a href="#s0" class="nav-link"><span class="ico">📊</span> Giao tiếp là gì?</a>
+    <a href="#s0b" class="nav-link"><span class="ico">⭐</span> Ưu tiên học gì trước</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-g1">🟠 Nền tảng</div>
+    <a href="#s1" class="nav-link"><span class="ico">1️⃣</span> Tư duy &amp; lộ trình <span class="nav-badge">★★★</span></a>
+    <a href="#s2" class="nav-link"><span class="ico">2️⃣</span> Chào hỏi &amp; giới thiệu <span class="nav-badge">★★★</span></a>
+    <a href="#s3" class="nav-link"><span class="ico">3️⃣</span> Small talk — nói chuyện xã giao</a>
+    <a href="#s4" class="nav-link"><span class="ico">4️⃣</span> Cứu nguy khi không hiểu</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-g2">🔵 Tình huống thực tế</div>
+    <a href="#s5" class="nav-link"><span class="ico">5️⃣</span> Ăn uống · Mua sắm · Hỏi đường</a>
+    <a href="#s6" class="nav-link"><span class="ico">6️⃣</span> Điện thoại · Họp · Phỏng vấn</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-g3">🟣 Ngôn ngữ chức năng</div>
+    <a href="#s7" class="nav-link"><span class="ico">7️⃣</span> Đồng ý · Mời · Xin lỗi · Cảm ơn <span class="nav-badge">★★★</span></a>
+    <a href="#s8" class="nav-link"><span class="ico">8️⃣</span> Lịch sự &amp; mức độ trang trọng</a>
+    <a href="#s9" class="nav-link"><span class="ico">9️⃣</span> Nói tự nhiên như người bản xứ</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-g4">🟢 Luyện nghe nói</div>
+    <a href="#s10" class="nav-link"><span class="ico">🔟</span> Phát âm · Nhấn nhá · Ngữ điệu</a>
+    <a href="#s11" class="nav-link"><span class="ico">🎧</span> Phương pháp luyện hiệu quả <span class="nav-badge">★★★</span></a>
+    <a href="#s12" class="nav-link"><span class="ico">⚠️</span> Lỗi của người Việt</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-au">📋 Tổng hợp</div>
+    <a href="#s13" class="nav-link"><span class="ico">📅</span> Lộ trình 30 ngày</a>
+    <a href="#s14" class="nav-link"><span class="ico">✍️</span> Tự kiểm tra</a>
+    <a href="#s15" class="nav-link"><span class="ico">📋</span> Cheat Sheet</a>
+  </div>
+</aside>
+
+<!-- ══════════ MAIN ══════════ -->
+<div class="main">
+
+<nav class="mnav" id="mnav" aria-label="Điều hướng nhanh">
+  <a href="#s0">Tổng quan</a><a href="#s1">Nền tảng</a><a href="#s2">Chào hỏi</a><a href="#s3">Small talk</a><a href="#s5">Tình huống</a><a href="#s7">Chức năng</a><a href="#s10">Phát âm</a><a href="#s11">Luyện tập</a><a href="#s13">30 ngày</a><a href="#s15">Cheat Sheet</a>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-dots"></div><div class="hero-glow"></div>
+  <div class="hero-eyebrow"><span class="pulse"></span> English Communication · Speaking · Listening · Dành cho người mất gốc</div>
+  <h1>
+    <span class="h-grad">Tiếng Anh</span> 💬<br>
+    <span class="h-g1">Giao Tiếp</span> · <span class="h-g2">Tự Nhiên</span><br>
+    & <span class="h-g3">Tự Tin</span>
+  </h1>
+  <p class="hero-desc">Không cần giỏi ngữ pháp mới nói được. Hướng dẫn này đi từ chào hỏi, small talk, các tình huống đời thường, đến cách nói lịch sự, nói tự nhiên, phát âm và phương pháp luyện nghe nói — kèm hội thoại mẫu, mẫu câu dùng ngay và lộ trình 30 ngày.</p>
+  <div class="hero-chips">
+    <span class="chip chip-g1">🟠 Nền tảng</span>
+    <span class="chip chip-g2">🔵 Tình huống thực tế</span>
+    <span class="chip chip-g3">🟣 Ngôn ngữ chức năng</span>
+    <span class="chip chip-g4">🟢 Luyện nghe nói</span>
+    <span class="chip chip-ch">🔊 Bấm câu tiếng Anh để nghe</span>
+    <span class="chip chip-au">📋 Cheat Sheet</span>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ════ S0 ════ -->
+<div class="section" id="s0">
+  <div class="sec-head">
+    <span class="sec-tag st-ov">TỔNG QUAN</span>
+    <div>
+      <h2 class="sec-title">Giao tiếp tốt nghĩa là gì?</h2>
+      <p class="sec-sub">Mục tiêu là hiểu nhau và trao đổi được — không phải nói hoàn hảo</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="grid-3">
+      <div class="rw-box rw-g1">
+        <div class="rw-label">🟠 NÓI ĐƯỢC</div>
+        <div class="rw-title">Diễn đạt ý của mình</div>
+        <div class="rw-body">Biết <strong>chọn đúng mẫu câu</strong> cho từng tình huống: chào hỏi, nhờ vả, từ chối, hỏi giá, đưa ý kiến. Bạn không cần câu dài — câu ngắn, rõ, đúng ý là đủ. <em>"Could I have the bill, please?"</em> tốt hơn một câu phức nói ấp úng.</div>
+      </div>
+      <div class="rw-box rw-g2">
+        <div class="rw-label">🔵 NGHE HIỂU</div>
+        <div class="rw-title">Bắt được ý người khác</div>
+        <div class="rw-body">Người bản xứ nói <strong>nhanh, nuốt âm, nối âm</strong>. Nghe hiểu cần luyện riêng bằng audio thật, không chỉ học từ vựng. Khi không hiểu, biết <strong>hỏi lại lịch sự</strong> cũng là một kỹ năng quan trọng.</div>
+      </div>
+      <div class="rw-box rw-g3">
+        <div class="rw-label">🟣 NÓI TỰ NHIÊN</div>
+        <div class="rw-title">Nghe "đúng chất" tiếng Anh</div>
+        <div class="rw-body">Đúng ngữ pháp chưa chắc tự nhiên. Người bản xứ dùng <strong>cụm cố định (chunks)</strong>, từ đệm, cách nói giảm nhẹ để lịch sự. Phần này làm bạn nghe "thoải mái" thay vì như đọc sách giáo khoa.</div>
+      </div>
+    </div>
+    <div class="info i-ok">
+      <span class="info-ico">🎯</span>
+      <div><strong>Cách dùng trang này:</strong> Bấm vào bất kỳ câu tiếng Anh nào (có màu sáng khi rê chuột) để nghe máy đọc mẫu, rồi <strong>đọc to theo</strong>. Đọc thầm không giúp bạn nói được — miệng cần được luyện như cơ bắp.</div>
+    </div>
+  </div>
+  <div class="sub" id="s0b">
+    <div class="sub-title">⭐ Ưu tiên theo mức độ dùng trong đời thực</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Ưu tiên</th><th>Nội dung</th><th>Lý do</th></tr></thead>
+      <tbody>
+        <tr><td><span style="color:var(--ins)">★★★</span></td><td>Chào hỏi, giới thiệu, hỏi lại khi không hiểu</td><td>Mở đầu mọi cuộc trò chuyện, giúp bạn "sống sót" ngay từ tuần đầu</td></tr>
+        <tr><td><span style="color:var(--ins)">★★★</span></td><td>Mẫu câu nhờ vả, đồng ý, từ chối, xin lỗi, cảm ơn</td><td>Chiếm phần lớn hội thoại hằng ngày và công việc</td></tr>
+        <tr><td><span style="color:var(--ch)">★★☆</span></td><td>Small talk, tình huống ăn uống – mua sắm – hỏi đường</td><td>Dùng khi đi du lịch, gặp người mới, làm việc với người nước ngoài</td></tr>
+        <tr><td><span style="color:var(--ch)">★★☆</span></td><td>Phát âm, nhấn nhá, ngữ điệu</td><td>Quyết định người khác có hiểu bạn không</td></tr>
+        <tr><td><span style="color:#ff8c50">★☆☆</span></td><td>Từ đệm, rút gọn khi nói, idioms</td><td>Nâng cấp độ tự nhiên — học sau khi đã có nền</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     PHẦN 1 — NỀN TẢNG
+════════════════════════════════ -->
+<div class="cat-banner cb-g1">
+  <div class="cb-icon">🟠</div>
+  <div>
+    <div class="cb-badge">FOUNDATION</div>
+    <div class="cb-title">Phần 1 — Nền Tảng Giao Tiếp</div>
+    <div class="cb-sub">Tư duy đúng, chào hỏi, trò chuyện xã giao và cách tự cứu mình khi không hiểu</div>
+  </div>
+</div>
+
+<!-- S1 -->
+<div class="section" id="s1">
+  <div class="sec-head">
+    <span class="sec-tag st-g1">NỀN TẢNG 1</span>
+    <div>
+      <h2 class="sec-title">Tư duy đúng &amp; lộ trình 4 cấp độ</h2>
+      <p class="sec-sub">Nói để giỏi lên — không phải giỏi rồi mới dám nói</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Lộ trình giao tiếp qua 4 cấp độ</div>
+    <div class="flow">
+      <div class="fl-slot fl-1">
+        <span class="fl-num">LV 1</span><span class="fl-cat">Survive</span>
+        <span class="fl-ex">Sống sót</span>
+        <span class="fl-ex" style="color:var(--g1)">chào hỏi, hỏi giá, hỏi đường, gọi món</span>
+      </div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-2">
+        <span class="fl-num">LV 2</span><span class="fl-cat">Cope</span>
+        <span class="fl-ex">Xoay xở</span>
+        <span class="fl-ex" style="color:var(--ch)">kể việc hằng ngày, hỏi đáp đơn giản, nhờ giúp đỡ</span>
+      </div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-3">
+        <span class="fl-num">LV 3</span><span class="fl-cat">Converse</span>
+        <span class="fl-ex">Trò chuyện</span>
+        <span class="fl-ex" style="color:var(--g2)">small talk, kể chuyện, nêu ý kiến, giải thích lý do</span>
+      </div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-4">
+        <span class="fl-num">LV 4</span><span class="fl-cat">Express</span>
+        <span class="fl-ex">Diễn đạt</span>
+        <span class="fl-ex" style="color:var(--g4)">tranh luận nhẹ, thuyết trình, họp, nói về chủ đề trừu tượng</span>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">🧠</span>
+      <div><strong>Đừng nhảy cấp.</strong> Nhiều người học ngữ pháp phức tạp nhưng chưa nói trôi chảy được câu "Could you say that again?". Hãy vững cấp 1–2 bằng <strong>mẫu câu có sẵn</strong> trước, rồi mới mở rộng.</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Hai nguyên tắc nền tảng</div>
+    <div class="cmp-box">
+      <div class="cmp-bad">
+        <div class="cmp-label">❌ Tư duy cản trở</div>
+        <div class="cmp-text">"Mình phải học xong ngữ pháp rồi mới nói."<br>"Nói sai thì xấu hổ."<br>"Phải dịch từng chữ trong đầu."</div>
+        <div class="cmp-note">Kết quả: biết nhiều nhưng không nói được, vì không có thời gian luyện miệng.</div>
+      </div>
+      <div class="cmp-good">
+        <div class="cmp-label">✅ Tư duy hiệu quả</div>
+        <div class="cmp-text">"Nói sai là cách học nhanh nhất."<br>"Học cả cụm câu, không học từng từ."<br>"Mỗi ngày nói to 15 phút."</div>
+        <div class="cmp-note">Kết quả: phản xạ hình thành dần, nhờ lặp lại các mẫu câu thật.</div>
+      </div>
+    </div>
+    <ul>
+      <li><strong>Fluency (trôi chảy) trước, Accuracy (chính xác) sau.</strong> Người nghe thường hiểu bạn dù sai ngữ pháp nhỏ như thiếu <code>-s</code>. Họ khó hiểu khi bạn ngập ngừng quá lâu hoặc phát âm mờ.</li>
+      <li><strong>Học theo cụm (chunks).</strong> Thay vì học <em>look</em> và <em>forward</em> riêng lẻ, hãy học nguyên cụm <em>"I'm looking forward to seeing you."</em> Não bộ lấy cả cụm ra dùng, nhanh hơn ghép từng từ.</li>
+      <li><strong>Vốn từ nhỏ nhưng dùng thành thạo</strong> hơn vốn từ lớn nhưng chưa từng nói ra miệng. Vài trăm đến một nghìn từ thông dụng đã đủ cho phần lớn hội thoại hằng ngày.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Bạn đang ở cấp nào? — Bảng tự đánh giá</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Cấp độ</th><th>Bạn làm được</th><th>Mục tiêu tiếp theo</th></tr></thead>
+      <tbody>
+        <tr><td>Chưa có nền</td><td>Biết vài từ rời rạc, chưa ghép được câu</td><td>Học 50 mẫu câu sinh tồn (Phần 2–3 &amp; S4) và đọc to mỗi ngày</td></tr>
+        <tr><td>Lv 1 — Survive</td><td>Giới thiệu bản thân, gọi món, hỏi giá bằng câu ngắn</td><td>Thêm câu hỏi ngược lại, kể việc hằng ngày 3–5 câu</td></tr>
+        <tr><td>Lv 2 — Cope</td><td>Hỏi đáp đơn giản, hiểu khi người ta nói chậm</td><td>Small talk 2–3 phút, dùng kỹ thuật Answer + Add + Ask</td></tr>
+        <tr><td>Lv 3 — Converse</td><td>Kể chuyện, nêu ý kiến, hiểu phần lớn hội thoại thường ngày</td><td>Nói tự nhiên hơn (S9), luyện nghe audio tốc độ thật</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- S2 -->
+<div class="section" id="s2">
+  <div class="sec-head">
+    <span class="sec-tag st-g1">NỀN TẢNG 2</span>
+    <div>
+      <h2 class="sec-title">Chào hỏi &amp; giới thiệu bản thân</h2>
+      <p class="sec-sub">Greetings · Introductions · How are you? · Chia tay</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Chào hỏi theo thời điểm &amp; mức độ thân thiết</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Tình huống</th><th>Thân mật</th><th>Trang trọng</th></tr></thead>
+      <tbody>
+        <tr><td>Chào gặp mặt</td><td><span class="say en">Hi! / Hey! / Hello!</span></td><td><span class="say en">Good morning / Good afternoon / Good evening.</span></td></tr>
+        <tr><td>Hỏi thăm</td><td><span class="say en">How's it going? / What's up? / How are you doing?</span></td><td><span class="say en">How are you? / How have you been?</span></td></tr>
+        <tr><td>Gặp lần đầu</td><td><span class="say en">Nice to meet you! / Great to meet you.</span></td><td><span class="say en">It's a pleasure to meet you.</span></td></tr>
+        <tr><td>Lâu không gặp</td><td><span class="say en">Long time no see! / It's been ages!</span></td><td><span class="say en">It's good to see you again.</span></td></tr>
+        <tr><td>Chia tay</td><td><span class="say en">See you! / Catch you later! / Take care!</span></td><td><span class="say en">Goodbye. / Have a nice day.</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong>Lưu ý:</strong> <em>Good evening</em> dùng khi <strong>gặp nhau</strong> buổi tối. Khi <strong>chia tay</strong> buổi tối, nói <em>Good night</em>. Cụm <em>How do you do?</em> rất trang trọng và cũ — người nghe cũng đáp lại y nguyên <em>How do you do?</em>, nên đừng dùng nó như "How are you?".</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Trả lời "How are you?" — đừng chỉ nói "I'm fine, thank you, and you?"</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Đáp theo tâm trạng</span><span class="ex-tag et-g1">REPLIES</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">Great, thanks! How about you?</span><span class="ex-arrow">→</span><span class="ex-vn">Rất tốt, cảm ơn! Còn bạn?</span><span class="ex-note">Rất vui</span></div>
+        <div class="ex-row"><span class="ex-en">Pretty good. You?</span><span class="ex-arrow">→</span><span class="ex-vn">Khá ổn. Còn bạn?</span><span class="ex-note">Tốt</span></div>
+        <div class="ex-row"><span class="ex-en">Not bad, thanks.</span><span class="ex-arrow">→</span><span class="ex-vn">Cũng không tệ.</span><span class="ex-note">Bình thường</span></div>
+        <div class="ex-row"><span class="ex-en">Can't complain.</span><span class="ex-arrow">→</span><span class="ex-vn">Không có gì để phàn nàn.</span><span class="ex-note">Ổn, thân mật</span></div>
+        <div class="ex-row"><span class="ex-en">A bit tired, but I'm okay.</span><span class="ex-arrow">→</span><span class="ex-vn">Hơi mệt nhưng vẫn ổn.</span><span class="ex-note">Hơi mệt</span></div>
+        <div class="ex-row"><span class="ex-en">Hanging in there.</span><span class="ex-arrow">→</span><span class="ex-vn">Đang cố gắng vượt qua thôi.</span><span class="ex-note">Hơi vất vả</span></div>
+      </div>
+    </div>
+    <p>Quy tắc vàng: <strong>trả lời + hỏi lại</strong>. Người nước ngoài hỏi "How are you?" thường là lời chào xã giao, nhưng nếu bạn hỏi lại, cuộc trò chuyện được mở ra.</p>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Công thức tự giới thiệu 5 câu</div>
+    <div class="flow">
+      <div class="fl-slot fl-1"><span class="fl-num">1</span><span class="fl-cat">Tên</span><span class="fl-ex">Hi, I'm Lan. / My name is Lan.</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-2"><span class="fl-num">2</span><span class="fl-cat">Quê / nơi ở</span><span class="fl-ex">I'm from Hanoi. / I live in Da Nang.</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-3"><span class="fl-num">3</span><span class="fl-cat">Nghề / học</span><span class="fl-ex">I work in marketing. / I'm a student.</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-4"><span class="fl-num">4</span><span class="fl-cat">Sở thích</span><span class="fl-ex">I enjoy cooking and traveling.</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-5"><span class="fl-num">5</span><span class="fl-cat">Hỏi lại</span><span class="fl-ex">What about you?</span></div>
+    </div>
+    <div class="dlg">
+      <div class="ex-head"><span class="ex-label">Hội thoại mẫu — Gặp người mới</span><span class="ex-tag et-g1">DIALOGUE</span></div>
+      <div class="dlg-body">
+        <div class="dl a"><span class="who">A</span><div><div class="dl-en">Hi! I don't think we've met. I'm Mark.</div><div class="dl-vn">Chào! Mình nghĩ chúng ta chưa gặp nhau. Mình là Mark.</div></div></div>
+        <div class="dl b"><span class="who">B</span><div><div class="dl-en">Hi Mark, I'm Lan. Nice to meet you!</div><div class="dl-vn">Chào Mark, mình là Lan. Rất vui được gặp bạn!</div></div></div>
+        <div class="dl a"><span class="who">A</span><div><div class="dl-en">Nice to meet you too. So, what do you do, Lan?</div><div class="dl-vn">Mình cũng vậy. Bạn làm nghề gì vậy Lan?</div></div></div>
+        <div class="dl b"><span class="who">B</span><div><div class="dl-en">I work in marketing. How about you?</div><div class="dl-vn">Mình làm marketing. Còn bạn?</div></div></div>
+        <div class="dl a"><span class="who">A</span><div><div class="dl-en">I'm a software engineer. Are you from around here?</div><div class="dl-vn">Mình là kỹ sư phần mềm. Bạn là người ở đây à?</div></div></div>
+        <div class="dl b"><span class="who">B</span><div><div class="dl-en">Yes, I was born in Hanoi. Have you been here long?</div><div class="dl-vn">Vâng, mình sinh ra ở Hà Nội. Bạn ở đây lâu chưa?</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Giới thiệu người khác &amp; xưng hô</div>
+    <ul>
+      <li><span class="say en">Mark, this is my colleague, Lan.</span> — Mark, đây là đồng nghiệp của mình, Lan.</li>
+      <li><span class="say en">Let me introduce you to my friend, Nam.</span> — Để mình giới thiệu bạn với Nam.</li>
+      <li>Gọi bằng <strong>tên riêng</strong> (Mark, Lan) là bình thường trong đa số môi trường. Dùng <strong>Mr./Ms. + họ</strong> (Mr. Smith) với người lớn tuổi, cấp trên hoặc khi chưa được mời gọi tên.</li>
+      <li>Không gọi giáo viên nước ngoài là <em>"Teacher"</em> — hãy gọi <em>Mr. Smith / Ms. Jane</em> hoặc tên riêng nếu họ cho phép.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- S3 -->
+<div class="section" id="s3">
+  <div class="sec-head">
+    <span class="sec-tag st-g1">NỀN TẢNG 3</span>
+    <div>
+      <h2 class="sec-title">Small talk — nói chuyện xã giao</h2>
+      <p class="sec-sub">Mở chuyện · Giữ chuyện · Kết thúc chuyện một cách tự nhiên</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Công thức vàng: Answer + Add + Ask</div>
+    <p>Lỗi phổ biến nhất khi nói chuyện bằng tiếng Anh là <strong>trả lời cụt lủn</strong> ("Yes." "No." "I'm fine."). Hãy trả lời, thêm một chi tiết, rồi hỏi ngược lại.</p>
+    <div class="flow">
+      <div class="fl-slot fl-1"><span class="fl-num">A1</span><span class="fl-cat">Answer</span><span class="fl-ex">Trả lời câu hỏi</span><span class="fl-ex" style="color:var(--g1)">"I love cooking."</span></div>
+      <span class="fl-arrow">+</span>
+      <div class="fl-slot fl-3"><span class="fl-num">A2</span><span class="fl-cat">Add</span><span class="fl-ex">Thêm 1 chi tiết</span><span class="fl-ex" style="color:var(--g2)">"I cook almost every weekend."</span></div>
+      <span class="fl-arrow">+</span>
+      <div class="fl-slot fl-4"><span class="fl-num">A3</span><span class="fl-cat">Ask</span><span class="fl-ex">Hỏi lại người kia</span><span class="fl-ex" style="color:var(--g4)">"Do you cook much?"</span></div>
+    </div>
+    <div class="cmp-box">
+      <div class="cmp-bad">
+        <div class="cmp-label">❌ Trả lời cụt</div>
+        <div class="cmp-text">A: Do you like movies?<br>B: Yes.</div>
+        <div class="cmp-note">Cuộc trò chuyện chết ngay. Người kia phải tự nghĩ câu tiếp theo.</div>
+      </div>
+      <div class="cmp-good">
+        <div class="cmp-label">✅ Answer + Add + Ask</div>
+        <div class="cmp-text">A: Do you like movies?<br>B: Yes, I do! I love comedies. What kind of movies do you like?</div>
+        <div class="cmp-note">Tự nhiên, có thông tin, và người kia có chủ đề để tiếp tục.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Chủ đề an toàn: F.O.R.D.</div>
+    <div class="grid-4">
+      <div class="card"><div class="card-icon">👨‍👩‍👧</div><div class="card-title">F — Family</div><div class="card-desc">Do you have any siblings? Do you live with your family?</div></div>
+      <div class="card"><div class="card-icon">💼</div><div class="card-title">O — Occupation</div><div class="card-desc">What do you do? How do you like your job?</div></div>
+      <div class="card"><div class="card-icon">🎮</div><div class="card-title">R — Recreation</div><div class="card-desc">What do you do in your free time? Any hobbies?</div></div>
+      <div class="card"><div class="card-icon">✨</div><div class="card-title">D — Dreams</div><div class="card-desc">Where would you like to travel? What are your plans?</div></div>
+    </div>
+    <p>Ngoài FORD còn có các chủ đề rất an toàn: <strong>thời tiết, ẩm thực, du lịch, phim ảnh, công nghệ, thể thao, sự kiện đang diễn ra</strong>. Với người mới quen, nên tránh hỏi thẳng về <strong>lương, tuổi tác, cân nặng, tình trạng hôn nhân, chính trị, tôn giáo</strong> — ở nhiều nền văn hóa phương Tây, đây là chuyện riêng tư.</p>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Câu hỏi mở đầu &amp; câu hỏi nối tiếp</div>
+    <div class="grid-2">
+      <div class="cheat-card">
+        <h4 class="h4-g1">🟠 Mở chuyện</h4>
+        <div class="cheat-row"><span class="ck say en">Crazy weather today, isn't it?</span><span class="cv">Thời tiết hôm nay thật lạ</span></div>
+        <div class="cheat-row"><span class="ck say en">How do you know the host?</span><span class="cv">Bạn quen chủ nhà thế nào?</span></div>
+        <div class="cheat-row"><span class="ck say en">Have you been here before?</span><span class="cv">Bạn từng đến đây chưa?</span></div>
+        <div class="cheat-row"><span class="ck say en">Did you do anything fun this weekend?</span><span class="cv">Cuối tuần bạn có gì vui không?</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g2">🔵 Nối tiếp chuyện</h4>
+        <div class="cheat-row"><span class="ck say en">Oh really? Tell me more!</span><span class="cv">Thật à? Kể thêm đi!</span></div>
+        <div class="cheat-row"><span class="ck say en">What made you decide to do that?</span><span class="cv">Điều gì khiến bạn quyết định vậy?</span></div>
+        <div class="cheat-row"><span class="ck say en">How was it?</span><span class="cv">Nó thế nào?</span></div>
+        <div class="cheat-row"><span class="ck say en">That sounds interesting. What happened next?</span><span class="cv">Nghe hay đấy. Sau đó thì sao?</span></div>
+      </div>
+    </div>
+    <p><strong>Phản ứng khi nghe</strong> (active listening) — giúp người kia thấy bạn quan tâm:</p>
+    <div class="pill-strip">
+      <span class="pill pl-g1 say">Really?</span><span class="pill pl-g1 say">Wow!</span><span class="pill pl-g2 say">I see.</span><span class="pill pl-g2 say">That's great!</span><span class="pill pl-g3 say">No way!</span><span class="pill pl-g3 say">That makes sense.</span><span class="pill pl-g4 say">Oh no, I'm sorry to hear that.</span><span class="pill pl-g4 say">Sounds fun!</span><span class="pill pl-ch say">Me too!</span><span class="pill pl-ch say">Same here.</span>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Kết thúc cuộc trò chuyện một cách lịch sự</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Cách rút lui khéo léo</span><span class="ex-tag et-g1">CLOSING</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">Well, it was great talking to you.</span><span class="ex-arrow">→</span><span class="ex-vn">Rất vui được nói chuyện với bạn.</span></div>
+        <div class="ex-row"><span class="ex-en">I should get going — I have a meeting at three.</span><span class="ex-arrow">→</span><span class="ex-vn">Mình phải đi rồi, 3 giờ mình có họp.</span></div>
+        <div class="ex-row"><span class="ex-en">I'll let you get back to your day.</span><span class="ex-arrow">→</span><span class="ex-vn">Để bạn tiếp tục công việc nhé.</span></div>
+        <div class="ex-row"><span class="ex-en">Let's keep in touch!</span><span class="ex-arrow">→</span><span class="ex-vn">Giữ liên lạc nhé!</span></div>
+        <div class="ex-row"><span class="ex-en">Hope to see you again soon!</span><span class="ex-arrow">→</span><span class="ex-vn">Hy vọng sớm gặp lại bạn!</span></div>
+      </div>
+    </div>
+    <div class="dlg">
+      <div class="ex-head"><span class="ex-label">Hội thoại mẫu — Small talk cuối tuần</span><span class="ex-tag et-g1">DIALOGUE</span></div>
+      <div class="dlg-body">
+        <div class="dl a"><span class="who">A</span><div><div class="dl-en">Hey Lan! Did you do anything fun this weekend?</div><div class="dl-vn">Chào Lan! Cuối tuần bạn có làm gì vui không?</div></div></div>
+        <div class="dl b"><span class="who">B</span><div><div class="dl-en">Yeah, I went hiking with some friends. The view was amazing! How about you?</div><div class="dl-vn">Có, mình đi leo núi với vài người bạn. Cảnh đẹp tuyệt! Còn bạn?</div></div></div>
+        <div class="dl a"><span class="who">A</span><div><div class="dl-en">Nice! I mostly stayed home and watched movies. Where did you go hiking?</div><div class="dl-vn">Hay quá! Mình chủ yếu ở nhà xem phim. Bạn leo núi ở đâu?</div></div></div>
+        <div class="dl b"><span class="who">B</span><div><div class="dl-en">Near Sapa. You should come with us next time!</div><div class="dl-vn">Gần Sa Pa. Lần sau bạn đi cùng bọn mình nhé!</div></div></div>
+        <div class="dl a"><span class="who">A</span><div><div class="dl-en">I'd love to! Well, I should get back to work. Talk to you later!</div><div class="dl-vn">Mình rất muốn! À, mình phải quay lại làm việc. Nói chuyện sau nhé!</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S4 -->
+<div class="section" id="s4">
+  <div class="sec-head">
+    <span class="sec-tag st-g1">NỀN TẢNG 4</span>
+    <div>
+      <h2 class="sec-title">Cứu nguy khi không hiểu hoặc không biết nói</h2>
+      <p class="sec-sub">Hỏi lại · Nhờ nói chậm · Câu giờ · Diễn đạt vòng</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="info i-ok">
+      <span class="info-ico">🛟</span>
+      <div><strong>Đây là nhóm câu quan trọng nhất cho người mới.</strong> Người bản xứ hoàn toàn bình thường khi người học hỏi lại. Im lặng và giả vờ hiểu mới là điều gây hiểu lầm.</div>
+    </div>
+    <div class="cheat-grid">
+      <div class="cheat-card">
+        <h4 class="h4-g1">🟠 Chưa nghe rõ</h4>
+        <div class="cheat-row"><span class="ck say en">Sorry, could you say that again?</span><span class="cv">Xin lỗi, bạn nhắc lại được không?</span></div>
+        <div class="cheat-row"><span class="ck say en">Pardon? / Sorry?</span><span class="cv">Dạ? / Xin lỗi?</span></div>
+        <div class="cheat-row"><span class="ck say en">I didn't catch that.</span><span class="cv">Mình chưa nghe kịp.</span></div>
+        <div class="cheat-row"><span class="ck say en">Could you speak a bit more slowly?</span><span class="cv">Bạn nói chậm hơn chút được không?</span></div>
+        <div class="cheat-row"><span class="ck say en">Could you speak up, please?</span><span class="cv">Bạn nói to hơn chút được không?</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g2">🔵 Chưa hiểu nghĩa</h4>
+        <div class="cheat-row"><span class="ck say en">What does "…" mean?</span><span class="cv">"…" nghĩa là gì?</span></div>
+        <div class="cheat-row"><span class="ck say en">Could you explain that, please?</span><span class="cv">Bạn giải thích giúp mình được không?</span></div>
+        <div class="cheat-row"><span class="ck say en">Do you mean…?</span><span class="cv">Ý bạn là…?</span></div>
+        <div class="cheat-row"><span class="ck say en">Could you give me an example?</span><span class="cv">Bạn cho mình ví dụ được không?</span></div>
+        <div class="cheat-row"><span class="ck say en">I'm not sure I understand.</span><span class="cv">Mình không chắc là mình hiểu.</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g3">🟣 Câu giờ để suy nghĩ</h4>
+        <div class="cheat-row"><span class="ck say en">Let me think…</span><span class="cv">Để mình nghĩ chút…</span></div>
+        <div class="cheat-row"><span class="ck say en">That's a good question.</span><span class="cv">Câu hỏi hay đấy.</span></div>
+        <div class="cheat-row"><span class="ck say en">How can I put it…?</span><span class="cv">Nói sao nhỉ…?</span></div>
+        <div class="cheat-row"><span class="ck say en">Give me a second.</span><span class="cv">Chờ mình một chút.</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g4">🟢 Không biết từ tiếng Anh</h4>
+        <div class="cheat-row"><span class="ck say en">How do you say "…" in English?</span><span class="cv">"…" tiếng Anh nói thế nào?</span></div>
+        <div class="cheat-row"><span class="ck say en">What's the word for…?</span><span class="cv">Từ chỉ … là gì?</span></div>
+        <div class="cheat-row"><span class="ck say en">It's a thing you use for…</span><span class="cv">Đó là thứ dùng để…</span></div>
+        <div class="cheat-row"><span class="ck say en">It's like a… but…</span><span class="cv">Nó giống … nhưng…</span></div>
+      </div>
+    </div>
+    <div class="sub-title">Kỹ thuật "diễn đạt vòng" (circumlocution)</div>
+    <p>Quên từ <em>"umbrella"</em>? Đừng dừng lại — hãy mô tả: <span class="say en">"It's the thing you use when it rains."</span> Quên từ <em>"plumber"</em>? <span class="say en">"The person who fixes water pipes."</span> Người nghe thường đoán ra, và bạn cũng học được từ mới khi họ nói lại.</p>
+    <div class="dlg">
+      <div class="ex-head"><span class="ex-label">Hội thoại mẫu — Không nghe kịp</span><span class="ex-tag et-g1">DIALOGUE</span></div>
+      <div class="dlg-body">
+        <div class="dl a"><span class="who">A</span><div><div class="dl-en">So, are you free to grab lunch later? There's a new place downtown.</div><div class="dl-vn">Lát nữa bạn rảnh đi ăn trưa không? Có quán mới ở trung tâm.</div></div></div>
+        <div class="dl b"><span class="who">B</span><div><div class="dl-en">Sorry, I didn't catch that. Could you say it a bit more slowly?</div><div class="dl-vn">Xin lỗi, mình chưa nghe kịp. Bạn nói chậm hơn chút được không?</div></div></div>
+        <div class="dl a"><span class="who">A</span><div><div class="dl-en">Sure! Do you want to have lunch together today?</div><div class="dl-vn">Được chứ! Hôm nay bạn muốn ăn trưa cùng không?</div></div></div>
+        <div class="dl b"><span class="who">B</span><div><div class="dl-en">Oh, I see. Yes, I'd love to! What time?</div><div class="dl-vn">À, mình hiểu rồi. Có, mình rất muốn! Mấy giờ vậy?</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     PHẦN 2 — TÌNH HUỐNG THỰC TẾ
+════════════════════════════════ -->
+<div class="cat-banner cb-g2">
+  <div class="cb-icon">🔵</div>
+  <div>
+    <div class="cb-badge">REAL-LIFE SITUATIONS</div>
+    <div class="cb-title">Phần 2 — Tình Huống Thực Tế</div>
+    <div class="cb-sub">Những nơi bạn thật sự cần nói tiếng Anh: quán ăn, cửa hàng, đường phố, điện thoại, công sở</div>
+  </div>
+</div>
+
+<!-- S5 -->
+<div class="section" id="s5">
+  <div class="sec-head">
+    <span class="sec-tag st-g2">TÌNH HUỐNG 1</span>
+    <div>
+      <h2 class="sec-title">Ăn uống · Mua sắm · Hỏi đường · Du lịch</h2>
+      <p class="sec-sub">Mẫu câu dùng ngay — nhớ câu của bạn (khách) và câu bạn sẽ nghe (nhân viên)</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">🍽️ Tại nhà hàng</div>
+    <div class="grid-2">
+      <div class="cheat-card">
+        <h4 class="h4-g2">Bạn nói</h4>
+        <div class="cheat-row"><span class="ck say en">A table for two, please.</span><span class="cv">Cho bàn 2 người.</span></div>
+        <div class="cheat-row"><span class="ck say en">Could I see the menu, please?</span><span class="cv">Cho mình xem thực đơn.</span></div>
+        <div class="cheat-row"><span class="ck say en">What do you recommend?</span><span class="cv">Bạn gợi ý món gì?</span></div>
+        <div class="cheat-row"><span class="ck say en">I'd like the grilled chicken, please.</span><span class="cv">Cho mình gà nướng.</span></div>
+        <div class="cheat-row"><span class="ck say en">Is this dish spicy?</span><span class="cv">Món này có cay không?</span></div>
+        <div class="cheat-row"><span class="ck say en">I'm allergic to peanuts.</span><span class="cv">Mình bị dị ứng đậu phộng.</span></div>
+        <div class="cheat-row"><span class="ck say en">Could we have the bill, please?</span><span class="cv">Cho mình tính tiền.</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g1">Bạn sẽ nghe</h4>
+        <div class="cheat-row"><span class="ck say en">Are you ready to order?</span><span class="cv">Bạn gọi món chưa?</span></div>
+        <div class="cheat-row"><span class="ck say en">Anything to drink?</span><span class="cv">Bạn uống gì không?</span></div>
+        <div class="cheat-row"><span class="ck say en">How would you like your steak?</span><span class="cv">Bạn muốn bít tết chín mức nào?</span></div>
+        <div class="cheat-row"><span class="ck say en">For here or to go?</span><span class="cv">Dùng tại chỗ hay mang đi?</span></div>
+        <div class="cheat-row"><span class="ck say en">Would you like anything else?</span><span class="cv">Bạn gọi thêm gì không?</span></div>
+        <div class="cheat-row"><span class="ck say en">Cash or card?</span><span class="cv">Tiền mặt hay thẻ?</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">🛍️ Mua sắm</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Trong cửa hàng</span><span class="ex-tag et-g2">SHOPPING</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">I'm just looking, thanks.</span><span class="ex-arrow">→</span><span class="ex-vn">Mình chỉ xem thôi, cảm ơn.</span></div>
+        <div class="ex-row"><span class="ex-en">How much is this?</span><span class="ex-arrow">→</span><span class="ex-vn">Cái này giá bao nhiêu?</span></div>
+        <div class="ex-row"><span class="ex-en">Do you have this in a larger size?</span><span class="ex-arrow">→</span><span class="ex-vn">Cái này có size lớn hơn không?</span></div>
+        <div class="ex-row"><span class="ex-en">Can I try this on?</span><span class="ex-arrow">→</span><span class="ex-vn">Mình thử được không?</span></div>
+        <div class="ex-row"><span class="ex-en">It's a bit too expensive for me. Is there any discount?</span><span class="ex-arrow">→</span><span class="ex-vn">Hơi đắt với mình. Có giảm giá không?</span></div>
+        <div class="ex-row"><span class="ex-en">Do you take credit cards?</span><span class="ex-arrow">→</span><span class="ex-vn">Bên bạn nhận thẻ tín dụng không?</span></div>
+        <div class="ex-row"><span class="ex-en">I'll take it.</span><span class="ex-arrow">→</span><span class="ex-vn">Mình lấy cái này.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">🧭 Hỏi đường &amp; chỉ đường</div>
+    <div class="dlg">
+      <div class="ex-head"><span class="ex-label">Hội thoại mẫu — Hỏi đường</span><span class="ex-tag et-g2">DIALOGUE</span></div>
+      <div class="dlg-body">
+        <div class="dl a"><span class="who">A</span><div><div class="dl-en">Excuse me, how do I get to the train station?</div><div class="dl-vn">Xin lỗi, đi đến ga tàu thế nào ạ?</div></div></div>
+        <div class="dl b"><span class="who">B</span><div><div class="dl-en">Go straight for two blocks, then turn left at the traffic light.</div><div class="dl-vn">Đi thẳng hai dãy phố, rồi rẽ trái ở đèn giao thông.</div></div></div>
+        <div class="dl a"><span class="who">A</span><div><div class="dl-en">Is it far from here?</div><div class="dl-vn">Có xa đây không?</div></div></div>
+        <div class="dl b"><span class="who">B</span><div><div class="dl-en">Not really. It's about a five-minute walk. It's next to the post office, on your right.</div><div class="dl-vn">Không xa. Đi bộ khoảng 5 phút. Nó nằm cạnh bưu điện, bên tay phải bạn.</div></div></div>
+        <div class="dl a"><span class="who">A</span><div><div class="dl-en">Great, thank you so much!</div><div class="dl-vn">Tuyệt, cảm ơn bạn nhiều!</div></div></div>
+      </div>
+    </div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Từ chỉ đường</th><th>Nghĩa</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td class="en">go straight</td><td>đi thẳng</td><td>Go straight for 200 meters.</td></tr>
+        <tr><td class="en">turn left / right</td><td>rẽ trái / phải</td><td>Turn right at the corner.</td></tr>
+        <tr><td class="en">next to / beside</td><td>cạnh</td><td>The bank is next to the café.</td></tr>
+        <tr><td class="en">opposite / across from</td><td>đối diện</td><td>It's opposite the park.</td></tr>
+        <tr><td class="en">between … and …</td><td>giữa … và …</td><td>It's between the bank and the school.</td></tr>
+        <tr><td class="en">at the intersection</td><td>ở ngã tư</td><td>Turn left at the intersection.</td></tr>
+        <tr><td class="en">you can't miss it</td><td>không thể bỏ lỡ</td><td>It's a big red building — you can't miss it.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">✈️ Sân bay · Khách sạn · Taxi</div>
+    <div class="cheat-grid">
+      <div class="cheat-card">
+        <h4 class="h4-g2">Sân bay</h4>
+        <div class="cheat-row"><span class="ck say en">Where is the check-in counter?</span><span class="cv">Quầy làm thủ tục ở đâu?</span></div>
+        <div class="cheat-row"><span class="ck say en">Window or aisle seat?</span><span class="cv">Ghế cửa sổ hay lối đi?</span></div>
+        <div class="cheat-row"><span class="ck say en">Where is the baggage claim?</span><span class="cv">Nhận hành lý ở đâu?</span></div>
+        <div class="cheat-row"><span class="ck say en">What is the purpose of your visit?</span><span class="cv">Mục đích chuyến đi của bạn?</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g1">Khách sạn</h4>
+        <div class="cheat-row"><span class="ck say en">I have a reservation under Nguyen.</span><span class="cv">Mình đặt phòng tên Nguyễn.</span></div>
+        <div class="cheat-row"><span class="ck say en">What time is check-out?</span><span class="cv">Mấy giờ trả phòng?</span></div>
+        <div class="cheat-row"><span class="ck say en">Is breakfast included?</span><span class="cv">Có bao gồm bữa sáng không?</span></div>
+        <div class="cheat-row"><span class="ck say en">The air conditioner isn't working.</span><span class="cv">Máy lạnh không chạy.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S6 -->
+<div class="section" id="s6">
+  <div class="sec-head">
+    <span class="sec-tag st-g2">TÌNH HUỐNG 2</span>
+    <div>
+      <h2 class="sec-title">Điện thoại · Cuộc họp · Phỏng vấn</h2>
+      <p class="sec-sub">Tiếng Anh công sở — lịch sự, rõ ràng, có cấu trúc</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">📞 Nói chuyện qua điện thoại</div>
+    <p>Qua điện thoại bạn không thấy mặt, không đọc được cử chỉ nên khó hơn nhiều. Hãy <strong>chuẩn bị sẵn các câu cố định</strong> và đừng ngại <em>xác nhận lại</em> thông tin quan trọng (tên, số điện thoại, giờ hẹn).</p>
+    <div class="cheat-grid">
+      <div class="cheat-card">
+        <h4 class="h4-g2">Gọi đi</h4>
+        <div class="cheat-row"><span class="ck say en">Hello, this is Lan from ABC Company.</span><span class="cv">Chào, tôi là Lan từ công ty ABC.</span></div>
+        <div class="cheat-row"><span class="ck say en">Could I speak to Mr. Brown, please?</span><span class="cv">Cho tôi nói chuyện với ông Brown?</span></div>
+        <div class="cheat-row"><span class="ck say en">I'm calling about your job posting.</span><span class="cv">Tôi gọi về tin tuyển dụng của bạn.</span></div>
+        <div class="cheat-row"><span class="ck say en">Could you ask him to call me back?</span><span class="cv">Nhờ ông ấy gọi lại cho tôi?</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g1">Nghe máy</h4>
+        <div class="cheat-row"><span class="ck say en">ABC Company, how can I help you?</span><span class="cv">Công ty ABC, tôi giúp gì được?</span></div>
+        <div class="cheat-row"><span class="ck say en">Who's calling, please?</span><span class="cv">Xin cho biết ai gọi ạ?</span></div>
+        <div class="cheat-row"><span class="ck say en">Hold on, please. I'll put you through.</span><span class="cv">Vui lòng chờ, tôi chuyển máy.</span></div>
+        <div class="cheat-row"><span class="ck say en">Can I take a message?</span><span class="cv">Tôi ghi lại lời nhắn nhé?</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g3">Xác nhận &amp; xử lý sự cố</h4>
+        <div class="cheat-row"><span class="ck say en">Could you spell that, please?</span><span class="cv">Bạn đánh vần giúp được không?</span></div>
+        <div class="cheat-row"><span class="ck say en">Let me repeat that to make sure…</span><span class="cv">Để mình nhắc lại cho chắc…</span></div>
+        <div class="cheat-row"><span class="ck say en">The line is bad. Could you call me back?</span><span class="cv">Đường truyền kém, bạn gọi lại nhé?</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g4">Kết thúc cuộc gọi</h4>
+        <div class="cheat-row"><span class="ck say en">Thanks for calling.</span><span class="cv">Cảm ơn bạn đã gọi.</span></div>
+        <div class="cheat-row"><span class="ck say en">I'll get back to you by Friday.</span><span class="cv">Mình sẽ phản hồi trước thứ Sáu.</span></div>
+        <div class="cheat-row"><span class="ck say en">Have a great day!</span><span class="cv">Chúc bạn một ngày tốt lành!</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">🧑‍💼 Trong cuộc họp</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Mục đích</th><th>Mẫu câu</th></tr></thead>
+      <tbody>
+        <tr><td>Mở đầu</td><td><span class="say en">Let's get started. / The purpose of today's meeting is to…</span></td></tr>
+        <tr><td>Xin phát biểu</td><td><span class="say en">Could I add something? / May I say a few words?</span></td></tr>
+        <tr><td>Ngắt lời lịch sự</td><td><span class="say en">Sorry to interrupt, but… / Can I jump in here?</span></td></tr>
+        <tr><td>Xác nhận đã hiểu</td><td><span class="say en">Let me make sure I understand. You're saying that…</span></td></tr>
+        <tr><td>Chuyển chủ đề</td><td><span class="say en">Let's move on to the next point. / Shall we turn to…?</span></td></tr>
+        <tr><td>Chốt lại</td><td><span class="say en">To sum up, we've agreed that… / So the next steps are…</span></td></tr>
+        <tr><td>Hoãn vấn đề</td><td><span class="say en">Let's take that offline. / Let's come back to that later.</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">🎤 Phỏng vấn: "Tell me about yourself"</div>
+    <p>Đây là câu mở đầu hầu như phỏng vấn nào cũng có. Dùng công thức <strong>Present – Past – Future</strong> và giữ trong khoảng 1–2 phút.</p>
+    <div class="flow">
+      <div class="fl-slot fl-1"><span class="fl-num">P1</span><span class="fl-cat">Present</span><span class="fl-ex">Bạn đang làm gì</span><span class="fl-ex" style="color:var(--g1)">"I'm currently a marketing executive at…"</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-3"><span class="fl-num">P2</span><span class="fl-cat">Past</span><span class="fl-ex">Kinh nghiệm liên quan</span><span class="fl-ex" style="color:var(--g2)">"Before that, I worked on… for three years."</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-4"><span class="fl-num">P3</span><span class="fl-cat">Future</span><span class="fl-ex">Vì sao bạn ở đây</span><span class="fl-ex" style="color:var(--g4)">"I'm excited about this role because…"</span></div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong>Mẹo trả lời phỏng vấn:</strong> Dùng cấu trúc <em>"I'm good at… For example, when I…, I…"</em> — luôn có <strong>ví dụ cụ thể</strong> đi kèm. Nếu chưa nghe rõ câu hỏi, hỏi lại: <span class="say en">"Could you repeat the question, please?"</span> — hoàn toàn bình thường trong phỏng vấn.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     PHẦN 3 — NGÔN NGỮ CHỨC NĂNG
+════════════════════════════════ -->
+<div class="cat-banner cb-g3">
+  <div class="cb-icon">🟣</div>
+  <div>
+    <div class="cb-badge">LANGUAGE FUNCTIONS</div>
+    <div class="cb-title">Phần 3 — Ngôn Ngữ Chức Năng &amp; Cách Nói Tự Nhiên</div>
+    <div class="cb-sub">Đồng ý, từ chối, xin lỗi, mời, nói lịch sự và nghe "đúng chất" người bản xứ</div>
+  </div>
+</div>
+
+<!-- S7 -->
+<div class="section" id="s7">
+  <div class="sec-head">
+    <span class="sec-tag st-g3">CHỨC NĂNG 1</span>
+    <div>
+      <h2 class="sec-title">Đồng ý · Phản đối · Mời · Xin lỗi · Cảm ơn</h2>
+      <p class="sec-sub">Những "việc" bạn làm bằng lời nói mỗi ngày — học theo mục đích, không theo ngữ pháp</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Nêu ý kiến</div>
+    <div class="pill-strip">
+      <span class="pill pl-g3 say">I think…</span><span class="pill pl-g3 say">In my opinion…</span><span class="pill pl-g3 say">Personally, I feel that…</span><span class="pill pl-g3 say">As far as I'm concerned…</span><span class="pill pl-g3 say">It seems to me that…</span><span class="pill pl-g3 say">If you ask me…</span>
+    </div>
+    <p>Ví dụ: <span class="say en">"Personally, I think working from home is more productive, because there are fewer distractions."</span> — luôn thêm <strong>because…</strong> để ý kiến có lý do.</p>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Thang đồng ý — phản đối</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Mức độ</th><th>Mẫu câu</th><th>Ghi chú</th></tr></thead>
+      <tbody>
+        <tr><td style="color:var(--ins)">Hoàn toàn đồng ý</td><td><span class="say en">Absolutely! / Exactly! / I couldn't agree more.</span></td><td>Thể hiện nhiệt tình</td></tr>
+        <tr><td style="color:var(--ins)">Đồng ý</td><td><span class="say en">I think so too. / That's true. / Good point.</span></td><td>An toàn mọi hoàn cảnh</td></tr>
+        <tr><td style="color:var(--ch)">Đồng ý một phần</td><td><span class="say en">I see your point, but… / That's true, however…</span></td><td>Bắt đầu bằng phần đúng, sau đó mới nêu khác biệt</td></tr>
+        <tr><td style="color:#ff8c50">Không chắc</td><td><span class="say en">I'm not so sure about that. / I'm not convinced.</span></td><td>Nhẹ nhàng hơn "No"</td></tr>
+        <tr><td style="color:var(--au)">Phản đối lịch sự</td><td><span class="say en">I see it differently. / I'm afraid I don't agree, because…</span></td><td>Luôn kèm lý do</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cmp-box">
+      <div class="cmp-bad">
+        <div class="cmp-label">❌ Quá thẳng</div>
+        <div class="cmp-text">"No, you're wrong."</div>
+        <div class="cmp-note">Nghe như tấn công cá nhân, dễ gây căng thẳng.</div>
+      </div>
+      <div class="cmp-good">
+        <div class="cmp-label">✅ Lịch sự</div>
+        <div class="cmp-text">"I see your point, but I think the data shows something different."</div>
+        <div class="cmp-note">Ghi nhận ý người kia trước, rồi mới nêu quan điểm.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Cảm ơn · Xin lỗi · Đáp lại</div>
+    <div class="grid-2">
+      <div class="cheat-card">
+        <h4 class="h4-g3">🙏 Cảm ơn &amp; đáp lại</h4>
+        <div class="cheat-row"><span class="ck say en">Thanks a lot! / Thank you so much.</span><span class="cv">Cảm ơn nhiều</span></div>
+        <div class="cheat-row"><span class="ck say en">I really appreciate your help.</span><span class="cv">Mình rất trân trọng sự giúp đỡ</span></div>
+        <div class="cheat-row"><span class="ck say en">You're welcome. / No problem.</span><span class="cv">Không có gì</span></div>
+        <div class="cheat-row"><span class="ck say en">Anytime! / My pleasure.</span><span class="cv">Bất cứ lúc nào / Hân hạnh</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g1">🙇 Xin lỗi &amp; đáp lại</h4>
+        <div class="cheat-row"><span class="ck say en">I'm sorry. / Sorry about that.</span><span class="cv">Xin lỗi</span></div>
+        <div class="cheat-row"><span class="ck say en">I apologize for being late.</span><span class="cv">Tôi xin lỗi vì đến muộn (trang trọng)</span></div>
+        <div class="cheat-row"><span class="ck say en">No worries. / It's okay.</span><span class="cv">Không sao đâu</span></div>
+        <div class="cheat-row"><span class="ck say en">Don't worry about it.</span><span class="cv">Đừng bận tâm</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong>Phân biệt:</strong> <em>Excuse me</em> dùng <strong>trước</strong> khi làm phiền (hỏi đường, đi qua, gọi nhân viên). <em>Sorry</em> / <em>I'm sorry</em> dùng <strong>sau</strong> khi đã gây ra lỗi hoặc để bày tỏ cảm thông (<em>"I'm sorry to hear that."</em>).</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Mời · Nhận lời · Từ chối khéo</div>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Lời mời</span><span class="ex-tag et-g3">INVITATIONS</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-ok">MỜI</span><span class="ex-en">Would you like to join us for dinner on Friday?</span><span class="ex-vn">Bạn muốn đi ăn tối cùng bọn mình thứ Sáu không?</span></div>
+        <div class="ex-row"><span class="ex-type ext-ok">MỜI</span><span class="ex-en">How about grabbing a coffee after work?</span><span class="ex-vn">Đi uống cà phê sau giờ làm nhé?</span></div>
+        <div class="ex-row"><span class="ex-type ext-ok">NHẬN</span><span class="ex-en">I'd love to! / Sounds great! / Sure, why not?</span><span class="ex-vn">Rất sẵn lòng! / Nghe hay đấy!</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">TỪ CHỐI</span><span class="ex-en">I'd love to, but I already have plans. Maybe next time?</span><span class="ex-vn">Mình rất muốn, nhưng đã có kế hoạch. Lần sau nhé?</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">TỪ CHỐI</span><span class="ex-en">Thanks for asking, but I can't make it.</span><span class="ex-vn">Cảm ơn đã mời, nhưng mình không đi được.</span></div>
+      </div>
+    </div>
+    <p>Công thức từ chối khéo: <strong>cảm ơn + lý do ngắn + gợi ý thay thế</strong>. Từ chối thẳng "No, I can't." nghe cụt và hơi lạnh.</p>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Đề nghị · Gợi ý · Nhờ vả · Khen · Chia vui · Chia buồn</div>
+    <div class="cheat-grid">
+      <div class="cheat-card">
+        <h4 class="h4-g3">Đề nghị giúp &amp; gợi ý</h4>
+        <div class="cheat-row"><span class="ck say en">Can I give you a hand?</span><span class="cv">Để mình giúp nhé?</span></div>
+        <div class="cheat-row"><span class="ck say en">Why don't we take a taxi?</span><span class="cv">Sao mình không đi taxi?</span></div>
+        <div class="cheat-row"><span class="ck say en">Let's order some pizza.</span><span class="cv">Mình gọi pizza đi.</span></div>
+        <div class="cheat-row"><span class="ck say en">How about trying the new café?</span><span class="cv">Thử quán cà phê mới nhé?</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g1">Nhờ vả</h4>
+        <div class="cheat-row"><span class="ck say en">Could you help me with this?</span><span class="cv">Bạn giúp mình việc này được không?</span></div>
+        <div class="cheat-row"><span class="ck say en">Would you mind closing the window?</span><span class="cv">Bạn đóng giúp cửa sổ được không?</span></div>
+        <div class="cheat-row"><span class="ck say en">Do you think you could send me the file?</span><span class="cv">Bạn gửi mình file được chứ?</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g4">Khen &amp; chúc mừng</h4>
+        <div class="cheat-row"><span class="ck say en">That's a great idea!</span><span class="cv">Ý hay đấy!</span></div>
+        <div class="cheat-row"><span class="ck say en">I love your jacket!</span><span class="cv">Mình thích áo khoác của bạn!</span></div>
+        <div class="cheat-row"><span class="ck say en">Congratulations! You deserve it.</span><span class="cv">Chúc mừng! Bạn xứng đáng.</span></div>
+        <div class="cheat-row"><span class="ck say en">Thanks, that's very kind of you.</span><span class="cv">Cảm ơn, bạn thật tốt (đáp lời khen)</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g2">Chia buồn &amp; động viên</h4>
+        <div class="cheat-row"><span class="ck say en">I'm so sorry to hear that.</span><span class="cv">Mình rất tiếc khi nghe vậy</span></div>
+        <div class="cheat-row"><span class="ck say en">That must be really hard.</span><span class="cv">Chắc hẳn rất khó khăn</span></div>
+        <div class="cheat-row"><span class="ck say en">Let me know if there's anything I can do.</span><span class="cv">Cần gì cứ báo mình</span></div>
+        <div class="cheat-row"><span class="ck say en">Hang in there. You've got this!</span><span class="cv">Cố lên, bạn làm được!</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S8 -->
+<div class="section" id="s8">
+  <div class="sec-head">
+    <span class="sec-tag st-g3">CHỨC NĂNG 2</span>
+    <div>
+      <h2 class="sec-title">Lịch sự &amp; mức độ trang trọng</h2>
+      <p class="sec-sub">Nói giảm nhẹ (softening) · Trực tiếp vs gián tiếp · Formal vs informal</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Tiếng Anh lịch sự = nói vòng một chút</div>
+    <p>Trong tiếng Việt, lịch sự thể hiện qua xưng hô và từ đệm (dạ, ạ, nhé). Trong tiếng Anh, lịch sự thể hiện qua <strong>cấu trúc câu</strong>: dùng <code>could</code>, <code>would</code>, <code>I'd like</code>, <code>Would you mind…?</code>, và thêm <code>please</code>. Câu mệnh lệnh trần ("Give me water.") có thể nghe cộc lốc hoặc bất lịch sự dù bạn không có ý đó.</p>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Quá trực tiếp</th><th>Lịch sự hơn</th><th>Rất lịch sự</th></tr></thead>
+      <tbody>
+        <tr><td>Give me some water.</td><td><span class="say en">Can I have some water, please?</span></td><td><span class="say en">Could I possibly have some water?</span></td></tr>
+        <tr><td>I want a coffee.</td><td><span class="say en">I'd like a coffee, please.</span></td><td><span class="say en">I'd like a coffee, if that's okay.</span></td></tr>
+        <tr><td>Open the window.</td><td><span class="say en">Could you open the window?</span></td><td><span class="say en">Would you mind opening the window?</span></td></tr>
+        <tr><td>What time is it?</td><td><span class="say en">Do you have the time?</span></td><td><span class="say en">Do you happen to know what time it is?</span></td></tr>
+        <tr><td>You're wrong.</td><td><span class="say en">I don't think that's right.</span></td><td><span class="say en">I'm not sure that's quite right.</span></td></tr>
+        <tr><td>I don't understand.</td><td><span class="say en">Sorry, I didn't get that.</span></td><td><span class="say en">I'm sorry, I didn't quite catch that.</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong>Bẫy trả lời "Would you mind…?":</strong> Câu này hỏi "Bạn có phiền không?", nên đồng ý giúp thì đáp <em>"Not at all."</em> / <em>"Of course not."</em> / <em>"No problem."</em> Nếu đáp <em>"Yes"</em> nghĩa là bạn <strong>có phiền</strong> — tức là từ chối.</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Formal vs Informal</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Ý nghĩa</th><th>Thân mật (bạn bè)</th><th>Trang trọng (công việc, người lạ)</th></tr></thead>
+      <tbody>
+        <tr><td>Xin chào</td><td>Hey! / What's up?</td><td>Good morning. / Hello.</td></tr>
+        <tr><td>Cảm ơn</td><td>Thanks! / Cheers!</td><td>Thank you very much. / I appreciate it.</td></tr>
+        <tr><td>Hỏi ai đó</td><td>What do you think?</td><td>May I ask for your opinion?</td></tr>
+        <tr><td>Muốn</td><td>I wanna grab a coffee.</td><td>I would like to have a coffee.</td></tr>
+        <tr><td>Giúp</td><td>Can you help me out?</td><td>Could you please assist me?</td></tr>
+        <tr><td>Tạm biệt</td><td>See ya! / Later!</td><td>Goodbye. / Have a pleasant day.</td></tr>
+      </tbody>
+    </table></div>
+    <p>Khi chưa chắc, <strong>chọn mức trung tính hoặc hơi lịch sự</strong> — hiếm khi sai. Dùng quá thân mật với người lạ hoặc sếp là rủi ro lớn hơn dùng quá trang trọng với bạn bè.</p>
+  </div>
+</div>
+
+<!-- S9 -->
+<div class="section" id="s9">
+  <div class="sec-head">
+    <span class="sec-tag st-g3">CHỨC NĂNG 3</span>
+    <div>
+      <h2 class="sec-title">Nói tự nhiên như người bản xứ</h2>
+      <p class="sec-sub">Từ đệm · Từ nối · Rút gọn khi nói · Phrasal verbs · Idioms</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Từ đệm (fillers) &amp; từ nối hội thoại</div>
+    <p>Người bản xứ cũng ngập ngừng và dùng từ đệm để suy nghĩ. Dùng đúng mức giúp bạn nghe tự nhiên; dùng quá nhiều (<em>"um, um, like, like"</em>) thì phản tác dụng.</p>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Nhóm</th><th>Ví dụ</th><th>Dùng khi</th></tr></thead>
+      <tbody>
+        <tr><td>Câu giờ</td><td><span class="say en">well… / you know… / I mean… / let me see…</span></td><td>Cần thời gian suy nghĩ</td></tr>
+        <tr><td>Nhấn mạnh</td><td><span class="say en">actually / honestly / basically / seriously</span></td><td>Đưa ra ý chính hoặc sự thật</td></tr>
+        <tr><td>Đổi chủ đề</td><td><span class="say en">by the way / speaking of… / anyway,</span></td><td>Chuyển hướng cuộc trò chuyện</td></tr>
+        <tr><td>Nêu thứ tự</td><td><span class="say en">first of all / then / after that / finally</span></td><td>Kể chuyện hoặc giải thích quy trình</td></tr>
+        <tr><td>Nêu tương phản</td><td><span class="say en">but / however / on the other hand</span></td><td>Đưa mặt trái của vấn đề</td></tr>
+        <tr><td>Kết luận</td><td><span class="say en">so / in the end / long story short</span></td><td>Tóm tắt lại</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Rút gọn &amp; nuốt âm khi nói nhanh</div>
+    <div class="info i-note">
+      <span class="info-ico">👂</span>
+      <div><strong>Mục đích chính: để NGHE hiểu.</strong> Những dạng này xuất hiện nhiều trong phim và đời thường. Bạn có thể dùng khi nói thân mật, nhưng <strong>không viết</strong> chúng trong email hay bài thi.</div>
+    </div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Viết đầy đủ</th><th>Nghe như</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td>going to</td><td class="en">gonna</td><td>I'm gonna call you later.</td></tr>
+        <tr><td>want to</td><td class="en">wanna</td><td>Do you wanna come?</td></tr>
+        <tr><td>have to / got to</td><td class="en">hafta / gotta</td><td>I gotta go now.</td></tr>
+        <tr><td>kind of / sort of</td><td class="en">kinda / sorta</td><td>It's kinda expensive.</td></tr>
+        <tr><td>let me / give me</td><td class="en">lemme / gimme</td><td>Lemme check. Gimme a minute.</td></tr>
+        <tr><td>I do not know</td><td class="en">I dunno</td><td>I dunno, maybe tomorrow?</td></tr>
+        <tr><td>What are you doing?</td><td class="en">Whatcha doin'?</td><td>Hey, whatcha doin'?</td></tr>
+        <tr><td>Did you eat?</td><td class="en">Didja eat?</td><td>Didja eat yet?</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Phrasal verbs &amp; idioms đời thường</div>
+    <div class="grid-2">
+      <div class="cheat-card">
+        <h4 class="h4-g3">Phrasal verbs hay gặp</h4>
+        <div class="cheat-row"><span class="ck say en">hang out</span><span class="cv">đi chơi, tụ tập</span></div>
+        <div class="cheat-row"><span class="ck say en">catch up (with)</span><span class="cv">hàn huyên, cập nhật</span></div>
+        <div class="cheat-row"><span class="ck say en">figure out</span><span class="cv">tìm ra, hiểu ra</span></div>
+        <div class="cheat-row"><span class="ck say en">run into</span><span class="cv">tình cờ gặp</span></div>
+        <div class="cheat-row"><span class="ck say en">come up with</span><span class="cv">nghĩ ra (ý tưởng)</span></div>
+        <div class="cheat-row"><span class="ck say en">look forward to</span><span class="cv">mong chờ</span></div>
+        <div class="cheat-row"><span class="ck say en">get along with</span><span class="cv">hòa hợp với</span></div>
+        <div class="cheat-row"><span class="ck say en">give up</span><span class="cv">bỏ cuộc</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-g1">Idioms thông dụng</h4>
+        <div class="cheat-row"><span class="ck say en">a piece of cake</span><span class="cv">dễ như ăn bánh</span></div>
+        <div class="cheat-row"><span class="ck say en">break the ice</span><span class="cv">phá vỡ sự ngượng ngùng</span></div>
+        <div class="cheat-row"><span class="ck say en">under the weather</span><span class="cv">hơi mệt, không khỏe</span></div>
+        <div class="cheat-row"><span class="ck say en">call it a day</span><span class="cv">nghỉ, kết thúc hôm nay</span></div>
+        <div class="cheat-row"><span class="ck say en">no big deal</span><span class="cv">không có gì to tát</span></div>
+        <div class="cheat-row"><span class="ck say en">hit the books</span><span class="cv">chăm chỉ học bài</span></div>
+        <div class="cheat-row"><span class="ck say en">once in a blue moon</span><span class="cv">hiếm khi</span></div>
+        <div class="cheat-row"><span class="ck say en">the ball is in your court</span><span class="cv">đến lượt bạn quyết định</span></div>
+      </div>
+    </div>
+    <div class="info i-tip">
+      <span class="info-ico">💡</span>
+      <div><strong>Cách học:</strong> Mỗi tuần chỉ học <strong>5 cụm</strong> và cố gắng dùng chúng trong ít nhất 2 câu của chính bạn. Học 100 cụm nhưng không dùng thì sẽ quên sau vài ngày.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     PHẦN 4 — LUYỆN NGHE NÓI
+════════════════════════════════ -->
+<div class="cat-banner cb-g4">
+  <div class="cb-icon">🟢</div>
+  <div>
+    <div class="cb-badge">PRACTICE</div>
+    <div class="cb-title">Phần 4 — Phát Âm &amp; Phương Pháp Luyện Tập</div>
+    <div class="cb-sub">Nói rõ để người ta hiểu, và cách luyện để nói tự nhiên theo thời gian</div>
+  </div>
+</div>
+
+<!-- S10 -->
+<div class="section" id="s10">
+  <div class="sec-head">
+    <span class="sec-tag st-g4">PHÁT ÂM</span>
+    <div>
+      <h2 class="sec-title">Phát âm · Nhấn nhá · Ngữ điệu · Nối âm</h2>
+      <p class="sec-sub">Ưu tiên những thứ ảnh hưởng nhiều nhất đến việc người nghe có hiểu bạn không</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">1. Nhấn nhá câu (sentence stress) — nhịp điệu của tiếng Anh</div>
+    <p>Tiếng Anh là ngôn ngữ <strong>nhấn theo nhịp</strong>: từ mang nghĩa (danh từ, động từ chính, tính từ, trạng từ, phủ định) được <strong>đọc rõ và dài</strong>; từ chức năng (a, the, to, of, is, and…) được <strong>đọc nhanh và nhẹ</strong>. Đây là lý do người bản xứ nghe như đang "nuốt chữ".</p>
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Nhấn từ mang nghĩa</span><span class="ex-tag et-g4">STRESS</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-en">I <strong style="color:var(--g4)">WANT</strong> to <strong style="color:var(--g4)">GO</strong> to the <strong style="color:var(--g4)">STORE</strong>.</span><span class="ex-vn">Nhấn WANT – GO – STORE; to / the đọc nhẹ</span></div>
+        <div class="ex-row"><span class="ex-en">She <strong style="color:var(--g4)">DOESN'T LIKE</strong> <strong style="color:var(--g4)">COFFEE</strong>.</span><span class="ex-vn">Phủ định luôn được nhấn</span></div>
+        <div class="ex-row"><span class="ex-en">Can you <strong style="color:var(--g4)">HELP</strong> me <strong style="color:var(--g4)">TOMORROW</strong>?</span><span class="ex-vn">Can đọc yếu /kən/</span></div>
+      </div>
+    </div>
+    <p>Bạn có thể <strong>đổi ý nghĩa</strong> bằng cách đổi từ được nhấn: <em>"I didn't say HE stole it"</em> (người khác nói) khác với <em>"I didn't SAY he stole it"</em> (tôi chỉ ngụ ý).</p>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">2. Ngữ điệu (intonation)</div>
+    <div class="grid-3">
+      <div class="rw-box rw-g1">
+        <div class="rw-label">↘ LÊN RỒI XUỐNG</div>
+        <div class="rw-title">Câu hỏi Wh- &amp; câu trần thuật</div>
+        <div class="rw-body"><span class="say en">Where do you live↘</span><br><span class="say en">I'm from Hanoi↘</span><br>Giọng xuống ở cuối câu.</div>
+      </div>
+      <div class="rw-box rw-g2">
+        <div class="rw-label">↗ LÊN</div>
+        <div class="rw-title">Câu hỏi Yes/No</div>
+        <div class="rw-body"><span class="say en">Are you ready↗</span><br><span class="say en">Do you like coffee↗</span><br>Giọng lên ở cuối câu.</div>
+      </div>
+      <div class="rw-box rw-g3">
+        <div class="rw-label">↗ ↗ ↘ LIỆT KÊ</div>
+        <div class="rw-title">Danh sách</div>
+        <div class="rw-body"><span class="say en">I bought apples↗, oranges↗, and bananas↘</span><br>Lên ở các mục đầu, xuống ở mục cuối.</div>
+      </div>
+    </div>
+    <div class="info i-note">
+      <span class="info-ico">🎵</span>
+      <div><strong>Ngữ điệu bằng phẳng</strong> (như khi nói tiếng Việt có dấu thanh cố định) làm người bản xứ khó nghe ra bạn đang hỏi, đang cảm ơn hay đang giận. Hãy nghe và bắt chước "giai điệu" của câu, không chỉ phát âm từng từ.</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">3. Nối âm (linking)</div>
+    <p>Phụ âm cuối của từ trước <strong>nối sang</strong> nguyên âm đầu của từ sau, nên các từ nghe như dính liền nhau.</p>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Viết</th><th>Nghe như</th><th>Quy tắc</th></tr></thead>
+      <tbody>
+        <tr><td>an apple</td><td class="en">a-napple</td><td>Phụ âm + nguyên âm → nối</td></tr>
+        <tr><td>pick it up</td><td class="en">pi-ki-tup</td><td>Mỗi phụ âm cuối nối với từ sau</td></tr>
+        <tr><td>turn off</td><td class="en">tur-noff</td><td>Nối phrasal verb</td></tr>
+        <tr><td>What time is it?</td><td class="en">Wha-time-i-zit?</td><td>t, s nối với nguyên âm kế tiếp</td></tr>
+        <tr><td>I'll call you</td><td class="en">I'll-cal-lyou</td><td>Nuốt và nối nhẹ</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">4. Âm cuối — lỗi số 1 của người Việt</div>
+    <p>Tiếng Việt có rất ít phụ âm cuối nên người học thường <strong>bỏ âm cuối</strong> khi nói tiếng Anh. Trong tiếng Anh, âm cuối quyết định <strong>thì, số nhiều, ngôi thứ ba</strong> và cả nghĩa của từ.</p>
+    <div class="grid-2">
+      <div class="cheat-card">
+        <h4 class="h4-au">Đuôi -s / -es</h4>
+        <div class="cheat-row"><span class="ck">/s/ sau âm vô thanh</span><span class="cv">cats, books, works</span></div>
+        <div class="cheat-row"><span class="ck">/z/ sau âm hữu thanh</span><span class="cv">dogs, plays, loves</span></div>
+        <div class="cheat-row"><span class="ck">/ɪz/ sau s, z, sh, ch, j</span><span class="cv">buses, watches, boxes</span></div>
+      </div>
+      <div class="cheat-card">
+        <h4 class="h4-au">Đuôi -ed</h4>
+        <div class="cheat-row"><span class="ck">/t/ sau âm vô thanh</span><span class="cv">worked, stopped, watched</span></div>
+        <div class="cheat-row"><span class="ck">/d/ sau âm hữu thanh</span><span class="cv">played, called, opened</span></div>
+        <div class="cheat-row"><span class="ck">/ɪd/ sau t, d</span><span class="cv">wanted, needed, decided</span></div>
+      </div>
+    </div>
+    <p><strong>Cặp từ dễ nhầm:</strong> <span class="say en">ship – sheep</span> · <span class="say en">bed – bad</span> · <span class="say en">think – sink</span> · <span class="say en">light – right</span> · <span class="say en">live – leave</span>. Hãy nghe và lặp lại từng cặp, chú ý sự khác biệt về <strong>độ dài nguyên âm</strong> và vị trí lưỡi.</p>
+  </div>
+</div>
+
+<!-- S11 -->
+<div class="section" id="s11">
+  <div class="sec-head">
+    <span class="sec-tag st-g4">LUYỆN TẬP</span>
+    <div>
+      <h2 class="sec-title">Phương pháp luyện nghe nói hiệu quả</h2>
+      <p class="sec-sub">Shadowing · 4-3-2 · Ghi âm · Nói một mình · Tìm bạn luyện</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">🔁 Shadowing — "đọc bóng" theo audio</div>
+    <p>Bạn nghe một đoạn audio và <strong>nói theo gần như cùng lúc</strong>, bắt chước tốc độ, nhấn nhá và ngữ điệu. Đây là cách rất hiệu quả để cải thiện phát âm và phản xạ.</p>
+    <div class="flow">
+      <div class="fl-slot fl-1"><span class="fl-num">B1</span><span class="fl-cat">Chọn audio</span><span class="fl-ex">1–2 phút, có transcript, dễ hơn trình độ bạn một chút</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-2"><span class="fl-num">B2</span><span class="fl-cat">Nghe</span><span class="fl-ex">Nghe 2–3 lần, chưa nhìn chữ, nắm ý chính</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-3"><span class="fl-num">B3</span><span class="fl-cat">Phân tích</span><span class="fl-ex">Đọc transcript, tra từ mới, đánh dấu từ nhấn và chỗ nối âm</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-4"><span class="fl-num">B4</span><span class="fl-cat">Nói theo</span><span class="fl-ex">Đọc cùng audio 5–10 lần, bắt chước giọng điệu</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-5"><span class="fl-num">B5</span><span class="fl-cat">Ghi âm</span><span class="fl-ex">Ghi giọng mình, nghe so với bản gốc, sửa lỗi</span></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">⏱️ Kỹ thuật 4-3-2 (nói lặp lại giảm dần thời gian)</div>
+    <p>Chọn một chủ đề quen thuộc (ví dụ: "Một ngày của tôi"). Nói trong <strong>4 phút</strong> → nghỉ → nói lại cùng nội dung trong <strong>3 phút</strong> → nói lại trong <strong>2 phút</strong>. Mỗi lần, bạn nói trôi chảy hơn, ít ngập ngừng hơn. Người mới có thể bắt đầu với <strong>2 – 1,5 – 1 phút</strong>. Bạn có thể nói với bạn học, hoặc nói với điện thoại và ghi âm lại.</p>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">🎯 Bốn thói quen hằng ngày</div>
+    <div class="grid-2">
+      <div class="rw-box rw-g1">
+        <div class="rw-label">🟠 NÓI MỘT MÌNH</div>
+        <div class="rw-title">Self-talk / tường thuật</div>
+        <div class="rw-body">Vừa làm việc vừa nói bằng tiếng Anh: <em>"I'm making coffee. Now I'm putting on my shoes."</em> Kể lại ngày hôm nay trước khi ngủ. Không cần người nghe vẫn luyện được phản xạ.</div>
+      </div>
+      <div class="rw-box rw-g2">
+        <div class="rw-label">🔵 GHI ÂM</div>
+        <div class="rw-title">Nghe lại giọng mình</div>
+        <div class="rw-body">Mỗi tuần ghi một đoạn 1–2 phút về cùng chủ đề. So sánh tuần 1 với tuần 4 — bạn sẽ thấy rõ tiến bộ. Đồng thời chọn <strong>3 lỗi lặp lại nhiều nhất</strong> để sửa trước.</div>
+      </div>
+      <div class="rw-box rw-g3">
+        <div class="rw-label">🟣 HỌC THEO CỤM</div>
+        <div class="rw-title">Sentence mining</div>
+        <div class="rw-body">Khi nghe hoặc đọc, ghi lại <strong>câu hay</strong> (không chỉ từ lẻ) vào sổ hoặc ứng dụng ghi chú. Mỗi ngày ôn 5 câu và đặt 1 câu của riêng bạn theo mẫu đó.</div>
+      </div>
+      <div class="rw-box rw-g4">
+        <div class="rw-label">🟢 NÓI VỚI NGƯỜI THẬT</div>
+        <div class="rw-title">Tìm bạn luyện</div>
+        <div class="rw-body">Câu lạc bộ tiếng Anh, bạn học cùng lớp, ứng dụng trao đổi ngôn ngữ, buổi học 1–1 với giáo viên, hoặc luyện hội thoại với trợ lý AI. Mục tiêu: <strong>ít nhất 2–3 lần nói thật mỗi tuần</strong>.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">🎧 Thang luyện nghe — từ dễ đến khó</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Giai đoạn</th><th>Loại nội dung</th><th>Cách luyện</th></tr></thead>
+      <tbody>
+        <tr><td>1 — Mới bắt đầu</td><td>Hội thoại chậm, bài học có transcript</td><td>Nghe → đọc transcript → nghe lại. Lặp lại cùng bài vài lần</td></tr>
+        <tr><td>2 — Cơ bản</td><td>Podcast học tiếng Anh, video YouTube ngắn có phụ đề</td><td>Xem với phụ đề tiếng Anh, tạm dừng để lặp lại câu</td></tr>
+        <tr><td>3 — Trung cấp</td><td>Phim, show đời thường, vlog</td><td>Xem lần 1 có phụ đề, lần 2 tắt phụ đề, ghi các cụm hay</td></tr>
+        <tr><td>4 — Nâng cao</td><td>Podcast, TED Talks, tin tức tốc độ thật</td><td>Nghe không phụ đề, tóm tắt lại bằng lời nói</td></tr>
+      </tbody>
+    </table></div>
+    <div class="info i-ok">
+      <span class="info-ico">🎯</span>
+      <div><strong>Nguồn luyện miễn phí:</strong>
+        <a href="https://learnenglish.britishcouncil.org/" target="_blank" rel="noopener">British Council LearnEnglish</a> — bài nghe &amp; hội thoại theo cấp độ ·
+        <a href="https://www.bbc.co.uk/learningenglish" target="_blank" rel="noopener">BBC Learning English</a> — bài học ngắn, podcast, từ vựng đời sống.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S12 -->
+<div class="section" id="s12">
+  <div class="sec-head">
+    <span class="sec-tag st-g4">LỖI THƯỜNG GẶP</span>
+    <div>
+      <h2 class="sec-title">Lỗi giao tiếp hay mắc của người Việt</h2>
+      <p class="sec-sub">Phần lớn đến từ việc dịch word-by-word từ tiếng Việt</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="ex-box">
+      <div class="ex-head"><span class="ex-label">Sửa lỗi nhanh</span><span class="ex-tag et-g4">FIX IT</span></div>
+      <div class="ex-body">
+        <div class="ex-row"><span class="ex-type ext-bad">SAI</span><span class="ex-en">I am agree with you.</span><span class="ex-arrow">→</span><span class="ex-type ext-ok">ĐÚNG</span><span class="ex-en">I agree with you.</span><span class="ex-note">agree là động từ</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">SAI</span><span class="ex-en">I very like music.</span><span class="ex-arrow">→</span><span class="ex-type ext-ok">ĐÚNG</span><span class="ex-en">I really like music. / I like music very much.</span><span class="ex-note">very không bổ nghĩa cho động từ</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">SAI</span><span class="ex-en">Can you speak English?</span><span class="ex-arrow">→</span><span class="ex-type ext-ok">ĐÚNG</span><span class="ex-en">Do you speak English?</span><span class="ex-note">Can = hỏi năng lực, nghe hơi thiếu tế nhị</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">SAI</span><span class="ex-en">I'm boring. (khi chán)</span><span class="ex-arrow">→</span><span class="ex-type ext-ok">ĐÚNG</span><span class="ex-en">I'm bored.</span><span class="ex-note">boring = nhàm chán; bored = cảm thấy chán</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">SAI</span><span class="ex-en">I look forward to see you.</span><span class="ex-arrow">→</span><span class="ex-type ext-ok">ĐÚNG</span><span class="ex-en">I look forward to seeing you.</span><span class="ex-note">to + V-ing</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">SAI</span><span class="ex-en">She don't like coffee.</span><span class="ex-arrow">→</span><span class="ex-type ext-ok">ĐÚNG</span><span class="ex-en">She doesn't like coffee.</span><span class="ex-note">He/She/It + doesn't</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">SAI</span><span class="ex-en">Open the light.</span><span class="ex-arrow">→</span><span class="ex-type ext-ok">ĐÚNG</span><span class="ex-en">Turn on the light.</span><span class="ex-note">turn on / turn off</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">SAI</span><span class="ex-en">Hello, teacher!</span><span class="ex-arrow">→</span><span class="ex-type ext-ok">ĐÚNG</span><span class="ex-en">Hello, Ms. Hoa! / Hi, Mr. Smith!</span><span class="ex-note">gọi bằng tên / Mr. / Ms.</span></div>
+        <div class="ex-row"><span class="ex-type ext-bad">SAI</span><span class="ex-en">It's depend on you.</span><span class="ex-arrow">→</span><span class="ex-type ext-ok">ĐÚNG</span><span class="ex-en">It depends on you.</span><span class="ex-note">động từ + s</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Bẫy "Yes / No" khi trả lời câu hỏi phủ định</div>
+    <p>Tiếng Việt thường trả lời câu hỏi phủ định theo <strong>ý của câu hỏi</strong> ("Vâng, bạn không thích cà phê." = "Đúng, tôi không thích"). Tiếng Anh trả lời theo <strong>sự thật của bạn</strong>:</p>
+    <div class="cmp-box">
+      <div class="cmp-bad">
+        <div class="cmp-label">❌ Dịch từ tiếng Việt</div>
+        <div class="cmp-text">A: You don't like coffee?<br>B: Yes, I don't. (= "Vâng, tôi không thích")</div>
+        <div class="cmp-note">"Yes" khiến người nghe hiểu bạn <strong>có</strong> thích cà phê.</div>
+      </div>
+      <div class="cmp-good">
+        <div class="cmp-label">✅ Theo sự thật</div>
+        <div class="cmp-text">A: You don't like coffee?<br>B: No, I don't. / Yes, I do actually.</div>
+        <div class="cmp-note">Không thích → No, I don't. Có thích → Yes, I do.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">Những câu nghe "sách vở" hoặc hơi lạ</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Câu quen thuộc</th><th>Vấn đề</th><th>Thay bằng</th></tr></thead>
+      <tbody>
+        <tr><td>I'm fine, thank you, and you?</td><td>Nghe máy móc nếu chỉ dùng mỗi câu này</td><td><span class="say en">Pretty good, thanks. How about you?</span></td></tr>
+        <tr><td>Where are you going?</td><td>Có thể nghe như tò mò, "kiểm soát"</td><td><span class="say en">Heading out? / Got any plans today?</span></td></tr>
+        <tr><td>Have you eaten yet?</td><td>Là lời chào trong tiếng Việt, nhưng tiếng Anh hiểu là lời hỏi thật</td><td><span class="say en">How's your day going?</span></td></tr>
+        <tr><td>How old are you?</td><td>Có thể bất tiện với người lớn</td><td><span class="say en">Hỏi chuyện khác (nghề nghiệp, sở thích)</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<hr class="dv">
+
+<!-- ════════════════════════════════
+     TỔNG HỢP
+════════════════════════════════ -->
+<div class="cat-banner cb-cheat">
+  <div class="cb-icon">📋</div>
+  <div>
+    <div class="cb-badge">SUMMARY</div>
+    <div class="cb-title">Tổng Hợp — Lộ Trình · Tự Kiểm Tra · Cheat Sheet</div>
+    <div class="cb-sub">Kế hoạch 30 ngày, bài tự kiểm tra và bảng tra nhanh in ra học</div>
+  </div>
+</div>
+
+<!-- S13 -->
+<div class="section" id="s13">
+  <div class="sec-head">
+    <span class="sec-tag st-ch">LỘ TRÌNH</span>
+    <div>
+      <h2 class="sec-title">Kế hoạch 30 ngày — mỗi ngày 30 phút</h2>
+      <p class="sec-sub">Ít nhưng đều mỗi ngày hiệu quả hơn dồn một buổi dài mỗi tuần</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="sub-title">Thói quen 30 phút mỗi ngày</div>
+    <div class="flow">
+      <div class="fl-slot fl-1"><span class="fl-num">5'</span><span class="fl-cat">Khởi động</span><span class="fl-ex">Nghe 1 audio ngắn hoặc ôn 5 câu hôm qua</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-2"><span class="fl-num">10'</span><span class="fl-cat">Shadowing</span><span class="fl-ex">Đọc theo audio 1–2 phút</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-3"><span class="fl-num">5'</span><span class="fl-cat">Chunks mới</span><span class="fl-ex">Học 5 mẫu câu và đặt câu của riêng bạn</span></div>
+      <span class="fl-arrow">→</span>
+      <div class="fl-slot fl-4"><span class="fl-num">10'</span><span class="fl-cat">Nói</span><span class="fl-ex">Self-talk hoặc ghi âm hoặc nói với bạn</span></div>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Thời gian</th><th>Nội dung chính</th><th>Mục tiêu cuối tuần</th></tr></thead>
+      <tbody>
+        <tr><td>Tuần 1</td><td>Chào hỏi, tự giới thiệu, hỏi lại khi không hiểu (S2, S4)</td><td>Tự giới thiệu trôi chảy 30–60 giây, thuộc 20 câu "cứu nguy"</td></tr>
+        <tr><td>Tuần 2</td><td>Small talk (Answer + Add + Ask), nhà hàng, mua sắm, hỏi đường (S3, S5)</td><td>Trò chuyện 2 phút với một người (hoặc trước gương)</td></tr>
+        <tr><td>Tuần 3</td><td>Đồng ý, mời, xin lỗi, nhờ vả, nói lịch sự, điện thoại (S6–S8)</td><td>Đóng vai hoàn chỉnh một cuộc gọi hoặc một lời mời</td></tr>
+        <tr><td>Tuần 4</td><td>Phát âm, từ đệm, rút gọn, 4-3-2, tổng ôn (S9–S11)</td><td>Ghi âm bài nói 2 phút về bản thân và so sánh với tuần 1</td></tr>
+        <tr><td>Sau tháng 1</td><td>Lặp lại vòng mới với chủ đề khó hơn: kể chuyện, nêu ý kiến, họp, phỏng vấn</td><td>Duy trì thói quen 30 phút mỗi ngày</td></tr>
+      </tbody>
+    </table></div>
+    <div class="info i-warn">
+      <span class="info-ico">⚠️</span>
+      <div><strong>Đừng chờ "đủ giỏi".</strong> Nếu bạn chỉ chọn một việc, hãy chọn: <strong>nói to mỗi ngày</strong>. Một tháng đều đặn sẽ khiến bạn tự tin hơn rất nhiều so với một tháng chỉ xem video.</div>
+    </div>
+  </div>
+</div>
+
+<!-- S14 -->
+<div class="section" id="s14">
+  <div class="sec-head">
+    <span class="sec-tag st-ch">TỰ KIỂM TRA</span>
+    <div>
+      <h2 class="sec-title">Tự kiểm tra nhanh</h2>
+      <p class="sec-sub">Tự trả lời trước, rồi bấm để xem gợi ý</p>
+    </div>
+  </div>
+  <div class="sub">
+    <details class="qa"><summary>1. Có người hỏi "How's it going?". Bạn trả lời thế nào để cuộc trò chuyện tiếp tục?</summary><div class="qa-a"><strong>Gợi ý:</strong> "Pretty good, thanks! How about you?" — trả lời ngắn + hỏi lại. Bạn có thể thêm chi tiết: "I've been busy with work, but I'm good."</div></details>
+    <details class="qa"><summary>2. Biến "Give me the bill." thành câu lịch sự.</summary><div class="qa-a"><strong>Gợi ý:</strong> "Could we have the bill, please?" hoặc "Could I get the check, please?" (Anh–Mỹ).</div></details>
+    <details class="qa"><summary>3. Khi chưa nghe kịp người nói, bạn nói gì?</summary><div class="qa-a"><strong>Gợi ý:</strong> "Sorry, could you say that again?" / "I didn't catch that. Could you speak a bit more slowly?"</div></details>
+    <details class="qa"><summary>4. Công thức nào giúp bạn không trả lời cụt khi small talk?</summary><div class="qa-a"><strong>Gợi ý:</strong> Answer + Add + Ask — trả lời, thêm một chi tiết, rồi hỏi lại người kia.</div></details>
+    <details class="qa"><summary>5. Ai đó hỏi "Would you mind opening the window?" Bạn muốn giúp thì đáp thế nào?</summary><div class="qa-a"><strong>Gợi ý:</strong> "Not at all." / "Of course not." / "No problem." — vì câu hỏi là "bạn có phiền không?".</div></details>
+    <details class="qa"><summary>6. Sửa lỗi: "I am agree with you" và "Can you speak English?"</summary><div class="qa-a"><strong>Gợi ý:</strong> "I agree with you." và "Do you speak English?"</div></details>
+    <details class="qa"><summary>7. Người ta hỏi "You don't like spicy food?" và bạn không thích cay. Trả lời thế nào?</summary><div class="qa-a"><strong>Gợi ý:</strong> "No, I don't." — trả lời theo sự thật của bạn, không theo ý của câu hỏi.</div></details>
+    <details class="qa"><summary>8. Câu "Tell me about yourself" nên trả lời theo cấu trúc nào?</summary><div class="qa-a"><strong>Gợi ý:</strong> Present – Past – Future: hiện tại bạn làm gì, kinh nghiệm liên quan trước đó, và vì sao bạn quan tâm đến vị trí/cơ hội này.</div></details>
+  </div>
+</div>
+
+<!-- S15 -->
+<div class="section" id="s15">
+  <div class="sec-head">
+    <span class="sec-tag st-ch">CHEAT SHEET</span>
+    <div>
+      <h2 class="sec-title">Cheat Sheet — Bảng tra nhanh</h2>
+      <p class="sec-sub">Chụp màn hình hoặc in ra để ôn mỗi ngày</p>
+    </div>
+  </div>
+  <div class="cheat-grid">
+    <div class="cheat-card">
+      <h4 class="h4-g1">🟠 Chào hỏi</h4>
+      <div class="cheat-row"><span class="ck">Chào</span><span class="cv">Hi / Hello / Good morning</span></div>
+      <div class="cheat-row"><span class="ck">Hỏi thăm</span><span class="cv">How's it going?</span></div>
+      <div class="cheat-row"><span class="ck">Gặp lần đầu</span><span class="cv">Nice to meet you</span></div>
+      <div class="cheat-row"><span class="ck">Chia tay</span><span class="cv">See you! / Take care!</span></div>
+    </div>
+    <div class="cheat-card">
+      <h4 class="h4-g1">🟠 Small talk</h4>
+      <div class="cheat-row"><span class="ck">Công thức</span><span class="cv">Answer + Add + Ask</span></div>
+      <div class="cheat-row"><span class="ck">Chủ đề</span><span class="cv">F.O.R.D.</span></div>
+      <div class="cheat-row"><span class="ck">Phản ứng</span><span class="cv">Really? / I see / Wow!</span></div>
+      <div class="cheat-row"><span class="ck">Kết thúc</span><span class="cv">It was great talking to you</span></div>
+    </div>
+    <div class="cheat-card">
+      <h4 class="h4-g2">🔵 Cứu nguy</h4>
+      <div class="cheat-row"><span class="ck">Nhắc lại</span><span class="cv">Could you say that again?</span></div>
+      <div class="cheat-row"><span class="ck">Chậm lại</span><span class="cv">Could you speak more slowly?</span></div>
+      <div class="cheat-row"><span class="ck">Nghĩa là gì</span><span class="cv">What does … mean?</span></div>
+      <div class="cheat-row"><span class="ck">Câu giờ</span><span class="cv">Let me think…</span></div>
+    </div>
+    <div class="cheat-card">
+      <h4 class="h4-g2">🔵 Yêu cầu lịch sự</h4>
+      <div class="cheat-row"><span class="ck">Muốn</span><span class="cv">I'd like …, please</span></div>
+      <div class="cheat-row"><span class="ck">Nhờ</span><span class="cv">Could you …?</span></div>
+      <div class="cheat-row"><span class="ck">Rất lịch sự</span><span class="cv">Would you mind …ing?</span></div>
+      <div class="cheat-row"><span class="ck">Xin phép</span><span class="cv">Could I …?</span></div>
+    </div>
+    <div class="cheat-card">
+      <h4 class="h4-g3">🟣 Đồng ý – phản đối</h4>
+      <div class="cheat-row"><span class="ck">Đồng ý</span><span class="cv">Absolutely! / I agree.</span></div>
+      <div class="cheat-row"><span class="ck">Một phần</span><span class="cv">I see your point, but…</span></div>
+      <div class="cheat-row"><span class="ck">Phản đối</span><span class="cv">I see it differently.</span></div>
+      <div class="cheat-row"><span class="ck">Ý kiến</span><span class="cv">In my opinion… because…</span></div>
+    </div>
+    <div class="cheat-card">
+      <h4 class="h4-g3">🟣 Lời mời</h4>
+      <div class="cheat-row"><span class="ck">Mời</span><span class="cv">Would you like to…?</span></div>
+      <div class="cheat-row"><span class="ck">Nhận lời</span><span class="cv">I'd love to!</span></div>
+      <div class="cheat-row"><span class="ck">Từ chối</span><span class="cv">Thanks, but I can't make it.</span></div>
+      <div class="cheat-row"><span class="ck">Đáp lời xin lỗi</span><span class="cv">No worries.</span></div>
+    </div>
+    <div class="cheat-card">
+      <h4 class="h4-g4">🟢 Phát âm</h4>
+      <div class="cheat-row"><span class="ck">Nhấn</span><span class="cv">từ mang nghĩa</span></div>
+      <div class="cheat-row"><span class="ck">Wh- / Câu trần thuật</span><span class="cv">giọng ↘</span></div>
+      <div class="cheat-row"><span class="ck">Yes/No question</span><span class="cv">giọng ↗</span></div>
+      <div class="cheat-row"><span class="ck">Âm cuối</span><span class="cv">-s, -ed, -t, -d đừng bỏ</span></div>
+    </div>
+    <div class="cheat-card">
+      <h4 class="h4-au">⚠️ Top lỗi cần tránh</h4>
+      <div class="cheat-row"><span class="ck">I am agree</span><span class="cv">→ I agree ✅</span></div>
+      <div class="cheat-row"><span class="ck">I very like</span><span class="cv">→ I really like ✅</span></div>
+      <div class="cheat-row"><span class="ck">Can you speak English?</span><span class="cv">→ Do you speak English? ✅</span></div>
+      <div class="cheat-row"><span class="ck">I'm boring</span><span class="cv">→ I'm bored ✅</span></div>
+      <div class="cheat-row"><span class="ck">Open the light</span><span class="cv">→ Turn on the light ✅</span></div>
+    </div>
+    <div class="cheat-card">
+      <h4 class="h4-ch">✅ Thói quen vàng</h4>
+      <div class="cheat-row"><span class="ck">Mỗi ngày</span><span class="cv">30 phút, nói to</span></div>
+      <div class="cheat-row"><span class="ck">Mỗi tuần</span><span class="cv">Ghi âm + 5 cụm mới</span></div>
+      <div class="cheat-row"><span class="ck">Mỗi tháng</span><span class="cv">So sánh ghi âm cũ – mới</span></div>
+      <div class="cheat-row"><span class="ck">Luôn luôn</span><span class="cv">Chấp nhận nói sai</span></div>
+    </div>
+    <div class="cheat-card">
+      <h4 class="h4-g1">💬 5 câu nên thuộc ngay hôm nay</h4>
+      <div class="cheat-row"><span class="ck say en">Could you say that again?</span><span class="cv">Nhắc lại được không?</span></div>
+      <div class="cheat-row"><span class="ck say en">I'd like …, please.</span><span class="cv">Cho mình …</span></div>
+      <div class="cheat-row"><span class="ck say en">What do you think?</span><span class="cv">Bạn nghĩ sao?</span></div>
+      <div class="cheat-row"><span class="ck say en">That sounds great!</span><span class="cv">Nghe hay đấy!</span></div>
+      <div class="cheat-row"><span class="ck say en">How about you?</span><span class="cv">Còn bạn thì sao?</span></div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<div class="footer">
+  <span>💬 Tiếng Anh Giao Tiếp · Hướng dẫn toàn tập · 2026</span>
+  <span style="margin-left:auto;color:var(--muted)">4 phần · 16 chủ đề · Hội thoại mẫu · Cheat Sheet</span>
+</div>
+</div><!-- /main -->
+
+<script>
+/* progress bar */
+(function(){
+  var bar=document.getElementById('pbar');
+  function upd(){
+    var el=document.documentElement;
+    var max=el.scrollHeight-el.clientHeight;
+    bar.style.width=(max>0?el.scrollTop/max*100:0)+'%';
+  }
+  window.addEventListener('scroll',upd,{passive:true});upd();
+})();
+
+/* active nav (sidebar + mobile) */
+(function(){
+  var secs=document.querySelectorAll('.section[id], #s0b');
+  var links=document.querySelectorAll('.nav-link, .mnav a');
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(l){l.classList.remove('active')});
+        document.querySelectorAll('a[href="#'+e.target.id+'"]').forEach(function(a){a.classList.add('active')});
+      }
+    });
+  },{rootMargin:'-15% 0px -70% 0px'});
+  secs.forEach(function(s){io.observe(s)});
+})();
+
+/* click-to-listen */
+(function(){
+  if(!('speechSynthesis' in window)) return;
+  var voice=null;
+  function pickVoice(){
+    var vs=window.speechSynthesis.getVoices()||[];
+    voice=vs.find(function(v){return /^en[-_]US/i.test(v.lang)})||vs.find(function(v){return /^en/i.test(v.lang)})||null;
+  }
+  pickVoice();
+  window.speechSynthesis.onvoiceschanged=pickVoice;
+  var current=null;
+  document.addEventListener('click',function(ev){
+    var t=ev.target.closest('.ex-en, .dl-en, .say');
+    if(!t) return;
+    var text=t.textContent.replace(/[↗↘]/g,'').replace(/\s+/g,' ').trim();
+    if(!text) return;
+    window.speechSynthesis.cancel();
+    if(current) current.classList.remove('speaking');
+    var u=new SpeechSynthesisUtterance(text);
+    u.lang='en-US';u.rate=.9;
+    if(voice) u.voice=voice;
+    current=t;t.classList.add('speaking');
+    u.onend=u.onerror=function(){t.classList.remove('speaking')};
+    window.speechSynthesis.speak(u);
+  });
+})();
+</script>
+</body>
+</html>
