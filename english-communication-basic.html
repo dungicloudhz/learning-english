@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>🗣️ Hội Thoại Theo Chủ Đề — Tiếng Anh Sơ Cấp</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#080810;--s1:#0e0e1c;--s2:#131326;--s3:#18182e;--s4:#1e1e38;
+  --border:#222240;--border2:#2c2c50;--text:#e6e6f2;--muted:#8a8ab8;--faint:#4a4a78;
+  --acc:#ffd060;--acc-dim:rgba(255,208,96,.11);
+  --green:#40d88e;--green-dim:rgba(64,216,142,.10);
+  --blue:#5ba8ff;--blue-dim:rgba(91,168,255,.10);
+  --purple:#a07af4;--purple-dim:rgba(160,122,244,.10);
+  --yellow:#ffd060;--yellow-dim:rgba(255,208,96,.10);
+  --teal:#30d8c0;--teal-dim:rgba(48,216,192,.10);
+  --pink:#ff6584;--pink-dim:rgba(255,101,132,.11);
+  --oc:#38bdf8;--oc-dim:rgba(56,189,248,.13);--oc-glow:rgba(56,189,248,.30);
+  --ins:#40d88e;--ins-dim:rgba(64,216,142,.12);
+  --ch:#ffd060;--ch-dim:rgba(255,208,96,.12);--ch-glow:rgba(255,208,96,.28);
+  --au:#ff6584;--au-dim:rgba(255,101,132,.12);--au-glow:rgba(255,101,132,.28);
+  /* topic colours */
+  --g1:#ff8c50;--g1-dim:rgba(255,140,80,.13);--g1-glow:rgba(255,140,80,.28);
+  --g2:#38bdf8;--g2-dim:rgba(56,189,248,.13);--g2-glow:rgba(56,189,248,.28);
+  --g3:#a07af4;--g3-dim:rgba(160,122,244,.13);--g3-glow:rgba(160,122,244,.28);
+  --g4:#40d88e;--g4-dim:rgba(64,216,142,.12);--g4-glow:rgba(64,216,142,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+
+/* ── SIDEBAR ── */
+.sidebar{position:fixed;left:0;top:0;width:272px;height:100%;background:var(--s1);border-right:1px solid var(--border);overflow-y:auto;z-index:400;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+.sb-logo{padding:20px 18px 16px;border-bottom:1px solid var(--border)}
+.sb-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.logo-icon{width:44px;height:44px;border-radius:11px;flex-shrink:0;background:linear-gradient(135deg,var(--g1),var(--g2),var(--g3));display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 26px var(--g1-glow)}
+.logo-text h2{font-size:15px;font-weight:800;letter-spacing:-.4px}
+.logo-text p{font-size:10.5px;color:var(--muted);margin-top:2px}
+.prog-wrap{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3),var(--ch));width:0%;transition:width .4s;border-radius:2px}
+.nav-section{padding:6px 0 4px}
+.nav-group-hdr{display:flex;align-items:center;gap:7px;margin:6px 12px 3px;padding:6px 10px;border-radius:7px;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.ngh-oc{background:var(--oc-dim);color:var(--oc)}
+.ngh-g1{background:var(--g1-dim);color:var(--g1)}.ngh-g2{background:var(--g2-dim);color:var(--g2)}
+.ngh-g3{background:var(--g3-dim);color:var(--g3)}.ngh-g4{background:var(--g4-dim);color:var(--g4)}
+.ngh-au{background:var(--au-dim);color:var(--au)}
+.nav-link{display:flex;align-items:center;gap:9px;padding:5px 18px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;border-left:2px solid transparent;transition:all .14s}
+.nav-link:hover,.nav-link.active{color:var(--text);background:rgba(255,208,96,.07);border-left-color:var(--acc)}
+.nav-link .ico{font-size:12px;flex-shrink:0;width:16px;text-align:center}
+.nav-badge{margin-left:auto;font-size:9px;font-weight:700;padding:2px 7px;border-radius:100px;background:var(--acc-dim);color:var(--acc)}
+.mnav{display:none}
+
+/* ── MAIN ── */
+.main{margin-left:272px;min-height:100vh}
+.hero{padding:72px 64px 56px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse 60% 55% at 75% 20%,rgba(255,140,80,.09) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 55% at 10% 80%,rgba(160,122,244,.08) 0%,transparent 55%),
+             radial-gradient(ellipse 45% 50% at 50% 55%,rgba(56,189,248,.05) 0%,transparent 60%),var(--bg)}
+.hero-dots{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+.hero-glow{position:absolute;right:-80px;top:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(255,140,80,.08) 0%,transparent 65%);pointer-events:none}
+.hero>*:not(.hero-dots):not(.hero-glow){position:relative}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--g1-dim);border:1px solid rgba(255,140,80,.35);color:var(--g1);padding:5px 16px;border-radius:100px;font-size:11.5px;font-weight:700;margin-bottom:24px;letter-spacing:.3px}
+.hero-eyebrow .pulse{width:6px;height:6px;border-radius:50%;background:var(--g1);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+@media(prefers-reduced-motion:reduce){.hero-eyebrow .pulse{animation:none}html{scroll-behavior:auto}}
+.hero h1{font-size:44px;font-weight:900;letter-spacing:-2.2px;line-height:1.08;margin-bottom:18px}
+.h-grad{background:linear-gradient(135deg,var(--g1) 0%,var(--g2) 50%,var(--g3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.h-g1{color:var(--g1)}.h-g2{color:var(--g2)}.h-g3{color:var(--g3)}.h-g4{color:var(--g4)}
+.hero-desc{font-size:15.5px;color:var(--muted);max-width:640px;line-height:1.75;margin-bottom:28px}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:5px 14px;border-radius:7px;font-size:12px;font-weight:700}
+.chip-g1{background:var(--g1-dim);color:var(--g1)}.chip-g2{background:var(--g2-dim);color:var(--g2)}
+.chip-g3{background:var(--g3-dim);color:var(--g3)}.chip-g4{background:var(--g4-dim);color:var(--g4)}
+.chip-ch{background:var(--ch-dim);color:var(--ch)}.chip-au{background:var(--au-dim);color:var(--au)}
+
+/* ── CAT BANNERS ── */
+.cat-banner{display:flex;align-items:center;gap:16px;padding:20px 24px;border-radius:14px;margin-bottom:44px;position:relative;overflow:hidden}
+.cat-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cb-g1{background:var(--g1-dim);border:1px solid rgba(255,140,80,.30)}.cb-g1::before{background:linear-gradient(90deg,var(--g1),var(--ch))}
+.cb-g2{background:var(--g2-dim);border:1px solid rgba(56,189,248,.30)}.cb-g2::before{background:linear-gradient(90deg,var(--g2),var(--ins))}
+.cb-g3{background:var(--g3-dim);border:1px solid rgba(160,122,244,.30)}.cb-g3::before{background:linear-gradient(90deg,var(--g3),var(--pink))}
+.cb-g4{background:var(--g4-dim);border:1px solid rgba(64,216,142,.30)}.cb-g4::before{background:linear-gradient(90deg,var(--g4),var(--teal))}
+.cb-cheat{background:var(--au-dim);border:1px solid rgba(255,101,132,.30)}.cb-cheat::before{background:linear-gradient(90deg,var(--au),var(--g3))}
+.cb-icon{font-size:36px;flex-shrink:0}
+.cb-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.cb-g1 .cb-badge{background:var(--g1-dim);color:var(--g1)}.cb-g2 .cb-badge{background:var(--g2-dim);color:var(--g2)}
+.cb-g3 .cb-badge{background:var(--g3-dim);color:var(--g3)}.cb-g4 .cb-badge{background:var(--g4-dim);color:var(--g4)}
+.cb-cheat .cb-badge{background:var(--au-dim);color:var(--au)}
+.cb-title{font-size:20px;font-weight:800;letter-spacing:-.5px}.cb-sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+/* ── CONTENT ── */
+.content{padding:52px 64px;max-width:1040px}
+.section{margin-bottom:68px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 10px;border-radius:5px;margin-top:5px;flex-shrink:0;letter-spacing:.5px}
+.st-ov{color:var(--oc);background:var(--oc-dim);border:1px solid var(--oc-glow)}
+.st-g1{color:var(--g1);background:var(--g1-dim);border:1px solid var(--g1-glow)}
+.st-g2{color:var(--g2);background:var(--g2-dim);border:1px solid var(--g2-glow)}
+.st-g3{color:var(--g3);background:var(--g3-dim);border:1px solid var(--g3-glow)}
+.st-g4{color:var(--g4);background:var(--g4-dim);border:1px solid var(--g4-glow)}
+.st-ch{color:var(--ch);background:var(--ch-dim);border:1px solid var(--ch-glow)}
+.sec-title{font-size:22px;font-weight:800;letter-spacing:-.6px;margin-bottom:5px}
+.sec-sub{font-size:13px;color:var(--muted)}
+
+/* ── SUB ── */
+.sub{margin-bottom:36px}
+.sub-title{font-size:14.5px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:10px}
+.sub-title::before{content:'';display:inline-block;width:14px;height:3px;background:var(--acc);border-radius:2px;flex-shrink:0}
+.sub p,.sub ul,.sub ol{color:var(--muted);font-size:13.5px;margin-bottom:10px;line-height:1.78}
+.sub ul,.sub ol{padding-left:22px}.sub li{margin-bottom:5px}.sub strong{color:var(--text)}
+
+/* ── FLOW CHAIN ── */
+.flow{display:flex;align-items:stretch;gap:4px;flex-wrap:wrap;margin:16px 0;padding:18px;background:var(--s2);border:1px solid var(--border2);border-radius:12px}
+.fl-slot{display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 12px;border-radius:9px;min-width:110px;flex:1;text-align:center}
+.fl-num{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:1px 7px;border-radius:4px}
+.fl-cat{font-size:12px;font-weight:700;color:var(--text)}
+.fl-ex{font-size:10.5px;color:var(--muted);line-height:1.5}
+.fl-1{background:rgba(255,140,80,.15);border:1.5px solid rgba(255,140,80,.4)}.fl-1 .fl-num{background:var(--g1-dim);color:var(--g1)}
+.fl-2{background:rgba(255,208,96,.12);border:1.5px solid rgba(255,208,96,.35)}.fl-2 .fl-num{background:var(--ch-dim);color:var(--ch)}
+.fl-3{background:rgba(56,189,248,.12);border:1.5px solid rgba(56,189,248,.35)}.fl-3 .fl-num{background:var(--g2-dim);color:var(--g2)}
+.fl-4{background:rgba(64,216,142,.12);border:1.5px solid rgba(64,216,142,.35)}.fl-4 .fl-num{background:var(--g4-dim);color:var(--g4)}
+.fl-5{background:rgba(160,122,244,.12);border:1.5px solid rgba(160,122,244,.35)}.fl-5 .fl-num{background:var(--g3-dim);color:var(--g3)}
+.fl-arrow{color:var(--faint);font-size:14px;flex-shrink:0;align-self:center}
+
+/* ── EXAMPLE BOX ── */
+.ex-box{background:var(--s1);border:1px solid var(--border2);border-radius:11px;overflow:hidden;margin:13px 0}
+.ex-head{display:flex;align-items:center;gap:8px;padding:9px 16px;background:var(--s2);border-bottom:1px solid var(--border)}
+.ex-label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.ex-tag{margin-left:auto;font-size:9px;font-weight:700;padding:2px 9px;border-radius:100px;flex-shrink:0}
+.et-g1{background:var(--g1-dim);color:var(--g1)}.et-g2{background:var(--g2-dim);color:var(--g2)}
+.et-g3{background:var(--g3-dim);color:var(--g3)}.et-g4{background:var(--g4-dim);color:var(--g4)}
+.et-tip{background:var(--ch-dim);color:var(--ch)}
+.ex-body{padding:14px 20px}
+.ex-row{display:flex;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13.5px}
+.ex-row:last-child{border-bottom:none}
+.ex-type{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0}
+.ext-ok{background:var(--ins-dim);color:var(--ins)}
+.ext-bad{background:var(--au-dim);color:var(--au)}
+.ex-en{color:var(--text);font-weight:600;flex:1;min-width:0}
+.ex-vn{color:var(--muted);flex:1;min-width:0}
+.ex-note{font-size:10.5px;color:var(--muted);flex-shrink:0;font-style:italic;max-width:200px}
+.ex-arrow{color:var(--faint);flex-shrink:0}
+.ex-en,.dl-en,.say{cursor:pointer;transition:color .14s}
+.ex-en:hover,.dl-en:hover,.say:hover{color:var(--acc)}
+.speaking{color:var(--acc)!important}
+
+/* ── DIALOGUE ── */
+.dlg{background:var(--s1);border:1px solid var(--border2);border-radius:12px;overflow:hidden;margin:14px 0}
+.dlg-body{padding:12px 20px 16px}
+.dl{display:flex;gap:12px;padding:8px 0;align-items:flex-start}
+.who{width:26px;height:26px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:1px}
+.dl.a .who{background:var(--g2-dim);color:var(--g2);border:1px solid var(--g2-glow)}
+.dl.b .who{background:var(--g1-dim);color:var(--g1);border:1px solid var(--g1-glow)}
+.dl-en{font-size:14px;font-weight:600;color:var(--text)}
+.dl-vn{font-size:12px;color:var(--muted);margin-top:1px}
+
+/* ── INFO BOXES ── */
+.info{display:flex;gap:12px;padding:13px 16px;border-radius:9px;margin:12px 0;font-size:13px;line-height:1.65}
+.info-ico{font-size:15px;flex-shrink:0;margin-top:1px}
+.i-ok{background:var(--green-dim);border:1px solid rgba(64,216,142,.2);color:#4cc58b}
+.i-warn{background:var(--yellow-dim);border:1px solid rgba(255,208,96,.2);color:#cfa83c}
+.i-tip{background:var(--blue-dim);border:1px solid rgba(91,168,255,.2);color:#6aa6e8}
+.i-note{background:var(--purple-dim);border:1px solid rgba(160,122,244,.2);color:#a58ce6}
+.i-err{background:var(--pink-dim);border:1px solid rgba(255,101,132,.2);color:#e8718a}
+.info strong{color:var(--text)}
+
+/* ── RW BOX ── */
+.rw-box{background:var(--s1);border:1px solid var(--border2);border-radius:12px;padding:16px 20px;margin:13px 0;position:relative;overflow:hidden}
+.rw-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
+.rw-g1::before{background:var(--g1)}.rw-g2::before{background:var(--g2)}.rw-g3::before{background:var(--g3)}.rw-g4::before{background:var(--g4)}
+.rw-label{font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.rw-g1 .rw-label{color:var(--g1)}.rw-g2 .rw-label{color:var(--g2)}.rw-g3 .rw-label{color:var(--g3)}.rw-g4 .rw-label{color:var(--g4)}
+.rw-title{font-size:14px;font-weight:700;margin-bottom:5px}
+.rw-body{font-size:13px;color:var(--muted);line-height:1.68}
+.rw-body strong{color:var(--text)}
+
+/* ── TABLE ── */
+.tbl-wrap{overflow-x:auto;margin:13px 0;border-radius:11px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;border-radius:11px;overflow:hidden}
+.tbl th{background:var(--s3);padding:9px 14px;text-align:left;font-weight:700;font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);border-bottom:1px solid var(--border2)}
+.tbl td{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted);vertical-align:top;font-size:13px}
+.tbl tr:hover td{background:rgba(255,255,255,.022)}
+.tbl td:first-child{color:var(--text);font-weight:600}
+.tbl .en{color:var(--g2);font-weight:700}
+.tbl td strong{color:var(--text)}
+
+/* ── CMP BOX ── */
+.cmp-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:11px;overflow:hidden;margin:13px 0}
+.cmp-bad{background:rgba(255,101,132,.07);border-right:1px solid var(--border);padding:14px 16px}
+.cmp-good{background:rgba(64,216,142,.07);padding:14px 16px}
+.cmp-label{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.cmp-bad .cmp-label{color:var(--au)}.cmp-good .cmp-label{color:var(--ins)}
+.cmp-text{font-size:13.5px;color:var(--text);line-height:1.7}
+.cmp-note{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+
+/* ── GRIDS ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:13px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:13px 0}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:11px;padding:15px;transition:all .2s}
+.card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.38)}
+.card-icon{font-size:22px;margin-bottom:8px}.card-title{font-size:13px;font-weight:700;margin-bottom:4px}.card-desc{font-size:12px;color:var(--muted);line-height:1.55}
+
+/* ── PHRASE CARDS / CHEAT ── */
+.cheat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:13px 0}
+.cheat-card{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:14px}
+.cheat-card h4{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:11px}
+.h4-g1{color:var(--g1)}.h4-g2{color:var(--g2)}.h4-g3{color:var(--g3)}.h4-g4{color:var(--g4)}.h4-ch{color:var(--ch)}.h4-au{color:var(--au)}
+.cheat-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;gap:10px}
+.cheat-row:last-child{border-bottom:none}
+.ck{color:var(--text);flex:1;font-size:12px;font-weight:600}
+.cv{font-size:11.5px;color:var(--teal);text-align:right;flex:1}
+
+/* ── PILLS ── */
+.pill-strip{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer}
+.pl-g1{background:rgba(255,140,80,.15);color:var(--g1)}.pl-g2{background:rgba(56,189,248,.15);color:var(--g2)}
+.pl-g3{background:rgba(160,122,244,.15);color:var(--g3)}.pl-g4{background:rgba(64,216,142,.15);color:var(--g4)}
+.pl-ch{background:rgba(255,208,96,.15);color:var(--ch)}
+
+/* ── SELF-TEST ── */
+.qa{background:var(--s1);border:1px solid var(--border2);border-radius:10px;margin:9px 0;overflow:hidden}
+.qa summary{cursor:pointer;padding:12px 16px;font-size:13.5px;font-weight:600;list-style:none;display:flex;gap:10px;align-items:baseline}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:'▸';color:var(--acc);transition:transform .15s;flex-shrink:0}
+.qa[open] summary::before{transform:rotate(90deg)}
+.qa[open] summary{border-bottom:1px solid var(--border);background:var(--s2)}
+.qa-a{padding:12px 16px 14px 36px;font-size:13px;color:var(--muted);line-height:1.7}
+.qa-a strong{color:var(--ins)}
+
+p code,li code,td code{font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(255,208,96,.1);color:var(--yellow);padding:2px 6px;border-radius:4px}
+hr.dv{border:none;border-top:1px solid var(--border);margin:52px 0}
+.footer{border-top:1px solid var(--border);padding:26px 64px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.footer a,.sub a,.info a{color:var(--acc)}
+
+@media(max-width:900px){
+  .sidebar{display:none}.main{margin-left:0}
+  .mnav{display:flex;gap:6px;overflow-x:auto;position:sticky;top:env(safe-area-inset-top,0px);z-index:300;background:var(--s1);border-bottom:1px solid var(--border);padding:9px 14px}
+  .mnav a{flex-shrink:0;font-size:11.5px;font-weight:700;color:var(--muted);text-decoration:none;padding:5px 12px;border-radius:100px;background:var(--s3)}
+  .mnav a.active{color:var(--acc);background:var(--acc-dim)}
+  .hero,.content,.footer{padding-left:22px;padding-right:22px}
+  .hero{padding-top:48px}
+  .hero h1{font-size:30px;letter-spacing:-1.4px}
+  .grid-2,.grid-3,.grid-4,.cheat-grid,.cmp-box{grid-template-columns:1fr}
+  .cmp-bad{border-right:none;border-bottom:1px solid var(--border)}
+  .ex-row{flex-wrap:wrap;gap:4px 10px}.ex-note{max-width:none}
+  .ex-en,.ex-vn{flex-basis:100%}.ex-arrow{display:none}
+  .fl-arrow{display:none}.fl-slot{min-width:46%}
+  .cat-banner{padding:16px}.cb-icon{font-size:28px}
+}
+.tool{background:var(--s2);border:1px solid var(--border2);border-radius:12px;padding:18px;margin:14px 0}
+.tool-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{font:inherit;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:8px;border:1px solid var(--border2);background:var(--s3);color:var(--text);cursor:pointer}
+.btn:hover{border-color:var(--acc)}.btn.on{background:var(--acc-dim);color:var(--acc);border-color:var(--acc)}
+.btn.go{background:var(--g4-dim);color:var(--g4);border-color:var(--g4-glow)}
+select.btn{padding:7px 10px}.stat{font-size:12px;color:var(--muted)}
+.dl{border-radius:8px;padding:8px 10px;transition:background .15s}.dl.playing{background:var(--acc-dim)}
+.dl.hid .dl-en,.dl.hid .dl-vn{filter:blur(6px);cursor:pointer}
+.turn{font-size:11px;font-weight:700;color:var(--g4);margin-left:8px}
+.nov .dl-vn{display:none}
+.pat{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13.5px}
+.pat:last-child{border-bottom:none}.pat .en{font-weight:600;cursor:pointer}.pat .en:hover{color:var(--acc)}.pat .vi{color:var(--teal);text-align:right;font-size:12.5px}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-brand">
+      <div class="logo-icon">🗣️</div>
+      <div class="logo-text"><h2>Hội Thoại Theo Chủ Đề</h2><p>Sơ cấp · Mẫu câu + audio</p></div>
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" id="pbar"></div></div>
+  </div>
+  <div class="nav-section" style="border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:2px">
+    <div class="nav-group-hdr" style="background:rgba(255,208,96,.12);color:#ffd060">📚 Lộ Trình Học</div>
+    <a href="english-grammar-basics.html" class="nav-link"><span class="ico">①</span> Tiếng Anh Cơ Bản</a>
+    <a href="english-12-tenses.html" class="nav-link"><span class="ico">②</span> 12 Thì Tiếng Anh</a>
+    <a href="subject-verb-agreement-tenses.html" class="nav-link"><span class="ico">③</span> Hòa Hợp C-V &amp; Phối Thì</a>
+    <a href="synonyms-antonyms-guide.html" class="nav-link"><span class="ico">④</span> Đồng Nghĩa &amp; Trái Nghĩa</a>
+    <a href="adjective-order-word-classes-relative-clauses.html" class="nav-link"><span class="ico">⑤</span> Trật Tự TT · Từ Loại · MĐ QH</a>
+    <a href="english-grammar-guide.html" class="nav-link"><span class="ico">⑥</span> Ngữ Pháp Tổng Hợp</a>
+    <a href="grammar-comparison-passive-conjunctions.html" class="nav-link"><span class="ico">⑦</span> So Sánh · Bị Động · Liên Từ</a>
+    <a href="prepositions-wish-guide.html" class="nav-link"><span class="ico">⑧</span> Giới Từ &amp; Câu Ước</a>
+    <a href="grammar-modals-quantifiers-stress.html" class="nav-link"><span class="ico">⑨</span> Modal · Lượng Từ · Trọng Âm</a>
+    <a href="grammar-tag-questions-articles-conditionals.html" class="nav-link"><span class="ico">⑩</span> Hỏi Đuôi · Mạo Từ · ĐK</a>
+    <a href="grammar-tov-ving-reported-phrasal.html" class="nav-link"><span class="ico">⑪</span> To V/V-ing · Tường Thuật</a>
+    <a href="english-pronunciation-guide.html" class="nav-link"><span class="ico">⑫</span> Phát Âm Tiếng Anh</a>
+    <a href="communication-english-guide.html" class="nav-link"><span class="ico">⑬</span> Tiếng Anh Giao Tiếp</a>
+    <a href="listening-speak-practice.html" class="nav-link"><span class="ico">⑭</span> Luyện Nghe · Luyện Nói</a>
+    <a href="vocabulary-full-audio.html" class="nav-link"><span class="ico">⑮</span> Học Từ Vựng Có Audio</a>
+    <a href="english-communication-basic.html" class="nav-link" style="color:var(--acc);background:rgba(255,208,96,.08);border-left-color:var(--acc)"><span class="ico">⑯</span> Hội Thoại Theo Chủ Đề</a>
+    <a href="grammar-conversation-structures.html" class="nav-link"><span class="ico">⑰</span> Cấu Trúc Câu Giao Tiếp</a>
+    <a href="thoughts-to-speech-guide.html" class="nav-link"><span class="ico">⑱</span> Từ Suy Nghĩ Đến Lời Nói</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-oc">🗺️ Tổng quan</div>
+    <a href="#s0" class="nav-link"><span class="ico">📊</span> Cách luyện hội thoại</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-g1">🟠 Nền tảng</div>
+    <a href="#s1" class="nav-link"><span class="ico">1️⃣</span> 8 mẫu câu khung <span class="nav-badge">★★★</span></a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-g2">🔵 Hội thoại theo chủ đề</div>
+    <a href="#s2" class="nav-link"><span class="ico">2️⃣</span> 12 chủ đề · có audio <span class="nav-badge">🔊</span></a>
+    <a href="#s2b" class="nav-link"><span class="ico">🗂️</span> Kho 96 câu thông dụng <span class="nav-badge">🔊</span></a>
+    <a href="#s2c" class="nav-link"><span class="ico">🧩</span> 40 cấu trúc câu mẫu <span class="nav-badge">★★★</span></a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-au">📋 Tổng hợp</div>
+    <a href="#s3" class="nav-link"><span class="ico">📅</span> Lộ trình 2 tuần</a>
+    <a href="#s4" class="nav-link"><span class="ico">📋</span> 10 câu sống còn</a>
+  </div>
+</aside>
+
+<div class="main">
+<nav class="mnav" aria-label="Điều hướng nhanh"><a href="#s0">Tổng quan</a><a href="#s1">Mẫu câu khung</a><a href="#s2">Hội thoại</a><a href="#s2b">Kho câu</a><a href="#s2c">Cấu trúc</a><a href="#s3">2 tuần</a><a href="#s4">Cheat Sheet</a></nav>
+
+<div class="hero">
+  <div class="hero-dots"></div><div class="hero-glow"></div>
+  <div class="hero-eyebrow"><span class="pulse"></span> Beginner · Hội thoại · Mẫu câu thông dụng · Có audio &amp; đóng vai</div>
+  <h1><span class="h-grad">Hội Thoại</span> 🗣️<br><span class="h-g2">Theo Chủ Đề</span> · <span class="h-g1">Sơ Cấp</span><br>& <span class="h-g4">Nói Được Ngay</span></h1>
+  <p class="hero-desc">12 chủ đề đời sống, mỗi chủ đề có <strong>mẫu câu thông dụng</strong> và <strong>một hội thoại hoàn chỉnh</strong> có audio. Bạn có thể nghe cả đoạn, hoặc <strong>chọn vai và tự nói</strong> với máy đóng vai người còn lại.</p>
+  <div class="hero-chips"><span class="chip chip-g1">🟠 8 mẫu câu khung</span><span class="chip chip-g3">🧩 40 cấu trúc câu</span><span class="chip chip-g2">🔊 Audio từng câu</span><span class="chip chip-g4">🎭 Chế độ đóng vai</span><span class="chip chip-g3">🇻🇳 Dịch tiếng Việt</span><span class="chip chip-au">📋 10 câu sống còn</span></div>
+</div>
+
+<div class="content">
+
+<div class="section" id="s0">
+  <div class="sec-head"><span class="sec-tag st-ov">TỔNG QUAN</span><div><h2 class="sec-title">Cách luyện một hội thoại</h2><p class="sec-sub">Mỗi hội thoại chỉ 5–10 phút, nhưng làm đủ 4 bước</p></div></div>
+  <div class="sub">
+    <div class="flow">
+      <div class="fl-slot fl-1"><span class="fl-num">1</span><span class="fl-cat">Nghe</span><span class="fl-ex">Nghe cả đoạn, đọc dịch để hiểu</span></div><span class="fl-arrow">→</span>
+      <div class="fl-slot fl-2"><span class="fl-num">2</span><span class="fl-cat">Lặp lại</span><span class="fl-ex">Bấm từng câu, nói theo to rõ</span></div><span class="fl-arrow">→</span>
+      <div class="fl-slot fl-3"><span class="fl-num">3</span><span class="fl-cat">Đóng vai</span><span class="fl-ex">Chọn vai A hoặc B, tự nói phần của mình</span></div><span class="fl-arrow">→</span>
+      <div class="fl-slot fl-4"><span class="fl-num">4</span><span class="fl-cat">Thay từ</span><span class="fl-ex">Đổi món, địa điểm, giờ bằng thông tin của bạn</span></div>
+    </div>
+    <div class="info i-ok"><span class="info-ico">🎯</span><div><strong>Mục tiêu sơ cấp:</strong> câu ngắn, rõ, đúng mẫu. Bạn không cần câu dài; <em>"I'd like a coffee, please."</em> đã là một câu giao tiếp hoàn chỉnh. Audio là giọng máy của trình duyệt (tiếng Anh Mỹ), dùng để làm quen nhịp và âm.</div></div>
+  </div>
+</div>
+
+<div class="section" id="s1">
+  <div class="sec-head"><span class="sec-tag st-g1">NỀN TẢNG</span><div><h2 class="sec-title">8 mẫu câu khung dùng ở mọi chủ đề</h2><p class="sec-sub">Học khung câu, rồi thay từ khóa theo tình huống</p></div></div>
+  <div class="sub">
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Khung câu</th><th>Ý nghĩa</th><th>Thay từ</th></tr></thead>
+      <tbody>
+        <tr><td class="en"><span class="say">I'd like + danh từ</span></td><td>Mình muốn… (lịch sự)</td><td><span class="say en">I'd like a coffee. / I'd like some water.</span></td></tr>
+        <tr><td class="en"><span class="say">Can I + động từ?</span></td><td>Mình có thể… không?</td><td><span class="say en">Can I sit here? / Can I try it on?</span></td></tr>
+        <tr><td class="en"><span class="say">Could you + động từ?</span></td><td>Bạn giúp mình… được không?</td><td><span class="say en">Could you help me? / Could you repeat that?</span></td></tr>
+        <tr><td class="en"><span class="say">Where is + danh từ?</span></td><td>… ở đâu?</td><td><span class="say en">Where is the bathroom? / Where is the station?</span></td></tr>
+        <tr><td class="en"><span class="say">How much is + danh từ?</span></td><td>… giá bao nhiêu?</td><td><span class="say en">How much is this? / How much are these?</span></td></tr>
+        <tr><td class="en"><span class="say">Do you have + danh từ?</span></td><td>Bạn có… không?</td><td><span class="say en">Do you have a menu? / Do you have this in blue?</span></td></tr>
+        <tr><td class="en"><span class="say">I'm / I have / I need</span></td><td>Mình đang / có / cần…</td><td><span class="say en">I'm tired. / I have a headache. / I need help.</span></td></tr>
+        <tr><td class="en"><span class="say">What time + …?</span></td><td>Mấy giờ…?</td><td><span class="say en">What time does it open? / What time is it?</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="info i-tip"><span class="info-ico">💡</span><div>Thêm <strong>please</strong> ở cuối câu và nói <strong>thank you</strong> sau khi nhận được thứ bạn cần. Chỉ hai từ này đã giúp bạn nghe lịch sự trong mọi tình huống.</div></div>
+  </div>
+</div>
+
+<hr class="dv">
+<div class="cat-banner cb-g2"><div class="cb-icon">🔵</div><div><div class="cb-badge">TOPIC CONVERSATIONS</div><div class="cb-title">Hội Thoại Theo 12 Chủ Đề</div><div class="cb-sub">Mẫu câu thông dụng + hội thoại có audio + chế độ đóng vai</div></div></div>
+
+<div class="section" id="s2">
+  <div class="sec-head"><span class="sec-tag st-g2">HỘI THOẠI</span><div><h2 class="sec-title">Chọn chủ đề và luyện nói</h2><p class="sec-sub">Bấm bất kỳ câu nào để nghe; dùng "Đóng vai" để tự nói phần của mình</p></div></div>
+  <div class="sub">
+    <div class="tool">
+      <div class="tool-row" id="topics"></div>
+      <div class="sub-title" id="ptitle">Mẫu câu thông dụng</div>
+      <div id="pats"></div>
+    </div>
+    <div class="tool">
+      <div class="sub-title" id="dtitle">Hội thoại</div>
+      <div class="tool-row">
+        <button class="btn go" id="play">▶ Nghe / Bắt đầu</button>
+        <button class="btn" id="stop">■ Dừng</button>
+        <select class="btn" id="role" aria-label="Chế độ đóng vai"><option value="">Nghe cả hai vai</option><option value="A">Đóng vai A (tôi nói A)</option><option value="B">Đóng vai B (tôi nói B)</option></select>
+        <select class="btn" id="rate" aria-label="Tốc độ"><option value=".7">Chậm</option><option value=".85" selected>Vừa</option><option value="1">Bình thường</option></select>
+        <label class="stat"><input type="checkbox" id="hidevi"> ẩn bản dịch</label>
+      </div>
+      <div class="stat" id="hint" style="margin-bottom:6px"></div>
+      <div id="dlg"></div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+<div class="section" id="s2b">
+  <div class="sec-head"><span class="sec-tag st-g2">KHO CÂU</span><div><h2 class="sec-title">Kho 96 câu thông dụng theo nhóm</h2><p class="sec-sub">12 nhóm, mỗi nhóm 8 câu ngắn dùng hằng ngày. Bấm câu để nghe, hoặc gõ từ khóa để tìm</p></div></div>
+  <div class="sub">
+    <div class="tool">
+      <div class="tool-row" id="ktabs"></div>
+      <div class="tool-row">
+        <input id="ksearch" class="btn" style="flex:1;min-width:200px;cursor:text;font-weight:500" type="search" placeholder="Tìm câu (tiếng Anh hoặc tiếng Việt)…" aria-label="Tìm câu">
+        <button class="btn go" id="kplay">▶ Nghe cả nhóm</button>
+        <span class="stat" id="kcount"></span>
+      </div>
+      <div id="klist"></div>
+    </div>
+  </div>
+</div>
+
+<hr class="dv">
+<div class="section" id="s2c">
+  <div class="sec-head"><span class="sec-tag st-g1">CẤU TRÚC</span><div><h2 class="sec-title">40 cấu trúc câu mẫu theo chủ đề</h2><p class="sec-sub">10 chủ đề đời sống, mỗi chủ đề 4 cấu trúc. Học khung câu rồi thay từ bằng thông tin của bạn</p></div></div>
+  <div class="sub">
+    <div class="tool">
+      <div class="tool-row" id="stabs"></div>
+      <div class="tool-row"><button class="btn go" id="splay">▶ Nghe cả chủ đề</button><span class="stat">Bấm vào từng ví dụ để nghe. Thử thay phần in đậm bằng điều bạn muốn nói.</span></div>
+      <div class="grid-2" id="slist"></div>
+    </div>
+    <div class="info i-tip"><span class="info-ico">💡</span><div><strong>V</strong> = động từ nguyên mẫu, <strong>V-ing</strong> = động từ thêm -ing, <strong>N</strong> = danh từ, <strong>adj</strong> = tính từ. Với mỗi cấu trúc, hãy tự đặt thêm 2 câu về cuộc sống của bạn rồi nói to.</div></div>
+  </div>
+</div>
+
+<hr class="dv">
+<div class="cat-banner cb-cheat"><div class="cb-icon">📋</div><div><div class="cb-badge">SUMMARY</div><div class="cb-title">Tổng Hợp — Lộ Trình &amp; Câu Sống Còn</div><div class="cb-sub">Kế hoạch 2 tuần và 10 câu nên thuộc trước</div></div></div>
+
+<div class="section" id="s3">
+  <div class="sec-head"><span class="sec-tag st-ch">LỘ TRÌNH</span><div><h2 class="sec-title">Lộ trình 2 tuần — 20 phút mỗi ngày</h2><p class="sec-sub">Mỗi ngày một chủ đề, ngày thứ 7 và 14 ôn lại</p></div></div>
+  <div class="sub">
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Ngày</th><th>Việc làm</th></tr></thead>
+      <tbody>
+        <tr><td>Ngày 1–4</td><td>Chủ đề 1–4: nghe cả đoạn, lặp từng câu, đóng vai A rồi B, thay từ bằng thông tin của bạn</td></tr>
+        <tr><td>Ngày 5–6</td><td>Chủ đề 5–6: làm như trên, và ghi âm lần đóng vai cuối cùng</td></tr>
+        <tr><td>Ngày 7</td><td>Ôn: chọn 3 chủ đề bất kỳ, đóng vai không nhìn chữ (bật "ẩn bản dịch")</td></tr>
+        <tr><td>Ngày 8–9</td><td>Chủ đề 7–8 theo quy trình 4 bước</td></tr>
+        <tr><td>Ngày 10–13</td><td>Quay lại chủ đề khó nhất, tự viết lại hội thoại bằng thông tin thật của bạn và nói to</td></tr>
+        <tr><td>Ngày 14</td><td>Ôn tổng hợp 8 chủ đề, nói với bạn hoặc ghi âm 2 phút</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<div class="section" id="s4">
+  <div class="sec-head"><span class="sec-tag st-ch">CHEAT SHEET</span><div><h2 class="sec-title">10 câu sống còn</h2><p class="sec-sub">Thuộc lòng trước khi học thêm bất kỳ thứ gì</p></div></div>
+  <div class="cheat-grid">
+    <div class="cheat-card"><h4 class="h4-g1">Mở đầu &amp; cảm ơn</h4>
+      <div class="cheat-row"><span class="ck say en">Excuse me.</span><span class="cv">Xin lỗi (gọi, hỏi)</span></div>
+      <div class="cheat-row"><span class="ck say en">Nice to meet you.</span><span class="cv">Rất vui được gặp bạn</span></div>
+      <div class="cheat-row"><span class="ck say en">Thank you very much.</span><span class="cv">Cảm ơn nhiều</span></div>
+      <div class="cheat-row"><span class="ck say en">You're welcome.</span><span class="cv">Không có gì</span></div></div>
+    <div class="cheat-card"><h4 class="h4-g2">Yêu cầu &amp; hỏi</h4>
+      <div class="cheat-row"><span class="ck say en">I'd like …, please.</span><span class="cv">Cho mình …</span></div>
+      <div class="cheat-row"><span class="ck say en">How much is this?</span><span class="cv">Cái này bao nhiêu?</span></div>
+      <div class="cheat-row"><span class="ck say en">Where is …?</span><span class="cv">… ở đâu?</span></div>
+      <div class="cheat-row"><span class="ck say en">Could you help me?</span><span class="cv">Bạn giúp mình được không?</span></div></div>
+    <div class="cheat-card"><h4 class="h4-g4">Khi không hiểu</h4>
+      <div class="cheat-row"><span class="ck say en">Sorry, could you repeat that?</span><span class="cv">Bạn nhắc lại được không?</span></div>
+      <div class="cheat-row"><span class="ck say en">Could you speak more slowly?</span><span class="cv">Nói chậm hơn được không?</span></div></div>
+    <div class="cheat-card"><h4 class="h4-au">Hay bị quên</h4>
+      <div class="cheat-row"><span class="ck">Thêm please</span><span class="cv">câu nghe lịch sự hơn</span></div>
+      <div class="cheat-row"><span class="ck">Hỏi lại</span><span class="cv">How about you?</span></div></div>
+  </div>
+  <p class="stat" style="margin-top:14px">Các câu về công việc, học tập, thời tiết và tình huống khẩn cấp có trong Kho 96 câu thông dụng ở trên.</p>
+</div>
+
+</div>
+<div class="footer"><span>🗣️ Hội Thoại Theo Chủ Đề · Sơ cấp · 2026</span><span style="margin-left:auto;color:var(--muted)">12 chủ đề · 12 hội thoại · 40 cấu trúc · 96 câu thông dụng · Audio &amp; đóng vai</span></div>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('pbar');
+  function upd(){var e=document.documentElement,m=e.scrollHeight-e.clientHeight;bar.style.width=(m>0?e.scrollTop/m*100:0)+'%'}
+  window.addEventListener('scroll',upd,{passive:true});upd();
+  var links=document.querySelectorAll('.nav-link, .mnav a');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.remove('active')});document.querySelectorAll('a[href="#'+e.target.id+'"]').forEach(function(a){a.classList.add('active')})}})},{rootMargin:'-15% 0px -70% 0px'});
+  document.querySelectorAll('.section[id]').forEach(function(s){io.observe(s)});
+
+  var tts='speechSynthesis' in window,voice=null,gen=0,rateEl=document.getElementById('rate');
+  function pv(){var v=speechSynthesis.getVoices()||[];voice=v.find(function(x){return /^en[-_]US/i.test(x.lang)})||v.find(function(x){return /^en/i.test(x.lang)})||null}
+  if(tts){pv();speechSynthesis.onvoiceschanged=pv}
+  function say(t,done){
+    if(!tts){if(done)setTimeout(done,1200);return}
+    var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=+rateEl.value;if(voice)u.voice=voice;
+    var d=false;function fin(){if(!d){d=true;if(done)done()}}u.onend=fin;u.onerror=fin;speechSynthesis.speak(u)}
+  function now(t){if(!tts)return;gen++;speechSynthesis.cancel();say(t)}
+  document.addEventListener('click',function(ev){
+    var t=ev.target.closest('.say, .pat .en, .dl-en');if(!t)return;
+    var s=t.textContent.replace('🔊','').replace(/\s+/g,' ').trim();if(/[à-ỹ]/i.test(s)||!/[a-z]/i.test(s))return;now(s)});
+
+  var T=[
+   {n:"Chào hỏi",i:"👋",p:["Hi, I'm Lan.|Chào, mình là Lan.","Nice to meet you.|Rất vui được gặp bạn.","Where are you from?|Bạn đến từ đâu?","I'm from Vietnam.|Mình đến từ Việt Nam.","What do you do?|Bạn làm nghề gì?","How are you?|Bạn khỏe không?"],
+    d:["A|Hi! I'm Mark. What's your name?|Chào! Mình là Mark. Bạn tên gì?","B|Hi Mark! I'm Lan. Nice to meet you.|Chào Mark! Mình là Lan. Rất vui được gặp bạn.","A|Nice to meet you too. Where are you from?|Mình cũng vậy. Bạn đến từ đâu?","B|I'm from Vietnam. How about you?|Mình đến từ Việt Nam. Còn bạn?","A|I'm from Canada. What do you do?|Mình đến từ Canada. Bạn làm nghề gì?","B|I'm a teacher.|Mình là giáo viên.","A|That's great!|Tuyệt quá!","B|Thank you. See you later!|Cảm ơn. Hẹn gặp lại!"]},
+   {n:"Gia đình & sở thích",i:"👨‍👩‍👧",p:["I have two sisters.|Mình có hai chị em gái.","Do you have any brothers or sisters?|Bạn có anh chị em không?","What do you do in your free time?|Rảnh bạn làm gì?","I like playing football.|Mình thích chơi bóng đá.","I'm interested in music.|Mình quan tâm đến âm nhạc.","How often do you exercise?|Bạn tập thể dục thường xuyên không?"],
+    d:["A|Do you have any brothers or sisters?|Bạn có anh chị em không?","B|Yes, I have one brother. He's twenty.|Có, mình có một anh trai. Anh ấy 20 tuổi.","A|What do you do in your free time?|Rảnh bạn làm gì?","B|I like reading and listening to music.|Mình thích đọc sách và nghe nhạc.","A|Really? What kind of music?|Thật à? Loại nhạc nào?","B|Pop music. How about you?|Nhạc pop. Còn bạn?","A|I like playing tennis on weekends.|Mình thích chơi tennis cuối tuần.","B|That sounds fun!|Nghe vui đấy!"]},
+   {n:"Nhà hàng & cà phê",i:"🍽️",p:["Can I see the menu, please?|Cho mình xem thực đơn.","I'd like a coffee, please.|Cho mình một ly cà phê.","What do you recommend?|Bạn gợi ý món gì?","Is this spicy?|Món này có cay không?","Could we have the bill, please?|Cho mình tính tiền.","That's all, thank you.|Vậy thôi, cảm ơn."],
+    d:["A|Hi! Are you ready to order?|Chào! Bạn gọi món chưa?","B|Yes. I'd like a chicken sandwich, please.|Rồi. Cho mình một bánh mì gà.","A|Anything to drink?|Bạn uống gì không?","B|A glass of orange juice, please.|Một ly nước cam.","A|Sure. Anything else?|Vâng. Còn gì nữa không?","B|No, that's all. Thank you.|Không, vậy thôi. Cảm ơn.","B|Could I have the bill, please?|Cho mình tính tiền.","A|Of course. Here you are.|Vâng ạ. Của bạn đây."]},
+   {n:"Mua sắm",i:"🛍️",p:["How much is this?|Cái này bao nhiêu?","Do you have a bigger size?|Có size lớn hơn không?","Can I try it on?|Mình thử được không?","It's too expensive.|Đắt quá.","I'll take it.|Mình lấy cái này.","Can I pay by card?|Mình trả bằng thẻ được không?"],
+    d:["A|Can I help you?|Tôi giúp gì được bạn?","B|Yes. How much is this shirt?|Vâng. Cái áo này bao nhiêu?","A|It's twenty dollars.|20 đô la.","B|Do you have a bigger size?|Có size lớn hơn không?","A|Yes, here you are.|Có, đây ạ.","B|Can I try it on?|Mình thử được không?","A|Of course. The fitting room is over there.|Được chứ. Phòng thử đồ ở đằng kia.","B|It fits well. I'll take it. Can I pay by card?|Vừa lắm. Mình lấy cái này. Trả bằng thẻ được không?"]},
+   {n:"Hỏi đường",i:"🧭",p:["Excuse me, where is the bank?|Xin lỗi, ngân hàng ở đâu?","How do I get to the station?|Đến nhà ga đi thế nào?","Go straight.|Đi thẳng.","Turn left at the corner.|Rẽ trái ở góc đường.","Is it far from here?|Có xa đây không?","It's next to the post office.|Nó cạnh bưu điện."],
+    d:["A|Excuse me, how do I get to the station?|Xin lỗi, đến nhà ga đi thế nào?","B|Go straight, then turn left at the corner.|Đi thẳng, rồi rẽ trái ở góc đường.","B|It's next to the post office.|Nó cạnh bưu điện.","A|Is it far from here?|Có xa đây không?","B|No, it's about five minutes on foot.|Không, đi bộ khoảng 5 phút.","A|Thank you so much!|Cảm ơn bạn nhiều!","B|You're welcome.|Không có gì."]},
+   {n:"Điện thoại & hẹn gặp",i:"📞",p:["Hello, this is Lan.|Alô, Lan đây.","Can I speak to Mr. Brown?|Cho mình nói chuyện với ông Brown.","Can you call me back?|Bạn gọi lại cho mình được không?","Are you free on Saturday?|Thứ Bảy bạn rảnh không?","Let's meet at seven o'clock.|Mình gặp lúc 7 giờ nhé.","Sorry, I can't make it.|Xin lỗi, mình không đi được."],
+    d:["A|Hello, this is Lan. Are you free on Saturday?|Alô, Lan đây. Thứ Bảy bạn rảnh không?","B|Hi Lan! Yes, I'm free in the afternoon.|Chào Lan! Có, chiều mình rảnh.","A|Let's have coffee.|Mình đi uống cà phê nhé.","B|Great idea! What time?|Ý hay! Mấy giờ?","A|How about three o'clock?|3 giờ nhé?","B|Sorry, I can't make it at three. Is four okay?|Xin lỗi, 3 giờ mình không đi được. 4 giờ được không?","A|Sure. See you at four.|Được. Hẹn gặp lúc 4 giờ."]},
+   {n:"Sức khỏe",i:"🩺",p:["I don't feel well.|Mình thấy không khỏe.","I have a headache.|Mình bị đau đầu.","I have a sore throat.|Mình bị đau họng.","Since yesterday.|Từ hôm qua.","Take this medicine twice a day.|Uống thuốc này hai lần một ngày.","You should get some rest.|Bạn nên nghỉ ngơi."],
+    d:["A|Good morning. What's the problem?|Chào buổi sáng. Bạn bị sao?","B|I don't feel well. I have a headache and a sore throat.|Mình thấy không khỏe. Mình bị đau đầu và đau họng.","A|How long have you had them?|Bạn bị bao lâu rồi?","B|Since yesterday.|Từ hôm qua.","A|Do you have a fever?|Bạn có sốt không?","B|No, I don't think so.|Không, mình nghĩ là không.","A|Take this medicine twice a day, and get some rest.|Uống thuốc này hai lần một ngày và nghỉ ngơi nhé.","B|Thank you, doctor.|Cảm ơn bác sĩ."]},
+   {n:"Du lịch & khách sạn",i:"🏨",p:["I have a reservation.|Mình đã đặt phòng.","I'd like to book a room for two nights.|Mình muốn đặt phòng 2 đêm.","What time is check-out?|Mấy giờ trả phòng?","Is breakfast included?|Có bao gồm bữa sáng không?","Could you call a taxi?|Bạn gọi giúp taxi được không?","Where is the airport shuttle?|Xe đưa đón sân bay ở đâu?"],
+    d:["A|Good evening. How can I help you?|Chào buổi tối. Tôi giúp gì được bạn?","B|I have a reservation under Nguyen.|Mình đặt phòng tên Nguyễn.","A|Yes, a room for two nights. May I see your passport?|Vâng, một phòng 2 đêm. Cho tôi xem hộ chiếu nhé?","B|Here you are. Is breakfast included?|Đây ạ. Có bao gồm bữa sáng không?","A|Yes, from seven to ten.|Có, từ 7 đến 10 giờ.","B|What time is check-out?|Mấy giờ trả phòng?","A|At twelve noon.|12 giờ trưa.","B|Thank you very much.|Cảm ơn bạn nhiều."]},
+   {n:"Buổi sáng ở nhà",i:"🌅",p:["What time do you wake up?|Bạn dậy lúc mấy giờ?","I usually wake up at six.|Mình thường dậy lúc 6 giờ.","What's for breakfast?|Bữa sáng ăn gì?","I'm running late.|Mình đang trễ giờ.","Don't forget your keys.|Đừng quên chìa khóa.","Have a good day!|Chúc một ngày tốt lành!"],
+    d:["A|Good morning! What time is it?|Chào buổi sáng! Mấy giờ rồi?","B|It's seven. You're going to be late.|7 giờ rồi. Bạn sắp trễ đó.","A|Oh no! What's for breakfast?|Ôi không! Bữa sáng ăn gì?","B|Eggs and toast. Do you want some?|Trứng và bánh mì nướng. Bạn ăn không?","A|Just toast, please. I'm running late.|Chỉ bánh mì thôi. Mình đang trễ giờ.","B|Don't forget your keys.|Đừng quên chìa khóa.","A|Thanks. See you tonight!|Cảm ơn. Tối gặp nhé!","B|Have a good day!|Chúc một ngày tốt lành!"]},
+   {n:"Hàng xóm",i:"🏘️",p:["Do you live around here?|Bạn sống quanh đây à?","How long have you lived here?|Bạn sống đây bao lâu rồi?","It's a quiet neighborhood.|Khu này yên tĩnh.","I just moved in.|Mình vừa chuyển đến.","Let me know if you need anything.|Cần gì cứ báo mình.","Nice talking to you.|Rất vui được nói chuyện."],
+    d:["A|Hi! Do you live around here?|Chào! Bạn sống quanh đây à?","B|Yes, I live in the building next door.|Vâng, mình sống ở tòa nhà bên cạnh.","A|How long have you lived here?|Bạn sống đây bao lâu rồi?","B|About two years. It's a quiet neighborhood.|Khoảng hai năm. Khu này yên tĩnh.","A|That's nice. I just moved in last week.|Hay quá. Mình vừa chuyển đến tuần trước.","B|Welcome! Let me know if you need anything.|Chào mừng! Cần gì cứ báo mình nhé.","A|Thank you. Nice talking to you!|Cảm ơn. Rất vui được nói chuyện!"]},
+   {n:"Đặt đồ ăn",i:"📦",p:["I'd like to order a pizza.|Mình muốn đặt một pizza.","What's the delivery address?|Địa chỉ giao hàng là gì?","How long will it take?|Mất bao lâu?","Can I pay when it arrives?|Mình trả khi nhận hàng được không?","My order hasn't arrived.|Đơn hàng của mình chưa đến.","Thanks for the quick delivery.|Cảm ơn vì giao nhanh."],
+    d:["A|Hello, Pizza Place. How can I help you?|Alô, tiệm Pizza đây. Tôi giúp gì được bạn?","B|I'd like to order a large pizza, please.|Cho mình đặt một pizza cỡ lớn.","A|Sure. What's the delivery address?|Vâng. Địa chỉ giao hàng là gì?","B|It's 25 Le Loi Street.|Số 25 phố Lê Lợi.","A|How would you like to pay?|Bạn muốn thanh toán thế nào?","B|Can I pay when it arrives?|Mình trả khi nhận hàng được không?","A|Yes, of course. It will take about thirty minutes.|Được ạ. Khoảng 30 phút sẽ giao.","B|Great. Thank you!|Tuyệt. Cảm ơn!"]},
+   {n:"Ở cơ quan",i:"🏢",p:["Do you have a minute?|Bạn có rảnh một chút không?","What's up?|Có chuyện gì vậy?","Could you send me the file?|Bạn gửi mình file được không?","I'll do it right away.|Mình làm ngay.","Let's have lunch together.|Mình ăn trưa cùng nhé.","See you tomorrow.|Hẹn mai gặp."],
+    d:["A|Hi Lan. Do you have a minute?|Chào Lan. Bạn có rảnh một chút không?","B|Sure. What's up?|Được. Có chuyện gì vậy?","A|Could you send me the report?|Bạn gửi mình báo cáo được không?","B|Of course. I'll send it right away.|Tất nhiên. Mình gửi ngay.","A|Thanks. By the way, let's have lunch together.|Cảm ơn. Nhân tiện, mình ăn trưa cùng nhé.","B|Sounds good! Where do you want to go?|Nghe hay đấy! Bạn muốn đi đâu?","A|How about the café downstairs?|Quán cà phê dưới lầu thì sao?","B|Perfect. See you at noon.|Tuyệt. Hẹn gặp lúc trưa."]}
+  ];
+  var cur=0,tb=document.getElementById('topics'),pats=document.getElementById('pats'),dlg=document.getElementById('dlg'),hint=document.getElementById('hint'),role='';
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+  function render(){
+    tb.innerHTML='';T.forEach(function(t,k){var b=document.createElement('button');b.className='btn'+(k===cur?' on':'');b.textContent=t.i+' '+t.n;b.onclick=function(){stopAll();cur=k;render()};tb.appendChild(b)});
+    var t=T[cur];
+    document.getElementById('ptitle').textContent='Mẫu câu thông dụng — '+t.n;
+    document.getElementById('dtitle').textContent='Hội thoại — '+t.n;
+    pats.innerHTML=t.p.map(function(s){var a=s.split('|');return '<div class="pat"><span class="en">🔊 '+esc(a[0])+'</span><span class="vi">'+esc(a[1])+'</span></div>'}).join('');
+    dlg.innerHTML=t.d.map(function(s,k){var a=s.split('|'),r=a[0];return '<div class="dl '+(r==='A'?'a':'b')+(r===role?' hid':'')+'" data-k="'+k+'"><span class="who">'+r+'</span><div><div class="dl-en">'+esc(a[1])+'</div><div class="dl-vn">'+esc(a[2])+'</div></div></div>'}).join('');
+    hint.textContent=role?'Bạn đóng vai '+role+': câu của vai '+role+' bị làm mờ, hãy tự nói rồi bấm vào câu để xem đáp án.':'';
+  }
+  dlg.addEventListener('click',function(ev){var d=ev.target.closest('.dl');if(d&&d.classList.contains('hid'))d.classList.remove('hid')});
+  function mark(k){dlg.querySelectorAll('.dl').forEach(function(d){d.classList.toggle('playing',+d.getAttribute('data-k')===k)})}
+  function stopAll(){gen++;if(tts)speechSynthesis.cancel();mark(-1)}
+  document.getElementById('stop').onclick=stopAll;
+  document.getElementById('role').onchange=function(){stopAll();role=this.value;render()};
+  document.getElementById('hidevi').onchange=function(){dlg.classList.toggle('nov',this.checked)};
+  document.getElementById('play').onclick=function(){
+    stopAll();var my=gen,L=T[cur].d,k=0;
+    if(role)dlg.querySelectorAll('.dl').forEach(function(d,i){if(L[i].split('|')[0]===role)d.classList.add('hid')});
+    (function next(){
+      if(my!==gen||k>=L.length){mark(-1);return}
+      var a=L[k].split('|'),row=dlg.querySelector('[data-k="'+k+'"]');mark(k);
+      if(role&&a[0]===role){
+        var ms=2500+a[1].split(' ').length*700;
+        setTimeout(function(){if(my!==gen)return;row.classList.remove('hid');say(a[1],function(){if(my!==gen)return;k++;setTimeout(next,400)})},ms);
+      }else say(a[1],function(){if(my!==gen)return;k++;setTimeout(next,600)});
+    })();
+  };
+  var K=[["Chào & tạm biệt","👋",["Good morning.|Chào buổi sáng.","Good afternoon.|Chào buổi chiều.","Good evening.|Chào buổi tối.","How's it going?|Dạo này thế nào?","Long time no see!|Lâu rồi không gặp!","See you tomorrow.|Hẹn mai gặp.","Take care!|Giữ gìn sức khỏe nhé!","Have a nice day!|Chúc một ngày tốt lành!"]],
+   ["Cảm ơn & xin lỗi","🙏",["Thanks a lot.|Cảm ơn nhiều.","I really appreciate it.|Mình rất trân trọng điều đó.","No problem.|Không có gì.","I'm sorry.|Xin lỗi.","Sorry I'm late.|Xin lỗi mình đến trễ.","It's my fault.|Đó là lỗi của mình.","Never mind.|Không sao đâu.","Don't worry about it.|Đừng lo về chuyện đó."]],
+   ["Nhờ giúp & hỏi","🙋",["Could you help me, please?|Bạn giúp mình được không?","Can you show me how?|Bạn chỉ mình cách làm được không?","What does this mean?|Cái này nghĩa là gì?","How do you say this in English?|Cái này tiếng Anh nói thế nào?","Could you write it down?|Bạn viết ra giúp được không?","Can you spell that?|Bạn đánh vần được không?","Is anyone sitting here?|Có ai ngồi ở đây không?","Do you know where the bathroom is?|Bạn biết nhà vệ sinh ở đâu không?"]],
+   ["Đồng ý & từ chối","👍",["Sure!|Chắc chắn rồi!","Of course.|Tất nhiên.","That sounds good.|Nghe hay đấy.","I agree.|Mình đồng ý.","I'm not sure.|Mình không chắc.","No, thanks.|Không, cảm ơn.","Maybe later.|Để sau nhé.","I'd love to, but I can't.|Mình muốn lắm nhưng không được."]],
+   ["Cảm xúc & ý kiến","😊",["I'm so happy!|Mình vui lắm!","I'm tired.|Mình mệt.","I'm worried.|Mình lo lắng.","I'm bored.|Mình chán.","I think it's great.|Mình nghĩ nó rất tuyệt.","I don't like it.|Mình không thích nó.","It's interesting.|Nó thú vị.","What do you think?|Bạn nghĩ sao?"]],
+   ["Thời gian & hẹn","⏰",["What time is it?|Mấy giờ rồi?","It's half past two.|Hai giờ rưỡi.","I'm free tomorrow.|Ngày mai mình rảnh.","See you at noon.|Hẹn gặp lúc trưa.","How long does it take?|Mất bao lâu?","It takes ten minutes.|Mất 10 phút.","I'll be there soon.|Mình sẽ đến sớm.","Hurry up!|Nhanh lên!"]],
+   ["Giá & thanh toán","💳",["How much does it cost?|Cái này giá bao nhiêu?","That's a good price.|Giá tốt đấy.","Do you accept cards?|Bạn nhận thẻ không?","I'll pay in cash.|Mình trả tiền mặt.","Keep the change.|Không cần thối lại.","Can I get a receipt?|Cho mình biên lai nhé.","Is there a discount?|Có giảm giá không?","Let's split the bill.|Mình chia tiền nhé."]],
+   ["Đi lại","🚌",["Where is the bus stop?|Trạm xe buýt ở đâu?","Which bus goes to the airport?|Xe buýt nào đến sân bay?","One ticket, please.|Cho mình một vé.","Is this seat taken?|Ghế này có người ngồi chưa?","I'm lost.|Mình bị lạc.","Please take me to this address.|Cho mình đến địa chỉ này.","Stop here, please.|Dừng ở đây giúp mình.","How far is it?|Nó cách bao xa?"]],
+   ["Hằng ngày ở nhà","🏠",["I wake up at six.|Mình dậy lúc 6 giờ.","I'm making breakfast.|Mình đang làm bữa sáng.","I'm going to work.|Mình đi làm đây.","Dinner is ready.|Bữa tối xong rồi.","Turn off the light.|Tắt đèn đi.","Could you close the door?|Bạn đóng cửa giúp mình được không?","I'm going to bed.|Mình đi ngủ đây.","Make yourself at home.|Cứ tự nhiên như ở nhà nhé."]],
+   ["Công việc & học tập","💼",["I'm busy right now.|Bây giờ mình đang bận.","I have a meeting.|Mình có cuộc họp.","Can we talk later?|Lát nữa nói chuyện được không?","I'll send you an email.|Mình sẽ gửi email cho bạn.","I don't understand this lesson.|Mình không hiểu bài này.","Can you explain it again?|Bạn giải thích lại được không?","I have homework to do.|Mình có bài tập phải làm.","Let me check.|Để mình kiểm tra."]],
+   ["Khẩn cấp & sự cố","🚨",["Help!|Cứu với!","Call the police!|Gọi cảnh sát!","Call an ambulance!|Gọi xe cấp cứu!","I lost my wallet.|Mình mất ví.","My phone is missing.|Điện thoại của mình bị mất.","I need a doctor.|Mình cần gặp bác sĩ.","There's a problem.|Có vấn đề rồi.","It's an emergency.|Đây là trường hợp khẩn cấp."]],
+   ["Thời tiết","🌦️",["It's a nice day.|Hôm nay trời đẹp.","It's raining.|Trời đang mưa.","It's really hot today.|Hôm nay nóng quá.","It's cold outside.|Ngoài trời lạnh.","What's the weather like?|Thời tiết thế nào?","I love this weather.|Mình thích thời tiết này.","Don't forget your umbrella.|Đừng quên mang ô.","The weather is perfect.|Thời tiết thật hoàn hảo."]]];
+  var kc=0,kq='',kt=document.getElementById('ktabs'),kl=document.getElementById('klist'),kn=document.getElementById('kcount'),ks=document.getElementById('ksearch');
+  function kclear(){kl.querySelectorAll('.pat').forEach(function(r){r.style.background=''})}
+  function krender(){
+    kt.innerHTML='';
+    K.forEach(function(c,i){var b=document.createElement('button');b.className='btn'+(i===kc&&!kq?' on':'');b.textContent=c[1]+' '+c[0];b.onclick=function(){stopAll();kq='';ks.value='';kc=i;krender()};kt.appendChild(b)});
+    var rows=[];
+    if(kq){K.forEach(function(c){c[2].forEach(function(s){if(s.toLowerCase().indexOf(kq)>-1)rows.push([s,c[0]])})})}
+    else{K[kc][2].forEach(function(s){rows.push([s,''])})}
+    kn.textContent=kq?rows.length+' kết quả':K[kc][2].length+' câu';
+    kl.innerHTML=rows.map(function(r){var a=r[0].split('|');return '<div class="pat"><span class="en">🔊 '+esc(a[0])+'</span><span class="vi">'+esc(a[1])+(r[1]?' · <i>'+esc(r[1])+'</i>':'')+'</span></div>'}).join('')||'<div class="stat">Không tìm thấy câu phù hợp.</div>';
+  }
+  ks.addEventListener('input',function(){stopAll();kq=ks.value.trim().toLowerCase();krender()});
+  document.getElementById('stop').addEventListener('click',kclear);
+  document.getElementById('kplay').onclick=function(){
+    stopAll();var my=gen,rows=kl.querySelectorAll('.pat'),k=0;
+    (function nx(){
+      kclear();if(my!==gen||k>=rows.length)return;
+      var r=rows[k];r.style.background='var(--acc-dim)';
+      say(r.querySelector('.en').textContent.replace('🔊','').trim(),function(){if(my!==gen)return;k++;setTimeout(nx,500)});
+    })();
+  };
+  krender();
+  var S=[["Giới thiệu & trò chuyện","💬",["I'm + nghề / nơi|Mình là… / Mình đến từ…|I'm a student.|Mình là sinh viên.|I'm from Hai Phong.|Mình đến từ Hải Phòng.","I live in / work at + nơi|Mình sống ở… / làm ở…|I live in Hanoi.|Mình sống ở Hà Nội.|I work at a bank.|Mình làm ở ngân hàng.","I like + V-ing / N|Mình thích…|I like cooking.|Mình thích nấu ăn.|I like coffee.|Mình thích cà phê.","How about you?|Còn bạn thì sao? (hỏi lại)|I'm fine. How about you?|Mình ổn. Còn bạn?|I love music. How about you?|Mình mê âm nhạc. Còn bạn?"]],
+   ["Hằng ngày & thói quen","🌅",["I + V (every day)|Việc làm thường xuyên|I wake up at six every day.|Ngày nào mình cũng dậy lúc 6 giờ.|I take the bus to work.|Mình đi xe buýt đi làm.","I usually / often / sometimes + V|Mình thường / hay / thỉnh thoảng…|I usually have breakfast at home.|Mình thường ăn sáng ở nhà.|I sometimes go to the gym.|Thỉnh thoảng mình đi tập gym.","I'm + V-ing|Mình đang…|I'm cooking dinner.|Mình đang nấu bữa tối.|I'm waiting for the bus.|Mình đang chờ xe buýt.","I'm going to + V|Mình sẽ… (dự định)|I'm going to visit my parents.|Mình sẽ thăm bố mẹ.|I'm going to study tonight.|Tối nay mình sẽ học bài."]],
+   ["Nhờ vả & lịch sự","🙏",["Can I + V?|Mình có thể… không?|Can I use your phone?|Mình dùng điện thoại bạn được không?|Can I sit here?|Mình ngồi đây được không?","Could you + V, please?|Bạn… giúp mình được không?|Could you open the window, please?|Bạn mở cửa sổ giúp mình nhé?|Could you speak slowly?|Bạn nói chậm được không?","Would you mind + V-ing?|Bạn có phiền… không?|Would you mind closing the door?|Phiền bạn đóng cửa giúp mình?|Would you mind waiting a moment?|Phiền bạn đợi một chút nhé?","Do you mind if I + V?|Bạn có phiền nếu mình… không?|Do you mind if I open the window?|Bạn có phiền nếu mình mở cửa sổ?|Do you mind if I join you?|Mình ngồi cùng bạn được không?"]],
+   ["Rủ rê & gợi ý","🎉",["Let's + V|Chúng ta hãy…|Let's have lunch together.|Mình cùng ăn trưa nhé.|Let's go home.|Mình về nhà thôi.","How about + V-ing / N?|… thì sao?|How about going to the cinema?|Đi xem phim nhé?|How about Saturday?|Thứ Bảy thì sao?","Why don't we + V?|Sao mình không…?|Why don't we take a taxi?|Sao mình không đi taxi?|Why don't we try that café?|Sao mình không thử quán đó?","Would you like to + V?|Bạn có muốn… không?|Would you like to join us?|Bạn muốn tham gia cùng bọn mình không?|Would you like some tea?|Bạn uống chút trà nhé?"]],
+   ["Ăn uống","🍽️",["I'd like + N|Cho mình… (lịch sự)|I'd like a glass of water.|Cho mình một ly nước.|I'd like the soup.|Cho mình món súp.","Can I have + N, please?|Cho mình… nhé|Can I have the menu, please?|Cho mình thực đơn nhé.|Can I have some more rice?|Cho mình thêm cơm nhé?","Is there + N? / Do you have + N?|Có… không?|Is there any vegetarian food?|Có món chay không?|Do you have a table for two?|Bạn có bàn cho hai người không?","It tastes + adj|Nó có vị…|It tastes delicious.|Nó ăn rất ngon.|It tastes a bit salty.|Nó hơi mặn."]],
+   ["Mua sắm & giá","🛍️",["How much is / are + N?|… giá bao nhiêu?|How much is this bag?|Cái túi này bao nhiêu?|How much are these shoes?|Đôi giày này bao nhiêu?","It's too + adj|Nó quá…|It's too big.|Nó rộng quá.|It's too expensive.|Đắt quá.","Do you have + N in + size / color?|Có… cỡ / màu… không?|Do you have this in black?|Cái này có màu đen không?|Do you have it in a smaller size?|Có size nhỏ hơn không?","I'll take + N|Mình lấy…|I'll take this one.|Mình lấy cái này.|I'll take two.|Mình lấy hai cái."]],
+   ["Hỏi đường & đi lại","🧭",["Where is + N?|… ở đâu?|Where is the pharmacy?|Hiệu thuốc ở đâu?|Where is the nearest bus stop?|Trạm xe buýt gần nhất ở đâu?","How do I get to + nơi?|Đến… đi thế nào?|How do I get to the airport?|Đến sân bay đi thế nào?|How do I get to the market?|Đến chợ đi thế nào?","It takes + thời gian (to + V)|Mất bao lâu để…|It takes ten minutes to walk there.|Đi bộ đến đó mất 10 phút.|It takes an hour by bus.|Đi xe buýt mất một giờ.","Turn left / right at + N|Rẽ trái / phải ở…|Turn right at the traffic light.|Rẽ phải ở đèn giao thông.|Turn left at the bank.|Rẽ trái ở ngân hàng."]],
+   ["Thời gian & hẹn","⏰",["What time + do / does…?|Mấy giờ…?|What time does the shop open?|Mấy giờ cửa hàng mở cửa?|What time do you finish work?|Mấy giờ bạn tan làm?","I'll + V|Mình sẽ… (quyết định ngay)|I'll call you later.|Mình sẽ gọi bạn sau.|I'll be there at five.|Mình sẽ đến lúc 5 giờ.","Are you free + on / at…?|Bạn rảnh vào… không?|Are you free on Sunday?|Chủ nhật bạn rảnh không?|Are you free this evening?|Tối nay bạn rảnh không?","I'm busy on… / I have + N|Mình bận… / Mình có…|I'm busy on Monday.|Thứ Hai mình bận.|I have a meeting at ten.|Mình có cuộc họp lúc 10 giờ."]],
+   ["Sức khỏe & cảm xúc","🩺",["I have + bệnh / triệu chứng|Mình bị…|I have a cold.|Mình bị cảm.|I have a stomachache.|Mình bị đau bụng.","My + bộ phận + hurts|… của mình đau|My back hurts.|Lưng mình đau.|My head hurts.|Đầu mình đau.","I feel + adj|Mình cảm thấy…|I feel tired.|Mình cảm thấy mệt.|I feel much better.|Mình thấy khỏe hơn nhiều.","You should + V|Bạn nên…|You should drink more water.|Bạn nên uống nhiều nước hơn.|You should see a doctor.|Bạn nên đi khám bác sĩ."]],
+   ["Ý kiến & so sánh","⚖️",["I think + (that) + câu|Mình nghĩ rằng…|I think it's a good idea.|Mình nghĩ đó là ý hay.|I think it will rain.|Mình nghĩ trời sẽ mưa.","I prefer A to B|Mình thích A hơn B|I prefer tea to coffee.|Mình thích trà hơn cà phê.|I prefer walking to driving.|Mình thích đi bộ hơn lái xe.","A is + adj-er than B|A … hơn B|This bag is cheaper than that one.|Túi này rẻ hơn túi kia.|My house is bigger than his.|Nhà mình to hơn nhà anh ấy.","I'm good at / interested in + N / V-ing|Mình giỏi / quan tâm…|I'm good at cooking.|Mình nấu ăn giỏi.|I'm interested in music.|Mình quan tâm đến âm nhạc."]]];
+  var sc=0,stb=document.getElementById('stabs'),sl=document.getElementById('slist');
+  function srender(){
+    stb.innerHTML='';
+    S.forEach(function(c,i){var b=document.createElement('button');b.className='btn'+(i===sc?' on':'');b.textContent=c[1]+' '+c[0];b.onclick=function(){stopAll();sc=i;srender()};stb.appendChild(b)});
+    sl.innerHTML=S[sc][2].map(function(s,n){var a=s.split('|');return '<div class="rw-box rw-g'+(n%4+1)+'"><div class="rw-label">CẤU TRÚC '+(n+1)+'</div><div class="rw-title">'+esc(a[0])+'</div><div class="rw-body">'+esc(a[1])+'</div><div style="margin-top:8px">'+[2,4].map(function(j){return '<div class="pat"><span class="en">🔊 '+esc(a[j])+'</span><span class="vi">'+esc(a[j+1])+'</span></div>'}).join('')+'</div></div>'}).join('');
+  }
+  document.getElementById('splay').onclick=function(){
+    stopAll();var my=gen,rows=sl.querySelectorAll('.pat'),k=0;
+    (function nx(){
+      rows.forEach(function(r){r.style.background=''});if(my!==gen||k>=rows.length)return;
+      var r=rows[k];r.style.background='var(--acc-dim)';
+      say(r.querySelector('.en').textContent.replace('🔊','').trim(),function(){if(my!==gen)return;k++;setTimeout(nx,500)});
+    })();
+  };
+  srender();
+  render();
+})();
+</script>
+</body>
+</html>

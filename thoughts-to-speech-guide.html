@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>💭 Từ Suy Nghĩ Đến Lời Nói — Luyện Giao Tiếp &amp; Luyện Nghe</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#080810;--s1:#0e0e1c;--s2:#131326;--s3:#18182e;--s4:#1e1e38;
+  --border:#222240;--border2:#2c2c50;--text:#e6e6f2;--muted:#8a8ab8;--faint:#4a4a78;
+  --acc:#ffd060;--acc-dim:rgba(255,208,96,.11);
+  --green:#40d88e;--green-dim:rgba(64,216,142,.10);
+  --blue:#5ba8ff;--blue-dim:rgba(91,168,255,.10);
+  --purple:#a07af4;--purple-dim:rgba(160,122,244,.10);
+  --yellow:#ffd060;--yellow-dim:rgba(255,208,96,.10);
+  --teal:#30d8c0;--teal-dim:rgba(48,216,192,.10);
+  --pink:#ff6584;--pink-dim:rgba(255,101,132,.11);
+  --oc:#38bdf8;--oc-dim:rgba(56,189,248,.13);--oc-glow:rgba(56,189,248,.30);
+  --ins:#40d88e;--ins-dim:rgba(64,216,142,.12);
+  --ch:#ffd060;--ch-dim:rgba(255,208,96,.12);--ch-glow:rgba(255,208,96,.28);
+  --au:#ff6584;--au-dim:rgba(255,101,132,.12);--au-glow:rgba(255,101,132,.28);
+  /* topic colours */
+  --g1:#ff8c50;--g1-dim:rgba(255,140,80,.13);--g1-glow:rgba(255,140,80,.28);
+  --g2:#38bdf8;--g2-dim:rgba(56,189,248,.13);--g2-glow:rgba(56,189,248,.28);
+  --g3:#a07af4;--g3-dim:rgba(160,122,244,.13);--g3-glow:rgba(160,122,244,.28);
+  --g4:#40d88e;--g4-dim:rgba(64,216,142,.12);--g4-glow:rgba(64,216,142,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+
+/* ── SIDEBAR ── */
+.sidebar{position:fixed;left:0;top:0;width:272px;height:100%;background:var(--s1);border-right:1px solid var(--border);overflow-y:auto;z-index:400;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+.sb-logo{padding:20px 18px 16px;border-bottom:1px solid var(--border)}
+.sb-brand{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.logo-icon{width:44px;height:44px;border-radius:11px;flex-shrink:0;background:linear-gradient(135deg,var(--g1),var(--g2),var(--g3));display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 26px var(--g1-glow)}
+.logo-text h2{font-size:15px;font-weight:800;letter-spacing:-.4px}
+.logo-text p{font-size:10.5px;color:var(--muted);margin-top:2px}
+.prog-wrap{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3),var(--ch));width:0%;transition:width .4s;border-radius:2px}
+.nav-section{padding:6px 0 4px}
+.nav-group-hdr{display:flex;align-items:center;gap:7px;margin:6px 12px 3px;padding:6px 10px;border-radius:7px;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.ngh-oc{background:var(--oc-dim);color:var(--oc)}
+.ngh-g1{background:var(--g1-dim);color:var(--g1)}.ngh-g2{background:var(--g2-dim);color:var(--g2)}
+.ngh-g3{background:var(--g3-dim);color:var(--g3)}.ngh-g4{background:var(--g4-dim);color:var(--g4)}
+.ngh-au{background:var(--au-dim);color:var(--au)}
+.nav-link{display:flex;align-items:center;gap:9px;padding:5px 18px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;border-left:2px solid transparent;transition:all .14s}
+.nav-link:hover,.nav-link.active{color:var(--text);background:rgba(255,208,96,.07);border-left-color:var(--acc)}
+.nav-link .ico{font-size:12px;flex-shrink:0;width:16px;text-align:center}
+.nav-badge{margin-left:auto;font-size:9px;font-weight:700;padding:2px 7px;border-radius:100px;background:var(--acc-dim);color:var(--acc)}
+.mnav{display:none}
+
+/* ── MAIN ── */
+.main{margin-left:272px;min-height:100vh}
+.hero{padding:72px 64px 56px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse 60% 55% at 75% 20%,rgba(255,140,80,.09) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 55% at 10% 80%,rgba(160,122,244,.08) 0%,transparent 55%),
+             radial-gradient(ellipse 45% 50% at 50% 55%,rgba(56,189,248,.05) 0%,transparent 60%),var(--bg)}
+.hero-dots{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+.hero-glow{position:absolute;right:-80px;top:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(255,140,80,.08) 0%,transparent 65%);pointer-events:none}
+.hero>*:not(.hero-dots):not(.hero-glow){position:relative}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--g1-dim);border:1px solid rgba(255,140,80,.35);color:var(--g1);padding:5px 16px;border-radius:100px;font-size:11.5px;font-weight:700;margin-bottom:24px;letter-spacing:.3px}
+.hero-eyebrow .pulse{width:6px;height:6px;border-radius:50%;background:var(--g1);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+@media(prefers-reduced-motion:reduce){.hero-eyebrow .pulse{animation:none}html{scroll-behavior:auto}}
+.hero h1{font-size:44px;font-weight:900;letter-spacing:-2.2px;line-height:1.08;margin-bottom:18px}
+.h-grad{background:linear-gradient(135deg,var(--g1) 0%,var(--g2) 50%,var(--g3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.h-g1{color:var(--g1)}.h-g2{color:var(--g2)}.h-g3{color:var(--g3)}.h-g4{color:var(--g4)}
+.hero-desc{font-size:15.5px;color:var(--muted);max-width:640px;line-height:1.75;margin-bottom:28px}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:5px 14px;border-radius:7px;font-size:12px;font-weight:700}
+.chip-g1{background:var(--g1-dim);color:var(--g1)}.chip-g2{background:var(--g2-dim);color:var(--g2)}
+.chip-g3{background:var(--g3-dim);color:var(--g3)}.chip-g4{background:var(--g4-dim);color:var(--g4)}
+.chip-ch{background:var(--ch-dim);color:var(--ch)}.chip-au{background:var(--au-dim);color:var(--au)}
+
+/* ── CAT BANNERS ── */
+.cat-banner{display:flex;align-items:center;gap:16px;padding:20px 24px;border-radius:14px;margin-bottom:44px;position:relative;overflow:hidden}
+.cat-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cb-g1{background:var(--g1-dim);border:1px solid rgba(255,140,80,.30)}.cb-g1::before{background:linear-gradient(90deg,var(--g1),var(--ch))}
+.cb-g2{background:var(--g2-dim);border:1px solid rgba(56,189,248,.30)}.cb-g2::before{background:linear-gradient(90deg,var(--g2),var(--ins))}
+.cb-g3{background:var(--g3-dim);border:1px solid rgba(160,122,244,.30)}.cb-g3::before{background:linear-gradient(90deg,var(--g3),var(--pink))}
+.cb-g4{background:var(--g4-dim);border:1px solid rgba(64,216,142,.30)}.cb-g4::before{background:linear-gradient(90deg,var(--g4),var(--teal))}
+.cb-cheat{background:var(--au-dim);border:1px solid rgba(255,101,132,.30)}.cb-cheat::before{background:linear-gradient(90deg,var(--au),var(--g3))}
+.cb-icon{font-size:36px;flex-shrink:0}
+.cb-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.cb-g1 .cb-badge{background:var(--g1-dim);color:var(--g1)}.cb-g2 .cb-badge{background:var(--g2-dim);color:var(--g2)}
+.cb-g3 .cb-badge{background:var(--g3-dim);color:var(--g3)}.cb-g4 .cb-badge{background:var(--g4-dim);color:var(--g4)}
+.cb-cheat .cb-badge{background:var(--au-dim);color:var(--au)}
+.cb-title{font-size:20px;font-weight:800;letter-spacing:-.5px}.cb-sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+/* ── CONTENT ── */
+.content{padding:52px 64px;max-width:1040px}
+.section{margin-bottom:68px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 10px;border-radius:5px;margin-top:5px;flex-shrink:0;letter-spacing:.5px}
+.st-ov{color:var(--oc);background:var(--oc-dim);border:1px solid var(--oc-glow)}
+.st-g1{color:var(--g1);background:var(--g1-dim);border:1px solid var(--g1-glow)}
+.st-g2{color:var(--g2);background:var(--g2-dim);border:1px solid var(--g2-glow)}
+.st-g3{color:var(--g3);background:var(--g3-dim);border:1px solid var(--g3-glow)}
+.st-g4{color:var(--g4);background:var(--g4-dim);border:1px solid var(--g4-glow)}
+.st-ch{color:var(--ch);background:var(--ch-dim);border:1px solid var(--ch-glow)}
+.sec-title{font-size:22px;font-weight:800;letter-spacing:-.6px;margin-bottom:5px}
+.sec-sub{font-size:13px;color:var(--muted)}
+
+/* ── SUB ── */
+.sub{margin-bottom:36px}
+.sub-title{font-size:14.5px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:10px}
+.sub-title::before{content:'';display:inline-block;width:14px;height:3px;background:var(--acc);border-radius:2px;flex-shrink:0}
+.sub p,.sub ul,.sub ol{color:var(--muted);font-size:13.5px;margin-bottom:10px;line-height:1.78}
+.sub ul,.sub ol{padding-left:22px}.sub li{margin-bottom:5px}.sub strong{color:var(--text)}
+
+/* ── FLOW CHAIN ── */
+.flow{display:flex;align-items:stretch;gap:4px;flex-wrap:wrap;margin:16px 0;padding:18px;background:var(--s2);border:1px solid var(--border2);border-radius:12px}
+.fl-slot{display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 12px;border-radius:9px;min-width:110px;flex:1;text-align:center}
+.fl-num{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:1px 7px;border-radius:4px}
+.fl-cat{font-size:12px;font-weight:700;color:var(--text)}
+.fl-ex{font-size:10.5px;color:var(--muted);line-height:1.5}
+.fl-1{background:rgba(255,140,80,.15);border:1.5px solid rgba(255,140,80,.4)}.fl-1 .fl-num{background:var(--g1-dim);color:var(--g1)}
+.fl-2{background:rgba(255,208,96,.12);border:1.5px solid rgba(255,208,96,.35)}.fl-2 .fl-num{background:var(--ch-dim);color:var(--ch)}
+.fl-3{background:rgba(56,189,248,.12);border:1.5px solid rgba(56,189,248,.35)}.fl-3 .fl-num{background:var(--g2-dim);color:var(--g2)}
+.fl-4{background:rgba(64,216,142,.12);border:1.5px solid rgba(64,216,142,.35)}.fl-4 .fl-num{background:var(--g4-dim);color:var(--g4)}
+.fl-5{background:rgba(160,122,244,.12);border:1.5px solid rgba(160,122,244,.35)}.fl-5 .fl-num{background:var(--g3-dim);color:var(--g3)}
+.fl-arrow{color:var(--faint);font-size:14px;flex-shrink:0;align-self:center}
+
+/* ── EXAMPLE BOX ── */
+.ex-box{background:var(--s1);border:1px solid var(--border2);border-radius:11px;overflow:hidden;margin:13px 0}
+.ex-head{display:flex;align-items:center;gap:8px;padding:9px 16px;background:var(--s2);border-bottom:1px solid var(--border)}
+.ex-label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.ex-tag{margin-left:auto;font-size:9px;font-weight:700;padding:2px 9px;border-radius:100px;flex-shrink:0}
+.et-g1{background:var(--g1-dim);color:var(--g1)}.et-g2{background:var(--g2-dim);color:var(--g2)}
+.et-g3{background:var(--g3-dim);color:var(--g3)}.et-g4{background:var(--g4-dim);color:var(--g4)}
+.et-tip{background:var(--ch-dim);color:var(--ch)}
+.ex-body{padding:14px 20px}
+.ex-row{display:flex;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13.5px}
+.ex-row:last-child{border-bottom:none}
+.ex-type{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0}
+.ext-ok{background:var(--ins-dim);color:var(--ins)}
+.ext-bad{background:var(--au-dim);color:var(--au)}
+.ex-en{color:var(--text);font-weight:600;flex:1;min-width:0}
+.ex-vn{color:var(--muted);flex:1;min-width:0}
+.ex-note{font-size:10.5px;color:var(--muted);flex-shrink:0;font-style:italic;max-width:200px}
+.ex-arrow{color:var(--faint);flex-shrink:0}
+.ex-en,.dl-en,.say{cursor:pointer;transition:color .14s}
+.ex-en:hover,.dl-en:hover,.say:hover{color:var(--acc)}
+.speaking{color:var(--acc)!important}
+
+/* ── DIALOGUE ── */
+.dlg{background:var(--s1);border:1px solid var(--border2);border-radius:12px;overflow:hidden;margin:14px 0}
+.dlg-body{padding:12px 20px 16px}
+.dl{display:flex;gap:12px;padding:8px 0;align-items:flex-start}
+.who{width:26px;height:26px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:1px}
+.dl.a .who{background:var(--g2-dim);color:var(--g2);border:1px solid var(--g2-glow)}
+.dl.b .who{background:var(--g1-dim);color:var(--g1);border:1px solid var(--g1-glow)}
+.dl-en{font-size:14px;font-weight:600;color:var(--text)}
+.dl-vn{font-size:12px;color:var(--muted);margin-top:1px}
+
+/* ── INFO BOXES ── */
+.info{display:flex;gap:12px;padding:13px 16px;border-radius:9px;margin:12px 0;font-size:13px;line-height:1.65}
+.info-ico{font-size:15px;flex-shrink:0;margin-top:1px}
+.i-ok{background:var(--green-dim);border:1px solid rgba(64,216,142,.2);color:#4cc58b}
+.i-warn{background:var(--yellow-dim);border:1px solid rgba(255,208,96,.2);color:#cfa83c}
+.i-tip{background:var(--blue-dim);border:1px solid rgba(91,168,255,.2);color:#6aa6e8}
+.i-note{background:var(--purple-dim);border:1px solid rgba(160,122,244,.2);color:#a58ce6}
+.i-err{background:var(--pink-dim);border:1px solid rgba(255,101,132,.2);color:#e8718a}
+.info strong{color:var(--text)}
+
+/* ── RW BOX ── */
+.rw-box{background:var(--s1);border:1px solid var(--border2);border-radius:12px;padding:16px 20px;margin:13px 0;position:relative;overflow:hidden}
+.rw-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
+.rw-g1::before{background:var(--g1)}.rw-g2::before{background:var(--g2)}.rw-g3::before{background:var(--g3)}.rw-g4::before{background:var(--g4)}
+.rw-label{font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.rw-g1 .rw-label{color:var(--g1)}.rw-g2 .rw-label{color:var(--g2)}.rw-g3 .rw-label{color:var(--g3)}.rw-g4 .rw-label{color:var(--g4)}
+.rw-title{font-size:14px;font-weight:700;margin-bottom:5px}
+.rw-body{font-size:13px;color:var(--muted);line-height:1.68}
+.rw-body strong{color:var(--text)}
+
+/* ── TABLE ── */
+.tbl-wrap{overflow-x:auto;margin:13px 0;border-radius:11px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;border-radius:11px;overflow:hidden}
+.tbl th{background:var(--s3);padding:9px 14px;text-align:left;font-weight:700;font-size:9.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);border-bottom:1px solid var(--border2)}
+.tbl td{padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted);vertical-align:top;font-size:13px}
+.tbl tr:hover td{background:rgba(255,255,255,.022)}
+.tbl td:first-child{color:var(--text);font-weight:600}
+.tbl .en{color:var(--g2);font-weight:700}
+.tbl td strong{color:var(--text)}
+
+/* ── CMP BOX ── */
+.cmp-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:11px;overflow:hidden;margin:13px 0}
+.cmp-bad{background:rgba(255,101,132,.07);border-right:1px solid var(--border);padding:14px 16px}
+.cmp-good{background:rgba(64,216,142,.07);padding:14px 16px}
+.cmp-label{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.cmp-bad .cmp-label{color:var(--au)}.cmp-good .cmp-label{color:var(--ins)}
+.cmp-text{font-size:13.5px;color:var(--text);line-height:1.7}
+.cmp-note{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+
+/* ── GRIDS ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:13px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:13px 0}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:11px;padding:15px;transition:all .2s}
+.card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.38)}
+.card-icon{font-size:22px;margin-bottom:8px}.card-title{font-size:13px;font-weight:700;margin-bottom:4px}.card-desc{font-size:12px;color:var(--muted);line-height:1.55}
+
+/* ── PHRASE CARDS / CHEAT ── */
+.cheat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:13px 0}
+.cheat-card{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:14px}
+.cheat-card h4{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;margin-bottom:11px}
+.h4-g1{color:var(--g1)}.h4-g2{color:var(--g2)}.h4-g3{color:var(--g3)}.h4-g4{color:var(--g4)}.h4-ch{color:var(--ch)}.h4-au{color:var(--au)}
+.cheat-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;gap:10px}
+.cheat-row:last-child{border-bottom:none}
+.ck{color:var(--text);flex:1;font-size:12px;font-weight:600}
+.cv{font-size:11.5px;color:var(--teal);text-align:right;flex:1}
+
+/* ── PILLS ── */
+.pill-strip{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer}
+.pl-g1{background:rgba(255,140,80,.15);color:var(--g1)}.pl-g2{background:rgba(56,189,248,.15);color:var(--g2)}
+.pl-g3{background:rgba(160,122,244,.15);color:var(--g3)}.pl-g4{background:rgba(64,216,142,.15);color:var(--g4)}
+.pl-ch{background:rgba(255,208,96,.15);color:var(--ch)}
+
+/* ── SELF-TEST ── */
+.qa{background:var(--s1);border:1px solid var(--border2);border-radius:10px;margin:9px 0;overflow:hidden}
+.qa summary{cursor:pointer;padding:12px 16px;font-size:13.5px;font-weight:600;list-style:none;display:flex;gap:10px;align-items:baseline}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:'▸';color:var(--acc);transition:transform .15s;flex-shrink:0}
+.qa[open] summary::before{transform:rotate(90deg)}
+.qa[open] summary{border-bottom:1px solid var(--border);background:var(--s2)}
+.qa-a{padding:12px 16px 14px 36px;font-size:13px;color:var(--muted);line-height:1.7}
+.qa-a strong{color:var(--ins)}
+
+p code,li code,td code{font-family:'JetBrains Mono',monospace;font-size:12px;background:rgba(255,208,96,.1);color:var(--yellow);padding:2px 6px;border-radius:4px}
+hr.dv{border:none;border-top:1px solid var(--border);margin:52px 0}
+.footer{border-top:1px solid var(--border);padding:26px 64px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.footer a,.sub a,.info a{color:var(--acc)}
+
+@media(max-width:900px){
+  .sidebar{display:none}.main{margin-left:0}
+  .mnav{display:flex;gap:6px;overflow-x:auto;position:sticky;top:env(safe-area-inset-top,0px);z-index:300;background:var(--s1);border-bottom:1px solid var(--border);padding:9px 14px}
+  .mnav a{flex-shrink:0;font-size:11.5px;font-weight:700;color:var(--muted);text-decoration:none;padding:5px 12px;border-radius:100px;background:var(--s3)}
+  .mnav a.active{color:var(--acc);background:var(--acc-dim)}
+  .hero,.content,.footer{padding-left:22px;padding-right:22px}
+  .hero{padding-top:48px}
+  .hero h1{font-size:30px;letter-spacing:-1.4px}
+  .grid-2,.grid-3,.grid-4,.cheat-grid,.cmp-box{grid-template-columns:1fr}
+  .cmp-bad{border-right:none;border-bottom:1px solid var(--border)}
+  .ex-row{flex-wrap:wrap;gap:4px 10px}.ex-note{max-width:none}
+  .ex-en,.ex-vn{flex-basis:100%}.ex-arrow{display:none}
+  .fl-arrow{display:none}.fl-slot{min-width:46%}
+  .cat-banner{padding:16px}.cb-icon{font-size:28px}
+}
+.tool{background:var(--s2);border:1px solid var(--border2);border-radius:12px;padding:18px;margin:14px 0}
+.tool-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{font:inherit;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:8px;border:1px solid var(--border2);background:var(--s3);color:var(--text);cursor:pointer}
+.btn:hover{border-color:var(--acc)}.btn.on{background:var(--acc-dim);color:var(--acc);border-color:var(--acc)}
+.btn.go{background:var(--g4-dim);color:var(--g4);border-color:var(--g4-glow)}
+select.btn{padding:7px 10px}.stat{font-size:12px;color:var(--muted)}
+.pat{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13.5px}
+.pat:last-child{border-bottom:none}.pat .en{font-weight:600;cursor:pointer}.pat .en:hover{color:var(--acc)}.pat .vi{color:var(--teal);text-align:right;font-size:12.5px}
+.clock{font-family:'JetBrains Mono',monospace;font-size:40px;font-weight:700;color:var(--g4);letter-spacing:-1px}
+.prompt{font-size:17px;font-weight:700;line-height:1.5;padding:14px 16px;background:var(--s1);border-left:3px solid var(--g1);border-radius:8px;min-height:60px;cursor:pointer}
+.hints{font-size:13px;color:var(--muted);margin:10px 0;line-height:1.9}.hints b{color:var(--yellow)}
+.dict{width:100%;min-height:70px;font:inherit;font-size:14px;color:var(--text);background:var(--s1);border:1px solid var(--border2);border-radius:8px;padding:10px 12px;margin:10px 0;resize:vertical}
+.res{font-size:15px;line-height:2;margin-top:8px}.res .ok{color:var(--green)}.res .miss{color:var(--pink);text-decoration:underline wavy}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-brand">
+      <div class="logo-icon">💭</div>
+      <div class="logo-text"><h2>Suy Nghĩ → Lời Nói</h2><p>Luyện giao tiếp · Luyện nghe</p></div>
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" id="pbar"></div></div>
+  </div>
+  <div class="nav-section" style="border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:2px">
+    <div class="nav-group-hdr" style="background:rgba(255,208,96,.12);color:#ffd060">📚 Lộ Trình Học</div>
+    <a href="english-grammar-basics.html" class="nav-link"><span class="ico">①</span> Tiếng Anh Cơ Bản</a>
+    <a href="english-12-tenses.html" class="nav-link"><span class="ico">②</span> 12 Thì Tiếng Anh</a>
+    <a href="subject-verb-agreement-tenses.html" class="nav-link"><span class="ico">③</span> Hòa Hợp C-V &amp; Phối Thì</a>
+    <a href="synonyms-antonyms-guide.html" class="nav-link"><span class="ico">④</span> Đồng Nghĩa &amp; Trái Nghĩa</a>
+    <a href="adjective-order-word-classes-relative-clauses.html" class="nav-link"><span class="ico">⑤</span> Trật Tự TT · Từ Loại · MĐ QH</a>
+    <a href="english-grammar-guide.html" class="nav-link"><span class="ico">⑥</span> Ngữ Pháp Tổng Hợp</a>
+    <a href="grammar-comparison-passive-conjunctions.html" class="nav-link"><span class="ico">⑦</span> So Sánh · Bị Động · Liên Từ</a>
+    <a href="prepositions-wish-guide.html" class="nav-link"><span class="ico">⑧</span> Giới Từ &amp; Câu Ước</a>
+    <a href="grammar-modals-quantifiers-stress.html" class="nav-link"><span class="ico">⑨</span> Modal · Lượng Từ · Trọng Âm</a>
+    <a href="grammar-tag-questions-articles-conditionals.html" class="nav-link"><span class="ico">⑩</span> Hỏi Đuôi · Mạo Từ · ĐK</a>
+    <a href="grammar-tov-ving-reported-phrasal.html" class="nav-link"><span class="ico">⑪</span> To V/V-ing · Tường Thuật</a>
+    <a href="english-pronunciation-guide.html" class="nav-link"><span class="ico">⑫</span> Phát Âm Tiếng Anh</a>
+    <a href="communication-english-guide.html" class="nav-link"><span class="ico">⑬</span> Tiếng Anh Giao Tiếp</a>
+    <a href="listening-speak-practice.html" class="nav-link"><span class="ico">⑭</span> Luyện Nghe · Luyện Nói</a>
+    <a href="vocabulary-full-audio.html" class="nav-link"><span class="ico">⑮</span> Học Từ Vựng Có Audio</a>
+    <a href="english-communication-basic.html" class="nav-link"><span class="ico">⑯</span> Hội Thoại Theo Chủ Đề</a>
+    <a href="grammar-conversation-structures.html" class="nav-link"><span class="ico">⑰</span> Cấu Trúc Câu Giao Tiếp</a>
+    <a href="thoughts-to-speech-guide.html" class="nav-link" style="color:var(--acc);background:rgba(255,208,96,.08);border-left-color:var(--acc)"><span class="ico">⑱</span> Từ Suy Nghĩ Đến Lời Nói</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-oc">🗺️ Tổng quan</div>
+    <a href="#s0" class="nav-link"><span class="ico">📊</span> Vì sao nghĩ được mà không nói?</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-g1">💭 Nghĩ → Nói</div>
+    <a href="#s1" class="nav-link"><span class="ico">1️⃣</span> Quy trình 5 bước <span class="nav-badge">★★★</span></a>
+    <a href="#s2" class="nav-link"><span class="ico">2️⃣</span> Công thức mở rộng ý</a>
+    <a href="#s3" class="nav-link"><span class="ico">3️⃣</span> Máy luyện nghĩ-nói <span class="nav-badge">🎤</span></a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-g2">🎧 Luyện nghe</div>
+    <a href="#s4" class="nav-link"><span class="ico">4️⃣</span> Cách nghe để hiểu</a>
+    <a href="#s5" class="nav-link"><span class="ico">5️⃣</span> Nghe chép chính tả <span class="nav-badge">🔊</span></a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-group-hdr ngh-au">📋 Tổng hợp</div>
+    <a href="#s6" class="nav-link"><span class="ico">📅</span> Lộ trình 4 tuần</a>
+    <a href="#s7" class="nav-link"><span class="ico">📋</span> Cheat Sheet</a>
+  </div>
+</aside>
+
+<div class="main">
+<nav class="mnav" aria-label="Điều hướng nhanh"><a href="#s0">Tổng quan</a><a href="#s1">5 bước</a><a href="#s3">Máy nghĩ-nói</a><a href="#s4">Luyện nghe</a><a href="#s5">Chép chính tả</a><a href="#s6">4 tuần</a><a href="#s7">Cheat Sheet</a></nav>
+
+<div class="hero">
+  <div class="hero-dots"></div><div class="hero-glow"></div>
+  <div class="hero-eyebrow"><span class="pulse"></span> Thinking in English · Speaking · Listening · Có công cụ luyện</div>
+  <h1><span class="h-grad">Từ Suy Nghĩ</span> 💭<br><span class="h-g1">Đến Lời Nói</span> · <span class="h-g2">Nghe Hiểu</span><br>& <span class="h-g4">Phản Xạ Nhanh</span></h1>
+  <p class="hero-desc">Bạn hiểu ý trong đầu nhưng <strong>nói ra thì bí</strong>? Trang này hướng dẫn cách <strong>đơn giản hóa ý, chọn khung câu và nói ra trôi chảy</strong>, kèm máy luyện nghĩ-nói có đồng hồ và bài <strong>nghe chép chính tả có chấm điểm</strong>.</p>
+  <div class="hero-chips"><span class="chip chip-g1">💭 5 bước nghĩ → nói</span><span class="chip chip-g4">🎤 Máy đề + đồng hồ</span><span class="chip chip-g2">🎧 Nghe chép chính tả</span><span class="chip chip-au">📋 Cheat Sheet</span></div>
+</div>
+
+<div class="content">
+
+<div class="section" id="s0">
+  <div class="sec-head"><span class="sec-tag st-ov">TỔNG QUAN</span><div><h2 class="sec-title">Vì sao nghĩ được mà không nói ra được?</h2><p class="sec-sub">Ba điểm nghẽn phổ biến, và cách gỡ từng điểm</p></div></div>
+  <div class="sub">
+    <div class="grid-3">
+      <div class="rw-box rw-g1"><div class="rw-label">🟠 NGHẼN 1</div><div class="rw-title">Nghĩ tiếng Việt rồi dịch</div><div class="rw-body">Câu tiếng Việt dài và phức tạp, dịch từng chữ rất chậm. <strong>Cách gỡ:</strong> rút ý thành câu đơn giản trước, rồi mới nói.</div></div>
+      <div class="rw-box rw-g2"><div class="rw-label">🔵 NGHẼN 2</div><div class="rw-title">Thiếu khung câu có sẵn</div><div class="rw-body">Biết từ nhưng không biết ghép. <strong>Cách gỡ:</strong> thuộc vài khung như <em>I think… because…</em> rồi chỉ việc thay từ.</div></div>
+      <div class="rw-box rw-g3"><div class="rw-label">🟣 NGHẼN 3</div><div class="rw-title">Sợ nói sai</div><div class="rw-body">Muốn câu hoàn hảo nên im lặng. <strong>Cách gỡ:</strong> chấp nhận câu đơn giản và đúng ý; sai nhỏ không làm người nghe mất ý.</div></div>
+    </div>
+    <div class="info i-ok"><span class="info-ico">🎯</span><div><strong>Nguyên tắc cốt lõi:</strong> nói bằng cái bạn <em>có thể</em> nói, không bằng cái bạn <em>muốn</em> nói. Một ý rõ ràng bằng câu ngắn luôn tốt hơn một ý hay nhưng nói đứt quãng.</div></div>
+  </div>
+</div>
+
+<hr class="dv">
+<div class="cat-banner cb-g1"><div class="cb-icon">💭</div><div><div class="cb-badge">THINKING → SPEAKING</div><div class="cb-title">Phần 1 — Biến Suy Nghĩ Thành Lời Nói</div><div class="cb-sub">Quy trình, công thức mở rộng ý và máy luyện có đồng hồ</div></div></div>
+
+<div class="section" id="s1">
+  <div class="sec-head"><span class="sec-tag st-g1">QUY TRÌNH</span><div><h2 class="sec-title">5 bước từ ý nghĩ đến câu nói</h2><p class="sec-sub">Chạy hết 5 bước trong 5–10 giây, càng luyện càng nhanh</p></div></div>
+  <div class="sub">
+    <div class="flow">
+      <div class="fl-slot fl-1"><span class="fl-num">1</span><span class="fl-cat">Chốt ý</span><span class="fl-ex">Ý chính của bạn là gì? Tóm trong 1 câu ngắn</span></div><span class="fl-arrow">→</span>
+      <div class="fl-slot fl-2"><span class="fl-num">2</span><span class="fl-cat">Đơn giản hóa</span><span class="fl-ex">Chọn từ bạn biết, bỏ ý phụ</span></div><span class="fl-arrow">→</span>
+      <div class="fl-slot fl-3"><span class="fl-num">3</span><span class="fl-cat">Chọn khung</span><span class="fl-ex">I think… / I'd like… / I usually…</span></div><span class="fl-arrow">→</span>
+      <div class="fl-slot fl-4"><span class="fl-num">4</span><span class="fl-cat">Nói ra</span><span class="fl-ex">Nói liền một mạch, không dịch lại</span></div><span class="fl-arrow">→</span>
+      <div class="fl-slot fl-5"><span class="fl-num">5</span><span class="fl-cat">Mở rộng</span><span class="fl-ex">Thêm because… / for example…</span></div>
+    </div>
+    <div class="sub-title">Dịch ý, không dịch chữ</div>
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Ý trong đầu (tiếng Việt)</th><th>Rút gọn thành ý chính</th><th>Câu nói ra</th></tr></thead>
+      <tbody>
+        <tr><td>Dạo này công việc của mình khá nhiều áp lực nên mình hay mệt</td><td>Mình bận và mệt</td><td><span class="say en">I'm very busy, so I feel tired.</span></td></tr>
+        <tr><td>Mình rất mong cuối tuần này được về quê thăm gia đình</td><td>Cuối tuần mình về quê</td><td><span class="say en">I'm going to visit my family this weekend.</span></td></tr>
+        <tr><td>Quán đó đồ ăn cũng ổn nhưng mà hơi đắt so với chất lượng</td><td>Ăn ngon nhưng đắt</td><td><span class="say en">The food is good, but it's expensive.</span></td></tr>
+        <tr><td>Mình chưa quyết định được là có nên đổi việc hay không</td><td>Mình chưa chắc</td><td><span class="say en">I'm not sure if I should change jobs.</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="cmp-box">
+      <div class="cmp-bad"><div class="cmp-label">❌ Dịch nguyên câu</div><div class="cmp-text">Nghĩ cả câu tiếng Việt dài, rồi tìm từ cho từng chữ.</div><div class="cmp-note">Chậm, hay ngập ngừng, và dễ ra câu lạ.</div></div>
+      <div class="cmp-good"><div class="cmp-label">✅ Nói ý chính</div><div class="cmp-text">Rút còn 1 ý, dùng khung câu quen và từ đã biết.</div><div class="cmp-note">Nhanh, rõ, người nghe hiểu ngay.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="s2">
+  <div class="sec-head"><span class="sec-tag st-g1">MỞ RỘNG Ý</span><div><h2 class="sec-title">Công thức mở rộng ý khi nói</h2><p class="sec-sub">Khi nói được một câu, hãy thêm đúng một lớp nữa</p></div></div>
+  <div class="sub">
+    <div class="grid-2">
+      <div class="cheat-card"><h4 class="h4-g1">PREP — nêu ý kiến</h4>
+        <div class="cheat-row"><span class="ck">P — Point</span><span class="cv say en">I think online learning is useful.</span></div>
+        <div class="cheat-row"><span class="ck">R — Reason</span><span class="cv say en">Because you can study anytime.</span></div>
+        <div class="cheat-row"><span class="ck">E — Example</span><span class="cv say en">For example, I study at night.</span></div>
+        <div class="cheat-row"><span class="ck">P — Point</span><span class="cv say en">So, it works well for me.</span></div></div>
+      <div class="cheat-card"><h4 class="h4-g2">PPF — kể chuyện bản thân</h4>
+        <div class="cheat-row"><span class="ck">Past</span><span class="cv say en">I started learning English last year.</span></div>
+        <div class="cheat-row"><span class="ck">Present</span><span class="cv say en">Now I practice every day.</span></div>
+        <div class="cheat-row"><span class="ck">Future</span><span class="cv say en">Next year I want to travel abroad.</span></div></div>
+    </div>
+    <div class="sub-title">Câu giờ — khi chưa nghĩ ra ngay</div>
+    <div class="pill-strip"><span class="pill pl-g1 say">Well…</span><span class="pill pl-g1 say">Let me think.</span><span class="pill pl-g2 say">That's a good question.</span><span class="pill pl-g2 say">How can I put it?</span><span class="pill pl-g3 say">What I mean is…</span><span class="pill pl-g4 say">Let me put it another way.</span></div>
+    <div class="info i-tip"><span class="info-ico">💡</span><div><strong>Khi bí từ:</strong> mô tả thay vì dừng lại: <span class="say en">"It's the thing you use when it rains."</span> (umbrella). Người nghe thường đoán ra, và bạn vẫn giữ được nhịp nói.</div></div>
+  </div>
+</div>
+
+<div class="section" id="s3">
+  <div class="sec-head"><span class="sec-tag st-g1">CÔNG CỤ</span><div><h2 class="sec-title">Máy luyện nghĩ-nói có đồng hồ</h2><p class="sec-sub">10 giây chốt ý, rồi nói liền cho đến hết giờ</p></div></div>
+  <div class="sub">
+    <div class="tool">
+      <div class="tool-row">
+        <button class="btn on" data-lv="0">Dễ</button><button class="btn" data-lv="1">Trung bình</button><button class="btn" data-lv="2">Khó</button>
+        <select class="btn" id="slen" aria-label="Thời gian nói"><option value="30">Nói 30 giây</option><option value="60" selected>Nói 60 giây</option><option value="90">Nói 90 giây</option></select>
+      </div>
+      <div class="prompt say" id="prompt">Bấm "Đề mới" để nhận câu hỏi.</div>
+      <div class="hints" id="hints"></div>
+      <div class="stat" id="phase">Sẵn sàng</div>
+      <div class="clock" id="clock">00:10</div>
+      <div class="tool-row" style="margin:12px 0 0">
+        <button class="btn go" id="newp">🎲 Đề mới &amp; bắt đầu</button>
+        <button class="btn" id="tpause">⏸ Tạm dừng</button>
+        <button class="btn" id="treset">↺ Đặt lại</button>
+      </div>
+    </div>
+    <div class="info i-note"><span class="info-ico">🎤</span><div>Giữ tay khỏi bàn phím và <strong>nói to</strong> khi đồng hồ chạy. Nếu có thể, ghi âm bằng điện thoại rồi nghe lại. Hết giờ, thử nói lại cùng đề với một ý khác.</div></div>
+  </div>
+</div>
+
+<hr class="dv">
+<div class="cat-banner cb-g2"><div class="cb-icon">🎧</div><div><div class="cb-badge">LISTENING</div><div class="cb-title">Phần 2 — Luyện Nghe</div><div class="cb-sub">Nghe để bắt ý, rồi nghe chép chính tả có chấm điểm</div></div></div>
+
+<div class="section" id="s4">
+  <div class="sec-head"><span class="sec-tag st-g2">NGHE</span><div><h2 class="sec-title">Cách nghe để hiểu nhiều hơn</h2><p class="sec-sub">Không cần hiểu từng từ; cần bắt được ý chính</p></div></div>
+  <div class="sub">
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Kỹ thuật</th><th>Cách làm</th></tr></thead>
+      <tbody>
+        <tr><td>Nghe từ khóa</td><td>Chú ý từ được nhấn mạnh (danh từ, động từ chính, số, phủ định). Phần còn lại thường đọc nhanh và nhẹ</td></tr>
+        <tr><td>Đoán trước</td><td>Xem tiêu đề hoặc bối cảnh, đoán 3 từ có thể xuất hiện, rồi nghe xem có đúng không</td></tr>
+        <tr><td>Nghe 3 lượt</td><td>Lượt 1 bắt ý chính. Lượt 2 bắt chi tiết. Lượt 3 đọc transcript rồi nghe lại</td></tr>
+        <tr><td>Bỏ qua từ lạ</td><td>Từ nào chưa biết thì đi tiếp, đừng dừng suy nghĩ; ghi lại để tra sau</td></tr>
+        <tr><td>Quen nối âm</td><td>Học nghe các dạng như <span class="say en">want to → wanna</span>, <span class="say en">did you → didja</span>, <span class="say en">what do you → whaddaya</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="info i-warn"><span class="info-ico">⚠️</span><div><strong>Nghe làm nền không đủ.</strong> Mỗi ngày dành 10–15 phút nghe một đoạn ngắn thật kỹ (chép, đối chiếu, nghe lại) sẽ hiệu quả hơn nhiều giờ nghe lướt.</div></div>
+  </div>
+</div>
+
+<div class="section" id="s5">
+  <div class="sec-head"><span class="sec-tag st-g2">CÔNG CỤ</span><div><h2 class="sec-title">Nghe chép chính tả có chấm điểm</h2><p class="sec-sub">Nghe một câu, gõ lại những gì bạn nghe được; máy đánh dấu từ đúng và từ sót</p></div></div>
+  <div class="sub">
+    <div class="tool">
+      <div class="tool-row">
+        <button class="btn on" data-dl="0">Dễ</button><button class="btn" data-dl="1">Trung bình</button><button class="btn" data-dl="2">Khó</button>
+        <span class="stat" id="dnum"></span>
+      </div>
+      <div class="tool-row">
+        <button class="btn go" id="dplay">🔊 Nghe câu</button>
+        <button class="btn" id="dslow">🐢 Nghe chậm</button>
+        <button class="btn" id="dnext">⏭ Câu khác</button>
+      </div>
+      <textarea class="dict" id="dtext" placeholder="Gõ câu bạn nghe được…" aria-label="Gõ câu nghe được"></textarea>
+      <div class="tool-row"><button class="btn go" id="dcheck">✓ Kiểm tra</button><button class="btn" id="dshow">👁 Xem đáp án</button></div>
+      <div class="res" id="dres"></div>
+    </div>
+    <div class="info i-tip"><span class="info-ico">💡</span><div>Từ nào màu <strong style="color:var(--green)">xanh</strong> là bạn nghe đúng; từ <strong style="color:var(--pink)">đỏ gạch chân</strong> là bạn sót hoặc nghe sai. Chú ý các từ nhẹ như <em>a, the, to, of</em>; đó là chỗ người học hay bỏ sót. Dấu nháy (') không bị chấm.</div></div>
+  </div>
+</div>
+
+<hr class="dv">
+<div class="cat-banner cb-cheat"><div class="cb-icon">📋</div><div><div class="cb-badge">SUMMARY</div><div class="cb-title">Tổng Hợp — Lộ Trình &amp; Cheat Sheet</div><div class="cb-sub">Kế hoạch 4 tuần và bảng tra nhanh</div></div></div>
+
+<div class="section" id="s6">
+  <div class="sec-head"><span class="sec-tag st-ch">LỘ TRÌNH</span><div><h2 class="sec-title">Lộ trình 4 tuần — 30 phút mỗi ngày</h2><p class="sec-sub">15 phút nghĩ-nói và 15 phút nghe</p></div></div>
+  <div class="sub">
+    <div class="tbl-wrap"><table class="tbl">
+      <thead><tr><th>Tuần</th><th>Nghĩ → Nói</th><th>Nghe</th></tr></thead>
+      <tbody>
+        <tr><td>Tuần 1</td><td>Máy nghĩ-nói mức Dễ, nói 30 giây; thuộc 3 khung câu</td><td>Chép chính tả mức Dễ mỗi ngày 5 câu</td></tr>
+        <tr><td>Tuần 2</td><td>Mức Dễ, nói 60 giây; dùng PREP để thêm lý do và ví dụ</td><td>Mức Dễ, thêm đoạn nghe 1 phút có transcript, nghe 3 lượt</td></tr>
+        <tr><td>Tuần 3</td><td>Mức Trung bình, 60 giây; ghi âm và nghe lại</td><td>Chép chính tả mức Trung bình; học các dạng nối âm</td></tr>
+        <tr><td>Tuần 4</td><td>Mức Khó, 90 giây; nói với bạn hoặc ghi âm</td><td>Mức Khó; nghe không phụ đề và tóm tắt bằng miệng</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<div class="section" id="s7">
+  <div class="sec-head"><span class="sec-tag st-ch">CHEAT SHEET</span><div><h2 class="sec-title">Cheat Sheet</h2><p class="sec-sub">Chụp màn hình hoặc in ra để ôn</p></div></div>
+  <div class="cheat-grid">
+    <div class="cheat-card"><h4 class="h4-g1">💭 5 bước nghĩ → nói</h4>
+      <div class="cheat-row"><span class="ck">1</span><span class="cv">Chốt 1 ý chính</span></div>
+      <div class="cheat-row"><span class="ck">2</span><span class="cv">Đơn giản hóa</span></div>
+      <div class="cheat-row"><span class="ck">3</span><span class="cv">Chọn khung câu</span></div>
+      <div class="cheat-row"><span class="ck">4–5</span><span class="cv">Nói ra, rồi mở rộng</span></div></div>
+    <div class="cheat-card"><h4 class="h4-g2">🎤 Khung câu hay dùng</h4>
+      <div class="cheat-row"><span class="ck say en">I think… because…</span><span class="cv">ý kiến + lý do</span></div>
+      <div class="cheat-row"><span class="ck say en">For example,…</span><span class="cv">ví dụ</span></div>
+      <div class="cheat-row"><span class="ck say en">I usually… / Last… I…</span><span class="cv">thói quen / quá khứ</span></div>
+      <div class="cheat-row"><span class="ck say en">I'm going to…</span><span class="cv">dự định</span></div></div>
+    <div class="cheat-card"><h4 class="h4-g4">🎧 Nghe</h4>
+      <div class="cheat-row"><span class="ck">Lượt 1</span><span class="cv">bắt ý chính</span></div>
+      <div class="cheat-row"><span class="ck">Lượt 2</span><span class="cv">bắt chi tiết</span></div>
+      <div class="cheat-row"><span class="ck">Lượt 3</span><span class="cv">đọc transcript, nghe lại</span></div></div>
+    <div class="cheat-card"><h4 class="h4-au">⚠️ Tránh</h4>
+      <div class="cheat-row"><span class="ck">Dịch cả câu</span><span class="cv">→ nói ý chính</span></div>
+      <div class="cheat-row"><span class="ck">Im lặng chờ hoàn hảo</span><span class="cv">→ câu giờ, nói tiếp</span></div>
+      <div class="cheat-row"><span class="ck">Nghe làm nền</span><span class="cv">→ nghe có chép</span></div></div>
+  </div>
+</div>
+
+</div>
+<div class="footer"><span>💭 Từ Suy Nghĩ Đến Lời Nói · Luyện giao tiếp &amp; luyện nghe · 2026</span><span style="margin-left:auto;color:var(--muted)">5 bước · Máy nghĩ-nói · Nghe chép chính tả</span></div>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('pbar');
+  function upd(){var e=document.documentElement,m=e.scrollHeight-e.clientHeight;bar.style.width=(m>0?e.scrollTop/m*100:0)+'%'}
+  window.addEventListener('scroll',upd,{passive:true});upd();
+  var links=document.querySelectorAll('.nav-link, .mnav a');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.remove('active')});document.querySelectorAll('a[href="#'+e.target.id+'"]').forEach(function(a){a.classList.add('active')})}})},{rootMargin:'-15% 0px -70% 0px'});
+  document.querySelectorAll('.section[id]').forEach(function(s){io.observe(s)});
+
+  var tts='speechSynthesis' in window,voice=null,gen=0;
+  function pv(){var v=speechSynthesis.getVoices()||[];voice=v.find(function(x){return /^en[-_]US/i.test(x.lang)})||v.find(function(x){return /^en/i.test(x.lang)})||null}
+  if(tts){pv();speechSynthesis.onvoiceschanged=pv}
+  function say(t,r){if(!tts)return;var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=r||.9;if(voice)u.voice=voice;speechSynthesis.speak(u)}
+  function now(t,r){if(!tts)return;speechSynthesis.cancel();say(t,r)}
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+  document.addEventListener('click',function(ev){
+    var t=ev.target.closest('.say');if(!t)return;
+    var s=t.textContent.replace('🔊','').replace(/\s+/g,' ').trim();if(/[à-ỹ]/i.test(s)||!/[a-z]/i.test(s))return;now(s)});
+  function beep(){try{var c=new (window.AudioContext||window.webkitAudioContext)(),o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=880;g.gain.value=.15;o.start();o.stop(c.currentTime+.35)}catch(e){}}
+  function fmt(n){var m=Math.floor(n/60),s=n%60;return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+  /* THINK-TO-SPEAK TRAINER */
+  var TP=[["Describe your best friend.","Talk about your favorite food.","What do you do on weekends?","Describe your home.","Talk about your job or studies."],
+    ["Describe a trip you enjoyed.","Why do you want to improve your English?","Talk about a problem you solved.","Do you prefer mornings or evenings? Why?","Describe a person you admire."],
+    ["Should children use smartphones? Give reasons.","Is working from home better than working in an office?","How can technology help people learn languages?","Can money buy happiness?","What change would you like to make in your life?"]];
+  var lv=0,last='',ph=0,left=10,iv=null,pr=document.getElementById('prompt'),hints=document.getElementById('hints'),phase=document.getElementById('phase'),clock=document.getElementById('clock'),speakLen=60;
+  document.querySelectorAll('[data-lv]').forEach(function(b){b.onclick=function(){document.querySelectorAll('[data-lv]').forEach(function(x){x.classList.remove('on')});b.classList.add('on');lv=+b.getAttribute('data-lv')}});
+  document.getElementById('slen').onchange=function(){speakLen=+this.value};
+  function show(){clock.textContent=fmt(left);phase.textContent=ph===0?'Bước 1–3: chốt ý, chọn khung câu':ph===1?'Nói to, nói liền một mạch':'Hoàn thành 🎉'}
+  function tstop(){clearInterval(iv);iv=null;document.getElementById('tpause').textContent='⏸ Tạm dừng'}
+  function run(){
+    iv=setInterval(function(){
+      left--;
+      if(left<=0){beep();if(ph===0){ph=1;left=speakLen;hints.innerHTML=''}else{ph=2;left=0;tstop()}}
+      show()},1000)}
+  document.getElementById('newp').onclick=function(){
+    tstop();var a=TP[lv],t;do{t=a[Math.floor(Math.random()*a.length)]}while(t===last&&a.length>1);last=t;
+    pr.textContent=t;hints.innerHTML='Gợi ý khung: <b>I think…</b> / <b>because…</b> / <b>for example…</b> / <b>so…</b>';
+    ph=0;left=10;show();run()};
+  document.getElementById('tpause').onclick=function(){if(ph===2||!last)return;if(iv){tstop();this.textContent='▶ Tiếp tục'}else{run();this.textContent='⏸ Tạm dừng'}};
+  document.getElementById('treset').onclick=function(){tstop();ph=0;left=10;hints.innerHTML='';show()};
+  show();
+
+  /* DICTATION */
+  var DS=[["I usually wake up at six.","Can I have a cup of coffee, please?","She works in a small bank.","Where is the nearest bus stop?","We are going to the market now.","It's a beautiful day today."],
+    ["I'm looking forward to seeing you next week.","Could you tell me how to get to the station?","He said he would call me back later.","I've lived here for about three years.","If it rains tomorrow, we'll stay at home.","What time does the meeting start on Monday?"],
+    ["I'd rather stay home tonight because I've had a really long day.","She asked me whether I could help her with the report.","By the time we got there, the movie had already started.","I think it might be better to wait until tomorrow.","Not many people know how much effort it takes to learn a language.","If I had known about the traffic, I would have left earlier."]];
+  var dl=0,cur='',dnum=0,dres=document.getElementById('dres'),dtext=document.getElementById('dtext');
+  function cl(w){return w.toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]/g,'')}
+  function pick(){var a=DS[dl],s;do{s=a[Math.floor(Math.random()*a.length)]}while(s===cur&&a.length>1);cur=s;dtext.value='';dres.innerHTML='';dnum++;document.getElementById('dnum').textContent='Câu số '+dnum}
+  document.querySelectorAll('[data-dl]').forEach(function(b){b.onclick=function(){document.querySelectorAll('[data-dl]').forEach(function(x){x.classList.remove('on')});b.classList.add('on');dl=+b.getAttribute('data-dl');dnum=0;pick()}});
+  document.getElementById('dplay').onclick=function(){now(cur,.9)};
+  document.getElementById('dslow').onclick=function(){now(cur,.6)};
+  document.getElementById('dnext').onclick=function(){pick();now(cur,.9)};
+  function lcs(a,b){var m=a.length,n=b.length,d=[],i,j;for(i=0;i<=m;i++)d[i]=new Array(n+1).fill(0);
+    for(i=1;i<=m;i++)for(j=1;j<=n;j++)d[i][j]=a[i-1]===b[j-1]?d[i-1][j-1]+1:Math.max(d[i-1][j],d[i][j-1]);
+    var oa=new Array(m).fill(false),ob=new Array(n).fill(false);i=m;j=n;
+    while(i>0&&j>0){if(a[i-1]===b[j-1]){oa[i-1]=true;ob[j-1]=true;i--;j--}else if(d[i-1][j]>=d[i][j-1])i--;else j--}
+    return [oa,ob]}
+  document.getElementById('dcheck').onclick=function(){
+    if(!cur)return;var tw=cur.split(' '),t=tw.map(cl),uw=dtext.value.trim().split(/\s+/).filter(Boolean),u=uw.map(cl);
+    if(!u.length){dres.textContent='Hãy gõ những gì bạn nghe được.';return}
+    var r=lcs(t,u),n=r[0].filter(Boolean).length;
+    var html=tw.map(function(w,i){return '<span class="'+(r[0][i]?'ok':'miss')+'">'+esc(w)+'</span>'}).join(' ');
+    var extra=uw.filter(function(w,i){return !r[1][i]});
+    dres.innerHTML=html+'<div class="stat" style="margin-top:6px">Đúng '+n+'/'+tw.length+' từ'+(n===tw.length&&!extra.length?' — chính xác! 🎉':'')+(extra.length?' · Từ thừa hoặc sai: '+esc(extra.join(', ')):'')+'</div>'};
+  document.getElementById('dshow').onclick=function(){if(cur)dres.innerHTML='<span class="ok">'+esc(cur)+'</span>'};
+  pick();dnum=1;document.getElementById('dnum').textContent='Câu số 1';
+})();
+</script>
+</body>
+</html>
