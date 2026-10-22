@@ -225,6 +225,18 @@ hr.dv{border:none;border-top:1px solid var(--border);margin:58px 0}
 .footer{border-top:1px solid var(--border);padding:28px 64px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}
 @media(max-width:900px){.sidebar{display:none}.main{margin-left:0}.hero,.content,.footer{padding-left:22px;padding-right:22px}.hero h1{font-size:32px}.grid-2,.grid-3,.grid-4,.cheat-grid,.vocab-grid{grid-template-columns:1fr 1fr}.cmp-box{grid-template-columns:1fr}}
 @media(max-width:480px){.vocab-grid{grid-template-columns:1fr 1fr}.cheat-grid{grid-template-columns:1fr}}
+
+/* ── PAGE-NAV (mobile inter-page navigation) ── */
+.page-nav{display:none}
+@media(max-width:900px){
+  .page-nav{display:flex;gap:0;overflow-x:auto;position:sticky;top:env(safe-area-inset-top,0px);z-index:500;background:var(--s1);border-bottom:2px solid var(--border2);padding:0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .page-nav::-webkit-scrollbar{display:none}
+  .page-nav a{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 10px;color:var(--muted);text-decoration:none;font-size:11px;font-weight:700;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .12s;min-width:52px}
+  .page-nav a:hover{color:var(--text);background:rgba(255,255,255,.04)}
+  .page-nav a.active{color:var(--acc);border-bottom-color:var(--acc);background:var(--acc-dim)}
+  .page-nav a .pn-num{font-size:14px;line-height:1}
+  .page-nav a .pn-lbl{font-size:9.5px;color:inherit;opacity:.85}
+}
 </style>
 </head>
 <body>
@@ -301,6 +313,26 @@ hr.dv{border:none;border-top:1px solid var(--border);margin:58px 0}
 
 <!-- ══ MAIN ══ -->
 <div class="main">
+<nav class="page-nav" aria-label="Điều hướng trang">
+  <a href="english-grammar-basics.html" class="active"><span class="pn-num">①</span><span class="pn-lbl">Cơ Bản</span></a>
+  <a href="english-12-tenses.html"><span class="pn-num">②</span><span class="pn-lbl">12 Thì</span></a>
+  <a href="subject-verb-agreement-tenses.html"><span class="pn-num">③</span><span class="pn-lbl">Hòa Hợp C-V</span></a>
+  <a href="synonyms-antonyms-guide.html"><span class="pn-num">④</span><span class="pn-lbl">Đồng/Trái Nghĩa</span></a>
+  <a href="adjective-order-word-classes-relative-clauses.html"><span class="pn-num">⑤</span><span class="pn-lbl">Trật Tự TT</span></a>
+  <a href="english-grammar-guide.html"><span class="pn-num">⑥</span><span class="pn-lbl">Ngữ Pháp</span></a>
+  <a href="grammar-comparison-passive-conjunctions.html"><span class="pn-num">⑦</span><span class="pn-lbl">So Sánh</span></a>
+  <a href="prepositions-wish-guide.html"><span class="pn-num">⑧</span><span class="pn-lbl">Giới Từ</span></a>
+  <a href="grammar-modals-quantifiers-stress.html"><span class="pn-num">⑨</span><span class="pn-lbl">Modal</span></a>
+  <a href="grammar-tag-questions-articles-conditionals.html"><span class="pn-num">⑩</span><span class="pn-lbl">Hỏi Đuôi</span></a>
+  <a href="grammar-tov-ving-reported-phrasal.html"><span class="pn-num">⑪</span><span class="pn-lbl">To V/V-ing</span></a>
+  <a href="english-pronunciation-guide.html"><span class="pn-num">⑫</span><span class="pn-lbl">Phát Âm</span></a>
+  <a href="communication-english-guide.html"><span class="pn-num">⑬</span><span class="pn-lbl">Giao Tiếp</span></a>
+  <a href="listening-speak-practice.html"><span class="pn-num">⑭</span><span class="pn-lbl">Nghe Nói</span></a>
+  <a href="vocabulary-full-audio.html"><span class="pn-num">⑮</span><span class="pn-lbl">Từ Vựng</span></a>
+  <a href="english-communication-basic.html"><span class="pn-num">⑯</span><span class="pn-lbl">Hội Thoại</span></a>
+  <a href="grammar-conversation-structures.html"><span class="pn-num">⑰</span><span class="pn-lbl">Cấu Trúc Câu</span></a>
+  <a href="thoughts-to-speech-guide.html"><span class="pn-num">⑱</span><span class="pn-lbl">Nghĩ → Nói</span></a>
+</nav>
 
 <!-- HERO -->
 <div class="hero">

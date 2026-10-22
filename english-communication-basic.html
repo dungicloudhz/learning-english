@@ -266,6 +266,18 @@ select.btn{padding:7px 10px}.stat{font-size:12px;color:var(--muted)}
 .nov .dl-vn{display:none}
 .pat{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13.5px}
 .pat:last-child{border-bottom:none}.pat .en{font-weight:600;cursor:pointer}.pat .en:hover{color:var(--acc)}.pat .vi{color:var(--teal);text-align:right;font-size:12.5px}
+
+/* ── PAGE-NAV (mobile inter-page navigation) ── */
+.page-nav{display:none}
+@media(max-width:900px){
+  .page-nav{display:flex;gap:0;overflow-x:auto;position:sticky;top:env(safe-area-inset-top,0px);z-index:500;background:var(--s1);border-bottom:2px solid var(--border2);padding:0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .page-nav::-webkit-scrollbar{display:none}
+  .page-nav a{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 10px;color:var(--muted);text-decoration:none;font-size:11px;font-weight:700;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .12s;min-width:52px}
+  .page-nav a:hover{color:var(--text);background:rgba(255,255,255,.04)}
+  .page-nav a.active{color:var(--acc);border-bottom-color:var(--acc);background:var(--acc-dim)}
+  .page-nav a .pn-num{font-size:14px;line-height:1}
+  .page-nav a .pn-lbl{font-size:9.5px;color:inherit;opacity:.85}
+}
 </style>
 </head>
 <body>
@@ -321,6 +333,26 @@ select.btn{padding:7px 10px}.stat{font-size:12px;color:var(--muted)}
 </aside>
 
 <div class="main">
+<nav class="page-nav" aria-label="Điều hướng trang">
+  <a href="english-grammar-basics.html"><span class="pn-num">①</span><span class="pn-lbl">Cơ Bản</span></a>
+  <a href="english-12-tenses.html"><span class="pn-num">②</span><span class="pn-lbl">12 Thì</span></a>
+  <a href="subject-verb-agreement-tenses.html"><span class="pn-num">③</span><span class="pn-lbl">Hòa Hợp C-V</span></a>
+  <a href="synonyms-antonyms-guide.html"><span class="pn-num">④</span><span class="pn-lbl">Đồng/Trái Nghĩa</span></a>
+  <a href="adjective-order-word-classes-relative-clauses.html"><span class="pn-num">⑤</span><span class="pn-lbl">Trật Tự TT</span></a>
+  <a href="english-grammar-guide.html"><span class="pn-num">⑥</span><span class="pn-lbl">Ngữ Pháp</span></a>
+  <a href="grammar-comparison-passive-conjunctions.html"><span class="pn-num">⑦</span><span class="pn-lbl">So Sánh</span></a>
+  <a href="prepositions-wish-guide.html"><span class="pn-num">⑧</span><span class="pn-lbl">Giới Từ</span></a>
+  <a href="grammar-modals-quantifiers-stress.html"><span class="pn-num">⑨</span><span class="pn-lbl">Modal</span></a>
+  <a href="grammar-tag-questions-articles-conditionals.html"><span class="pn-num">⑩</span><span class="pn-lbl">Hỏi Đuôi</span></a>
+  <a href="grammar-tov-ving-reported-phrasal.html"><span class="pn-num">⑪</span><span class="pn-lbl">To V/V-ing</span></a>
+  <a href="english-pronunciation-guide.html"><span class="pn-num">⑫</span><span class="pn-lbl">Phát Âm</span></a>
+  <a href="communication-english-guide.html"><span class="pn-num">⑬</span><span class="pn-lbl">Giao Tiếp</span></a>
+  <a href="listening-speak-practice.html"><span class="pn-num">⑭</span><span class="pn-lbl">Nghe Nói</span></a>
+  <a href="vocabulary-full-audio.html"><span class="pn-num">⑮</span><span class="pn-lbl">Từ Vựng</span></a>
+  <a href="english-communication-basic.html" class="active"><span class="pn-num">⑯</span><span class="pn-lbl">Hội Thoại</span></a>
+  <a href="grammar-conversation-structures.html"><span class="pn-num">⑰</span><span class="pn-lbl">Cấu Trúc Câu</span></a>
+  <a href="thoughts-to-speech-guide.html"><span class="pn-num">⑱</span><span class="pn-lbl">Nghĩ → Nói</span></a>
+</nav>
 <nav class="mnav" aria-label="Điều hướng nhanh"><a href="#s0">Tổng quan</a><a href="#s1">Mẫu câu khung</a><a href="#s2">Hội thoại</a><a href="#s2b">Kho câu</a><a href="#s2c">Cấu trúc</a><a href="#s3">2 tuần</a><a href="#s4">Cheat Sheet</a></nav>
 
 <div class="hero">
